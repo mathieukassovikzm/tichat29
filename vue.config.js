@@ -6,8 +6,8 @@ module.exports = {
         @import "@/scss/_functions.scss";
         @import "@/scss/_variables.scss";
         @import "@/scss/_mixins.scss";
-        `
-      }
-    }
-  }
+        `,
+      },
+    },
+  },
 };
