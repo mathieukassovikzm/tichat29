@@ -1,0 +1,87 @@
+// @font-face {
+//   font-family: 'Ostrich';
+//   src: url('./../assets/fonts/OstrichSans-Heavy.otf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'Tw';
+//   src: url('./../assets/fonts/Tw-Cen-MT-Condensed.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  cursor: pointer;
+}
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  font-family: $font-txt, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+ul {
+  list-style-type: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  border: none;
+}
+
+// h1,h2,h3,h4 {
+
+// }
+// h1 {
+
+// }
+// h2 {
+
+// }
+// h3 {
+
+// }
+// h4 {
+
+// }
+
+// p {
+
+// }
+
+// button {
+// }
+
+.section {
+  margin: 0;
+  padding-top: $section-padding-tb;
+  padding-bottom: $section-padding-tb;
+  padding-left: $section-padding-lr;
+  padding-right: $section-padding-lr;
+}
+
+.light-background {
+  background-color: $c-secundary-light;
+  color: $c-text-dark;
+}
+.dark-background {
+  background-color: $c-dark-background;
+}

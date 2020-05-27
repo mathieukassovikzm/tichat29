@@ -1,0 +1,89 @@
+$animation-duration-short: 0.2s;
+$animation-duration: 0.5s;
+
+/*******************************
+ * Media Query
+ *******************************/
+$min-width-s: 450px;
+$min-width-m: 650px;
+$min-width-l: 850px;
+
+/*******************************
+ * Colors
+ *******************************/
+
+$c-primary: #fdb719;
+$c-primary-light: lighten($c-primary, 0.7);
+$c-primary-dark: darken($c-primary, 0.7);
+
+$c-secundary: #757575;
+$c-secundary-light: #fff;
+$c-secundary-dark: #333333;
+
+$c-text-light: $c-secundary-light;
+$c-text-dark: $c-secundary-dark;
+
+$c-dark-background: #e8eaf6;
+
+$c-box-shadow: rgba(0, 0, 0, 0.9);
+
+/*******************************
+ * General
+ *******************************/
+//$font-title: 'Ostrich';
+//$font-txt: 'Tw';
+
+$base-size-font-txt-xs: rem(18);
+$base-size-font-txt-s: rem(18);
+$base-size-font-txt-m: rem(20);
+$base-size-font-txt-l: rem(24);
+$base-size-font-txt-xl: rem(26);
+$base-size-font-txt-xxl: rem(30);
+
+$base-size-font-title-s: rem(16);
+$base-size-font-title-m: rem(22);
+$base-size-font-title-l: rem(28);
+$base-size-font-title-xl: rem(30);
+$base-size-font-title-xxl: rem(40);
+$base-size-font-title-xxxl: rem(55);
+
+$section-padding-tb: 50px;
+$section-padding-lr: 0px;
+$section-container-padding-tb: 10px;
+$section-container-padding-lr: 10px;
+
+$margin-bottom-h1: 20px;
+$margin-bottom-h2: 15px;
+$margin-bottom-h3: 10px;
+
+//$background-image: '../assets/img/Background.png';
+$background-color: $c-primary;
+
+$svg-media-size: 40px;
+
+/*******************************
+ * Header
+ *******************************/
+// $header-bkg-color: $c-secundary-dark;
+// $header-txt-color: $c-text-light;
+// $header-txt-hover-color: $c-primary;
+// $header-txt-size-m: $base-size-font-txt-m;
+// $header-txt-size-l: $base-size-font-txt-xl;
+// $header-txt-responsive-size: $base-size-font-title-m;
+// $header-bottom-height: 80px;
+// $header-responsive-nav-height: 93vh;
+// $header-img-square-rotation: -54deg;
+// $header-img-square-size: 300px;
+// $header-img-square-position-top: -160px;
+// $header-img-square-position-left: -75px;
+// $header-img-size: 60%;
+// $header-img-position-left: 70px;
+
+/*******************************
+ * Footer
+ *******************************/
+// $footer-border-color: $c-primary;
+// $footer-title-color: $c-primary;
+// $footer-txt-color: $c-secundary-light;
+// $footer-padding-t: $section-padding-tb;
+// $footer-img-width: 250px;
