@@ -1,13 +1,13 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Main from './pages/main/main.vue';
+import Home from './pages/page-home/page-home.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    component: Main,
+    component: Home,
   },
   { path: '*', redirect: '/' },
 ];
