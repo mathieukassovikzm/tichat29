@@ -2,10 +2,13 @@
 
 <script>
 import $ from "jquery";
+import Burger from "./../burger/burger.vue";
 
 export default {
   name: "Header",
-
+  components: {
+    Burger
+  },
   data() {
     return {
       navItems: [

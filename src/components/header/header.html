@@ -1,9 +1,7 @@
 <header class="main-header">
   <div id="elt-sticky-responsive" class="header-top">
     <div class="menu-burger">
-      <div class="menu-icon" :class="isOpen" @click.prevent="openMenu">
-        <span></span>
-      </div>
+      <Burger @burgerClicked="openMenu" />
     </div>
     <div class="menu-img" @click="goToTop">
       <img src="../../assets/LogoTiChat.png" alt="logo Go2Sport" />
@@ -12,7 +10,7 @@
   <nav class="main-nav">
     <ul>
       <li v-for="navItem in navItems" class="nav-item nav-item-responsive">
-        <router-link :to="{name:'{{ navItem.href }}'}">{{ navItem.name }}</router-link>
+        <router-link :to="{name:'navItem.href'}">{{ navItem.name }}</router-link>
       </li>
     </ul>
   </nav>
