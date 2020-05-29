@@ -12,13 +12,13 @@ $min-width-l: 850px;
  * Colors
  *******************************/
 
-$c-primary: #fdb719;
-$c-primary-light: lighten($c-primary, 0.7);
-$c-primary-dark: darken($c-primary, 0.7);
+$c-primary: #f8bbd0;
+$c-primary-light: #ffedff;
+$c-primary-dark: #c38a9e;
 
 $c-secundary: #757575;
 $c-secundary-light: #fff;
-$c-secundary-dark: #333333;
+$c-secundary-dark: #616161;
 
 $c-text-light: $c-secundary-light;
 $c-text-dark: $c-secundary-dark;
@@ -64,20 +64,20 @@ $svg-media-size: 40px;
 /*******************************
  * Header
  *******************************/
-// $header-bkg-color: $c-secundary-dark;
-// $header-txt-color: $c-text-light;
-// $header-txt-hover-color: $c-primary;
-// $header-txt-size-m: $base-size-font-txt-m;
-// $header-txt-size-l: $base-size-font-txt-xl;
-// $header-txt-responsive-size: $base-size-font-title-m;
-// $header-bottom-height: 80px;
-// $header-responsive-nav-height: 93vh;
-// $header-img-square-rotation: -54deg;
-// $header-img-square-size: 300px;
-// $header-img-square-position-top: -160px;
-// $header-img-square-position-left: -75px;
-// $header-img-size: 60%;
-// $header-img-position-left: 70px;
+$header-bkg-color: $c-secundary-dark;
+$header-txt-color: $c-text-light;
+$header-txt-hover-color: $c-text-dark;
+$header-txt-size-m: $base-size-font-txt-m;
+$header-txt-size-l: $base-size-font-txt-xl;
+$header-txt-responsive-size: $base-size-font-title-m;
+$header-top-height: 80px;
+$header-responsive-nav-height: 93vh;
+$header-img-square-rotation: -54deg;
+$header-img-square-size: 300px;
+$header-img-square-position-top: -160px;
+$header-img-square-position-left: -75px;
+$header-img-size: 60%;
+$header-img-position-left: 70px;
 
 /*******************************
  * Footer

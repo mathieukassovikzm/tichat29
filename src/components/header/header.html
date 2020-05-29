@@ -1,17 +1,18 @@
 <header class="main-header">
-  <nav>
+  <div id="elt-sticky-responsive" class="header-top">
+    <div class="menu-burger">
+      <div class="menu-icon" :class="isOpen" @click.prevent="openMenu">
+        <span></span>
+      </div>
+    </div>
+    <div class="menu-img" @click="goToTop">
+      <img src="../../assets/LogoTiChat.png" alt="logo Go2Sport" />
+    </div>
+  </div>
+  <nav class="main-nav">
     <ul>
-      <li>
-        <router-link :to="{name:'PageHome'}">Home</router-link>
-      </li>
-      <li>
-        <router-link :to="{name:'PageAdoptees'}">Page1</router-link>
-      </li>
-      <li>
-        <router-link :to="{name:'PageAdoption'}">Page2</router-link>
-      </li>
-      <li>
-        <router-link :to="{name:'PageEvents'}">Page3</router-link>
+      <li v-for="navItem in navItems" class="nav-item nav-item-responsive">
+        <router-link :to="{name:'{{ navItem.href }}'}">{{ navItem.name }}</router-link>
       </li>
     </ul>
   </nav>
