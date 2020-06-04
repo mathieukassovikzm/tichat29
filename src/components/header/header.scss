@@ -17,22 +17,14 @@
     }
   }
   .main-nav {
-    .nav-item {
-      padding: 5px 0;
-      font-family: $font-txt, sans-serif;
-      transition: color $animation-duration;
+    position: fixed;
+    top: $header-top-height;
+    width: 100%;
+    height: $header-responsive-nav-height;
 
-      &:hover,
-      &.active {
-        color: $header-txt-hover-color;
-        cursor: pointer;
-      }
-    }
-    &.nav-responsive {
-      position: fixed;
-      top: $header-top-height;
+    .nav-items {
       width: 100%;
-      height: $header-responsive-nav-height;
+      height: 100%;
 
       display: flex;
       flex-direction: column;
@@ -40,25 +32,30 @@
       justify-content: space-evenly;
       text-align: center;
 
-      transition: transform $animation-duration;
-      border-top: 1px solid $header-txt-hover-color;
-      border-bottom: 1px solid $header-txt-hover-color;
-
-      &.is-opened {
-        transform: translateX(0);
-      }
-      &.is-closed {
-        transform: translateX(100%);
-      }
+      background-color: red;
 
       .nav-item {
-        display: block;
         padding: 5px 0;
-        font-size: $header-txt-responsive-size;
-        text-transform: uppercase;
-
+        font-family: $font-txt, sans-serif;
+        transition: color $animation-duration;
         opacity: 0;
         margin: auto;
+
+        .links {
+          display: block;
+          padding: 5px 0;
+          font-size: $header-txt-responsive-size;
+          text-transform: uppercase;
+
+          display: block;
+          text-align: center;
+        }
+
+        &:hover,
+        &.active {
+          color: $header-txt-hover-color;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -72,7 +69,10 @@
 }
 @keyframes translateIn {
   0% {
-    transform: translateX(100%);
+    // Appears from the left
+    transform: translateX(-100%);
+    // Appears from the right
+    //transform: translateX(100%);
   }
   100% {
     transform: translateX(0%);
@@ -82,7 +82,10 @@
 @keyframes navLinkFadeIn {
   from {
     opacity: 0;
-    transform: translateX(150px);
+    // Appears from the left
+    transform: translateX(-150px);
+    // Appears from the right
+    //transform: translateX(150px);
   }
   to {
     opacity: 1;

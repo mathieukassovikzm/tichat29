@@ -7,11 +7,13 @@
       <img src="../../assets/LogoTiChat.png" alt="logo Go2Sport" />
     </div>
   </div>
-  <nav class="main-nav">
-    <ul>
-      <li v-for="navItem in navItems" class="nav-item nav-item-responsive">
-        <router-link :to="{name:'navItem.href'}">{{ navItem.name }}</router-link>
-      </li>
-    </ul>
-  </nav>
+  <transition name="translatedMenu" v-on:before-enter="toggleScroll" v-on:after-leave="toggleScroll">
+    <nav id="nav-responsive" class="main-nav closed-left" v-show="isOpened">
+      <ul class="nav-items">
+        <li v-for="navItem in navItems" class="nav-item nav-item-responsive">
+          <router-link :to="{name:'navItem.href'}" class="links">{{ navItem.name }}</router-link>
+        </li>
+      </ul>
+    </nav>
+  </transition>
 </header>
