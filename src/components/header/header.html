@@ -8,10 +8,11 @@
     </div>
   </div>
   <transition name="translatedMenu" v-on:before-enter="toggleScroll" v-on:after-leave="toggleScroll">
-    <nav id="nav-responsive" class="main-nav closed-left" v-show="isOpened">
+    <nav id="nav-responsive" class="main-nav closed-left" v-show="getNavOpenState">
       <ul class="nav-items">
         <li v-for="navItem in navItems" class="nav-item nav-item-responsive">
-          <router-link :to="{name:'navItem.href'}" class="links">{{ navItem.name }}</router-link>
+          <a class="links" v-on:click="linkClicked(navItem.href)">{{ navItem.name }}
+          </a>
         </li>
       </ul>
     </nav>

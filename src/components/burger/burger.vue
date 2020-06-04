@@ -1,21 +1,27 @@
 <template src="./burger.html"></template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
+
 export default {
   name: "Burger",
-  data() {
-    return {
-      isOpened: false
-    };
-  },
+
   computed: {
+    ...mapGetters("mainStore", {
+      getNavOpenState: "getNavOpenStateInStore"
+    }),
+
     isOpen() {
-      return this.isOpened === true ? "is-opened" : "is-closed";
+      return this.getNavOpenState === true ? "is-opened" : "is-closed";
     }
   },
   methods: {
+    ...mapActions("mainStore", {
+      toggleNavOpen: "toggleNavOpenInStore"
+    }),
+
     burgerClicked() {
-      this.isOpened = !this.isOpened;
+      this.toggleNavOpen();
       this.$emit("burgerClicked");
     }
   }

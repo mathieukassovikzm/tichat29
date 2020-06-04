@@ -2,6 +2,8 @@
 
 <script>
 import $ from "jquery";
+import { mapGetters, mapActions } from "vuex";
+import router from "./../../router";
 import Burger from "./../burger/burger.vue";
 
 export default {
@@ -20,27 +22,35 @@ export default {
       ],
       limiteSize: 650,
       isUnderLimiteSize: false,
-      wasUnderLimiteSize: false,
-      isOpened: false
+      wasUnderLimiteSize: false
     };
   },
   computed: {
+    ...mapGetters("mainStore", {
+      getNavOpenState: "getNavOpenStateInStore"
+    }),
+
     isOpen() {
-      return this.isOpened === true ? "is-opened" : "is-closed";
+      return this.getNavOpenState === true ? "is-opened" : "is-closed";
     }
   },
   methods: {
+    ...mapActions("mainStore", {
+      toggleNavOpen: "toggleNavOpenInStore",
+      setToFalseNavOpen: "setToFalseNavOpenInStore",
+      setToTrueNavOpen: "setToTrueNavOpenInStore"
+    }),
+
     openMenu() {
       let windowWidth = document.documentElement.clientWidth;
       if (windowWidth < this.limiteSize) {
         const navLinks = document.querySelectorAll(".nav-item-responsive");
-        if (this.isOpened === true) {
-          this.isOpened = false;
+        // If the menu just closed => Fadeout, else FadeIn
+        if (this.getNavOpenState === false) {
           navLinks.forEach(link => {
             link.style.animation = `navLinkFadeOut 0.5s ease`;
           });
         } else {
-          this.isOpened = true;
           navLinks.forEach((link, index) => {
             link.style.animation = `navLinkFadeIn 0.5s ease forwards ${index /
               7 +
@@ -61,14 +71,9 @@ export default {
 
     linkClicked(idLinkClicked) {
       if (this.isUnderLimitSize()) {
-        this.isOpened = false;
+        this.setToFalseNavOpen();
       }
-      $("html,body").animate(
-        {
-          scrollTop: $(idLinkClicked).offset().top - $("#fake-elt").height()
-        },
-        "slow"
-      );
+      router.push({ name: idLinkClicked });
     },
 
     onNavBarItemClicked() {
@@ -82,7 +87,7 @@ export default {
         /* enlever l'animation ici */
         const nav = document.getElementById("nav-responsive");
         nav.style.animation = "";
-        this.isOpened = false;
+        this.setToFalseNavOpen();
       }
       this.wasUnderLimiteSize = this.isUnderLimiteSize;
     },
@@ -104,7 +109,7 @@ export default {
     toggleScroll() {
       if (this.isUnderLimitSize()) {
         const elementBody = document.getElementsByTagName("body")[0];
-        if (this.isOpened === true) {
+        if (this.getNavOpenState) {
           elementBody.classList.add(this.classCantScroll);
         } else {
           elementBody.classList.remove(this.classCantScroll);
@@ -126,9 +131,9 @@ export default {
     this.wasUnderLimiteSize = this.isUnderLimitSize();
     this.isUnderLimiteSize = this.wasUnderLimiteSize;
     if (this.isUnderLimiteSize === true) {
-      this.isOpened = false;
+      this.setToFalseNavOpen();
     } else {
-      this.isOpened = true;
+      this.setToTrueNavOpen();
     }
   },
 

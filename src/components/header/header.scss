@@ -35,20 +35,21 @@
       background-color: red;
 
       .nav-item {
+        margin: auto;
         padding: 5px 0;
         font-family: $font-txt, sans-serif;
         transition: color $animation-duration;
         opacity: 0;
-        margin: auto;
 
         .links {
           display: block;
+
           padding: 5px 0;
+
           font-size: $header-txt-responsive-size;
           text-transform: uppercase;
-
-          display: block;
           text-align: center;
+          color: white;
         }
 
         &:hover,
