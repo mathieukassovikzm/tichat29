@@ -19,14 +19,14 @@ export default {
   },
   data() {
     return {
-      limitSmallHeader: 50,
-      isSmallHeader: true,
-      classSmallHeader: "smallHeader"
+      limitBigHeader: 50,
+      isBigHeader: false,
+      classBigHeader: "big-header"
     };
   },
   computed: {
-    toggleSmallSquare() {
-      return this.isSmallHeader === true ? this.classSmallHeader : "";
+    toggleBigHeader() {
+      return this.isBigHeader === true ? this.classBigHeader : "";
     }
   },
   methods: {
@@ -39,20 +39,19 @@ export default {
       );
     },
     handleScroll() {
-      console.log("handleScroll");
-      // var y = window.scrollY;
-      // if (y > this.limitSmallHeader && !this.isSmallHeader) {
-      //   this.isSmallHeader = true;
-      // } else if (y < this.limitSmallHeader && this.isSmallHeader) {
-      //   this.isSmallHeader = false;
-      // }
+      var y = window.scrollY;
+      if (y > this.limitBigHeader && !this.isBigHeader) {
+        this.isBigHeader = true;
+      } else if (y < this.limitBigHeader && this.isBigHeader) {
+        this.isBigHeader = false;
+      }
     },
   },
   mounted() {
-    document.addEventListener("scroll", this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll);
   },
   destroyed () {
-    document.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 };
 </script>

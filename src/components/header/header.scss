@@ -48,20 +48,23 @@
       }
     }
   }
+
+  &.big-header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: $header-bkg-color;
+  }
 }
+
+
 
 @media only screen and (min-width: $min-width-s) {
   .header {
     .header-logo{
       transform: translateY(-40px);
-
-      .svg {
-        &.svg-tichat{
-        }
-        &.svg-cat{
-        }
-      }
     }
   }
 }
-//background-color: $header-bkg-color;
+
+
