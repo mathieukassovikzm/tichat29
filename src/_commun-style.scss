@@ -4,7 +4,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'alegreya';
   src: url('./assets/fonts/Alegreya-Regular.ttf') format('truetype');
@@ -68,8 +67,38 @@ h1,h2,h3,h4 {
 
 // }
 
-// button {
-// }
+button, .button {
+  padding: 10px;
+
+  background-color: $c-primary;
+  color: $c-secundary-dark;
+
+  border: solid 2px $c-primary;
+  border-radius: 5px;
+
+  transition: color 0.2s ease;
+  transition: background-color 0.2s ease;
+
+  cursor: pointer;
+
+  text-align: center;
+  font-family: $font-title, sans-serif;
+  font-size: $base-size-font-title-m;
+
+  @media only screen and (min-width: $min-width-s) {
+  }
+  @media only screen and (min-width: $min-width-m) {
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: $c-primary;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
 
 .section {
   margin: 0;
@@ -79,10 +108,8 @@ h1,h2,h3,h4 {
   padding-right: $section-padding-lr;
 }
 
-.light-background {
-  background-color: $c-secundary-light;
-  color: $c-text-dark;
-}
-.dark-background {
-  background-color: $c-dark-background;
+svg{
+  path{
+    fill: $c-secundary-dark;
+  }
 }

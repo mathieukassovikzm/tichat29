@@ -1,8 +1,19 @@
-<header class="header">
-  <div class="menu-burger">
-    <Burger @burgerClicked="openMenu" />
+<header class="header" v-bind:class="toggleSmallSquare">
+  <div class="header-top">
+    <div class="header-top-item burger">
+      <Burger />
+    </div>
+    <div class="header-top-item social-media">
+      <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/">
+        <Facebook/>
+      </a>
+      <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/">
+        <Instagram/>
+      </a>
+    </div>
   </div>
-  <div class="menu-img">
-    <TiChat class="svg-tichat"/>
+  <div class="header-logo" @click="goToTop">
+    <Cat class="svg svg-cat"/>
+    <TiChat class="svg svg-tichat"/>
   </div>
 </header>

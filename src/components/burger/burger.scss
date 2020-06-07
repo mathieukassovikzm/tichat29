@@ -1,6 +1,6 @@
 /******* Variables *******/
-$burger-anim-duration: $animation-duration;
-$burger-color: $header-txt-hover-color;
+$burger-anim-duration: $animation-duration !default;
+$burger-color: $header-txt-color !default;
 
 .icon-burger {
   position: relative;

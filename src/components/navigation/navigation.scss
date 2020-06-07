@@ -1,12 +1,12 @@
 .main-nav {
   position: fixed;
-  top: $header-top-height;
+  top: 0;
   bottom: 0;
-  width: $header-nav-width;
+  width: $navigation-width;
 
   transition-duration: $animation-duration;
   &.is-closed {
-    transform: translateX($header-nav-width * -1);
+    transform: translateX($navigation-width * -1);
   }
   &.is-opened {
     transform: translateX(0);
@@ -22,7 +22,7 @@
     justify-content: space-evenly;
     text-align: center;
 
-    background-color: darken($header-bkg-color, 5);
+    background-color: $navigation-bkg-color;
 
     .nav-item {
       margin: auto;
@@ -38,13 +38,15 @@
         font-size: $header-txt-responsive-size;
         text-transform: uppercase;
         text-align: center;
-        color: white;
+        color: $navigation-txt-color;
       }
 
       &:hover,
       &.active {
-        color: $header-txt-hover-color;
-        cursor: pointer;
+        .links {
+          color: $navigation-txt-hover-color;
+          cursor: pointer;
+        }
       }
     }
   }

@@ -1,38 +1,59 @@
 <template src="./header.html"></template>
 
 <script>
+import $ from "jquery";
 import Burger from './../burger/burger.vue';
+import Cat from './../svg/svg-cat.vue';
 import TiChat from './../svg/svg-tiChat29.vue';
-import { mapActions } from 'vuex';
+import Facebook from './../svg/svg-facebook.vue';
+import Instagram from './../svg/svg-instagram.vue';
 
 export default {
   name: 'Header',
   components: {
     Burger,
-    TiChat
+    TiChat,
+    Cat,
+    Facebook,
+    Instagram
+  },
+  data() {
+    return {
+      limitSmallHeader: 50,
+      isSmallHeader: true,
+      classSmallHeader: "smallHeader"
+    };
+  },
+  computed: {
+    toggleSmallSquare() {
+      return this.isSmallHeader === true ? this.classSmallHeader : "";
+    }
   },
   methods: {
-    ...mapActions('mainStore', {
-      toggleNavOpen: 'toggleNavOpenInStore',
-      setToFalseNavOpen: 'setToFalseNavOpenInStore',
-      setToTrueNavOpen: 'setToTrueNavOpenInStore',
-    }),
-
-    openMenu() {
-      const navLinks = document.querySelectorAll('.nav-item-responsive');
-      // If the menu just closed => Fadeout, else FadeIn
-      if (this.getNavOpenState === false) {
-        navLinks.forEach((link) => {
-          link.style.animation = `navLinkFadeOut 0.5s ease`;
-        });
-      } else {
-        navLinks.forEach((link, index) => {
-          link.style.animation = `navLinkFadeIn 0.5s ease forwards ${index / 7 +
-            0.1}s`;
-        });
-      }
+    goToTop() {
+      $("html,body").animate(
+        {
+          scrollTop: 0
+        },
+        "slow"
+      );
+    },
+    handleScroll() {
+      console.log("handleScroll");
+      // var y = window.scrollY;
+      // if (y > this.limitSmallHeader && !this.isSmallHeader) {
+      //   this.isSmallHeader = true;
+      // } else if (y < this.limitSmallHeader && this.isSmallHeader) {
+      //   this.isSmallHeader = false;
+      // }
     },
   },
+  mounted() {
+    document.addEventListener("scroll", this.handleScroll)
+  },
+  destroyed () {
+    document.removeEventListener("scroll", this.handleScroll);
+  }
 };
 </script>
 

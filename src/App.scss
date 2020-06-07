@@ -10,7 +10,6 @@
   right: 0;
   bottom: 0;
   height: 100%;
-  padding-top: $header-top-height;
   background-color: white;
 }
 .site-pusher {
@@ -21,7 +20,7 @@
     transform: translateX(0);
   }
   &.is-opened {
-    transform: translateX($header-nav-width);
+    transform: translateX($navigation-width);
     .site-cache {
       position: absolute;
       left: 0;

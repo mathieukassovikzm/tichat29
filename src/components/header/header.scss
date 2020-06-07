@@ -1,18 +1,67 @@
 /**------------------------------------------ header -------------------------------------------------**/
 .header {
-  height: $header-top-height;
+  position: absolute;
   width: 100%;
-  position: fixed;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: $header-bkg-color;
   z-index: 1;
-  .svg-tichat {
-    width: 70%;
-    cursor: pointer;
-    height: $header-top-height;
+  .header-top{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    .header-top-item{
+      margin: 0 20px;
+    }
+    .burger{
+      width: $header-burger-size;
+      height: $header-burger-size;
+      z-index: 2;
+
+    }
+    .social-media{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .link{
+        width: 30px;
+        svg{
+          path{
+            fill:$header-txt-color;
+          }
+        }
+      }
+    }
   }
-  .menu-burger {
-    width: 30%;
+  
+  .header-logo{
+    position: relative;
+    transition-duration: $animation-duration-short;
+    transform: translateY(-20px);
+    .svg {
+      margin: auto;
+      display: block;
+      cursor: pointer;
+      width: 150px;
+      path{
+        fill:$header-txt-color;
+      }
+    }
   }
 }
+
+@media only screen and (min-width: $min-width-s) {
+  .header {
+    .header-logo{
+      transform: translateY(-40px);
+
+      .svg {
+        &.svg-tichat{
+        }
+        &.svg-cat{
+        }
+      }
+    }
+  }
+}
+//background-color: $header-bkg-color;

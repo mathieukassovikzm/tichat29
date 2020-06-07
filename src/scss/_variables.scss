@@ -12,13 +12,13 @@ $min-width-l: 850px;
  * Colors
  *******************************/
 
-$c-primary: #f8bbd0;
-$c-primary-light: #ffedff;
-$c-primary-dark: #c38a9e;
+$c-primary: #eeeeee;
+$c-primary-light: #64b5f6;
+$c-primary-dark: #00227b;
 
 $c-secundary: #757575;
-$c-secundary-light: #fff;
-$c-secundary-dark: #616161;
+$c-secundary-light: #fafafa;
+$c-secundary-dark: #333;
 
 $c-text-light: $c-secundary-light;
 $c-text-dark: $c-secundary-dark;
@@ -56,9 +56,6 @@ $margin-bottom-h1: 20px;
 $margin-bottom-h2: 15px;
 $margin-bottom-h3: 10px;
 
-//$background-image: '../assets/img/Background.png';
-$background-color: $c-primary;
-
 $svg-media-size: 40px;
 
 /*******************************
@@ -67,11 +64,22 @@ $svg-media-size: 40px;
 $header-bkg-color: $c-primary;
 $header-txt-color: $c-text-light;
 $header-txt-hover-color: $c-text-dark;
-$header-txt-size-m: $base-size-font-txt-m;
-$header-txt-size-l: $base-size-font-txt-xl;
 $header-txt-responsive-size: $base-size-font-title-m;
 $header-top-height: 80px;
-$header-nav-width: 250px;
+$header-burger-size: 40px;
+
+/*******************************
+ * Navigation
+ *******************************/
+$navigation-width: 250px !default;
+$navigation-bkg-color: transparentize($c-primary, 0.5) !default;
+$navigation-txt-color: $c-text-dark !default;
+$navigation-txt-hover-color: $c-primary-dark !default;
+
+/*******************************
+ * Page Home
+ *******************************/
+$page-home-title-txt-color: $c-secundary-light;
 
 /*******************************
  * Footer
