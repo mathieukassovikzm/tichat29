@@ -2,12 +2,14 @@
 
 <script>
 import Burger from './../burger/burger.vue';
+import TiChat from './../svg/svg-tiChat29.vue';
 import { mapActions } from 'vuex';
 
 export default {
   name: 'Header',
   components: {
     Burger,
+    TiChat
   },
   methods: {
     ...mapActions('mainStore', {

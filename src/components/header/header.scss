@@ -7,13 +7,10 @@
   flex-wrap: wrap;
   background-color: $header-bkg-color;
   z-index: 1;
-  .menu-img {
+  .svg-tichat {
     width: 70%;
     cursor: pointer;
-    img {
-      height: $header-top-height;
-      width: auto;
-    }
+    height: $header-top-height;
   }
   .menu-burger {
     width: 30%;
