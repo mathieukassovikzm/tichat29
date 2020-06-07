@@ -1,0 +1,34 @@
+@import './commun-style.scss';
+
+.app {
+  height: 100vh;
+}
+.site-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  padding-top: $header-top-height;
+  background-color: white;
+}
+.site-pusher {
+  height: 100%;
+
+  transition-duration: $animation-duration;
+  &.is-closed {
+    transform: translateX(0);
+  }
+  &.is-opened {
+    transform: translateX($header-nav-width);
+    .site-cache {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}

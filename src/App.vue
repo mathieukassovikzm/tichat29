@@ -1,24 +1,39 @@
-<template lang="html">
-  <div id="app">
-    <Header />
-    <router-view></router-view>
-    <Footer />
-  </div>
-</template>
+<template src="./App.html"></template>
 
 <script>
-import Header from "./components/header/header.vue";
-import Footer from "./components/footer/footer.vue";
+import { mapGetters, mapActions } from 'vuex';
+import Header from './components/header/header.vue';
+import Navigation from './components/navigation/navigation.vue';
+import Footer from './components/footer/footer.vue';
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
     Header,
-    Footer
-  }
+    Navigation,
+    Footer,
+  },
+  computed: {
+    ...mapGetters('mainStore', {
+      getNavOpenState: 'getNavOpenStateInStore',
+    }),
+
+    isOpen() {
+      return this.getNavOpenState === true ? 'is-opened' : 'is-closed';
+    },
+  },
+  methods: {
+    ...mapActions('mainStore', {
+      toggleNavOpen: 'toggleNavOpenInStore',
+      setToFalseNavOpen: 'setToFalseNavOpenInStore',
+      setToTrueNavOpen: 'setToTrueNavOpenInStore',
+    }),
+
+    closeNav() {
+      this.setToFalseNavOpen();
+    },
+  },
 };
 </script>
 
-<style lang="scss">
-  @import './commun-style.scss';
-</style>
+<style lang="scss" src="./App.scss"></style>

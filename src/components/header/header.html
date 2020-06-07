@@ -1,20 +1,8 @@
-<header class="main-header">
-  <div id="elt-sticky-responsive" class="header-top">
-    <div class="menu-burger">
-      <Burger @burgerClicked="openMenu" />
-    </div>
-    <div class="menu-img" @click="goToTop">
-      <img src="../../assets/LogoTiChat.jpg" alt="logo Go2Sport" />
-    </div>
+<header class="header">
+  <div class="menu-burger">
+    <Burger @burgerClicked="openMenu" />
   </div>
-  <transition name="translatedMenu" v-on:before-enter="toggleScroll" v-on:after-leave="toggleScroll">
-    <nav id="nav-responsive" class="main-nav closed-left" v-show="getNavOpenState">
-      <ul class="nav-items">
-        <li v-for="navItem in navItems" class="nav-item nav-item-responsive">
-          <a class="links" v-on:click="linkClicked(navItem.href)">{{ navItem.name }}
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </transition>
+  <div class="menu-img">
+    <img src="../../assets/LogoTiChat.jpg" alt="logo Go2Sport" />
+  </div>
 </header>

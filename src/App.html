@@ -1,0 +1,11 @@
+<div id="app" class="app">
+  <Header />
+  <Navigation />
+  <div class="site-pusher" v-bind:class="isOpen">
+    <div class="site-content">
+      <router-view></router-view>
+      <Footer />
+    </div>
+    <div class="site-cache" @click="closeNav"></div>
+  </div>
+</div>
