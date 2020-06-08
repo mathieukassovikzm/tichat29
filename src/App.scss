@@ -9,8 +9,8 @@
   height: 100%;
   background-color: white;
 }
-.site-pusher {
 
+.site-pusher {
   transition-duration: $animation-duration;
   &.is-closed {
     transform: translateX(0);
@@ -24,6 +24,7 @@
       top: 0;
       bottom: 0;
       background-color: rgba(0, 0, 0, 0.6);
+      z-index: 3;
     }
   }
 }
