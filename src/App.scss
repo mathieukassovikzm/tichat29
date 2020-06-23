@@ -11,9 +11,10 @@
 }
 
 .site-pusher {
+  position: relative;
   transition-duration: $animation-duration;
   &.is-closed {
-    transform: translateX(0);
+    //transform: translateX(0);
   }
   &.is-opened {
     transform: translateX($navigation-width);

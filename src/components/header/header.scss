@@ -1,8 +1,14 @@
 /**------------------------------------------ header -------------------------------------------------**/
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 1;
+  .svg {
+    path {
+      fill: $header-txt-color;
+    }
+  }
+
   .header-top {
     display: flex;
     align-items: center;
@@ -23,12 +29,8 @@
       align-items: center;
       flex-wrap: wrap;
       .link {
-        width: 30px;
-        svg {
-          path {
-            fill: $header-txt-color;
-          }
-        }
+        width: $header-social-size;
+        z-index: 2;
       }
     }
   }
@@ -41,17 +43,37 @@
       margin: auto;
       display: block;
       cursor: pointer;
-      width: 150px;
-      path {
-        fill: $header-txt-color;
+      &.svg-logo {
+        width: $header-logo-size;
+      }
+      &.svg-logo-txt {
+        width: $header-logo-txt-size;
       }
     }
   }
 
   &.big-header {
-    position: fixed;
     width: 100%;
+    height: $header-responsive-height;
     background-color: $header-bkg-color;
+    .svg {
+      path {
+        fill: $header-txt-hover-color;
+      }
+    }
+    .icon-burger span {
+      background-color: $header-txt-hover-color;
+      &::before,
+      &::after {
+        background-color: $header-txt-hover-color;
+      }
+    }
+    .header-logo {
+      transform: translateY(($header-logo-size - 20px) * (-1));
+      .svg-logo {
+        transform: translateY(-30px);
+      }
+    }
   }
 }
 
@@ -59,6 +81,12 @@
   .header {
     .header-logo {
       transform: translateY(-40px);
+    }
+    &.big-header {
+      height: $header-height;
+      .header-logo {
+        transform: translateY(($header-logo-size + 5px) * (-1));
+      }
     }
   }
 }
