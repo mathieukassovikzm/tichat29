@@ -3,20 +3,24 @@
   position: fixed;
   width: 100%;
   z-index: 1;
+
   .svg {
     path {
       fill: $header-txt-color;
     }
   }
-
   .header-top {
+    display: none;
+  }
+  .header-central {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    transition: background-color $animation-duration-short ease;
 
-    .header-top-item {
+    .header-central-item {
       margin: 0 20px;
     }
     .burger {
@@ -37,7 +41,7 @@
 
   .header-logo {
     position: relative;
-    transition-duration: $animation-duration-short;
+    transition: transform $animation-duration-short ease;
     transform: translateY(-20px);
     .svg {
       margin: auto;
@@ -61,6 +65,7 @@
         fill: $header-txt-hover-color;
       }
     }
+
     .icon-burger span {
       background-color: $header-txt-hover-color;
       &::before,
@@ -82,8 +87,22 @@
     .header-logo {
       transform: translateY(-40px);
     }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      background-color: $header-txt-color;
+      transition: background-color $animation-duration-short ease;
+      transition: color $animation-duration-short ease;
+      z-index: 3;
+    }
     &.big-header {
       height: $header-height;
+      .header-top {
+        background-color: $header-txt-hover-color;
+        color: $header-txt-color;
+      }
       .header-logo {
         transform: translateY(($header-logo-size + 5px) * (-1));
       }
