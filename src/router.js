@@ -2,9 +2,9 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import Home from './pages/page-home/page-home.vue';
-import PageAdoptees from './pages/page-adoptees/page-adoptees.vue';
-import PageAdoption from './pages/page-adoption/page-adoption.vue';
-import PageEvents from './pages/page-events/page-events.vue';
+import PageActualitees from './pages/page-actualitees/page-actualitees.vue';
+import NosChats from './pages/page-nos-chats/page-nos-chats.vue';
+import PageFamilleDaccueil from './pages/page-famille-accueil/page-famille-accueil.vue';
 
 Vue.use(VueRouter);
 
@@ -15,19 +15,19 @@ const routes = [
     name: 'PageHome',
   },
   {
-    path: '/adoptees',
-    component: PageAdoptees,
-    name: 'PageAdoptees',
+    path: '/actualitees',
+    component: PageActualitees,
+    name: 'PageActualitees',
   },
   {
-    path: '/adoption',
-    component: PageAdoption,
-    name: 'PageAdoption',
+    path: '/nos-chats',
+    component: NosChats,
+    name: 'NosChats',
   },
   {
-    path: '/events',
-    component: PageEvents,
-    name: 'PageEvents',
+    path: '/famille-accueil',
+    component: PageFamilleDaccueil,
+    name: 'PageFamilleDaccueil',
   },
   { path: '*', redirect: '/' },
 ];

@@ -1,36 +1,36 @@
 <template src="./navigation.html"></template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
-import router from './../../router';
+import { mapGetters, mapActions } from "vuex";
+import router from "./../../router";
 
 export default {
-  name: 'Naviagion',
+  name: "Naviagion",
   data() {
     return {
       navItems: [
-        { name: 'Home', href: 'PageHome' },
-        { name: 'Adoptées', href: 'PageAdoptees' },
-        { name: 'Adoption', href: 'PageAdoption' },
-        { name: 'Event', href: 'PageEvents' },
-        { name: 'Contact', href: 'Contact' },
-      ],
+        { name: "Home", href: "PageHome" },
+        { name: "Nos chats", href: "NosChats" },
+        { name: "Actualitées", href: "PageActualitees" },
+        { name: "Devenir Famille d'acceuil", href: "PageFamilleDaccueil" },
+        { name: "Contact", href: "Contact" }
+      ]
     };
   },
   computed: {
-    ...mapGetters('mainStore', {
-      getNavOpenState: 'getNavOpenStateInStore',
+    ...mapGetters("mainStore", {
+      getNavOpenState: "getNavOpenStateInStore"
     }),
 
     isOpen() {
-      return this.getNavOpenState === true ? 'is-opened' : 'is-closed';
-    },
+      return this.getNavOpenState === true ? "is-opened" : "is-closed";
+    }
   },
   methods: {
-    ...mapActions('mainStore', {
-      toggleNavOpen: 'toggleNavOpenInStore',
-      setToFalseNavOpen: 'setToFalseNavOpenInStore',
-      setToTrueNavOpen: 'setToTrueNavOpenInStore',
+    ...mapActions("mainStore", {
+      toggleNavOpen: "toggleNavOpenInStore",
+      setToFalseNavOpen: "setToFalseNavOpenInStore",
+      setToTrueNavOpen: "setToTrueNavOpenInStore"
     }),
 
     linkClicked(idLinkClicked) {
@@ -40,8 +40,8 @@ export default {
 
     onNavBarItemClicked() {
       this.openMenu();
-    },
-  },
+    }
+  }
 };
 </script>
 
