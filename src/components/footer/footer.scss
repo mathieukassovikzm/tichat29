@@ -1,4 +1,4 @@
-.footer.section {
+.footer {
   padding-top: $footer-padding-t;
   padding-left: 10px;
   padding-right: 10px;
@@ -69,7 +69,7 @@
 }
 /* ---------------------- Media query ----------------------------*/
 @media only screen and (min-width: $min-width-m) {
-  .footer.section {
+  .footer {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;

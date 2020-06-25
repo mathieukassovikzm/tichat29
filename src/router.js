@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import Home from './pages/page-home/page-home.vue';
-import PageActualitees from './pages/page-actualitees/page-actualitees.vue';
+import PageActualites from './pages/page-actualites/page-actualites.vue';
 import NosChats from './pages/page-nos-chats/page-nos-chats.vue';
 import PageFamilleDaccueil from './pages/page-famille-accueil/page-famille-accueil.vue';
 
@@ -15,9 +15,9 @@ const routes = [
     name: 'PageHome',
   },
   {
-    path: '/actualitees',
-    component: PageActualitees,
-    name: 'PageActualitees',
+    path: '/actualites',
+    component: PageActualites,
+    name: 'PageActualites',
   },
   {
     path: '/nos-chats',

@@ -47,7 +47,10 @@ textarea {
   border: none;
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: $font-title, sans-serif;
 }
 // h1 {
@@ -67,7 +70,8 @@ h1,h2,h3,h4 {
 
 // }
 
-button, .button {
+button,
+.button {
   padding: 10px;
 
   background-color: $c-primary;
@@ -100,16 +104,22 @@ button, .button {
   }
 }
 
-.section {
+section {
   margin: 0;
   padding-top: $section-padding-tb;
   padding-bottom: $section-padding-tb;
   padding-left: $section-padding-lr;
   padding-right: $section-padding-lr;
 }
+@media only screen and (min-width: $min-width-m) {
+  section {
+    margin: auto;
+    width: 70%;
+  }
+}
 
-svg{
-  path{
+svg {
+  path {
     fill: $c-secundary-dark;
   }
 }

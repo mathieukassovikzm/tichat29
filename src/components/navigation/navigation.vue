@@ -11,7 +11,7 @@ export default {
       navItems: [
         { name: "Home", href: "PageHome" },
         { name: "Nos chats", href: "NosChats" },
-        { name: "Actualitées", href: "PageActualitees" },
+        { name: "Actualitées", href: "PageActualites" },
         { name: "Devenir Famille d'acceuil", href: "PageFamilleDaccueil" },
         { name: "Contact", href: "Contact" }
       ]
