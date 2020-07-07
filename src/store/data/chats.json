@@ -1,3 +1,18 @@
 {
-  "chat": "chat"
+  "nbChatsAdoptes": 1000,
+  "nbChatsDisponibles": 5,
+  "chats": [
+    {
+      "nom": "Ron",
+      "description": "Noisette , elle est très chouette Et sa bonne mine plutôt divine... Ti chat , y a le téléphon qui sonne  Et y aura pas personne ( ben non je serai là bien sûr) pour y répondre ! Bon je récapitule ... Noisette 8 mois hyper sociable a l’adoption sur pluguffan Appelez nous au 06 25 09 52 22",
+      "photos": ["Ron/Ron-1", "Ron/Ron-2", "Ron/Ron-3"],
+      "adopte": false
+    },
+    {
+      "nom": "Hila",
+      "description": "Hina déesse tahitienne ... Fille de la lune 🌔 et du soleil ☀️ Et oui, il lui fallait au moins un prénom pareil à cette jolie minette de deux ans. Un amour , sage propre câline et posée. Pour la rencontrer sur Pleuven merci de nous laisser un message sur Facebook ou nous contacter au 06 25 09 52 22",
+      "photos": [],
+      "adopte": false
+    }
+  ]
 }

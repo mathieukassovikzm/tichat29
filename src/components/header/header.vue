@@ -2,14 +2,15 @@
 
 <script>
 import $ from "jquery";
-import Burger from './../burger/burger.vue';
-import Cat from './../svg/svg-cat.vue';
-import TiChat from './../svg/svg-tiChat29.vue';
-import Facebook from './../svg/svg-facebook.vue';
-import Instagram from './../svg/svg-instagram.vue';
+import Burger from "./../burger/burger.vue";
+import Cat from "./../svg/svg-cat.vue";
+import TiChat from "./../svg/svg-tiChat29.vue";
+import Facebook from "./../svg/svg-facebook.vue";
+import Instagram from "./../svg/svg-instagram.vue";
+import { mapGetters } from "vuex";
 
 export default {
-  name: 'Header',
+  name: "Header",
   components: {
     Burger,
     TiChat,
@@ -25,10 +26,22 @@ export default {
     };
   },
   computed: {
+    ...mapGetters("chatsStore", {
+      getNbChatAdoptes: "getNbChatAdoptesInStore",
+      getNbChatsDisponibles: "getNbChatsDisponiblesInStore"
+    }),
+
     toggleBigHeader() {
       return this.isBigHeader === true ? this.classBigHeader : "";
+    },
+    nbChatAdoptes() {
+      return this.getNbChatAdoptes;
+    },
+    nbChatDispo() {
+      return this.getNbChatsDisponibles;
     }
   },
+
   methods: {
     goToTop() {
       $("html,body").animate(
@@ -45,13 +58,13 @@ export default {
       } else if (y < this.limitBigHeader && this.isBigHeader) {
         this.isBigHeader = false;
       }
-    },
+    }
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll);
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>

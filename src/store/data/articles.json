@@ -1,3 +1,18 @@
 {
-  "article": ""
+  "articles": [
+    {
+      "titre": "Article1",
+      "date": "2020-10-10T11:00:00",
+      "lieu": "Lennon",
+      "description": "Descriptif de l'article",
+      "photo": ""
+    },
+    {
+      "titre": "Article0",
+      "date": "2020-09-10T11:00:00",
+      "lieu": "Pleyben",
+      "description": "Descriptif de l'article",
+      "photo": ""
+    }
+  ]
 }
