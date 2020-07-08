@@ -1,0 +1,6 @@
+<div class="mini-diapo">
+  <div v-for="srcPhoto in listPhotos">
+    <img class="main-photo" src="./../../assets/Chats/Ron/Ron-1.jpg" alt="">
+    <img class="main-photo" v-bind:src="buildSrc(srcPhoto)" alt="">
+  </div>
+</div>
