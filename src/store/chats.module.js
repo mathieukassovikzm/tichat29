@@ -9,6 +9,9 @@ const getters = {
   getListChatsInStore: (state) => {
     return state.listChats;
   },
+  getListChatsDispoInStore: (state) => {
+    return state.listChats.filter((chat) => chat.dispo);
+  },
   getNbChatAdoptesInStore: (state) => {
     return state.nbChatAdoptes;
   },
@@ -44,9 +47,9 @@ const actions = {
             for (var objChat of value) {
               let chat = {
                 nom: objChat.nom,
-                desc: objChat.description,
+                description: objChat.description,
                 photos: objChat.photos,
-                adopt: objChat.adopte,
+                dispo: objChat.dispo,
               };
               list.push(chat);
             }
