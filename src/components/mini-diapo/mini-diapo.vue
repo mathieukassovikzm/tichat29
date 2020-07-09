@@ -5,15 +5,10 @@ export default {
   props: ["listPhotos"],
   data() {
     return {
-      path: "./../../assets/Chats"
+      index: 0
     };
   },
-  methods: {
-    buildSrc(srcPhoto) {
-      console.log(`${this.path}/${srcPhoto}`);
-      return `${this.path}/${srcPhoto}`;
-    }
-  }
+  methods: {}
 };
 </script>
 

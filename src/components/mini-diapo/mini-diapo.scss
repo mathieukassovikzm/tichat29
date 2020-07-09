@@ -1,5 +1,11 @@
+$width-main-photo: 300px;
+$width-secondary-photo: 300px;
+
 .mini-diapo {
   .main-photo {
-    width: 200px;
+    width: $width-main-photo;
+  }
+  .secondary-photo {
+    width: $width-secondary-photo;
   }
 }
