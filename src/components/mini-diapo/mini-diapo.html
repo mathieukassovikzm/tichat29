@@ -1,5 +1,11 @@
 <div class="mini-diapo">
-  <div v-for="srcPhoto in listPhotos">
-    <img class="main-photo" :src="require(`@/assets/Chats/${srcPhoto}`)">
+  <div class="main-photo">
+    <img class="main-photo" :src="getMainPhoto.img">
+  </div>
+
+  <div class="thumbnails">
+    <div class="thumbnail" v-for="(srcPhoto, nbTN) in getFilteredList">
+      <img class="secondary-photo" :src="getThumbnailPhoto(nbTN+1).img">
+    </div>
   </div>
 </div>
