@@ -1,11 +1,15 @@
 <div class="mini-diapo">
-  <div class="main-photo">
-    <img class="main-photo" :src="getMainPhoto.img">
-  </div>
+  <button @click="GoPrev">Prev</button>
+  <div class="photos">
+    <div class="main-photo-div">
+      <img class="main-photo" :src="getMainPhoto.img">
+    </div>
 
-  <div class="thumbnails">
-    <div class="thumbnail" v-for="(srcPhoto, nbTN) in getFilteredList">
-      <img class="secondary-photo" :src="getThumbnailPhoto(nbTN+1).img">
+    <div class="thumbnails">
+      <div class="thumbnail" v-for="(srcPhoto, nbTN) in getFilteredList">
+        <img class="secondary-photo" :src="getThumbnailPhoto(nbTN).img">
+      </div>
     </div>
   </div>
+  <button @click="GoNext">Next</button>
 </div>

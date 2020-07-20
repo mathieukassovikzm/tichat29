@@ -2,10 +2,16 @@ $width-main-photo: 300px;
 $width-secondary-photo: 146px;
 
 .mini-diapo {
-  .main-photo {
-    width: $width-main-photo;
-    margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  .main-photo-div {
+    .main-photo {
+      width: $width-main-photo;
+      margin: auto;
+    }
   }
+
   .secondary-photo {
     width: $width-secondary-photo;
   }
