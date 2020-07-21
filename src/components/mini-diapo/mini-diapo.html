@@ -4,7 +4,6 @@
     <div class="main-photo-div">
       <img class="main-photo" :src="getMainPhoto.img">
     </div>
-
     <div class="thumbnails">
       <div class="thumbnail" v-for="(srcPhoto, nbTN) in getFilteredList">
         <img class="secondary-photo" :src="getThumbnailPhoto(nbTN).img">

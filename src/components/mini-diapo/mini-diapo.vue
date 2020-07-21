@@ -21,28 +21,24 @@ export default {
       };
     },
     getFilteredList() {
-      // var newArray = this.listPhotos.filter(
-      //   el => el !== this.listPhotos[this.index]
-      // );
-      // console.log(newArray);
-      // return newArray;
       var newArray = [];
       for (var i = this.index; i < this.index + this.nbThumbnailsToShow; i++) {
         newArray.push(this.listPhotosCopy[i]);
       }
-      console.log(newArray);
       return newArray;
     }
   },
   methods: {
+    // Method that returns the thumbnail to display
     getThumbnailPhoto(nbTN) {
       return {
-        ...this.listPhotos[this.index + nbTN],
+        ...this.listPhotosCopy[this.index + nbTN],
         img:
-          this.listPhotos[this.index + nbTN] &&
-          require(`@/assets/Chats/${this.listPhotos[this.index + nbTN]}`)
+          this.listPhotosCopy[this.index + nbTN] &&
+          require(`@/assets/Chats/${this.listPhotosCopy[this.index + nbTN]}`)
       };
     },
+    // Method that displays the previous photo
     GoPrev() {
       if (this.index == 0) {
         this.index = this.listPhotosSize - 1;
@@ -50,6 +46,7 @@ export default {
         this.index--;
       }
     },
+    // Method that displays the next photo
     GoNext() {
       if (this.index === this.listPhotosSize - 1) {
         this.index = 0;
@@ -58,12 +55,15 @@ export default {
       }
     }
   },
-  created() {
+  // On Mounted we copy the table twice
+  mounted() {
     this.listPhotosSize = this.listPhotos.length;
-    this.listPhotosCopy = this.listPhotos;
-    // this.listPhotos.forEach(photo => {
-    //   this.listPhotosCopy.push(photo);
-    // });
+    this.listPhotos.forEach(photo => {
+      this.listPhotosCopy.push(photo);
+    });
+    this.listPhotos.forEach(photo => {
+      this.listPhotosCopy.push(photo);
+    });
   }
 };
 </script>
