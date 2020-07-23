@@ -1,18 +1,20 @@
-<section class="section">
-  <h1>Page nos-chats</h1>
-  <div class="list-chats">
-    <div class="chat" v-for="chat in listChats">
-      <div class="top">
-        <h2>{{ chat.nom }}</h2>
-      </div>
-      <div class="desc">
-        <div class="photos">
-          <miniDiapo v-bind:listPhotos="chat.photos" />
+<div>
+  <Title pageName="pageNosChats" />
+  <section class="section">
+    <div class="list-chats">
+      <div class="chat" v-for="chat in listChats">
+        <div class="top">
+          <h2>{{ chat.nom }}</h2>
         </div>
-        <div class="description">
-          <p>{{ chat.description }}</p>
+        <div class="desc">
+          <div class="photos">
+            <miniDiapo v-bind:listPhotos="chat.photos" />
+          </div>
+          <div class="description">
+            <p>{{ chat.description }}</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

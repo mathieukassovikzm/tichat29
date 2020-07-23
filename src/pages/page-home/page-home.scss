@@ -1,33 +1,4 @@
 /**------------------------------------------ Page Home -------------------------------------------------**/
 .section-home {
-  position: relative;
-  height: 100vh;
-  background-image: url('./../../assets/homePic.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  box-shadow: inset 0 0 0 1000px rgba($c-secundary-dark, 0.8);
-
-  .title-centered {
-    position: relative;
-    width: 50%;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    text-align: center;
-    color: $page-home-title-txt-color;
-    .svg {
-      display: block;
-      margin: auto;
-      path {
-        fill: $page-home-title-txt-color;
-      }
-    }
-    .svg-cat {
-      height: 200px;
-    }
-    .svg-tichat {
-      height: 40px;
-    }
-  }
+  background-image: url('./../../assets/titles/homePic.jpg');
 }
