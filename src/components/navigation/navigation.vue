@@ -11,26 +11,26 @@ export default {
       navItems: [
         { name: "Home", href: "PageHome" },
         { name: "Nos chats", href: "NosChats" },
-        { name: "Actualitées", href: "PageActualites" },
+        { name: "Actualitées", href: "PageActualitees" },
         { name: "Devenir Famille d'acceuil", href: "PageFamilleDaccueil" },
-        { name: "Contact", href: "Contact" }
-      ]
+        { name: "Contact", href: "PageContact" },
+      ],
     };
   },
   computed: {
     ...mapGetters("mainStore", {
-      getNavOpenState: "getNavOpenStateInStore"
+      getNavOpenState: "getNavOpenStateInStore",
     }),
 
     isOpen() {
       return this.getNavOpenState === true ? "is-opened" : "is-closed";
-    }
+    },
   },
   methods: {
     ...mapActions("mainStore", {
       toggleNavOpen: "toggleNavOpenInStore",
       setToFalseNavOpen: "setToFalseNavOpenInStore",
-      setToTrueNavOpen: "setToTrueNavOpenInStore"
+      setToTrueNavOpen: "setToTrueNavOpenInStore",
     }),
 
     linkClicked(idLinkClicked) {
@@ -40,8 +40,8 @@ export default {
 
     onNavBarItemClicked() {
       this.openMenu();
-    }
-  }
+    },
+  },
 };
 </script>
 

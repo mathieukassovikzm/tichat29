@@ -1,23 +1,23 @@
 <template src="./page-nos-chats.html"></template>
 
 <script>
-import MiniDiapo from "./../../components/mini-diapo/mini-diapo.vue";
-import Title from "./../../components/title/title.vue";
+import MiniDiapo from "@/components/mini-diapo/mini-diapo.vue";
+import PageTitle from "@/components/title/title.vue";
 import { mapGetters } from "vuex";
 
 export default {
   components: {
     MiniDiapo,
-    Title
+    PageTitle,
   },
   computed: {
     ...mapGetters("chatsStore", {
-      getListChatsDispo: "getListChatsDispoInStore"
+      getListChatsDispo: "getListChatsDispoInStore",
     }),
     listChats() {
       return this.getListChatsDispo;
-    }
-  }
+    },
+  },
 };
 </script>
 

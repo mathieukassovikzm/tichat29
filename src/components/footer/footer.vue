@@ -1,13 +1,13 @@
 <template src="./footer.html"></template>
 
 <script>
-import Cat from "./../svg/svg-cat.vue";
-import TiChat from "./../svg/svg-tiChat29.vue";
-import SvgPhone from "./../svg/svg-phone";
-import SvgEmail from "./../svg/svg-email";
-import SvgAddress from "./../svg/svg-address";
-import SvgFacebook from "./../svg/svg-facebook";
-import SvgInstagram from "./../svg/svg-instagram";
+import Cat from "@/components/svg/svg-cat.vue";
+import TiChat from "@/components/svg/svg-tiChat29.vue";
+import SvgPhone from "@/components/svg/svg-phone";
+import SvgEmail from "@/components/svg/svg-email";
+import SvgAddress from "@/components/svg/svg-address";
+import SvgFacebook from "@/components/svg/svg-facebook";
+import SvgInstagram from "@/components/svg/svg-instagram";
 export default {
   components: {
     SvgPhone,

@@ -2,13 +2,13 @@
 
 <script>
 export default {
-  props: ["listPhotos"],
+  props: ['listPhotos'],
   data() {
     return {
       listPhotosCopy: [],
       index: 0,
       listPhotosSize: 0,
-      nbThumbnailsToShow: 2
+      nbThumbnailsToShow: 3,
     };
   },
   computed: {
@@ -17,7 +17,7 @@ export default {
         ...this.listPhotos[this.index],
         img:
           this.listPhotos[this.index] &&
-          require(`@/assets/Chats/${this.listPhotos[this.index]}`)
+          require(`@/assets/Chats/${this.listPhotos[this.index]}`),
       };
     },
     getFilteredList() {
@@ -26,7 +26,7 @@ export default {
         newArray.push(this.listPhotosCopy[i]);
       }
       return newArray;
-    }
+    },
   },
   methods: {
     // Method that returns the thumbnail to display
@@ -35,7 +35,7 @@ export default {
         ...this.listPhotosCopy[this.index + nbTN],
         img:
           this.listPhotosCopy[this.index + nbTN] &&
-          require(`@/assets/Chats/${this.listPhotosCopy[this.index + nbTN]}`)
+          require(`@/assets/Chats/${this.listPhotosCopy[this.index + nbTN]}`),
       };
     },
     // Method that displays the previous photo
@@ -53,18 +53,18 @@ export default {
       } else {
         this.index++;
       }
-    }
+    },
   },
   // On Mounted we copy the table twice
   mounted() {
     this.listPhotosSize = this.listPhotos.length;
-    this.listPhotos.forEach(photo => {
+    this.listPhotos.forEach((photo) => {
       this.listPhotosCopy.push(photo);
     });
-    this.listPhotos.forEach(photo => {
+    this.listPhotos.forEach((photo) => {
       this.listPhotosCopy.push(photo);
     });
-  }
+  },
 };
 </script>
 
