@@ -1,0 +1,16 @@
+.page-nos-chats {
+}
+
+@media only screen and (min-width: $min-width-s) {
+  .page-nos-chats {
+    .chat {
+      display: flex;
+      .item {
+        width: 50%;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: $min-width-m) {
+}

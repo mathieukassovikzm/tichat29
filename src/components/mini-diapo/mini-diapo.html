@@ -1,14 +1,24 @@
 <div class="mini-diapo">
-  <button @click="GoPrev">Prev</button>
   <div class="photos">
     <div class="main-photo-div">
-      <img class="main-photo" :src="getMainPhoto.img">
+      <SvgNext class="icon-prev" v-on:click.native="GoPrev" />
+      <img class="main-photo" :src="getMainPhoto.img" />
+      <p class="nb-photo">{{index + 1}}/{{listPhotosSize}}</p>
+      <SvgNext class="icon-next" v-on:click.native="GoNext" />
     </div>
     <div class="thumbnails">
-      <div class="thumbnail" v-for="(srcPhoto, nbTN) in getFilteredList">
-        <img class="secondary-photo" :src="getThumbnailPhoto(nbTN).img">
+      <div
+        class="thumbnail"
+        v-for="(srcPhoto, nbTN) in getFilteredList"
+        :class="getThumbnailActive(nbTN)"
+      >
+        <img
+          class="secondary-photo"
+          :style="getThumbnailWidth"
+          :src="getThumbnailPhoto(nbTN).img"
+        />
+        <div class="shadow" :style="getShadowHeight"></div>
       </div>
     </div>
   </div>
-  <button @click="GoNext">Next</button>
 </div>
