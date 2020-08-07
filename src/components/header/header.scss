@@ -9,49 +9,48 @@
       fill: $header-txt-color;
     }
   }
-  .header-top {
-    display: none;
-  }
-  .header-central {
+
+  .header-item {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    width: 100%;
     transition: background-color $animation-duration-short ease;
 
-    .header-central-item {
-      margin: 0 20px;
-    }
-    .burger {
+    &.item-burger {
+      width: 10%;
       width: $header-burger-size;
       height: $header-burger-size;
       z-index: 2;
     }
-    .social-media {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      .link {
-        width: $header-social-size;
-        z-index: 2;
+    &.item-logo {
+      width: 50%;
+      position: relative;
+      transition: transform $animation-duration-short ease;
+      transform: translateY(-20px);
+      .svg {
+        margin: auto;
+        display: block;
+        cursor: pointer;
+        &.svg-logo {
+          width: $header-logo-size;
+        }
+        &.svg-logo-txt {
+          width: $header-logo-txt-size;
+        }
       }
     }
-  }
+    &.item-social-media {
+      width: 40%;
+      .list-social-media {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
 
-  .header-logo {
-    position: relative;
-    transition: transform $animation-duration-short ease;
-    transform: translateY(-20px);
-    .svg {
-      margin: auto;
-      display: block;
-      cursor: pointer;
-      &.svg-logo {
-        width: $header-logo-size;
-      }
-      &.svg-logo-txt {
-        width: $header-logo-txt-size;
+        .link {
+          width: $header-social-size;
+          z-index: 2;
+        }
       }
     }
   }
@@ -66,14 +65,14 @@
       }
     }
 
-    .icon-burger span {
+    .item-burger span {
       background-color: $header-txt-hover-color;
       &::before,
       &::after {
         background-color: $header-txt-hover-color;
       }
     }
-    .header-logo {
+    .item-logo {
       transform: translateY(($header-logo-size - 20px) * (-1));
       .svg-logo {
         transform: translateY(-30px);

@@ -1,24 +1,27 @@
 <header class="header" v-bind:class="toggleBigHeader">
-  <div class="header-top">
+  <!-- <div class="header-top">
     <p class="header-top-item">Nombre de chats sauvés: {{ nbChatAdoptes }}</p>
     <p class="header-top-item">Nombre de chats disponibles: {{ nbChatDispo }}</p>
     <p class="header-top-item">Contactez-nous: 06 66 66 66 66</p>
+  </div> -->
+  <Burger class="header-item item-burger" />
+
+  <div class="header-item item-logo" @click="goToTop">
+    <Cat class="svg svg-logo" />
+    <TiChat class="svg svg-logo-txt" />
   </div>
-  <div class="header-central">
-    <div class="header-central-item burger">
-      <Burger />
-    </div>
-    <div class="header-central-item social-media">
+
+  <div class="header-item item-social-media">
+    <p class="">CONCTACTEZ-NOUS: 06 66 66 66 66</p>
+    <div class="list-social-media">
       <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
+        <Circle />
         <Facebook class="svg svg-facebook" />
       </a>
       <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
+        <Circle />
         <Instagram class="svg svg-instagram" />
       </a>
     </div>
-  </div>
-  <div class="header-logo" @click="goToTop">
-    <Cat class="svg svg-logo" />
-    <TiChat class="svg svg-logo-txt" />
   </div>
 </header>
