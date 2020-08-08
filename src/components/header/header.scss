@@ -1,23 +1,27 @@
+$herder-resp-item-center-width: 40%;
+$herder-resp-item-sides-width: (100% - $herder-resp-item-center-width)/2;
+
 /**------------------------------------------ header -------------------------------------------------**/
 .header {
   position: fixed;
   width: 100%;
   z-index: 1;
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-wrap: nowrap;
   justify-content: space-between;
   transition: background-color $animation-duration-short ease;
 
   .header-item {
     &.item-burger {
+      width: $herder-resp-item-sides-width;
+      padding: 20px;
       z-index: 2;
     }
     &.item-logo {
-      width: 50%;
+      width: $herder-resp-item-center-width;
       position: relative;
       transition: transform $animation-duration-short ease;
-      transform: translateY(-20px);
       .svg {
         margin: auto;
         display: block;
@@ -27,6 +31,7 @@
         }
         &.svg-logo-txt {
           width: $header-logo-txt-size;
+          margin-top: $header-logo-txt-m-top;
         }
         path {
           fill: $header-txt-color;
@@ -34,24 +39,44 @@
       }
     }
     &.item-social-media {
-      width: 40%;
+      width: $herder-resp-item-sides-width;
+      padding: 5px;
+
+      p {
+        position: relative;
+        font-size: 6px;
+        color: $c-primary-more-dark;
+        text-align: right;
+
+        &.custom-underline::after {
+          content: '';
+          position: absolute;
+          top: 90%;
+          height: 1px;
+          width: 90%;
+          right: 0;
+          background-color: $c-primary-more-dark;
+        }
+      }
       .list-social-media {
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        justify-content: flex-end;
+        margin-top: 2px;
         .link {
           width: $header-social-size;
+          margin-left: 3px;
           z-index: 2;
           .svg {
+            filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+
             path {
-              fill: $header-txt-color;
+              fill: $c-primary-more-dark;
             }
             &.svg-social {
               circle {
-                fill: none;
-                stroke: $header-txt-color;
-                stroke-width: 4px;
+                fill: $header-txt-color;
               }
             }
           }
@@ -64,11 +89,6 @@
     width: 100%;
     height: $header-responsive-height;
     background-color: $header-bkg-color;
-    .svg {
-      path {
-        fill: $header-txt-hover-color;
-      }
-    }
 
     .item-burger span {
       background-color: $header-txt-hover-color;
@@ -78,7 +98,14 @@
       }
     }
     .item-logo {
-      transform: translateY(($header-logo-size - 20px) * (-1));
+      transform: translateY(
+        ($header-logo-size - 2 * $header-logo-txt-m-top - 2px) * (-1)
+      );
+      .svg {
+        path {
+          fill: $header-txt-hover-color;
+        }
+      }
       .svg-logo {
         transform: translateY(-30px);
       }
