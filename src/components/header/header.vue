@@ -5,7 +5,6 @@ import $ from "jquery";
 import Burger from "./../burger/burger.vue";
 import Cat from "./../svg/svg-cat.vue";
 import TiChat from "./../svg/svg-tiChat29.vue";
-import Circle from "./../svg/svg-circle.vue";
 import Facebook from "./../svg/svg-facebook.vue";
 import Instagram from "./../svg/svg-instagram.vue";
 import { mapGetters } from "vuex";
@@ -18,7 +17,6 @@ export default {
     Cat,
     Facebook,
     Instagram,
-    Circle,
   },
   data() {
     return {
