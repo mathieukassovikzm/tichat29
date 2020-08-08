@@ -3,24 +3,14 @@
   position: fixed;
   width: 100%;
   z-index: 1;
-
-  .svg {
-    path {
-      fill: $header-txt-color;
-    }
-  }
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  transition: background-color $animation-duration-short ease;
 
   .header-item {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    transition: background-color $animation-duration-short ease;
-
     &.item-burger {
-      width: 10%;
-      width: $header-burger-size;
-      height: $header-burger-size;
       z-index: 2;
     }
     &.item-logo {
@@ -38,6 +28,9 @@
         &.svg-logo-txt {
           width: $header-logo-txt-size;
         }
+        path {
+          fill: $header-txt-color;
+        }
       }
     }
     &.item-social-media {
@@ -45,11 +38,23 @@
       .list-social-media {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
-
+        flex-wrap: nowrap;
+        justify-content: space-between;
         .link {
           width: $header-social-size;
           z-index: 2;
+          .svg {
+            path {
+              fill: $header-txt-color;
+            }
+            &.svg-social {
+              circle {
+                fill: none;
+                stroke: $header-txt-color;
+                stroke-width: 4px;
+              }
+            }
+          }
         }
       }
     }

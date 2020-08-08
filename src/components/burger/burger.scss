@@ -1,12 +1,17 @@
 /******* Variables *******/
 $burger-anim-duration: $animation-duration !default;
 $burger-color: $header-txt-color !default;
+$burger-width: $header-burger-size !default;
+$burger-height: $header-burger-size !default;
+$burger-bar-height: 3px !default;
+$burger-bar-space: $burger-bar-height * 2.5;
+$burger-open-bar-space: $burger-bar-height * 3;
 
 .icon-burger {
   position: relative;
   margin: auto;
-  width: 50px;
-  height: 100%;
+  width: $burger-width;
+  height: $burger-height;
   cursor: pointer;
 
   transition: transform $burger-anim-duration;
@@ -17,11 +22,11 @@ $burger-color: $header-txt-color !default;
     bottom: 50%;
 
     display: block;
-    width: 25px;
-    height: 2px;
+    width: $burger-width;
+    height: $burger-bar-height;
 
     background-color: $burger-color;
-    transform: translateX(50%) translateY(-50%);
+    transform: translateY(-50%);
 
     &::before,
     &::after {
@@ -32,24 +37,24 @@ $burger-color: $header-txt-color !default;
       left: 0;
 
       display: block;
-      width: 25px;
-      height: 2px;
+      width: $burger-width;
+      height: $burger-bar-height;
 
       background-color: $burger-color;
 
-      transform: translateY(-6px);
+      transform: translateY($burger-bar-space * -1);
       transition: transform $burger-anim-duration;
     }
     &::after {
-      transform: translateY(6px);
+      transform: translateY($burger-bar-space);
     }
   }
   &:hover {
     span::before {
-      transform: translateY(-8px);
+      transform: translateY($burger-open-bar-space * -1);
     }
     span::after {
-      transform: translateY(8px);
+      transform: translateY($burger-open-bar-space);
     }
   }
 

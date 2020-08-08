@@ -12,15 +12,17 @@ $min-width-l: 850px;
  * Colors
  *******************************/
 
-$c-primary: #eeeeee;
-$c-primary-light: #64b5f6;
-$c-primary-dark: #00227b;
+$c-primary: #efedea;
+$c-primary-dark: #e2e0dd;
+$c-primary-more-dark: #978f8f;
 
-$c-secundary: #757575;
+$c-secundary: #575a5b;
 $c-secundary-light: #fafafa;
 $c-secundary-dark: #333;
 
-$c-text-light: $c-secundary-light;
+$c-third: #d5ac7f;
+
+$c-text-light: $c-primary;
 $c-text-dark: $c-secundary-dark;
 
 $c-dark-background: #e8eaf6;
@@ -30,8 +32,8 @@ $c-box-shadow: rgba(0, 0, 0, 0.9);
 /*******************************
  * General
  *******************************/
-$font-title: 'parisienne';
-$font-txt: 'alegreya';
+$font-title: 'futura';
+$font-txt: 'myriad';
 
 $base-size-font-txt-xs: rem(18);
 $base-size-font-txt-s: rem(18);
@@ -69,7 +71,7 @@ $header-txt-hover-color: $c-text-dark;
 $header-txt-responsive-size: $base-size-font-title-m;
 $header-responsive-height: 70px;
 $header-height: 65px;
-$header-burger-size: 40px;
+$header-burger-size: 30px;
 $header-social-size: 30px;
 $header-logo-size: 130px;
 $header-logo-txt-size: 150px;
