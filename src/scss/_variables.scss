@@ -23,7 +23,7 @@ $c-secundary-dark: #333;
 $c-third: #d5ac7f;
 
 $c-text-light: $c-primary;
-$c-text-dark: $c-secundary-dark;
+$c-text-dark: $c-secundary;
 
 $c-dark-background: #e8eaf6;
 
@@ -67,15 +67,15 @@ $component-title-txt-color: $c-secundary-light;
  *******************************/
 $header-bkg-color: $c-primary;
 $header-txt-color: $c-text-light;
-$header-txt-hover-color: $c-text-dark;
+$header-txt-hover-color: $c-primary-more-dark;
 $header-txt-responsive-size: $base-size-font-title-m;
-$header-responsive-height: 70px;
+$header-responsive-height: 40px;
 $header-height: 65px;
 $header-burger-size: 30px;
-$header-social-size: 30px;
+$header-social-size: 20px;
 $header-logo-size: 130px;
 $header-logo-txt-size: 150px;
-
+$header-logo-txt-m-top: 10px;
 /*******************************
  * Navigation
  *******************************/
