@@ -1,8 +1,59 @@
+/*******************************
+ * Variables Page Home 
+ *******************************/
+$page_home_title_txt_color: $c-secundary-light;
+$page_home_button_paw_size: 55px;
 /**------------------------------------------ Page Home -------------------------------------------------**/
-.section-home {
+.section__home {
   background-image: url('./../../assets/img/titles/homePic.jpg');
-  h2 {
-    font-size: 27px;
-    text-transform: uppercase;
+  .home__title {
+    position: relative;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    h2 {
+      width: 80%;
+      margin: auto;
+      color: $page_home_title_txt_color;
+      font-size: 27px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 20px;
+      .txt__italic {
+        font-style: italic;
+      }
+    }
+    p {
+      color: $page_home_title_txt_color;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      cursor: pointer;
+      .button__paw {
+        position: relative;
+        margin: 0 10px;
+        .svg__cat__paw {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          width: $page_home_button_paw_size;
+          filter: $drop-shadow;
+
+          path,
+          ellipse {
+            fill: $page_home_title_txt_color;
+          }
+        }
+        p {
+          font-style: italic;
+          text-transform: uppercase;
+        }
+      }
+    }
   }
 }

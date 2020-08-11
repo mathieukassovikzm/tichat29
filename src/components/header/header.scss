@@ -69,7 +69,7 @@ $herder-resp-item-sides-width: (100% - $herder-resp-item-center-width)/2;
           margin-left: 3px;
           z-index: 2;
           .svg {
-            filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+            filter: $drop-shadow;
 
             path {
               fill: $c-primary-more-dark;

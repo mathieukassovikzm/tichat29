@@ -1,10 +1,24 @@
-<div class="page-home">
-  <div class="section-home section-title">
-    <div class="title-centered">
-      <h2>Association de sauvetage de chats abandonnés</h2>
+<div class="page__home">
+  <div class="section__home section__title">
+    <div class="home__title">
+      <h2>
+        Association de sauvetage de
+        <span class="txt__italic">chats</span> abandonnés
+      </h2>
       <div class="buttons">
-        <!-- <a href="https://www.lilo.org/fr/ti-chat-29/" class="button">Contribuer</a>
-        <button>Adopter</button> -->
+        <router-link :to="{ name: 'NosChats'}" class="button__paw"
+          ><CatPaw />
+          <p>Adopter</p></router-link
+        >
+
+        <a
+          href="https://www.lilo.org/fr/ti-chat-29/"
+          class="button__paw"
+          target="_blank"
+        >
+          <CatPaw />
+          <p>Donner</p>
+        </a>
       </div>
     </div>
   </div>
