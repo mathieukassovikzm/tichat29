@@ -1,31 +1,31 @@
-/******* Variables *******/
-$burger-anim-duration: $animation-duration !default;
-$burger-color: $header-txt-color !default;
-$burger-width: $header-burger-size !default;
-$burger-height: $header-burger-size !default;
-$burger-bar-height: 3px !default;
-$burger-bar-space: $burger-bar-height * 2.5;
-$burger-open-bar-space: $burger-bar-height * 3;
+/******* Variables Burger *******/
+$burger-anim-duration: 0.5s !default;
+$burger-color: $c-primary !default;
+$burger-bkg-color: $c-primary !default;
+$burger-width: 50px !default;
+$burger-height: 50px !default;
+$burger-span-width: $burger-width/2 !default;
+$burger-span-height: 3px !default;
+$burger-span-space: $burger-span-height * 2.5;
+$burger-open-span-space: $burger-span-height * 3;
 
-.icon-burger {
+.menu-icon {
   position: relative;
   width: $burger-width;
   height: $burger-height;
   cursor: pointer;
 
-  transition: transform $burger-anim-duration;
-
   span {
     position: absolute;
     top: 50%;
-    bottom: 50%;
+    left: 50%;
 
     display: block;
-    width: $burger-width;
-    height: $burger-bar-height;
-
+    width: $burger-span-width;
+    height: $burger-span-height;
     background-color: $burger-color;
-    transform: translateY(-50%);
+
+    transform: translateX(-50%) translateY(-50%);
 
     &::before,
     &::after {
@@ -36,31 +36,39 @@ $burger-open-bar-space: $burger-bar-height * 3;
       left: 0;
 
       display: block;
-      width: $burger-width;
-      height: $burger-bar-height;
+      width: $burger-span-width;
+      height: $burger-span-height;
 
       background-color: $burger-color;
 
-      transform: translateY($burger-bar-space * -1);
+      transform: translateY($burger-span-space * -1);
       transition: transform $burger-anim-duration;
     }
     &::after {
-      transform: translateY($burger-bar-space);
+      transform: translateY($burger-span-space);
     }
   }
   &:hover {
     span::before {
-      transform: translateY($burger-open-bar-space * -1);
+      transform: translateY($burger-open-span-space * -1);
     }
     span::after {
-      transform: translateY($burger-open-bar-space);
+      transform: translateY($burger-open-span-space);
+    }
+  }
+}
+
+.menu-icon-cross {
+  transition: transform $burger-anim-duration;
+  span {
+    transition: background $burger-anim-duration,
+      transform $burger-anim-duration;
+    &::before,
+    &::after {
+      transform-origin: 50% 50%;
     }
   }
 
-  span::before,
-  span::after {
-    transform-origin: 50% 50%;
-  }
   &.is-opened {
     transform: rotate(180deg);
     span {
