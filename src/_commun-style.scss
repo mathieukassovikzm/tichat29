@@ -21,10 +21,10 @@ a {
   cursor: pointer;
 }
 html,
-body {
-  overflow-x: hidden;
+body,
+.app {
   width: 100%;
-  background-color: $c-primary;
+  height: 100%;
 }
 
 body {

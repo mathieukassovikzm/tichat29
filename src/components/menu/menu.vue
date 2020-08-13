@@ -1,11 +1,23 @@
-<template src="./navigation.html"></template>
+<template src="./menu.html"></template>
 
 <script>
+import Burger from "@/components/burger/burger.vue";
+import Cat from "./../svg/svg-cat.vue";
+import TiChat from "./../svg/svg-tiChat29.vue";
+import Facebook from "./../svg/svg-facebook.vue";
+import Instagram from "./../svg/svg-instagram.vue";
 import { mapGetters, mapActions } from "vuex";
 import router from "./../../router";
 
 export default {
-  name: "Naviagion",
+  name: "menuResp",
+  components: {
+    Burger,
+    TiChat,
+    Cat,
+    Facebook,
+    Instagram,
+  },
   data() {
     return {
       navItems: [
@@ -45,4 +57,4 @@ export default {
 };
 </script>
 
-<style lang="scss" src="./navigation.scss"></style>
+<style lang="scss" src="./menu.scss"></style>

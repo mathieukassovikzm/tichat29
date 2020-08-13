@@ -1,11 +1,13 @@
-<div id="app" class="app">
-  <Navigation />
-  <div id="site-pusher" class="site-pusher" v-bind:class="isOpen">
-    <Header />
-    <div id="site-content" class="site-content">
-      <router-view></router-view>
-      <Footer />
+<div id="app" class="app" :class="isOpen">
+  <div class="site-container">
+    <MenuResp />
+    <div class="site-pusher push-left">
+      <div class="site-content">
+        <div class="container">
+          <router-view></router-view>
+        </div>
+      </div>
+      <div class="site-cache" @click="closeNav"></div>
     </div>
-    <div class="site-cache" @click="closeNav"></div>
   </div>
 </div>

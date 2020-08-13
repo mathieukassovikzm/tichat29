@@ -2,50 +2,51 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
-import Header from "./components/header/header.vue";
-import Navigation from "./components/navigation/navigation.vue";
+import MenuResp from "./components/menu/menu.vue";
+
+// import Header from "./components/header/header.vue";
+// import Navigation from "./components/navigation/navigation.vue";
 import Footer from "./components/footer/footer.vue";
 
 export default {
   name: "app",
   components: {
-    Header,
-    Navigation,
-    Footer
+    MenuResp,
+    Footer,
   },
   computed: {
     ...mapGetters("mainStore", {
-      getNavOpenState: "getNavOpenStateInStore"
+      getNavOpenState: "getNavOpenStateInStore",
     }),
 
     isOpen() {
       return this.getNavOpenState === true ? "is-opened" : "is-closed";
-    }
+    },
   },
   methods: {
     ...mapActions("mainStore", {
       toggleNavOpen: "toggleNavOpenInStore",
       setToFalseNavOpen: "setToFalseNavOpenInStore",
-      setToTrueNavOpen: "setToTrueNavOpenInStore"
+      setToTrueNavOpen: "setToTrueNavOpenInStore",
     }),
     ...mapActions("chatsStore", {
-      fetchInfosChats: "fetchInfosChatsInStore"
+      fetchInfosChats: "fetchInfosChatsInStore",
     }),
     ...mapActions("articlesStore", {
-      fetchInfosArticles: "fetchInfosArticlesInStore"
+      fetchInfosArticles: "fetchInfosArticlesInStore",
     }),
     ...mapActions("eventsStore", {
-      fetchInfosEvents: "fetchInfosEventsInStore"
+      fetchInfosEvents: "fetchInfosEventsInStore",
     }),
     closeNav() {
       this.setToFalseNavOpen();
-    }
+    },
   },
   created() {
     this.fetchInfosChats();
     this.fetchInfosArticles();
     this.fetchInfosEvents();
-  }
+  },
 };
 </script>
 
