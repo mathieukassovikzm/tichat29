@@ -1,13 +1,13 @@
 /******* Variables Burger *******/
 $burger-anim-duration: 0.5s !default;
-$burger-color: $c-primary !default;
-$burger-bkg-color: $c-primary !default;
+$burger-color: #333 !default;
+$burger-bkg-color: #efedea !default;
 $burger-width: 50px !default;
 $burger-height: 50px !default;
 $burger-span-width: $burger-width/2 !default;
 $burger-span-height: 3px !default;
-$burger-span-space: $burger-span-height * 2.5;
-$burger-open-span-space: $burger-span-height * 3;
+$burger-span-space: $burger-span-height * 2.5 !default;
+$burger-open-span-space: $burger-span-height * 3 !default;
 
 .menu-icon {
   position: relative;

@@ -1,22 +1,24 @@
-/*--------------------------*\
-      VARIABLES
-\*--------------------------*/
-$menu-width: 250px !default;
-$header-height: 80px;
-$header-bkg-color: #2e7d32;
-$header-link-color: #c6ff00;
+/*******************************
+** Variables
+********************************/
+$site-cache-color: rgba(0, 0, 0, 0.6) !default;
+$site-content-bkg-color: #efedea !default;
+$menu-width: 80% !default;
+$menu-height: 66px !default;
+$menu-bkg-color: #c62828 !default;
+$menu-txt-color: #fafafa !default;
+$menu-animation-duration: 0.3s !default;
 
-/*--------------------------*\
-      BASE
-\*--------------------------*/
+/*******************************
+** Bases
+********************************/
 .site-content {
   padding-top: $header-height;
 }
 
-/*--------------------------*\
-      HEADER
-\*--------------------------*/
-
+/*******************************
+** Menu
+********************************/
 .header {
   position: fixed;
   left: 0;
@@ -73,10 +75,9 @@ $header-link-color: #c6ff00;
   }
 }
 
-/*--------------------------*\
-      RESPONSIVE
-\*--------------------------*/
-
+/*******************************
+ * Menu Responsive
+ *******************************/
 @media only screen and (max-width: $min-width-m) {
   .site-pusher,
   .site-container {
