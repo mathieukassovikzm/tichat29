@@ -100,6 +100,17 @@ $header-link-color: #c6ff00;
     -webkit-overflow-scrolling: touch;
     background-color: white;
   }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .site-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .site-content {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
   .header {
     position: static;
     .header-container {
