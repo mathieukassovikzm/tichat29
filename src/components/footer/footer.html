@@ -2,21 +2,32 @@
   <div class="footer-item item-logo">
     <Cat class="svg-cat" />
     <TiChat class="svg-tichat" />
-    <ul class="social-icons">
-      <li>
-        <a href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
-          <SvgFacebook />
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/go2sport29/" target="_blank">
-          <SvgInstagram />
-        </a>
-      </li>
-    </ul>
   </div>
+
+  <nav class="footer-item  item-navigation">
+    <router-link class="menu-item" :to="{ name: 'PageHome'}">Home</router-link>
+    <router-link class="menu-item" :to="{ name: 'PageContact'}"
+      >Contact</router-link
+    >
+  </nav>
+
+  <ul class="footer-item item-social-icons">
+    <li>
+      <a
+        href="https://www.facebook.com/Ti-Chat-29-198937427142014/"
+        target="_blank"
+      >
+        <SvgFacebook />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/go2sport29/" target="_blank">
+        <SvgInstagram />
+      </a>
+    </li>
+  </ul>
+
   <div class="footer-item item-contact">
-    <h3>Contactez-nous</h3>
     <ul class="contact-infos">
       <li class="contact-info phone">
         <SvgPhone />
@@ -34,7 +45,12 @@
         </div>
       </li>
     </ul>
-    <p class="copyright">© 2020 Mathéo</p>
-
+  </div>
+  <div class="footer-item item-copyright">
+    <p>Copyright © 2020 - Tichat29</p>
+    <p class="splitter">|</p>
+    <p>Design: Delgado Ericka</p>
+    <p class="splitter">|</p>
+    <p>Développement: Le Bellec Mathieu</p>
   </div>
 </footer>

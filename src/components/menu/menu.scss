@@ -13,21 +13,22 @@ $menu-animation-duration: 0.3s !default;
 ** Bases
 ********************************/
 .site-content {
-  padding-top: $header-height;
+  padding-top: $menu-height;
 }
 
 /*******************************
 ** Menu
 ********************************/
-.header {
+.menu {
   position: fixed;
   left: 0;
   right: 0;
-  height: $header-height;
-  color: $header-link-color;
-  background-color: $header-bkg-color;
+  height: $menu-height;
+  color: $menu-txt-color;
+  background-color: $menu-bkg-color;
   z-index: 10;
-  .header-container {
+  .menu-container {
+    height: 100%;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -36,38 +37,41 @@ $menu-animation-duration: 0.3s !default;
   .menu-icon {
     display: none;
   }
-  .menu {
+  .navigation {
     a {
       font-size: 24px;
       padding: 0 10px;
     }
     a:hover {
-      color: $header-link-color;
+      color: $menu-txt-color;
       text-decoration: none;
     }
     a:active {
-      color: $header-link-color;
+      color: $menu-txt-color;
     }
   }
   .list-social-media {
+    position: absolute;
+    right: 5px;
+    top: 5px;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     justify-content: flex-end;
     .link {
-      height: $header-social-size;
-      width: $header-social-size;
       margin-left: 3px;
       z-index: 2;
       .svg {
+        height: $menu-social-size;
+        width: $menu-social-size;
         filter: $drop-shadow;
 
         path {
-          fill: $c-primary-more-dark;
+          fill: $menu-txt-color;
         }
         &.svg-social {
           circle {
-            fill: $header-txt-color;
+            fill: $menu-social-bkg-color;
           }
         }
       }
@@ -95,11 +99,11 @@ $menu-animation-duration: 0.3s !default;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: $menu-height;
     overflow-y: scroll;
     padding-top: 0;
     -webkit-overflow-scrolling: touch;
-    background-color: white;
+    background-color: $site-content-bkg-color;
   }
   /* Hide scrollbar for Chrome, Safari and Opera */
   .site-content::-webkit-scrollbar {
@@ -112,13 +116,13 @@ $menu-animation-duration: 0.3s !default;
     scrollbar-width: none; /* Firefox */
   }
 
-  .header {
+  .menu {
     position: static;
-    .header-container {
+    .menu-container {
       .menu-icon {
         display: block;
       }
-      .menu {
+      .navigation {
         position: absolute;
         &.push-left {
           left: 0px;
@@ -126,15 +130,15 @@ $menu-animation-duration: 0.3s !default;
         &.push-right {
           right: 0px;
         }
-        top: $header-height;
+        top: $menu-height;
         bottom: 0px;
         width: $menu-width;
-        background-color: darken($header-bkg-color, 5);
+        background-color: darken($menu-bkg-color, 5);
 
         a {
           display: block;
           text-align: center;
-          border-bottom: 1px solid $header-bkg-color;
+          border-bottom: 1px solid $menu-bkg-color;
         }
       }
     }
@@ -153,7 +157,7 @@ $menu-animation-duration: 0.3s !default;
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: $site-cache-color;
     }
   }
 }

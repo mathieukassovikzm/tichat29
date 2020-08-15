@@ -2,10 +2,11 @@
 
 <script>
 import Burger from "@/components/burger/burger.vue";
-import Cat from "./../svg/svg-cat.vue";
-import TiChat from "./../svg/svg-tiChat29.vue";
-import Facebook from "./../svg/svg-facebook.vue";
-import Instagram from "./../svg/svg-instagram.vue";
+import SvgCat from "./../svg/svg-cat.vue";
+import SvgTiChat from "./../svg/svg-tiChat29.vue";
+import SvgPhone from "./../svg/svg-phone.vue";
+import SvgFacebook from "./../svg/svg-facebook.vue";
+import SvgInstagram from "./../svg/svg-instagram.vue";
 import { mapGetters, mapActions } from "vuex";
 import router from "./../../router";
 
@@ -13,10 +14,11 @@ export default {
   name: "menuResp",
   components: {
     Burger,
-    TiChat,
-    Cat,
-    Facebook,
-    Instagram,
+    SvgTiChat,
+    SvgCat,
+    SvgPhone,
+    SvgFacebook,
+    SvgInstagram,
   },
   data() {
     return {

@@ -9,6 +9,7 @@ import SvgAddress from "@/components/svg/svg-address";
 import SvgFacebook from "@/components/svg/svg-facebook";
 import SvgInstagram from "@/components/svg/svg-instagram";
 export default {
+  name: "footer-resp",
   components: {
     SvgPhone,
     SvgEmail,
@@ -16,8 +17,8 @@ export default {
     Cat,
     SvgFacebook,
     SvgInstagram,
-    TiChat
-  }
+    TiChat,
+  },
 };
 </script>
 

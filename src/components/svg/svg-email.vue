@@ -1,5 +1,5 @@
 <template>
-  <svg class="icon icon-svg contact-logo" viewBox="0 0 283.46 283.46">
+  <svg class="svg svg-contact svg-email" viewBox="0 0 283.46 283.46">
     <path
       class="cls-1"
       d="M249.45,206.11Q228.14,188,206.82,170l-29.63-25.18-2.14-1.84,74.4-64.74Z"

@@ -11,10 +11,9 @@ $min-width-l: 850px;
 /*******************************
 ** Colors
 ********************************/
-
-$c-primary: #efedea;
-$c-primary-dark: #e2e0dd;
-$c-primary-more-dark: #978f8f;
+$c-primary: #e2e0dd;
+$c-primary-light: #efedea;
+$c-primary-dark: #978f8f;
 
 $c-secundary: #575a5b;
 $c-secundary-light: #fafafa;
@@ -28,65 +27,28 @@ $c-text-dark: $c-secundary;
 $c-dark-background: #e8eaf6;
 
 $c-box-shadow: rgba(0, 0, 0, 0.9);
-$drop-shadow: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+
 /*******************************
-** General
+** Fonts
 ********************************/
 $font-title: 'futura';
 $font-txt: 'myriad';
 
-$base-size-font-txt-xs: rem(18);
 $base-size-font-txt-s: rem(18);
 $base-size-font-txt-m: rem(20);
 $base-size-font-txt-l: rem(24);
-$base-size-font-txt-xl: rem(26);
-$base-size-font-txt-xxl: rem(30);
 
 $base-size-font-title-s: rem(16);
 $base-size-font-title-m: rem(22);
 $base-size-font-title-l: rem(28);
-$base-size-font-title-xl: rem(30);
-$base-size-font-title-xxl: rem(40);
-$base-size-font-title-xxxl: rem(55);
-
-$section-padding-tb: 50px;
-$section-padding-lr: 10px;
-$section-container-padding-tb: 10px;
-$section-container-padding-lr: 10px;
-
-$margin-bottom-h1: 20px;
-$margin-bottom-h2: 15px;
-$margin-bottom-h3: 10px;
-
-$svg-media-size: 40px;
-
-$component-title-txt-color: $c-secundary-light;
-
-/*******************************
-** Header
-********************************/
-$header-bkg-color: $c-primary;
-$header-txt-color: $c-text-light;
-$header-txt-hover-color: $c-primary-more-dark;
-$header-txt-responsive-size: $base-size-font-title-m;
-$header-responsive-height: 40px;
-$header-height: 65px;
-$header-burger-size: 30px;
-$header-social-size: 20px;
-$header-logo-size: 130px;
-$header-logo-txt-size: 150px;
-$header-logo-txt-m-top: 10px;
-
-/*******************************
-** Footer
-********************************/
-$footer-txt-color: $c-secundary-light;
-$footer-padding-t: $section-padding-tb;
-$footer-img-width: 250px;
 
 /*******************************
 ** Import
 ********************************/
+@import './variables/v-globals';
+
 @import './variables/v-burger';
 @import './variables/v-carousel';
 @import './variables/v-lightbox';
+@import './variables/v-menu';
+@import './variables/v-footer';

@@ -3,16 +3,13 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 import MenuResp from "./components/menu/menu.vue";
-
-// import Header from "./components/header/header.vue";
-// import Navigation from "./components/navigation/navigation.vue";
-import Footer from "./components/footer/footer.vue";
+import FooterResp from "./components/footer/footer.vue";
 
 export default {
   name: "app",
   components: {
     MenuResp,
-    Footer,
+    FooterResp,
   },
   computed: {
     ...mapGetters("mainStore", {
