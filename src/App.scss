@@ -106,6 +106,7 @@ button,
 
 section {
   margin: 0;
+  width: $section-resp-width;
   padding-top: $section-padding-tb;
   padding-bottom: $section-padding-tb;
   padding-left: $section-padding-lr;
@@ -115,7 +116,7 @@ section {
 @media only screen and (min-width: $min-width-m) {
   section {
     margin: auto;
-    width: 70%;
+    width: $section-width;
   }
 }
 
