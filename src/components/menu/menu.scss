@@ -41,14 +41,14 @@ $menu-animation-duration: 0.3s !default;
     }
     &.router-link-active {
       &::after {
-        width: 90%;
+        width: 70%;
         transition: $animation-duration-short ease all;
       }
     }
   }
 
   &:hover .menu-item-link::after {
-    width: 70%;
+    width: 80%;
     transition: $animation-duration-short ease all;
   }
 }
@@ -94,10 +94,20 @@ $menu-animation-duration: 0.3s !default;
 
         path {
           fill: $menu-txt-color;
+          transition: fill $animation-duration-short ease;
         }
         &.svg-social {
           circle {
             fill: $menu-social-bkg-color;
+            transition: fill $animation-duration-short ease;
+          }
+        }
+        &:hover {
+          circle {
+            fill: $footer-social-color;
+          }
+          path {
+            fill: $footer-social-bkg-color;
           }
         }
       }

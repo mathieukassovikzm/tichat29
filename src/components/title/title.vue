@@ -12,7 +12,7 @@ export default {};
 
 <style lang="scss">
 .title-h1 {
-  padding: $titles-padding-tb 0;
+  padding: 0 0 $titles-padding-tb 0;
   h1 {
     position: relative;
     display: inline-block;

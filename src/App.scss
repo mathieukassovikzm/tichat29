@@ -33,6 +33,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.05em;
   color: $c-text-dark;
+  background-color: $site-bkg-color;
 }
 ul {
   list-style-type: none;
@@ -105,9 +106,8 @@ button,
 
 .section {
   background-image: url('./assets/img/backgroundTichat29.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background-repeat: round;
+  background-size: contain;
   .section-container {
     margin: 0;
     width: $section-resp-width;

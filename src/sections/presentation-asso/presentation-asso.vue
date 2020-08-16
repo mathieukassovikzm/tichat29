@@ -9,17 +9,24 @@
         abandonnés. L'objectif étant de recueillir, identifier, stériliser et
         placer les chats abandonnés.
       </p>
+    </div>
+    <SectionBkgImg class="img-obj-asso">
+      <div class="section-bkg-img img-obj-asso">
+        <div class="section-container">
+          <TitleH1 class="bkg-light">Objectifs de l'association</TitleH1>
+          <p>
+            Les chats sociables sont recueillis par notre association pour être
+            proposés à l’nos-chats (ils sont identifiés, vaccinés, stérilisés ou
+            castrés). Afin de remédier à la prolifération des chats errants qui ne
+            sont pas sociables, nous souhaitons les faire stériliser ou castrer par un
+            vétérinaire, puis les remettre sur site où ils sont nourris et disposent
+            d’un abri que nous confectionnons.
+          </p>
+        </div>
+      </div>
+    </SectionBkgImg>
 
-      <TitleH1 class="bkg-light">Objectifs de l'association</TitleH1>
-      <p>
-        Les chats sociables sont recueillis par notre association pour être
-        proposés à l’nos-chats (ils sont identifiés, vaccinés, stérilisés ou
-        castrés). Afin de remédier à la prolifération des chats errants qui ne
-        sont pas sociables, nous souhaitons les faire stériliser ou castrer par un
-        vétérinaire, puis les remettre sur site où ils sont nourris et disposent
-        d’un abri que nous confectionnons.
-      </p>
-
+    <div class="section-container">
       <TitleH1 class="bkg-light">Familles d'accueil</TitleH1>
       <p>
         Nous sommes à la recherche de familles d'accueil afin de mettre nos petits
@@ -29,23 +36,29 @@
         par un vétérinaire, déparasités interne et externe, identifiés, stérilisés
         et primo vaccinés.
       </p>
-      <p>
-        Ti Chat 29 fournit les croquettes et prend en charge
-        les frais vétérinaires. Actuellement les demandes de prise en charge
-        affluent mais nous manquons cruellement de familles d'accueil. Etre
-        famille d'accueil c'est de l'amour et le bonheur de participer à un
-        sauvetage : n'hésitez pas à en parler autour de vous ! Nous avons besoin
-        de votre aide pour donner une seconde chance à tous ces chats abandonnés.
-      </p>
     </div>
+    <SectionBkgImg class="img-fam-acc">
+      <div class="section-container">
+        <p>
+          Ti Chat 29 fournit les croquettes et prend en charge
+          les frais vétérinaires. Actuellement les demandes de prise en charge
+          affluent mais nous manquons cruellement de familles d'accueil. Etre
+          famille d'accueil c'est de l'amour et le bonheur de participer à un
+          sauvetage : n'hésitez pas à en parler autour de vous ! Nous avons besoin
+          de votre aide pour donner une seconde chance à tous ces chats abandonnés.
+        </p>
+      </div>
+    </SectionBkgImg>
   </section>
 </template>
 
 <script>
 import TitleH1 from "@/components/title/title.vue";
+import SectionBkgImg from "@/components/section-bkg-img/section-bkg-img.vue";
 export default {
   components: {
     TitleH1,
+    SectionBkgImg,
   },
 };
 </script>

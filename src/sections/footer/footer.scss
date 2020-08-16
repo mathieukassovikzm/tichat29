@@ -113,6 +113,9 @@
       .splitter {
         display: none;
       }
+      p {
+        font-size: $footer-copyright-font-size;
+      }
     }
   }
 }
