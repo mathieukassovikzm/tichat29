@@ -119,12 +119,9 @@
         .contact-infos {
           display: flex;
           flex-wrap: wrap;
-          justify-content: center;
-          .contact-info {
-            &.phone,
-            &.email {
-              width: 50%;
-            }
+          justify-content: space-evenly;
+          .contact-info.address {
+            width: 100%;
           }
         }
       }
