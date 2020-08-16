@@ -1,4 +1,4 @@
-$animation-duration-short: 0.2s;
+$animation-duration-short: 0.3s;
 $animation-duration: 0.5s;
 
 /*******************************
@@ -40,7 +40,7 @@ $base-size-font-txt-l: rem(24);
 
 $base-size-font-title-s: rem(16);
 $base-size-font-title-m: rem(22);
-$base-size-font-title-l: rem(28);
+$base-size-font-title-l: rem(32);
 
 /*******************************
 ** Import
@@ -52,3 +52,4 @@ $base-size-font-title-l: rem(28);
 @import './variables/v-lightbox';
 @import './variables/v-menu';
 @import './variables/v-footer';
+@import './variables/v-titles';

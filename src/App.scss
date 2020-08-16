@@ -32,6 +32,7 @@ body {
   font-family: $font-txt, sans-serif;
   line-height: 1.5;
   letter-spacing: 0.05em;
+  color: $c-text-dark;
 }
 ul {
   list-style-type: none;
@@ -53,9 +54,7 @@ h3,
 h4 {
   font-family: $font-title, sans-serif;
 }
-// h1 {
 
-// }
 // h2 {
 
 // }
@@ -104,19 +103,27 @@ button,
   }
 }
 
-section {
-  margin: 0;
-  width: $section-resp-width;
-  padding-top: $section-padding-tb;
-  padding-bottom: $section-padding-tb;
-  padding-left: $section-padding-lr;
-  padding-right: $section-padding-lr;
+.section {
+  background-image: url('./assets/img/backgroundTichat29.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  .section-container {
+    margin: 0;
+    width: $section-resp-width;
+    padding-top: $section-padding-tb;
+    padding-bottom: $section-padding-tb;
+    padding-left: $section-padding-lr;
+    padding-right: $section-padding-lr;
+  }
 }
 
 @media only screen and (min-width: $min-width-m) {
-  section {
-    margin: auto;
-    width: $section-width;
+  .section {
+    .section-container {
+      margin: auto;
+      width: $section-width;
+    }
   }
 }
 

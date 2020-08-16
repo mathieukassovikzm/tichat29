@@ -1,0 +1,12 @@
+<section class="section">
+  <div class="section-container">
+    <h1>Evenements</h1>
+    <div class="event" v-for="event in listEvents">
+      <h2>{{ event.titre }}</h2>
+      <p>{{ event.date }}</p>
+      <p>{{ event.lieu }}</p>
+      <p>{{ event.description }}</p>
+      <p>{{ event.photo }}</p>
+    </div>
+  </div>
+</section>

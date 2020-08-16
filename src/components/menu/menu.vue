@@ -2,11 +2,11 @@
 
 <script>
 import Burger from "@/components/burger/burger.vue";
-import SvgCat from "./../svg/svg-cat.vue";
-import SvgTiChat from "./../svg/svg-tiChat29.vue";
-import SvgPhone from "./../svg/svg-phone.vue";
-import SvgFacebook from "./../svg/svg-facebook.vue";
-import SvgInstagram from "./../svg/svg-instagram.vue";
+import SvgCat from "@/components/svg/svg-cat.vue";
+import SvgTiChat from "@/components/svg/svg-tiChat29.vue";
+import SvgPhone from "@/components/svg/svg-phone.vue";
+import SvgFacebook from "@/components/svg/svg-facebook.vue";
+import SvgInstagram from "@/components/svg/svg-instagram.vue";
 import { mapGetters, mapActions } from "vuex";
 import router from "./../../router";
 

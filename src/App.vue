@@ -3,7 +3,7 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 import MenuResp from "./components/menu/menu.vue";
-import FooterResp from "./components/footer/footer.vue";
+import FooterResp from "./sections/footer/footer.vue";
 
 export default {
   name: "app",

@@ -29,21 +29,34 @@
       <SvgTiChat />
     </div>
     <nav class="navigation push-left">
-      <router-link class="menu-item" :to="{ name: 'PageHome'}"
-        >Home</router-link
-      >
-      <router-link class="menu-item" :to="{ name: 'NosChats'}"
-        >Nos chats</router-link
-      >
-      <router-link class="menu-item" :to="{ name: 'PageActualitees'}"
-        >Actualitées</router-link
-      >
-      <router-link class="menu-item" :to="{ name: 'PageFamilleDaccueil'}"
-        >Devenir Famille d'acceuil</router-link
-      >
-      <router-link class="menu-item" :to="{ name: 'PageContact'}"
-        >Contact</router-link
-      >
+      <div class="menu-item">
+        <router-link class="menu-item-link" :to="{ name: 'PageHome'}"
+          >Home</router-link
+        >
+      </div>
+
+      <div class="menu-item">
+        <router-link class="menu-item-link" :to="{ name: 'NosChats'}"
+          >Nos chats</router-link
+        >
+      </div>
+
+      <div class="menu-item">
+        <router-link class="menu-item-link" :to="{ name: 'PageActualitees'}"
+          >Actualitées</router-link
+        >
+      </div>
+
+      <div class="menu-item">
+        <router-link class="menu-item-link" :to="{ name: 'PageFamilleDaccueil'}"
+          >Devenir Famille d'acceuil</router-link
+        >
+      </div>
+      <div class="menu-item">
+        <router-link class="menu-item-link" :to="{ name: 'PageContact'}"
+          >Contact</router-link
+        >
+      </div>
     </nav>
   </div>
 </header>

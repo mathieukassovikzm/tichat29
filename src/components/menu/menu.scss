@@ -19,6 +19,39 @@ $menu-animation-duration: 0.3s !default;
 /*******************************
 ** Menu
 ********************************/
+.menu-item {
+  text-transform: uppercase;
+  .menu-item-link {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0 10px;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0%;
+      height: $menu-item-link-height !important;
+      width: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $menu-txt-color;
+      transition: 0.4s ease-out all 0.1s;
+    }
+    &.router-link-active {
+      &::after {
+        width: 90%;
+        transition: $animation-duration-short ease all;
+      }
+    }
+  }
+
+  &:hover .menu-item-link::after {
+    width: 70%;
+    transition: $animation-duration-short ease all;
+  }
+}
 .menu {
   position: fixed;
   left: 0;
@@ -38,17 +71,10 @@ $menu-animation-duration: 0.3s !default;
     display: none;
   }
   .navigation {
-    a {
-      font-size: 24px;
-      padding: 0 10px;
-    }
-    a:hover {
-      color: $menu-txt-color;
-      text-decoration: none;
-    }
-    a:active {
-      color: $menu-txt-color;
-    }
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
   }
   .list-social-media {
     position: absolute;

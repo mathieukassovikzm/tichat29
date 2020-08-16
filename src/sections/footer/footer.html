@@ -1,18 +1,24 @@
 <footer class="footer">
-  <section class="section-footer">
+  <div class="section-container">
     <div class="footer-item item-logo">
       <Cat class="svg-cat" />
       <TiChat class="svg-tichat" />
     </div>
 
     <nav class="footer-item item-navigation">
-      <router-link class="menu-item" :to="{ name: 'PageHome'}"
-        >Home</router-link
-      >
-      <a class="menu-item" href="#">About US</a>
-      <router-link class="menu-item" :to="{ name: 'PageContact'}"
-        >Contact</router-link
-      >
+      <div class="menu-item">
+        <router-link class="menu-item-link" :to="{ name: 'PageHome'}"
+          >Home</router-link
+        >
+      </div>
+      <div class="menu-item">
+        <a class="menu-item-link" href="#">About Us</a>
+      </div>
+      <div class="menu-item">
+        <router-link class="menu-item-link" :to="{ name: 'PageContact'}"
+          >Contact</router-link
+        >
+      </div>
     </nav>
 
     <ul class="footer-item item-social-icons">
@@ -58,5 +64,5 @@
       <p class="splitter">|</p>
       <p>Développement: Le Bellec Mathieu</p>
     </div>
-  </section>
+  </div>
 </footer>

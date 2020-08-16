@@ -1,0 +1,60 @@
+<template >
+  <section class="section s-presentation-asso">
+    <div class="section-container">
+      <div class="title-h1">
+        <TitleH1 class="bkg-light">TiChat29</TitleH1>
+      </div>
+      <p>
+        L'association Ti Chat 29 a été créée afin de venir en aide aux chats
+        abandonnés. L'objectif étant de recueillir, identifier, stériliser et
+        placer les chats abandonnés.
+      </p>
+
+      <TitleH1 class="bkg-light">Objectifs de l'association</TitleH1>
+      <p>
+        Les chats sociables sont recueillis par notre association pour être
+        proposés à l’nos-chats (ils sont identifiés, vaccinés, stérilisés ou
+        castrés). Afin de remédier à la prolifération des chats errants qui ne
+        sont pas sociables, nous souhaitons les faire stériliser ou castrer par un
+        vétérinaire, puis les remettre sur site où ils sont nourris et disposent
+        d’un abri que nous confectionnons.
+      </p>
+
+      <TitleH1 class="bkg-light">Familles d'accueil</TitleH1>
+      <p>
+        Nous sommes à la recherche de familles d'accueil afin de mettre nos petits
+        protégés à l'abri le temps de leur nos-chats. Les chats sont mis en
+        quarantaine dans un premier temps, soit dans la famille d'accueil ou soit
+        dans une famille d'accueil prévue pour les quarantaines. Ils seront vus
+        par un vétérinaire, déparasités interne et externe, identifiés, stérilisés
+        et primo vaccinés.
+      </p>
+      <p>
+        Ti Chat 29 fournit les croquettes et prend en charge
+        les frais vétérinaires. Actuellement les demandes de prise en charge
+        affluent mais nous manquons cruellement de familles d'accueil. Etre
+        famille d'accueil c'est de l'amour et le bonheur de participer à un
+        sauvetage : n'hésitez pas à en parler autour de vous ! Nous avons besoin
+        de votre aide pour donner une seconde chance à tous ces chats abandonnés.
+      </p>
+    </div>
+  </section>
+</template>
+
+<script>
+import TitleH1 from "@/components/title/title.vue";
+export default {
+  components: {
+    TitleH1,
+  },
+};
+</script>
+
+<style lang="scss" >
+.s-presentation-asso {
+  p {
+    text-align: center;
+    color: $c-primary-dark;
+  }
+}
+</style>
