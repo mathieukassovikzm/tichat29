@@ -5,6 +5,7 @@ $page_home_title_txt_color: $c-secundary-light;
 $page_home_button_paw_size: 55px;
 /**------------------------------------------ Page Home -------------------------------------------------**/
 .section__home {
+  position: relative;
   background-image: url('./../../assets/img/pageHome/homePic.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,7 +13,7 @@ $page_home_button_paw_size: 55px;
   height: 95vh;
   .home__title {
     position: relative;
-    top: 70%;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     h2 {
@@ -59,5 +60,11 @@ $page_home_button_paw_size: 55px;
         }
       }
     }
+  }
+  .btn-savoir-plus {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
   }
 }

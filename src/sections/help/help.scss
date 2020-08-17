@@ -6,7 +6,8 @@
     .help {
       position: relative;
       width: 100%;
-      padding: $s-help-div-padding;
+      padding: $s-help-div-padding $s-help-div-padding-tb-resp;
+      margin: $s-help-div-margin-tb 0;
       .logo-paw {
         position: relative;
         margin: auto;
@@ -79,6 +80,7 @@
       margin: $s-help-div-offset 0;
       .help {
         width: 25%;
+        padding: $s-help-div-padding;
         &.offset-top {
           bottom: $s-help-div-offset;
         }
