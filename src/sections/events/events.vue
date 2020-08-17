@@ -1,9 +1,7 @@
 <template >
   <section class="section">
     <div class="section-container">
-      <div class="section-container">
-        <TitleH1 class="bkg-light">Evenements</TitleH1>
-      </div>
+      <TitleH1 class="bkg-light">Evenements</TitleH1>
       <div class="event" v-for="event in listEvents" v-bind:key="event.titre">
         <h2>{{ event.titre }}</h2>
         <p>{{ event.date }}</p>

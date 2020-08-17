@@ -74,20 +74,22 @@ button,
 .button {
   padding: 10px;
 
-  background-color: $c-primary;
-  color: $c-secundary-dark;
+  background-color: transparent;
+  color: $buttons-color;
 
-  border: solid 2px $c-primary;
-  border-radius: 5px;
+  border: solid $buttons-border-width $buttons-color;
+  border-radius: $buttons-border-radius;
 
-  transition: color 0.2s ease;
-  transition: background-color 0.2s ease;
+  transition: color $buttons-anim-duration ease;
+  transition: background-color $buttons-anim-duration ease;
 
   cursor: pointer;
 
   text-align: center;
-  font-family: $font-title, sans-serif;
-  font-size: $base-size-font-title-m;
+  text-transform: uppercase;
+  font-family: $font-txt, sans-serif;
+  font-size: $base-size-font-title-s;
+  font-style: italic;
 
   @media only screen and (min-width: $min-width-s) {
   }
@@ -95,8 +97,8 @@ button,
   }
 
   &:hover {
-    background-color: transparent;
-    color: $c-primary;
+    background-color: $buttons-color;
+    color: $buttons-color-hover;
   }
 
   &:focus {
