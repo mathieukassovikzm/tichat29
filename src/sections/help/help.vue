@@ -7,6 +7,8 @@ import SvgChild from "@/components/svg/svg-child";
 import SvgHands from "@/components/svg/svg-hands";
 import SvgDonate from "@/components/svg/svg-donate";
 import SvgCatPaw from "@/components/svg/svg-cat-paw";
+import { mapGetters } from "vuex";
+
 export default {
   components: {
     TitleH1,
@@ -15,6 +17,18 @@ export default {
     SvgHands,
     SvgDonate,
     SvgCatPaw,
+  },
+  computed: {
+    ...mapGetters("chatsStore", {
+      getNbChatAdoptes: "getNbChatAdoptesInStore",
+      getNbChatsDisponibles: "getNbChatsDisponiblesInStore",
+    }),
+    NbCatSaved() {
+      return this.getNbChatAdoptes;
+    },
+    NbCatAvailable() {
+      return this.getNbChatsDisponibles;
+    },
   },
 };
 </script>

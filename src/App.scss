@@ -101,12 +101,13 @@ button,
     }
   }
   &.btn-v2 {
-    background-color: transparent;
+    background-color: $buttons-v2-color-hover;
     color: $buttons-v2-color;
     border: solid $buttons-border-width $buttons-v2-color;
     &:hover {
       background-color: $buttons-v2-color;
       color: $buttons-v2-color-hover;
+      border: solid $buttons-border-width $buttons-v2-color-hover;
     }
   }
   &.btn-v3 {

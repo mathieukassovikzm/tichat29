@@ -61,6 +61,14 @@
       }
     }
   }
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .btn {
+      margin: $s-help-button-nb-margin-tb 0;
+    }
+  }
 }
 
 @media only screen and (min-width: $min-width-m) {
@@ -68,6 +76,11 @@
     .list-help {
       .help {
         width: 50%;
+      }
+    }
+    .buttons {
+      .btn {
+        margin: $s-help-button-nb-margin-tb $s-help-buttons-nb-margin-lr;
       }
     }
   }
