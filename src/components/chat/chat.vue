@@ -1,9 +1,10 @@
 <template src="./chat.html"></template>
 
 <script>
+import SvgPlus from "@/components/svg/svg-plus.vue";
 export default {
   props: ["chat"],
-  components: {},
+  components: { SvgPlus },
   data() {
     return {};
   },
