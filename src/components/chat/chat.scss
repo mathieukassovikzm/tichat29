@@ -1,0 +1,11 @@
+.c-chat {
+  .chat-photo {
+    width: $c-chat-img-size;
+    height: $c-chat-img-size;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

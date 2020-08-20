@@ -47,12 +47,17 @@ $base-size-font-title-l: rem(32);
 ********************************/
 @import './variables/v-globals';
 
+/* Components */
 @import './variables/v-burger';
 @import './variables/v-buttons';
 @import './variables/v-carousel';
+@import './variables/v-chat';
 @import './variables/v-lightbox';
 @import './variables/v-menu';
 @import './variables/v-footer';
 @import './variables/v-titles';
 @import './variables/v-section-bkg-img';
-@import './variables/v-section-help';
+
+/* Pages */
+@import './variables/v-page-home';
+@import './variables/v-page-nos-chats';

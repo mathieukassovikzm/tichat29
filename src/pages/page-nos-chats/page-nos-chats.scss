@@ -1,16 +1,14 @@
 .page-nos-chats {
+  .list-chats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .item-chat {
+    }
+  }
 }
 
 @media only screen and (min-width: $min-width-s) {
-  .page-nos-chats {
-    .chat {
-      display: flex;
-      .item {
-        width: 50%;
-        margin: 0 10px;
-      }
-    }
-  }
 }
 @media only screen and (min-width: $min-width-m) {
 }

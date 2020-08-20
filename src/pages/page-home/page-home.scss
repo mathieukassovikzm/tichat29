@@ -20,10 +20,10 @@ $page_home_button_paw_size: 55px !default;
       width: 80%;
       margin: auto;
       color: $page_home_title_txt_color;
-      font-size: 27px;
+      font-size: $page_home_title_font-size;
       text-transform: uppercase;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: $page_home_title_margin-b;
       .txt-italic {
         font-style: italic;
       }
@@ -31,7 +31,7 @@ $page_home_button_paw_size: 55px !default;
     p {
       color: $page_home_title_txt_color;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: $page_home_title_margin-b;
     }
 
     .buttons {
@@ -57,6 +57,10 @@ $page_home_button_paw_size: 55px !default;
         p {
           font-style: italic;
           text-transform: uppercase;
+        }
+        transition: transform $page_home_button_paw_scale-up-duration ease;
+        &:hover {
+          transform: scale($page_home_button_paw_scale-up);
         }
       }
     }

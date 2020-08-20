@@ -3,12 +3,14 @@
 <script>
 import MiniDiapo from "@/components/mini-diapo/mini-diapo.vue";
 import PageTitle from "@/components/title/title.vue";
+import Chat from "@/components/chat/chat.vue";
 import { mapGetters } from "vuex";
 
 export default {
   components: {
     MiniDiapo,
     PageTitle,
+    Chat,
   },
   computed: {
     ...mapGetters("chatsStore", {
@@ -16,6 +18,14 @@ export default {
     }),
     listChats() {
       return this.getListChatsDispo;
+    },
+    getMainPhoto() {
+      return {
+        ...this.listPhotos[this.index],
+        img:
+          this.listPhotos[this.index] &&
+          require(`@/assets/img/Chats/${this.listPhotos[this.index]}`),
+      };
     },
   },
 };

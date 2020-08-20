@@ -21,6 +21,42 @@
       "dispo": true
     },
     {
+      "nom": "René",
+      "description": "Petit con mais adorable",
+      "photos": [
+        "Hilda/Hilda-4.jpg",
+        "Hilda/Hilda-2.jpg",
+        "Hilda/Hilda-3.jpg",
+        "Hilda/Hilda-4.jpg",
+        "Hilda/Hilda-5.jpg"
+      ],
+      "dispo": true
+    },
+    {
+      "nom": "Jean",
+      "description": "Juste le meilleur des chats, fait partie de la bande mafcuss",
+      "photos": [
+        "Hilda/Hilda-3.jpg",
+        "Hilda/Hilda-2.jpg",
+        "Hilda/Hilda-3.jpg",
+        "Hilda/Hilda-4.jpg",
+        "Hilda/Hilda-5.jpg"
+      ],
+      "dispo": true
+    },
+    {
+      "nom": "El padrino",
+      "description": "Sacré mafieux",
+      "photos": [
+        "Hilda/Hilda-5.jpg",
+        "Hilda/Hilda-2.jpg",
+        "Hilda/Hilda-3.jpg",
+        "Hilda/Hilda-4.jpg",
+        "Hilda/Hilda-5.jpg"
+      ],
+      "dispo": true
+    },
+    {
       "nom": "Zazu",
       "description": "Chat plus dispo",
       "photos": [],

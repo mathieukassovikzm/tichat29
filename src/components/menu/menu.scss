@@ -39,7 +39,7 @@ $menu-animation-duration: 0.3s !default;
       background-color: $menu-txt-color;
       transition: 0.4s ease-out all 0.1s;
     }
-    &.router-link-active {
+    &.router-link-exact-active {
       &::after {
         width: 70%;
         transition: $animation-duration-short ease all;
