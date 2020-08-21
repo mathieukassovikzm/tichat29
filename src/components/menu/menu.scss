@@ -24,9 +24,9 @@ $menu-animation-duration: 0.3s !default;
   .menu-item-link {
     position: relative;
     display: inline-block;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
-    font-size: 24px;
+    font-size: $menu-item-link-font-size;
     padding: 0 10px;
     &::after {
       content: '';
@@ -39,7 +39,7 @@ $menu-animation-duration: 0.3s !default;
       background-color: $menu-txt-color;
       transition: 0.4s ease-out all 0.1s;
     }
-    &.router-link-active {
+    &.router-link-exact-active {
       &::after {
         width: 70%;
         transition: $animation-duration-short ease all;
@@ -160,21 +160,36 @@ $menu-animation-duration: 0.3s !default;
       }
       .navigation {
         position: absolute;
+        flex-wrap: wrap;
+        top: $menu-height;
+        bottom: 0px;
+        width: $menu-width;
+        background-color: darken($menu-bkg-color, 5);
+
         &.push-left {
           left: 0px;
         }
         &.push-right {
           right: 0px;
         }
-        top: $menu-height;
-        bottom: 0px;
-        width: $menu-width;
-        background-color: darken($menu-bkg-color, 5);
 
-        a {
-          display: block;
-          text-align: center;
-          border-bottom: 1px solid $menu-bkg-color;
+        .menu-item {
+          width: 100%;
+          .menu-item-link {
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            &::after {
+              content: none;
+            }
+            // &.router-link-exact-active {
+            //   &::after {
+            //   }
+            // }
+          }
+
+          // &:hover .menu-item-link::after {
+          // }
         }
       }
     }

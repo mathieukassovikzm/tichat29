@@ -1,5 +1,5 @@
 <template>
-  <svg class="svg svg__cat__paw" viewBox="0 0 148.235 139.815">
+  <svg class="svg svg-cat-paw" viewBox="0 0 148.235 139.815">
     <ellipse
       cx="18.274"
       cy="23.577"
@@ -36,3 +36,8 @@
     </g>
   </svg>
 </template>
+<script>
+export default {
+  name: "SvgCatPaw",
+};
+</script>

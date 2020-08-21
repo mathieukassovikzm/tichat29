@@ -1,36 +1,37 @@
 /*******************************
  * Variables Page Home 
  *******************************/
-$page_home_title_txt_color: $c-secundary-light;
-$page_home_button_paw_size: 55px;
+$page_home_title_txt_color: $c-secundary-light !default;
+$page_home_button_paw_size: 55px !default;
 /**------------------------------------------ Page Home -------------------------------------------------**/
-.section__home {
+.section-home {
+  position: relative;
   background-image: url('./../../assets/img/pageHome/homePic.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 95vh;
-  .home__title {
+  .home-title {
     position: relative;
-    top: 70%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     h2 {
       width: 80%;
       margin: auto;
       color: $page_home_title_txt_color;
-      font-size: 27px;
+      font-size: $page_home_title_font-size;
       text-transform: uppercase;
       text-align: center;
-      margin-bottom: 20px;
-      .txt__italic {
+      margin-bottom: $page_home_title_margin-b;
+      .txt-italic {
         font-style: italic;
       }
     }
     p {
       color: $page_home_title_txt_color;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: $page_home_title_margin-b;
     }
 
     .buttons {
@@ -38,10 +39,10 @@ $page_home_button_paw_size: 55px;
       flex-wrap: nowrap;
       justify-content: center;
       cursor: pointer;
-      .button__paw {
+      .button-paw {
         position: relative;
         margin: 0 10px;
-        .svg__cat__paw {
+        .svg-cat-paw {
           position: relative;
           left: 50%;
           transform: translateX(-50%);
@@ -57,7 +58,29 @@ $page_home_button_paw_size: 55px;
           font-style: italic;
           text-transform: uppercase;
         }
+        transition: transform $page_home_button_paw_scale-up-duration ease;
+        &:hover {
+          transform: scale($page_home_button_paw_scale-up);
+        }
       }
+    }
+  }
+  .btn-savoir-plus {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (min-width: $min-width-m) {
+  .section-home {
+    display: flex;
+    flex-wrap: wrap;
+    .home-title {
+      width: 50%;
+      left: 0;
+      top: 75%;
+      transform: translateY(-50%);
     }
   }
 }

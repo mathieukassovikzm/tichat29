@@ -1,0 +1,106 @@
+.s-help {
+  .list-help {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    .help {
+      position: relative;
+      width: 100%;
+      padding: $s-help-div-padding $s-help-div-padding-tb-resp;
+      margin: $s-help-div-margin-tb 0;
+      .logo-paw {
+        position: relative;
+        margin: auto;
+        width: $s-help-svg-paw-size;
+        height: $s-help-svg-paw-size;
+        .svg-cat-paw {
+          width: $s-help-svg-paw-size;
+          filter: $drop-shadow;
+          path,
+          ellipse {
+            fill: $s-help-svg-paw-color;
+          }
+        }
+        .svg-help {
+          position: absolute;
+          left: 47%;
+          transform: translateX(-50%);
+          width: $s-help-svg-help-size;
+          z-index: 1;
+          filter: $drop-shadow;
+
+          path {
+            fill: $s-help-svg-help-color;
+          }
+          circle {
+            fill: none;
+          }
+          &.svg-cat-help {
+            bottom: 5px;
+          }
+          &.svg-hands {
+            bottom: 5px;
+          }
+          &.svg-child {
+            bottom: 8px;
+          }
+          &.svg-donate {
+            bottom: 6px;
+          }
+        }
+      }
+      p {
+        text-align: center;
+        margin: $s-help-p-margin-tb 0;
+      }
+      button {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: $s-help-button-width;
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .btn {
+      margin: $s-help-button-nb-margin-tb 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $min-width-m) {
+  .s-help {
+    .list-help {
+      .help {
+        width: 50%;
+      }
+    }
+    .buttons {
+      .btn {
+        margin: $s-help-button-nb-margin-tb $s-help-buttons-nb-margin-lr;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $min-width-l) {
+  .s-help {
+    .list-help {
+      flex-wrap: nowrap;
+      margin: $s-help-div-offset 0;
+      .help {
+        width: 25%;
+        padding: $s-help-div-padding;
+        &.offset-top {
+          bottom: $s-help-div-offset;
+        }
+        &.offset-bottom {
+          top: $s-help-div-offset;
+        }
+      }
+    }
+  }
+}

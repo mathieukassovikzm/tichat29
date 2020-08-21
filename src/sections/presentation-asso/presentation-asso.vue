@@ -10,10 +10,10 @@
         placer les chats abandonnés.
       </p>
     </div>
-    <SectionBkgImg class="img-obj-asso">
+    <SectionBkgImg class="img-obj-asso bkg-light">
       <div class="section-bkg-img img-obj-asso">
         <div class="section-container">
-          <TitleH1 class="bkg-light">Objectifs de l'association</TitleH1>
+          <TitleH1>Objectifs de l'association</TitleH1>
           <p>
             Les chats sociables sont recueillis par notre association pour être
             proposés à l’nos-chats (ils sont identifiés, vaccinés, stérilisés ou
@@ -37,7 +37,7 @@
         et primo vaccinés.
       </p>
     </div>
-    <SectionBkgImg class="img-fam-acc">
+    <SectionBkgImg class="img-fam-acc bkg-light">
       <div class="section-container">
         <p>
           Ti Chat 29 fournit les croquettes et prend en charge
@@ -68,6 +68,33 @@ export default {
   p {
     text-align: center;
     color: $c-primary-dark;
+  }
+  .img-obj-asso,
+  .img-fam-acc {
+    .section-container {
+      display: flex;
+      flex-wrap: wrap;
+      .title-h1 {
+        width: 100%;
+      }
+      p {
+        width: 100%;
+        color: $c-text-dark;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $min-width-m) {
+  .s-presentation-asso {
+    .img-obj-asso,
+    .img-fam-acc {
+      .section-container {
+        p {
+          width: 50%;
+        }
+      }
+    }
   }
 }
 </style>

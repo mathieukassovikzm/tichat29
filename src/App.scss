@@ -71,32 +71,53 @@ h4 {
 // }
 
 button,
-.button {
+.btn {
   padding: 10px;
 
-  background-color: $c-primary;
-  color: $c-secundary-dark;
+  border-radius: $buttons-border-radius;
 
-  border: solid 2px $c-primary;
-  border-radius: 5px;
-
-  transition: color 0.2s ease;
-  transition: background-color 0.2s ease;
+  transition: color $buttons-anim-duration ease;
+  transition: background-color $buttons-anim-duration ease;
 
   cursor: pointer;
 
   text-align: center;
-  font-family: $font-title, sans-serif;
-  font-size: $base-size-font-title-m;
+  text-transform: uppercase;
+  font-family: $font-txt, sans-serif;
+  font-size: $base-size-font-title-s;
+  font-style: italic;
 
   @media only screen and (min-width: $min-width-s) {
   }
   @media only screen and (min-width: $min-width-m) {
   }
-
-  &:hover {
+  &.btn-v1 {
     background-color: transparent;
-    color: $c-primary;
+    color: $buttons-v1-color;
+    border: solid $buttons-border-width $buttons-v1-color;
+    &:hover {
+      background-color: $buttons-v1-color;
+      color: $buttons-v1-color-hover;
+    }
+  }
+  &.btn-v2 {
+    background-color: $buttons-v2-color-hover;
+    color: $buttons-v2-color;
+    border: solid $buttons-border-width $buttons-v2-color;
+    &:hover {
+      background-color: $buttons-v2-color;
+      color: $buttons-v2-color-hover;
+      border: solid $buttons-border-width $buttons-v2-color-hover;
+    }
+  }
+  &.btn-v3 {
+    background-color: transparent;
+    color: $buttons-v3-color;
+    border: solid $buttons-border-width $buttons-v3-color;
+    &:hover {
+      background-color: $buttons-v3-color;
+      color: $buttons-v3-color-hover;
+    }
   }
 
   &:focus {
@@ -105,9 +126,20 @@ button,
 }
 
 .section {
-  background-image: url('./assets/img/backgroundTichat29.png');
-  background-repeat: round;
-  background-size: contain;
+  position: relative;
+  //background-image: url(./assets/img/backgroundTichat29.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &::before {
+    background-color: $c-dark-background;
+    display: block;
+    content: '';
+    position: absolute;
+    height: inherit;
+    width: inherit;
+  }
   .section-container {
     margin: 0;
     width: $section-resp-width;

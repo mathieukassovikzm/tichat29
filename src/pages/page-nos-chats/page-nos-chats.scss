@@ -1,16 +1,43 @@
 .page-nos-chats {
-}
-
-@media only screen and (min-width: $min-width-s) {
-  .page-nos-chats {
-    .chat {
-      display: flex;
-      .item {
-        width: 50%;
-        margin: 0 10px;
+  .list-chats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .item-chat {
+      width: 50%;
+    }
+  }
+  .voir-conditions {
+    position: absolute;
+    bottom: $p-chats-vc-position-b;
+    right: $p-chats-vc-position-r;
+    .svg-cat-paw {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: $p-chats-paw-width;
+      filter: $p-chats-paw-drop-shadow;
+      transition: transform $p-chats-paw-scale-up-duration ease;
+      path,
+      ellipse {
+        fill: $p-chats-paw-color;
+      }
+    }
+    h3 {
+      text-transform: uppercase;
+      font-style: italic;
+      font-size: $p-chats-vc-h3-font-size;
+    }
+    &:hover {
+      cursor: pointer;
+      .svg-cat-paw {
+        transform: translateX(-50%) scale($p-chats-paw-scale-up);
       }
     }
   }
+}
+
+@media only screen and (min-width: $min-width-s) {
 }
 @media only screen and (min-width: $min-width-m) {
 }

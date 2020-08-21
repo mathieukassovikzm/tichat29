@@ -1,0 +1,16 @@
+/******* Variables Burger *******/
+$buttons-anim-duration: $animation-duration-short;
+$buttons-border-width: 1px;
+$buttons-border-radius: 30px;
+
+/* Style 1 */
+$buttons-v1-color: $c-text-dark;
+$buttons-v1-color-hover: $c-primary-light;
+
+/* Style 2 */
+$buttons-v2-color: $c-primary-light;
+$buttons-v2-color-hover: $c-third;
+
+/* Style 3 */
+$buttons-v3-color: $c-primary-light;
+$buttons-v3-color-hover: $c-primary-dark;

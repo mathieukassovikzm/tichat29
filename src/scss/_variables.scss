@@ -24,7 +24,7 @@ $c-third: #d5ac7f;
 $c-text-light: $c-primary;
 $c-text-dark: $c-secundary;
 
-$c-dark-background: #e8eaf6;
+$c-dark-background: $c-primary-light;
 
 $c-box-shadow: rgba(0, 0, 0, 0.9);
 
@@ -47,10 +47,16 @@ $base-size-font-title-l: rem(32);
 ********************************/
 @import './variables/v-globals';
 
+/* Components */
 @import './variables/v-burger';
+@import './variables/v-buttons';
 @import './variables/v-carousel';
 @import './variables/v-lightbox';
 @import './variables/v-menu';
 @import './variables/v-footer';
 @import './variables/v-titles';
 @import './variables/v-section-bkg-img';
+
+/* Pages */
+@import './variables/v-page-home';
+@import './variables/v-page-nos-chats';

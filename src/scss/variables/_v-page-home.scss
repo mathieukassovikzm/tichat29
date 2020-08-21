@@ -1,0 +1,46 @@
+/*******************************
+** Section Home
+********************************/
+
+/******************
+** Section Home
+*******************/
+$page_home_title_txt_color: $c-secundary-light;
+$page_home_title_font-size: 27px;
+$page_home_title_margin-b: 20px;
+$page_home_button_paw_size: 55px;
+$page_home_button_paw_scale-up: 1.1;
+$page_home_button_paw_scale-up-duration: 0.2s;
+
+/******************
+** Section help
+*******************/
+$s-help-div-padding: 5px;
+$s-help-div-padding-tb-resp: 40px;
+$s-help-div-margin-tb: 10px;
+$s-help-div-offset: 60px;
+$s-help-svg-paw-size: 100px;
+$s-help-svg-paw-color: $c-third;
+$s-help-svg-help-size: 50%;
+$s-help-svg-help-color: $c-primary-light;
+$s-help-p-margin-tb: 10px;
+$s-help-button-width: 70%;
+$s-help-buttons-nb-margin-lr: 10px;
+$s-help-button-nb-margin-tb: 5px;
+
+/******************
+** Section Event
+*******************/
+$c-events-margin-tb: 20px;
+$c-event-padding-tb: 10px;
+$c-event-padding-lr: 20px;
+$c-event-bkg-color: $c-third;
+$c-event-border-radius: 60px;
+$c-event-box-shadow: 1px 1px 2px rgba($c-secundary-dark, 0.5);
+$c-event-box-svg-shadow: 2px 2px 2px rgba($c-secundary-dark, 0.5);
+$c-event-txt-color: $c-text-light;
+$c-event-title-color: $c-secundary;
+$c-event-img-size: 100px;
+$c-event-paw-drop-size: 80px;
+$p-event-paw-drop-shadow: drop-shadow(2px 0px 0px rgba(0, 0, 0, 0.8));
+$c-event-desc-margin-l: 10px;
