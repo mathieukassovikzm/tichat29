@@ -45,6 +45,9 @@ $menu-animation-duration: 0.3s !default;
         transition: $animation-duration-short ease all;
       }
     }
+    .svg-menu {
+      display: none;
+    }
   }
 
   &:hover .menu-item-link::after {
@@ -176,11 +179,33 @@ $menu-animation-duration: 0.3s !default;
         .menu-item {
           width: 100%;
           .menu-item-link {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
             top: 50%;
             transform: translateY(-50%);
-            display: block;
             &::after {
               content: none;
+            }
+            .svg-menu {
+              display: inline-block;
+              width: $menu-item-link-svg-size;
+              circle {
+                fill: $menu-item-link-svg-bkg-color;
+              }
+              path,
+              ellipse {
+                fill: $menu-item-link-svg-color;
+              }
+            }
+            p {
+              padding: $menu-item-link-txt-padding-tb
+                $menu-item-link-txt-padding-lr;
+              width: 100%;
+              border-radius: $menu-item-link-txt-border-radius-s
+                $menu-item-link-txt-border-radius-b
+                $menu-item-link-txt-border-radius-b
+                $menu-item-link-txt-border-radius-s;
             }
             // &.router-link-exact-active {
             //   &::after {
@@ -188,8 +213,24 @@ $menu-animation-duration: 0.3s !default;
             // }
           }
 
-          // &:hover .menu-item-link::after {
-          // }
+          &:hover .menu-item-link {
+            .svg-menu {
+              background-color: $menu-item-link-svg-bkg-color;
+              border-radius: 50% 0 0 50%;
+
+              circle {
+                fill: $menu-item-link-svg-bkg-color;
+              }
+              path,
+              ellipse {
+                fill: $menu-item-link-svg-color;
+              }
+            }
+            p {
+              color: $menu-bkg-color;
+              background-color: $menu-item-link-svg-bkg-color;
+            }
+          }
         }
       }
     }

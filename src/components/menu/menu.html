@@ -31,30 +31,35 @@
     <nav class="navigation push-left">
       <div class="menu-item">
         <router-link class="menu-item-link" :to="{ name: 'PageHome'}"
-          >Home</router-link
+          ><SvgHome class="svg-menu" />
+          <p>Home</p></router-link
         >
       </div>
 
       <div class="menu-item">
         <router-link class="menu-item-link" :to="{ name: 'NosChats'}"
-          >Nos chats</router-link
+          ><SvgCatPaw class="svg-menu" />
+          <p>Nos chats</p></router-link
         >
       </div>
 
       <div class="menu-item">
         <router-link class="menu-item-link" :to="{ name: 'PageActualitees'}"
-          >Actualitées</router-link
+          ><SvgScheduler class="svg-menu" />
+          <p>Actualitées</p></router-link
         >
       </div>
 
       <div class="menu-item">
         <router-link class="menu-item-link" :to="{ name: 'PageFamilleDaccueil'}"
-          >Devenir Famille d'acceuil</router-link
+          ><SvgHeart class="svg-menu" />
+          <p>Devenir Famille d'acceuil</p></router-link
         >
       </div>
       <div class="menu-item">
         <router-link class="menu-item-link" :to="{ name: 'PageContact'}"
-          >Contact</router-link
+          ><SvgPhone class="svg-menu" />
+          <p>Contact</p></router-link
         >
       </div>
     </nav>
