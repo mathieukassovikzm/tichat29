@@ -1,7 +1,8 @@
 <div class="c-chat">
-  <div>
-    <img class="chat-photo" :src="getMainPhoto.img" />
+  <div class="chat-photo-container">
     <SvgPlus />
+    <div class="cloak"></div>
+    <img class="chat-photo" :src="getMainPhoto.img" />
   </div>
   <div class="chat-name">
     <h2>{{ chat.nom }}</h2>

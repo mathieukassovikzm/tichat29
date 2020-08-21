@@ -1,6 +1,7 @@
 <template src="./page-nos-chats.html"></template>
 
 <script>
+import TitleH1 from "@/components/title/title.vue";
 import MiniDiapo from "@/components/mini-diapo/mini-diapo.vue";
 import SvgCatPaw from "@/components/svg/svg-cat-paw.vue";
 import PageTitle from "@/components/title/title.vue";
@@ -13,6 +14,7 @@ export default {
     PageTitle,
     Chat,
     SvgCatPaw,
+    TitleH1,
   },
   computed: {
     ...mapGetters("chatsStore", {

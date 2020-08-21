@@ -1,3 +1,22 @@
 /*******************************
 ** Variables Page Nos Chats
 ********************************/
+$p-chats-vc-position-b: 30px;
+$p-chats-vc-position-r: 30px;
+$p-chats-vc-h3-font-size: $base-size-font-title-s;
+$p-chats-paw-width: 90px;
+$p-chats-paw-color: $c-third;
+$p-chats-paw-drop-shadow: drop-shadow(2px 0px 0px rgba(0, 0, 0, 0.8));
+$p-chats-paw-scale-up: 1.1;
+$p-chats-paw-scale-up-duration: 0.2s;
+
+/*******************************
+** Variables Component Chats
+********************************/
+$c-chat-img-size: 200px;
+$c-chat-svg-plus-width: 25px;
+$c-chat-svg-plus-color: $c-third;
+$c-chat-svg-plus-stroke-color: $c-primary-light;
+$c-chat-svg-plus-stroke-width: 10px;
+$c-chat-cloak-color: rgba($c-primary-light, 0.4);
+$c-chats-hover-duration: 0.2s;
