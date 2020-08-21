@@ -2,12 +2,8 @@
   <section class="section">
     <div class="section-container">
       <TitleH1 class="bkg-light">Evenements</TitleH1>
-      <div class="event" v-for="event in listEvents" v-bind:key="event.titre">
-        <h2>{{ event.titre }}</h2>
-        <p>{{ event.date }}</p>
-        <p>{{ event.lieu }}</p>
-        <p>{{ event.description }}</p>
-        <p>{{ event.photo }}</p>
+      <div class="item-event" v-for="event in listEvents" v-bind:key="event.titre">
+        <Event v-bind:event="event" />
       </div>
     </div>
   </section>
@@ -15,12 +11,14 @@
 
 <script>
 import TitleH1 from "@/components/title/title.vue";
+import Event from "@/components/event/event.vue";
 import DateHelper from "../../dateHelper.js";
 import { mapGetters } from "vuex";
 
 export default {
   components: {
     TitleH1,
+    Event,
   },
   computed: {
     ...mapGetters("eventsStore", {
@@ -34,4 +32,8 @@ export default {
 };
 </script>
 
-<style lang="scss" src="./events.scss"></style>
+<style lang="scss">
+.item-event {
+  margin: $c-events-margin-tb 0;
+}
+</style>

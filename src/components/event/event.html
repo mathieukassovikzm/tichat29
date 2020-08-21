@@ -1,0 +1,15 @@
+<div class="c-event">
+  <div class="event-photo-container">
+    <SvgCatPaw v-if="noPhoto"></SvgCatPaw>
+    <p v-else>{{ event.photo }}</p>
+  </div>
+  <div class="event-desc">
+    <h2>{{ event.titre }}</h2>
+    <div class="event-date">
+      <p>Date: {{ event.date }}</p>
+      <p>Heure: {{ event.date }}</p>
+    </div>
+    <p>Lieu: {{ event.lieu }}</p>
+    <p>Description: {{ event.description }}</p>
+  </div>
+</div>
