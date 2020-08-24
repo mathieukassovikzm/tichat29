@@ -1,6 +1,8 @@
 .c-event {
   margin: auto;
   .c-event-container {
+    max-width: $c-event-max-width;
+    margin: auto;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -41,17 +43,26 @@
       box-shadow: $c-event-box-svg-shadow;
     }
     .event-desc {
+      width: $c-event-desc-width;
       color: $c-event-txt-color;
       margin-left: $c-event-desc-margin-l;
       .event-date {
         display: flex;
         flex-wrap: nowrap;
-        justify-content: space-around;
+        justify-content: space-between;
       }
       h2 {
         color: $c-event-title-color;
         text-transform: uppercase;
         font-style: italic;
+      }
+      button {
+        position: relative;
+        left: 84%;
+        transform: translateX(-50%);
+      }
+      .event-txt {
+        margin: $c-event-txt-margin-tb 0;
       }
     }
   }

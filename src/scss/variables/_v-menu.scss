@@ -4,9 +4,8 @@
 $site-cache-color: rgba(0, 0, 0, 0.6);
 $site-content-bkg-color: $c-primary-light;
 $menu-width: 80%;
-$menu-height: 66px;
 $menu-bkg-color: $c-primary-light;
-$menu-txt-color: $c-primary-dark;
+$menu-txt-color: $c-text-dark;
 $menu-animation-duration: $animation-duration;
 $menu-social-size: 20px;
 $menu-social-bkg-color: $c-primary;
@@ -19,3 +18,16 @@ $menu-item-link-txt-padding-lr: 15px;
 $menu-item-link-txt-padding-tb: 25px;
 $menu-item-link-txt-border-radius-s: 10px;
 $menu-item-link-txt-border-radius-b: 60px;
+
+/*******************************
+** Menu Responsive
+********************************/
+
+/*******************************
+** Menu Full Size
+********************************/
+$menu-height: 66px;
+$menu-logo-cat-size: 50px;
+$menu-logo-tichat-size: $menu-height - $menu-logo-cat-size;
+$menu-logo-color: $menu-txt-color;
+$menu-logo-margin-lr: 5px;

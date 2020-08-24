@@ -73,10 +73,27 @@ $menu-animation-duration: 0.3s !default;
   .menu-icon {
     display: none;
   }
+  .menu-logo {
+    margin: $menu-logo-margin-lr;
+    .svg {
+      display: block;
+      margin: auto;
+      path {
+        fill: $menu-logo-color;
+      }
+    }
+    .svg-cat {
+      height: $menu-logo-cat-size;
+    }
+    .svg-tichat {
+      height: $menu-logo-tichat-size;
+    }
+  }
   .navigation {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
     width: 100%;
   }
   .list-social-media {
@@ -168,7 +185,7 @@ $menu-animation-duration: 0.3s !default;
         bottom: 0px;
         width: $menu-width;
         background-color: darken($menu-bkg-color, 5);
-
+        align-items: initial;
         &.push-left {
           left: 0px;
         }
@@ -213,6 +230,9 @@ $menu-animation-duration: 0.3s !default;
             // }
           }
 
+          &.menu-logo {
+            display: none;
+          }
           &:hover .menu-item-link {
             .svg-menu {
               background-color: $menu-item-link-svg-bkg-color;
