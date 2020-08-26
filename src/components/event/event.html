@@ -1,23 +1,27 @@
-<div class="c-event">
-  <div class="c-event-container">
-    <div class="event-svg-container" v-if="noPhoto">
-      <SvgCatPaw></SvgCatPaw>
-    </div>
-    <div class="event-photo-container" v-else>
-      <img class="event-photo" :src="getPhoto.img" />
-    </div>
-    <div class="event-desc">
-      <h2>{{ event.titre }}</h2>
-      <div class="event-txt">
-        <div class="event-date">
-          <p>Date: {{ event.date | moment("DD/MM/YYYY") }}</p>
-          <p>Heure: {{ event.date | moment("H:mm")}}</p>
-        </div>
-        <p>Lieu: {{ event.lieu }}</p>
+<Flipped :flipId="flipId">
+  <div class="c-event" :class="{isExpanded}">
+    <div class="c-event-container">
+      <div class="event-svg-container" v-if="noPhoto">
+        <SvgCatPaw></SvgCatPaw>
       </div>
+      <div class="event-photo-container" v-else>
+        <img class="event-photo" :src="getPhoto.img" />
+      </div>
+      <div class="event-desc">
+        <h2>{{ event.titre }}</h2>
+        <div class="event-txt">
+          <div class="event-date">
+            <p>Date: {{ event.date | moment("DD/MM/YYYY") }}</p>
+            <p>Heure: {{ event.date | moment("H:mm")}}</p>
+          </div>
+          <p>Lieu: {{ event.lieu }}</p>
+        </div>
+        <div class="event-infos-supp" v-if="expanded">
+          <p>Description: {{ event.description }}</p>
+        </div>
 
-      <button class="btn btn-v1">Voir plus</button>
-      <!-- <p>Description: {{ event.description }}</p> -->
+        <button class="btn btn-v1">Voir plus</button>
+      </div>
     </div>
   </div>
-</div>
+</Flipped>

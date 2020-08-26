@@ -32,10 +32,12 @@ const actions = {
       let data = dataEvents;
       if (data) {
         let list = [];
+        var i = 1;
         for (const [key, value] of Object.entries(data)) {
           if (key == 'events') {
             for (var objEvent of value) {
               let event = {
+                eventId: i,
                 titre: objEvent.titre,
                 date: objEvent.date,
                 lieu: objEvent.lieu,
@@ -43,6 +45,7 @@ const actions = {
                 photo: objEvent.photo,
               };
               list.push(event);
+              i++;
             }
             store.commit('SETLISTEVENTS', list);
           }
