@@ -2,7 +2,12 @@
   <section class="section">
     <div class="section-container">
       <TitleH1 class="bkg-light">Evenements</TitleH1>
-      <Flipper :flipKey="active">
+      <Flipper
+        :flipKey="active"
+        :spring="spring"
+        :decisionData="active"
+        :staggerConfig="staggerConfig"
+      >
         <ul>
           <li
             class="item-event"
@@ -34,6 +39,12 @@ export default {
   data() {
     return {
       active: 0,
+      staggerConfig: {
+        listEvents: {
+          speed: 0.5,
+          reverse: false,
+        },
+      },
     };
   },
   computed: {
@@ -44,10 +55,17 @@ export default {
     listEvents() {
       return DateHelper.getListEventsSortedAntiChrono(this.getListEventsToCome);
     },
+    spring() {
+      return {
+        stiffness: 70,
+        damping: 15,
+      };
+    },
   },
   methods: {
     onClick(item) {
       this.active = this.active === item ? 0 : item;
+      this.staggerConfig.listEvents.reverse = this.active !== 0;
     },
   },
 };
