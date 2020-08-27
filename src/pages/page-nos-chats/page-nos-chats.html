@@ -2,7 +2,7 @@
   <div class="section-container">
     <TitleH1 class="bkg-light">Nos Chats</TitleH1>
     <div class="list-chats">
-      <div class="item-chat" v-for="chat in listChats">
+      <div class="item-chat" v-for="chat in listChats" v-bind:key="chat.chatId">
         <Chat v-bind:chat="chat" />
       </div>
     </div>

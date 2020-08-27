@@ -36,6 +36,7 @@ const actions = {
       let data = dataChats;
       if (data) {
         let list = [];
+        var i = 1;
         for (const [key, value] of Object.entries(data)) {
           if (key == 'nbChatsAdoptes') {
             store.commit('SETNBCHATSADOPTES', value);
@@ -46,12 +47,14 @@ const actions = {
           if (key == 'chats') {
             for (var objChat of value) {
               let chat = {
+                chatId: i,
                 nom: objChat.nom,
                 description: objChat.description,
                 photos: objChat.photos,
                 dispo: objChat.dispo,
               };
               list.push(chat);
+              i++;
             }
             store.commit('SETLISTCHATS', list);
           }

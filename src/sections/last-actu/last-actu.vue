@@ -4,7 +4,7 @@
       <div class="section-container">
         <TitleH1 class="bkg-light">Nos dernières actualités</TitleH1>
       </div>
-      <div class="article" v-for="article in listArticles" v-bind:key="article.titre">
+      <div class="article" v-for="article in listArticles" v-bind:key="article.articleID">
         <h2>{{ article.titre }}</h2>
         <p>{{ article.date }}</p>
         <p>{{ article.lieu }}</p>
