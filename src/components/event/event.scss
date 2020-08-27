@@ -66,4 +66,37 @@
       }
     }
   }
+  &.expanded {
+    .c-event-container {
+      display: block;
+      margin-top: $c-event-expanded-padding-tb;
+      margin-bottom: $c-event-expanded-padding-tb;
+      .event-photo-container,
+      .event-svg-container,
+      .event-desc {
+        margin: auto;
+      }
+      .event-desc {
+        h2,
+        h3 {
+          text-align: center;
+          margin-top: $c-event-title-margin-t;
+          margin-bottom: $c-event-title-margin-b;
+        }
+        .event-date {
+          display: block;
+        }
+        .event-infos-supp {
+          p {
+            padding: $c-event-desc-padding;
+            background-color: $c-event-txt-color;
+            border-radius: $c-event-desc-border-radius;
+            color: $c-event-title-color;
+            min-height: $c-event-desc-min-height;
+            margin-bottom: $c-event-desc-margin-b;
+          }
+        }
+      }
+    }
+  }
 }

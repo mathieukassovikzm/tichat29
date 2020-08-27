@@ -1,5 +1,5 @@
 <Flipped :flipId="flipId">
-  <div class="c-event" :class="{isExpanded}">
+  <div class="c-event" :class="isExpanded">
     <div class="c-event-container">
       <div class="event-svg-container" v-if="noPhoto">
         <SvgCatPaw></SvgCatPaw>
@@ -17,7 +17,8 @@
           <p>Lieu: {{ event.lieu }}</p>
         </div>
         <div class="event-infos-supp" v-if="expanded">
-          <p>Description: {{ event.description }}</p>
+          <h3>Description</h3>
+          <p>{{ event.description }}</p>
         </div>
 
         <button class="btn btn-v1">Voir plus</button>
