@@ -1,35 +1,19 @@
-<Flipped
-  :flipId="flipId"
-  :shouldInvert="shouldFlip"
-  stagger="listEvents"
-  @on-start="onStart"
->
+<Flipped :flipId="flipId" :shouldInvert="shouldFlip" stagger="listEvents" @on-start="onStart">
   <div class="c-event" :class="isExpanded">
     <Flipped :inverseFlipId="flipId">
       <div class="c-event-container">
-        <Flipped
-          :flipId="flipIdAvatar"
-          :shouldFlip="shouldFlip"
-          stagger="listEventsContent"
-        >
+        <Flipped :flipId="flipIdAvatar" :shouldFlip="shouldFlip" stagger="listEventsContent">
           <div class="avatar">
             <SvgCatPaw v-if="noPhoto"></SvgCatPaw>
             <img class="event-photo" :src="getPhoto.img" v-else />
           </div>
         </Flipped>
         <div class="event-desc">
-          <Flipped
-            v-for="p in paragraphs"
-            :key="p.index"
-            :flipId="`listItem-p${p.index}`"
-            :shouldFlip="shouldFlip"
-            stagger="listEventsContent"
-            class="event-desc"
-          >
-            <div>
+          <Flipped v-for="p in paragraphs" :key="p.index" :flipId="`listItem-${event.eventId}-p${p.index}`"
+            :shouldFlip="shouldFlip" stagger="listEventsContent">
+            <div class="event-desc-txt">
               <p :class="descTitle(p.index)">{{p.txt}}</p>
             </div>
-            <!-- <p>{{p.txt}}</p> -->
           </Flipped>
         </div>
 

@@ -41,7 +41,11 @@ export default {
       active: 0,
       staggerConfig: {
         listEvents: {
-          speed: 0.5,
+          speed: 1,
+          reverse: false,
+        },
+        listEventsContent: {
+          speed: 1,
           reverse: false,
         },
       },
@@ -66,6 +70,7 @@ export default {
     onClick(item) {
       this.active = this.active === item ? 0 : item;
       this.staggerConfig.listEvents.reverse = this.active !== 0;
+      this.staggerConfig.listEventsContent.reverse = this.active !== 0;
     },
   },
 };
