@@ -1,3 +1,49 @@
-<div>
-  <PageTitle pageName="pageContact" />
-</div>
+<section class="page-nos-chats section">
+  <div class="section-container">
+    <div class="contact-form">
+      <TitleH1 class="bkg-light">Contactez-nous</TitleH1>
+      <form @submit.prevent="onSubmit()">
+        <div class="formSection">
+          <label for="firstname">Votre nom</label>
+          <input type="text" required id="firstname" name="firstname" />
+        </div>
+        <div class="formSection">
+          <label for="email">Votre email</label>
+          <input
+            type="email"
+            required
+            id="email"
+            name="email"
+            placeholder="votre@email.com"
+          />
+        </div>
+        <div class="formSection">
+          <label for="message">Votre message</label>
+          <textarea name="message" required></textarea>
+        </div>
+        <div class="formSection">
+          <button type="submit">Envoyer votre email</button>
+        </div>
+      </form>
+    </div>
+    <div class="contact-infos">
+      <TitleH1 class="bkg-light">Contact</TitleH1>
+
+      <ul class="contact-infos-item item-social-icons">
+        <li>
+          <a
+            href="https://www.facebook.com/Ti-Chat-29-198937427142014/"
+            target="_blank"
+          >
+            <SvgFacebook />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/go2sport29/" target="_blank">
+            <SvgInstagram />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
