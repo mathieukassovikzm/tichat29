@@ -2,9 +2,11 @@
 
 <script>
 import SvgPlus from "@/components/svg/svg-plus.vue";
+import { Flipped } from "vue-flip-toolkit";
 export default {
-  props: ["chat"],
-  components: { SvgPlus },
+  props: ["chat", "expanded"],
+  components: { SvgPlus, Flipped },
+
   data() {
     return {};
   },

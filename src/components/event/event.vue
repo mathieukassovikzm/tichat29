@@ -16,19 +16,19 @@ export default {
     return {
       paragraphs: [
         {
-          index: 0,
+          index: 1,
           txt: `${this.event.titre}`,
         },
         {
-          index: 1,
+          index: 2,
           txt: `Date: ${moment(this.event.date).format("DD/MM/YYYY")}`,
         },
         {
-          index: 2,
+          index: 3,
           txt: `Heure: ${moment(this.event.date).format("H:mm")}`,
         },
         {
-          index: 3,
+          index: 4,
           txt: `Lieu: ${this.event.lieu}`,
         },
       ],
@@ -67,7 +67,7 @@ export default {
       el.classList.add("animated-in");
     },
     descTitle(index) {
-      return index === 0 ? "desc-title" : "";
+      return index === 1 ? "desc-title" : "";
     },
   },
 };
