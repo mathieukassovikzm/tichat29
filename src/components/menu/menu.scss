@@ -111,25 +111,7 @@ $menu-animation-duration: 0.3s !default;
         height: $menu-social-size;
         width: $menu-social-size;
         filter: $drop-shadow;
-
-        path {
-          fill: $menu-txt-color;
-          transition: fill $animation-duration-short ease;
-        }
-        &.svg-social {
-          circle {
-            fill: $menu-social-bkg-color;
-            transition: fill $animation-duration-short ease;
-          }
-        }
-        &:hover {
-          circle {
-            fill: $footer-social-color;
-          }
-          path {
-            fill: $footer-social-bkg-color;
-          }
-        }
+        @include svgHover($menu-social-bkg-color, $menu-social-color);
       }
     }
   }

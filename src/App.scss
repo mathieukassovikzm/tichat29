@@ -47,28 +47,37 @@ textarea {
   font-size: 100%;
   margin: 0;
   border: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 h1,
 h2,
 h3,
 h4 {
+  position: relative;
+  display: inline-block;
   font-family: $font-title, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  font-weight: lighter;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    right: 1%;
+    height: 1px;
+    width: $titles-bar-width;
+    background-color: $titles-bkg-light-color;
+  }
 }
 
-// h2 {
-
-// }
-// h3 {
-
-// }
-// h4 {
-
-// }
-
-// p {
-
-// }
+h2 {
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 button,
 .btn {
@@ -127,7 +136,7 @@ button,
 
 .section {
   position: relative;
-  //background-image: url(./assets/img/backgroundTichat29.png);
+  background-image: url(./assets/img/backgroundTichat29.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

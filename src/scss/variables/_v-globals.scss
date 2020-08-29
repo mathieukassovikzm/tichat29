@@ -9,13 +9,28 @@ $section-padding-lr: 10px;
 $section-container-padding-tb: 10px;
 $section-container-padding-lr: 10px;
 
-$margin-bottom-h1: 20px;
-$margin-bottom-h2: 15px;
-$margin-bottom-h3: 10px;
+$headings: h1 h2 h3 h4 h5 h6;
+$font-size-base: 16px;
+
+$title-font-size-upper: 36px;
+$title-font-size-dec: 6px;
+$title-margin-bottom: 35px;
+$title-margin-bottom-dec: 5px;
+
+@each $heading in $headings {
+  #{$heading} {
+    font-size: $title-font-size-upper;
+    font-size: ($title-font-size-upper / $font-size-base) + em;
+    margin-bottom: $title-margin-bottom - $title-margin-bottom-dec;
+  }
+  $title-font-size-upper: $title-font-size-upper - $title-font-size-dec;
+  $title-margin-bottom: $title-margin-bottom - $title-margin-bottom-dec;
+}
 
 $drop-shadow: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
 
 $svg-media-size: 40px;
+$svg-color-anim-duration: $animation-duration-short;
 
-$site-bkg-color: $c-primary-light;
+$site-bkg-color: $c-secundary-light;
 $component-title-txt-color: $c-secundary-light;

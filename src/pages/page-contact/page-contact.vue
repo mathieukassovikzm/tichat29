@@ -21,8 +21,10 @@ export default {
   data() {
     return {
       form: {
-        email: "",
         firstname: "",
+        lastname: "",
+        phone: "",
+        email: "",
         message: "",
       },
       classFormError: "form-error",
@@ -34,30 +36,50 @@ export default {
   /* List of requierement for each input */
   validations: {
     form: {
-      email: { required },
       firstname: { required },
+      lastname: { required },
+      phone: { required },
+      email: { required },
       message: { required },
     },
   },
   computed: {
-    formEmailValid() {
-      return !this.$v.form.email.$invalid ? this.classInputValid : "";
+    formLastValid() {
+      return !this.$v.form.lastname.$invalid ? this.classInputValid : "";
     },
     formFirstnameValid() {
       return !this.$v.form.firstname.$invalid ? this.classInputValid : "";
+    },
+    formPhoneValid() {
+      return !this.$v.form.phone.$invalid ? this.classInputValid : "";
+    },
+    formEmailValid() {
+      return !this.$v.form.email.$invalid ? this.classInputValid : "";
     },
     formMessageValid() {
       return !this.$v.form.message.$invalid ? this.classInputValid : "";
     },
     // v-show nameError if the form has been touch and if there is and error
-    formEmailError() {
-      return this.formTouched && this.$v.form.email.$error
+    formLastNameError() {
+      return this.formTouched && this.$v.form.lastname.$error
         ? this.classFormError
         : "";
     },
     // v-show nameError if the form has been touch and if there is and error
     formFirstnameError() {
       return this.formTouched && this.$v.form.firstname.$error
+        ? this.classFormError
+        : "";
+    },
+    // v-show nameError if the form has been touch and if there is and error
+    formPhoneError() {
+      return this.formTouched && this.$v.form.phone.$error
+        ? this.classFormError
+        : "";
+    },
+    // v-show nameError if the form has been touch and if there is and error
+    formEmailError() {
+      return this.formTouched && this.$v.form.email.$error
         ? this.classFormError
         : "";
     },

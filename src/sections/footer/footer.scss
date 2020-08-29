@@ -58,22 +58,7 @@
         }
 
         .svg-social {
-          circle {
-            fill: $footer-social-bkg-color;
-            transition: fill $animation-duration-short ease;
-          }
-          path {
-            fill: $footer-social-color;
-            transition: fill $animation-duration-short ease;
-          }
-          &:hover {
-            circle {
-              fill: $footer-social-color;
-            }
-            path {
-              fill: $footer-social-bkg-color;
-            }
-          }
+          @include svgHover($footer-social-bkg-color, $footer-social-color);
         }
       }
     }

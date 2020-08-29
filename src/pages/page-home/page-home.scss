@@ -16,7 +16,7 @@ $page_home_button_paw_size: 55px !default;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    h2 {
+    h1 {
       width: 80%;
       margin: auto;
       color: $page_home_title_txt_color;
@@ -24,8 +24,13 @@ $page_home_button_paw_size: 55px !default;
       text-transform: uppercase;
       text-align: center;
       margin-bottom: $page_home_title_margin-b;
+      left: 50%;
+      transform: translateX(-50%);
       .txt-italic {
         font-style: italic;
+      }
+      &::after {
+        content: none;
       }
     }
     p {

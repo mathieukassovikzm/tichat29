@@ -1,29 +1,123 @@
-@mixin form() {
-  width: 100%;
-  .formSection {
-    margin: 20px 0;
+.page-contact.section {
+  .section-container {
+    width: 100%;
+    padding: 0;
+    .p-contact-section {
+      padding-left: $form-section-padding-lr;
+      padding-right: $form-section-padding-lr;
+      &.section-form {
+        padding-top: $section-padding-tb;
+        padding-bottom: $section-padding-tb/2;
+      }
+      &.section-infos {
+        padding-top: $section-padding-tb/2;
+        padding-bottom: $section-padding-tb;
+      }
+    }
   }
-  input,
-  textarea {
-    @include input;
+  .form {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    .form-section {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      .form-elt {
+        width: $form-elt-width;
+        margin: auto;
+        margin-top: $form-elt-margin-tb;
+        margin-bottom: $form-elt-margin-tb;
+        input,
+        textarea {
+          width: 100%;
+          padding: $form-input-padding;
+          margin-right: 20px;
+          color: $form-input-font-color;
+          font-size: $form-input-font-size;
+          border-radius: $form-input-border-radius;
+          background-color: $form-input-bkg;
+          &::placeholder {
+            color: $form-input-placeholder-color;
+            font-style: italic;
+          }
+        }
+        label {
+          margin-left: 3px;
+          text-transform: uppercase;
+          font-size: $form-label-font-size;
+          color: $form-label-font-color;
+        }
+        textarea {
+          min-height: 150px;
+        }
+      }
+      &.form-section-btn {
+        margin: auto;
+      }
+    }
   }
-  label {
-    @include label;
+  .section-infos {
+    background-color: $form-section-infos-bkg-color;
+    p {
+      text-align: center;
+    }
+    .contact-infos-item {
+      h3 {
+        margin-top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      ul {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        li {
+          width: $s-infos-svg-size;
+        }
+      }
+      .svg {
+        @include svgHover($s-infos-svg-bkg-color, $s-infos-svg-color);
+      }
+    }
   }
 }
-
-@mixin input() {
-  width: 100%;
-  padding: 10px;
-  margin-right: 20px;
-  font-size: 20px;
-  border: 2px solid $c-primary-light;
-  border-radius: 3px;
-}
-
-@mixin label() {
-  font-weight: bold;
-  font-size: 20px;
-  margin-right: 10px;
-  color: $c-text-dark;
+/* ---------------------- Media query ----------------------------*/
+@media only screen and (min-width: $min-width-l) {
+  .page-contact.section {
+    .section-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      .p-contact-section {
+        &.section-form,
+        &.section-infos {
+          padding-left: $form-section-fs-padding-lr;
+          padding-right: $form-section-fs-padding-lr;
+          padding-top: $section-padding-tb;
+          padding-bottom: $section-padding-tb;
+        }
+        &.section-form {
+          width: $form-section-form-width;
+        }
+        &.section-infos {
+          width: 100% - $form-section-form-width;
+        }
+      }
+    }
+    .form {
+      .form-section {
+        flex-direction: row;
+        .form-elt {
+          width: $form-elt-width-fs;
+          &.form-elt-message {
+            width: 98%;
+          }
+        }
+      }
+    }
+  }
 }

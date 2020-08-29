@@ -2,13 +2,14 @@
 ** Menu
 ********************************/
 $site-cache-color: rgba(0, 0, 0, 0.6);
-$site-content-bkg-color: $c-primary-light;
+$site-content-bkg-color: $site-bkg-color;
 $menu-width: 80%;
-$menu-bkg-color: $c-primary-light;
+$menu-bkg-color: $site-bkg-color;
 $menu-txt-color: $c-text-dark;
 $menu-animation-duration: $animation-duration;
 $menu-social-size: 20px;
 $menu-social-bkg-color: $c-primary;
+$menu-social-color: $c-text-dark;
 $menu-item-link-height: 2px;
 $menu-item-link-font-size: $base-size-font-txt-s;
 $menu-item-link-svg-size: 50px;
