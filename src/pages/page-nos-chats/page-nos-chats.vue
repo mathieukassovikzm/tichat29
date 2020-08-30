@@ -3,7 +3,7 @@
     <div class="section-container">
       <router-view></router-view>
     </div>
-    <div class="voir-conditions">
+    <div class="voir-conditions" @click="voirConditions">
       <SvgCatPaw />
       <h3>Voir Conditions</h3>
     </div>
@@ -17,6 +17,11 @@ export default {
   name: "page-nos-chats",
   components: {
     SvgCatPaw,
+  },
+  methods: {
+    voirConditions() {
+      this.$router.push({ name: "ConditionsAdoption" });
+    },
   },
 };
 </script>

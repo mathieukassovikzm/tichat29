@@ -5,6 +5,7 @@ import Home from './pages/page-home/page-home.vue';
 import NosChats from './pages/page-nos-chats/page-nos-chats.vue';
 import ListChats from './components/chat-list/chat-list.vue';
 import DetailChat from './components/chat-detail/chat-detail.vue';
+import ConditionsAdoption from './components/conditions-adoption/conditions-adoption.vue';
 import PageActualitees from './pages/page-actualitees/page-actualitees.vue';
 import PageFamilleDaccueil from './pages/page-famille-accueil/page-famille-accueil.vue';
 import PageContact from './pages/page-contact/page-contact.vue';
@@ -32,6 +33,11 @@ const routes = [
         path: '/detail-chat/:itemId',
         component: DetailChat,
         name: 'DetailChat',
+      },
+      {
+        path: '/conditions-adoption',
+        component: ConditionsAdoption,
+        name: 'ConditionsAdoption',
       },
     ],
   },
