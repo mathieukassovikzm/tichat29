@@ -1,0 +1,51 @@
+.c-chat-detail {
+  width: 100%;
+  height: $c-chat-detail-size;
+  .chat-detail-name {
+    position: relative;
+    top: $c-chat-detail-name-pos-t;
+    left: $c-chat-detail-txt-pos-l;
+    transform: translateY(-100%);
+    h2 {
+      left: 0;
+    }
+  }
+  .chat-detail-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $c-chat-detail-bottom-size;
+    background-color: $c-chat-detail-bkg-color;
+    .list-photos {
+      width: 300px;
+      height: 200px;
+      background-color: black;
+    }
+    .chat-detail-dsc {
+      position: relative;
+      left: $c-chat-detail-txt-pos-l;
+      top: $c-chat-detail-dsc-pos-t;
+      transform: translateX(-50%);
+      width: $c-chat-detail-dsc-width;
+      text-align: center;
+      color: $c-chat-detail-dsc-color;
+      font-size: $c-chat-detail-dsc-font-size;
+    }
+  }
+  .chat-detail-photo-container {
+    position: absolute;
+    right: $c-chat-detail-img-pos-right;
+    top: $c-chat-detail-img-pos-top;
+    .chat-detail-photo {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: $c-chat-detail-img-size;
+      height: $c-chat-detail-img-size;
+      object-fit: cover;
+      border-radius: 50%;
+      z-index: 1;
+    }
+  }
+}

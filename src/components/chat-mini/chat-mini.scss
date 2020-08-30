@@ -1,23 +1,25 @@
-.c-chat {
-  .chat-photo-container {
+.c-chat-mini {
+  .chat-mini-photo-container {
     position: relative;
-    .chat-photo {
+    .chat-mini-photo {
       position: relative;
       left: 50%;
       transform: translateX(-50%);
-      width: $c-chat-img-size;
-      height: $c-chat-img-size;
+      width: $c-chat-mini-img-size;
+      height: $c-chat-mini-img-size;
       object-fit: cover;
       border-radius: 50%;
       z-index: 1;
     }
     .cloak {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: $c-chat-mini-img-size;
+      height: $c-chat-mini-img-size;
       border-radius: 47%;
-      background-color: $c-chat-cloak-color;
-      transition: opacity $c-chats-hover-duration ease;
+      background-color: $c-chat-mini-cloak-color;
+      transition: opacity $c-chat-mini-hover-duration ease;
       opacity: 0;
       z-index: 2;
     }
@@ -25,14 +27,14 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transition: transform $c-chats-hover-duration ease;
+      transition: transform $c-chat-mini-hover-duration ease;
       transform: translateX(-50%) translateY(-50%) scale(0);
-      width: $c-chat-svg-plus-width;
+      width: $c-chat-mini-svg-plus-width;
       z-index: 3;
       path {
-        fill: $c-chat-svg-plus-color;
-        stroke: $c-chat-svg-plus-stroke-color;
-        stroke-width: $c-chat-svg-plus-stroke-width;
+        fill: $c-chat-mini-svg-plus-color;
+        stroke: $c-chat-mini-svg-plus-stroke-color;
+        stroke-width: $c-chat-mini-svg-plus-stroke-width;
       }
     }
     &:hover {
@@ -45,7 +47,7 @@
       }
     }
   }
-  .chat-name {
+  .chat-mini-name {
     text-align: center;
     text-transform: uppercase;
     font-style: italic;

@@ -1,0 +1,12 @@
+<div class="c-chat-detail">
+  <div class="chat-detail-name">
+    <h2>{{ chat.nom }}</h2>
+  </div>
+  <div class="chat-detail-bottom">
+    <div class="chat-detail-photo-container">
+      <img class="chat-detail-photo" :src="getMainPhoto.img" />
+    </div>
+    <p class="chat-detail-dsc">{{ chat.description }}</p>
+    <MiniDiapo class="list-photos" v-bind:listPhotos="chat.photos" />
+  </div>
+</div>

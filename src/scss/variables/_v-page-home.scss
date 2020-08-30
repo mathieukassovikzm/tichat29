@@ -5,12 +5,13 @@
 /******************
 ** Section Home
 *******************/
-$page_home_title_txt_color: $c-secundary-light;
-$page_home_title_font-size: 27px;
-$page_home_title_margin-b: 20px;
-$page_home_button_paw_size: 55px;
-$page_home_button_paw_scale-up: 1.1;
-$page_home_button_paw_scale-up-duration: 0.2s;
+$page-home-size: $size-under-menu;
+$page-home-title-txt-color: $c-secundary-light;
+$page-home-title-font-size: 27px;
+$page-home-title-margin-b: 20px;
+$page-home-button-paw-size: 55px;
+$page-home-button-paw-scale-up: 1.1;
+$page-home-button-paw-scale-up-duration: 0.2s;
 
 /******************
 ** Section help

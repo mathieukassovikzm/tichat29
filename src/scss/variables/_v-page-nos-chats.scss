@@ -11,12 +11,33 @@ $p-chats-paw-scale-up: 1.1;
 $p-chats-paw-scale-up-duration: 0.2s;
 
 /*******************************
-** Variables Component Chats
+** Variables Component list-chat
 ********************************/
-$c-chat-img-size: 200px;
-$c-chat-svg-plus-width: 25px;
-$c-chat-svg-plus-color: $c-third;
-$c-chat-svg-plus-stroke-color: $c-primary-light;
-$c-chat-svg-plus-stroke-width: 8px;
-$c-chat-cloak-color: rgba($c-primary-light, 0.4);
-$c-chats-hover-duration: 0.2s;
+
+/*******************************
+** Variables Component Chat-mini
+********************************/
+$c-chat-mini-img-size: 200px;
+$c-chat-mini-svg-plus-width: 25px;
+$c-chat-mini-svg-plus-color: $c-third;
+$c-chat-mini-svg-plus-stroke-color: $c-primary-light;
+$c-chat-mini-svg-plus-stroke-width: 8px;
+$c-chat-mini-cloak-color: rgba($c-primary-light, 0.4);
+$c-chat-mini-hover-duration: 0.2s;
+
+/*******************************
+** Variables Component chat-detail
+********************************/
+$c-chat-detail-size: $size-under-menu;
+$c-chat-detail-bottom-size: $size-under-menu - 30vh;
+$c-chat-detail-name-pos-t: $size-under-menu - $c-chat-detail-bottom-size;
+$c-chat-detail-txt-pos-l: 30%;
+$c-chat-detail-dsc-width: 50%;
+$c-chat-detail-dsc-pos-t: 5vh;
+$c-chat-detail-dsc-color: $c-text-light;
+$c-chat-detail-dsc-font-size: $base-size-font-txt-m;
+$c-chat-detail-img-size: 300px;
+$c-chat-detail-img-pos-right: 50px;
+$c-chat-detail-img-pos-top: ($c-chat-detail-img-size / 2) * -1;
+$c-chat-detail-bkg-color: rgba($c-third, 0.7);
+$c-chat-detail-color: $c-text-dark;

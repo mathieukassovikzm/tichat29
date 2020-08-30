@@ -1,8 +1,8 @@
 /*******************************
  * Variables Page Home 
  *******************************/
-$page_home_title_txt_color: $c-secundary-light !default;
-$page_home_button_paw_size: 55px !default;
+$page-home-title-txt-color: $c-secundary-light !default;
+$page-home-button-paw-size: 55px !default;
 /**------------------------------------------ Page Home -------------------------------------------------**/
 .section-home {
   position: relative;
@@ -10,7 +10,7 @@ $page_home_button_paw_size: 55px !default;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 95vh;
+  height: $page-home-size;
   .home-title {
     position: relative;
     top: 50%;
@@ -19,11 +19,11 @@ $page_home_button_paw_size: 55px !default;
     h1 {
       width: 80%;
       margin: auto;
-      color: $page_home_title_txt_color;
-      font-size: $page_home_title_font-size;
+      color: $page-home-title-txt-color;
+      font-size: $page-home-title-font-size;
       text-transform: uppercase;
       text-align: center;
-      margin-bottom: $page_home_title_margin-b;
+      margin-bottom: $page-home-title-margin-b;
       left: 50%;
       transform: translateX(-50%);
       .txt-italic {
@@ -34,9 +34,9 @@ $page_home_button_paw_size: 55px !default;
       }
     }
     p {
-      color: $page_home_title_txt_color;
+      color: $page-home-title-txt-color;
       text-align: center;
-      margin-bottom: $page_home_title_margin-b;
+      margin-bottom: $page-home-title-margin-b;
     }
 
     .buttons {
@@ -51,21 +51,21 @@ $page_home_button_paw_size: 55px !default;
           position: relative;
           left: 50%;
           transform: translateX(-50%);
-          width: $page_home_button_paw_size;
+          width: $page-home-button-paw-size;
           filter: $drop-shadow;
 
           path,
           ellipse {
-            fill: $page_home_title_txt_color;
+            fill: $page-home-title-txt-color;
           }
         }
         p {
           font-style: italic;
           text-transform: uppercase;
         }
-        transition: transform $page_home_button_paw_scale-up-duration ease;
+        transition: transform $page-home-button-paw-scale-up-duration ease;
         &:hover {
-          transform: scale($page_home_button_paw_scale-up);
+          transform: scale($page-home-button-paw-scale-up);
         }
       }
     }

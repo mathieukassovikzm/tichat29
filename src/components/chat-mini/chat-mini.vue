@@ -1,9 +1,10 @@
-<template src="./chat.html"></template>
+<template src="./chat-mini.html"></template>
 
 <script>
 import SvgPlus from "@/components/svg/svg-plus.vue";
 import { Flipped } from "vue-flip-toolkit";
 export default {
+  name: "component-chat-mini",
   props: ["chat", "expanded"],
   components: { SvgPlus, Flipped },
 
@@ -23,4 +24,4 @@ export default {
 };
 </script>
 
-<style lang="scss" src="./chat.scss"></style>
+<style lang="scss" src="./chat-mini.scss"></style>

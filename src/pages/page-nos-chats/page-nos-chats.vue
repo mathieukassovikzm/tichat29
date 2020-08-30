@@ -1,63 +1,66 @@
-<template src="./page-nos-chats.html"></template>
+<template>
+  <section class="page-nos-chats section">
+    <div class="section-container">
+      <router-view></router-view>
+    </div>
+    <div class="voir-conditions">
+      <SvgCatPaw />
+      <h3>Voir Conditions</h3>
+    </div>
+  </section>
+</template>
 
 <script>
-import TitleH1 from "@/components/title/title.vue";
-import MiniDiapo from "@/components/mini-diapo/mini-diapo.vue";
 import SvgCatPaw from "@/components/svg/svg-cat-paw.vue";
-import PageTitle from "@/components/title/title.vue";
-import Chat from "@/components/chat/chat.vue";
-import { Flipper } from "vue-flip-toolkit";
-import { mapGetters } from "vuex";
 
 export default {
+  name: "page-nos-chats",
   components: {
-    MiniDiapo,
-    PageTitle,
-    Chat,
     SvgCatPaw,
-    TitleH1,
-    Flipper,
-  },
-  data() {
-    return {
-      active: 0,
-      staggerConfig: {
-        listEvents: {
-          speed: 0.5,
-          reverse: false,
-        },
-      },
-    };
-  },
-  computed: {
-    ...mapGetters("chatsStore", {
-      getListChatsDispo: "getListChatsDispoInStore",
-    }),
-    listChats() {
-      return this.getListChatsDispo;
-    },
-    getMainPhoto() {
-      return {
-        ...this.listPhotos[this.index],
-        img:
-          this.listPhotos[this.index] &&
-          require(`@/assets/img/Chats/${this.listPhotos[this.index]}`),
-      };
-    },
-    spring() {
-      return {
-        stiffness: 70,
-        damping: 15,
-      };
-    },
-  },
-  methods: {
-    onClick(item) {
-      this.active = this.active === item ? 0 : item;
-      this.staggerConfig.listEvents.reverse = this.active !== 0;
-    },
   },
 };
 </script>
 
-<style lang="scss" src="./page-nos-chats.scss"></style>
+<style lang="scss" >
+.page-nos-chats {
+  &.section .section-container {
+    padding: 0;
+  }
+  .voir-conditions {
+    position: absolute;
+    bottom: $p-chats-vc-position-b;
+    right: $p-chats-vc-position-r;
+    .svg-cat-paw {
+      position: relative;
+      left: 50%;
+      bottom: 30px;
+      width: $p-chats-paw-width;
+      filter: $p-chats-paw-drop-shadow;
+      transition: transform $p-chats-paw-scale-up-duration ease;
+      path,
+      ellipse {
+        fill: $p-chats-paw-color;
+      }
+    }
+    h3 {
+      margin-bottom: 0;
+    }
+    &:hover {
+      cursor: pointer;
+      .svg-cat-paw {
+        transform: scale($p-chats-paw-scale-up);
+      }
+    }
+  }
+}
+/*******************************
+ * Menu Responsive
+ *******************************/
+@media only screen and (min-width: $min-width-m) {
+  .page-nos-chats {
+    &.section .section-container {
+      width: 100%;
+    }
+  }
+}
+</style>
