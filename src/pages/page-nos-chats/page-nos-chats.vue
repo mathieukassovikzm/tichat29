@@ -5,7 +5,8 @@
     </div>
     <div class="voir-conditions" @click="voirConditions">
       <SvgCatPaw />
-      <h3>Voir Conditions</h3>
+      <h3 v-if="voirConditionsTxt">Voir Conditions</h3>
+      <h3 v-else>Retour</h3>
     </div>
   </section>
 </template>
@@ -18,9 +19,25 @@ export default {
   components: {
     SvgCatPaw,
   },
+  data() {
+    return {
+      voirCond: true,
+    };
+  },
+  computed: {
+    voirConditionsTxt() {
+      return this.voirCond;
+    },
+  },
   methods: {
     voirConditions() {
-      this.$router.push({ name: "ConditionsAdoption" });
+      if (this.$route.name == "ConditionsAdoption") {
+        this.$router.go(-1);
+        this.voirCond = true;
+      } else {
+        this.$router.push({ name: "ConditionsAdoption" });
+        this.voirCond = false;
+      }
     },
   },
 };
