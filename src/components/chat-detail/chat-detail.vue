@@ -1,11 +1,12 @@
 <template src="./chat-detail.html"></template>
 
 <script>
+import CarouselComponent from "@/components/carousel-lightbox/carousel-component.vue";
 import { mapGetters } from "vuex";
 import { Flipped } from "vue-flip-toolkit";
 export default {
   name: "component-chat-detail",
-  components: { Flipped },
+  components: { Flipped, CarouselComponent },
   data() {
     return {
       loading: false,

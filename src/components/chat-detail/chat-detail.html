@@ -7,6 +7,6 @@
       <img class="chat-detail-photo" :src="getMainPhoto.img" />
     </div>
     <p class="chat-detail-dsc">{{ chat.description }}</p>
-    <MiniDiapo class="list-photos" v-bind:listPhotos="chat.photos" />
+    <CarouselComponent class="list-photos" v-bind:listPhotos="chat.photos" />
   </div>
 </div>

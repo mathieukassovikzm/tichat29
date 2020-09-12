@@ -1,0 +1,59 @@
+.slide-right-enter-active {
+  animation: slideRightIn $carousel-anim-duration;
+}
+
+.slide-right-leave-active {
+  animation: slideRightOut $carousel-anim-duration;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+@keyframes slideRightIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRightOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.slide-left-enter-active {
+  animation: slideleftIn $carousel-anim-duration;
+}
+
+.slide-left-leave-active {
+  animation: slideleftOut $carousel-anim-duration;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+@keyframes slideleftIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideleftOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
