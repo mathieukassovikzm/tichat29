@@ -10,7 +10,7 @@ const getters = {
     return state.listChats;
   },
   getChatInStore: (state) => (id) => {
-    return state.listChats.filter((chat) => chat.chatId === id);
+    return state.listChats.filter((chat) => chat.chatId == id);
   },
   getListChatsDispoInStore: (state) => {
     return state.listChats.filter((chat) => chat.dispo);

@@ -62,8 +62,13 @@ export default {
     }),
 
     linkClicked(idLinkClicked) {
-      if (this.$route.name !== idLinkClicked)
+      if (
+        this.$route.name !== idLinkClicked &&
+        !(this.$route.name === "ListeChats" && idLinkClicked === "NosChats")
+      ) {
         router.push({ name: idLinkClicked });
+      }
+
       this.setToFalseNavOpen();
     },
 

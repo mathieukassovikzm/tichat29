@@ -63,7 +63,17 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   .item-chat {
-    width: 50%;
+    width: 100%;
+  }
+}
+/*******************************
+ * Menu screen size
+ *******************************/
+@media only screen and (min-width: $min-width-m) {
+  .list-chats {
+    .item-chat {
+      width: 50%;
+    }
   }
 }
 </style>

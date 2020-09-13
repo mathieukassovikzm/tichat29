@@ -37,10 +37,14 @@ export default {
     ...mapActions("mainStore", {
       setBodyClass: "setBodyClassInStore",
     }),
+    ...mapActions("chatsStore", {
+      fetchInfosChats: "fetchInfosChatsInStore",
+    }),
     setSiteContainerClass() {
       this.setBodyClass(this.getBodyClassPageNosChats);
     },
     voirConditions() {
+      console.log(this.$route);
       if (this.$route.name == "ConditionsAdoption") {
         this.$router.go(-1);
         this.voirCond = true;
@@ -51,6 +55,7 @@ export default {
     },
   },
   beforeMount() {
+    this.fetchInfosChats();
     this.setSiteContainerClass();
   },
 };

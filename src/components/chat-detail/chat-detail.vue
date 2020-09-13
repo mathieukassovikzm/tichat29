@@ -2,7 +2,7 @@
 
 <script>
 import CarouselComponent from "@/components/carousel-lightbox/carousel-component.vue";
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 import { Flipped } from "vue-flip-toolkit";
 export default {
   name: "component-chat-detail",
@@ -28,6 +28,9 @@ export default {
     },
   },
   methods: {
+    ...mapActions("chatsStore", {
+      fetchInfosChats: "fetchInfosChatsInStore",
+    }),
     fetchData() {
       this.error = this.chat = null;
       this.loading = true;
@@ -36,7 +39,8 @@ export default {
       this.chat = resultChat[0];
     },
   },
-  created() {
+
+  beforeMount() {
     this.fetchData();
   },
 };
