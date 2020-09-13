@@ -1,8 +1,20 @@
 const state = {
   NavOpen: false,
+  BodyClass: '',
+  BodyClassPageHome: 'p-home p-transparent-menu',
+  BodyClassPageNosChats: 'p-nos-chats',
+  BodyClassPageActu: 'p-actu',
+  BodyClassPageFamAcc: 'p-fam-acc',
+  BodyClassPageContact: 'p-contact',
 };
 const getters = {
   getNavOpenStateInStore: (state) => state.NavOpen,
+  getBodyClassInStore: (state) => state.BodyClass,
+  getBodyClassPageHomeInStore: (state) => state.BodyClassPageHome,
+  getBodyClassPageNosChatsInStore: (state) => state.BodyClassPageNosChats,
+  getBodyClassPageActuInStore: (state) => state.BodyClassPageActu,
+  getBodyClassPageFamAccInStore: (state) => state.BodyClassPageFamAcc,
+  getBodyClassPageContactInStore: (state) => state.BodyClassPageContact,
 };
 const mutations = {
   TOGGLE_NAVOPEN: (state) => {
@@ -14,6 +26,9 @@ const mutations = {
   SET_TO_TRUE_NAVOPEN: (state) => {
     state.NavOpen = true;
   },
+  SET_BODY_CLASS: (state, data) => {
+    state.BodyClass = data;
+  },
 };
 const actions = {
   toggleNavOpenInStore: (store) => {
@@ -24,6 +39,9 @@ const actions = {
   },
   setToTrueNavOpenInStore: (store) => {
     store.commit('SET_TO_TRUE_NAVOPEN');
+  },
+  setBodyClassInStore: (store, data) => {
+    store.commit('SET_BODY_CLASS', data);
   },
 };
 

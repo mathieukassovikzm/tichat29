@@ -14,6 +14,7 @@ export default {
   computed: {
     ...mapGetters("mainStore", {
       getNavOpenState: "getNavOpenStateInStore",
+      getBodyClass: "getBodyClassInStore",
     }),
 
     isOpen() {

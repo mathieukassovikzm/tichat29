@@ -13,6 +13,7 @@
 
 <script>
 import SvgCatPaw from "@/components/svg/svg-cat-paw.vue";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "page-nos-chats",
@@ -25,11 +26,20 @@ export default {
     };
   },
   computed: {
+    ...mapGetters("mainStore", {
+      getBodyClassPageNosChats: "getBodyClassPageNosChatsInStore",
+    }),
     voirConditionsTxt() {
       return this.voirCond;
     },
   },
   methods: {
+    ...mapActions("mainStore", {
+      setBodyClass: "setBodyClassInStore",
+    }),
+    setSiteContainerClass() {
+      this.setBodyClass(this.getBodyClassPageNosChats);
+    },
     voirConditions() {
       if (this.$route.name == "ConditionsAdoption") {
         this.$router.go(-1);
@@ -39,6 +49,9 @@ export default {
         this.voirCond = false;
       }
     },
+  },
+  beforeMount() {
+    this.setSiteContainerClass();
   },
 };
 </script>

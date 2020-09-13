@@ -1,12 +1,24 @@
-<header class="menu">
+<header class="menu" :class="toggleMenuTop">
   <div class="list-social-media">
-    <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
+    <a
+      class="link"
+      href="https://www.facebook.com/Ti-Chat-29-198937427142014/"
+      target="_blank"
+    >
       <SvgPhone />
     </a>
-    <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
+    <a
+      class="link"
+      href="https://www.facebook.com/Ti-Chat-29-198937427142014/"
+      target="_blank"
+    >
       <SvgFacebook />
     </a>
-    <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
+    <a
+      class="link"
+      href="https://www.facebook.com/Ti-Chat-29-198937427142014/"
+      target="_blank"
+    >
       <SvgInstagram />
     </a>
   </div>
@@ -15,42 +27,40 @@
 
     <nav class="navigation push-left">
       <div class="menu-item">
-        <router-link class="menu-item-link" :to="{ name: 'PageHome'}">
+        <div class="menu-item-link" @click="linkClicked('PageHome')">
           <SvgHome class="svg-menu" />
           <p>Home</p>
-        </router-link>
+        </div>
       </div>
-
       <div class="menu-item">
-        <router-link class="menu-item-link" :to="{ name: 'NosChats'}">
+        <div class="menu-item-link" @click="linkClicked('NosChats')">
           <SvgCatPaw class="svg-menu" />
           <p>Nos chats</p>
-        </router-link>
+        </div>
       </div>
-
       <div class="menu-item">
-        <router-link class="menu-item-link" :to="{ name: 'PageActualitees'}">
+        <div class="menu-item-link" @click="linkClicked('PageActualitees')">
           <SvgScheduler class="svg-menu" />
           <p>Actualitées</p>
-        </router-link>
+        </div>
       </div>
-
       <div class="menu-item menu-logo">
-        <SvgCat class="svg-cat" />
-        <SvgTiChat class="svg-tichat" />
+        <div class="menu-item-link" @click="linkClicked('PageHome')">
+          <SvgCat class="svg-cat" />
+          <SvgTiChat class="svg-tichat" />
+        </div>
       </div>
-
       <div class="menu-item">
-        <router-link class="menu-item-link" :to="{ name: 'PageFamilleDaccueil'}">
+        <div class="menu-item-link" @click="linkClicked('PageFamilleDaccueil')">
           <SvgHeart class="svg-menu" />
           <p>Devenir Famille d'acceuil</p>
-        </router-link>
+        </div>
       </div>
       <div class="menu-item">
-        <router-link class="menu-item-link" :to="{ name: 'PageContact'}">
+        <div class="menu-item-link" @click="linkClicked('PageContact')">
           <SvgPhone class="svg-menu" />
           <p>Contact</p>
-        </router-link>
+        </div>
       </div>
     </nav>
   </div>

@@ -8,6 +8,7 @@ import SvgAddress from "@/components/svg/svg-address";
 import SvgFacebook from "@/components/svg/svg-facebook";
 import SvgInstagram from "@/components/svg/svg-instagram";
 import { required } from "vuelidate/lib/validators";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
@@ -44,6 +45,9 @@ export default {
     },
   },
   computed: {
+    ...mapGetters("mainStore", {
+      getBodyClassPageContact: "getBodyClassPageContactInStore",
+    }),
     formLastValid() {
       return !this.$v.form.lastname.$invalid ? this.classInputValid : "";
     },
@@ -91,6 +95,9 @@ export default {
     },
   },
   methods: {
+    ...mapActions("mainStore", {
+      setBodyClass: "setBodyClassInStore",
+    }),
     /* Handle the user's submit
      * @emit the event 'addRequestToChat' for his parent
      */
@@ -113,6 +120,13 @@ export default {
       this.name = "";
       this.query = "";
     },
+
+    setSiteContainerClass() {
+      this.setBodyClass(this.getBodyClassPageContact);
+    },
+  },
+  beforeMount() {
+    this.setSiteContainerClass();
   },
 };
 </script>

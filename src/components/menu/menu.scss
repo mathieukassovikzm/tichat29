@@ -15,6 +15,35 @@ $menu-animation-duration: 0.3s !default;
 .site-content {
   padding-top: $menu-height;
 }
+.site-container.p-transparent-menu {
+  .site-content {
+    padding-top: 0;
+  }
+  .menu.menu-top {
+    color: $menu-top-color;
+    background-color: transparent;
+    .menu-logo {
+      .svg {
+        path {
+          fill: $menu-top-color;
+        }
+      }
+      .svg-cat {
+        height: $menu-logo-cat-size;
+      }
+      .svg-tichat {
+        height: $menu-logo-tichat-size;
+      }
+    }
+    .menu-item {
+      .menu-item-link {
+        &::after {
+          background-color: $menu-top-color;
+        }
+      }
+    }
+  }
+}
 
 /*******************************
 ** Menu
@@ -28,6 +57,7 @@ $menu-animation-duration: 0.3s !default;
     text-decoration: none;
     font-size: $menu-item-link-font-size;
     padding: 0 10px;
+    cursor: pointer;
     &::after {
       content: '';
       position: absolute;
@@ -62,6 +92,7 @@ $menu-animation-duration: 0.3s !default;
   height: $menu-height;
   color: $menu-txt-color;
   background-color: $menu-bkg-color;
+  transition: $animation-duration-short ease-out all 0.1s;
   z-index: 10;
   .menu-container {
     height: 100%;
@@ -86,7 +117,8 @@ $menu-animation-duration: 0.3s !default;
       height: $menu-logo-cat-size;
     }
     .svg-tichat {
-      height: $menu-logo-tichat-size;
+      transition: $animation-duration-short ease-out all 0.1s;
+      height: 0;
     }
   }
   .navigation {
@@ -157,6 +189,8 @@ $menu-animation-duration: 0.3s !default;
   .menu {
     position: static;
     .menu-container {
+      color: $menu-resp-txt-color;
+
       .menu-icon {
         display: block;
       }
@@ -166,7 +200,7 @@ $menu-animation-duration: 0.3s !default;
         top: $menu-height;
         bottom: 0px;
         width: $menu-width;
-        background-color: darken($menu-bkg-color, 5);
+        background-color: $menu-bkg-color;
         align-items: initial;
         &.push-left {
           left: 0px;
@@ -190,7 +224,7 @@ $menu-animation-duration: 0.3s !default;
               display: inline-block;
               width: $menu-item-link-svg-size;
               circle {
-                fill: $menu-item-link-svg-bkg-color;
+                fill: transparent;
               }
               path,
               ellipse {
@@ -217,20 +251,20 @@ $menu-animation-duration: 0.3s !default;
           }
           &:hover .menu-item-link {
             .svg-menu {
-              background-color: $menu-item-link-svg-bkg-color;
+              background-color: $menu-resp-item-hover-bkg-color;
               border-radius: 50% 0 0 50%;
 
               circle {
-                fill: $menu-item-link-svg-bkg-color;
+                fill: $menu-resp-item-hover-bkg-color;
               }
               path,
               ellipse {
-                fill: $menu-item-link-svg-color;
+                fill: $menu-item-link-svg-color-hover;
               }
             }
             p {
-              color: $menu-bkg-color;
-              background-color: $menu-item-link-svg-bkg-color;
+              color: $menu-resp-txt-color-hover;
+              background-color: $menu-resp-item-hover-bkg-color;
             }
           }
         }

@@ -8,7 +8,7 @@ import PresAsso from "@/sections/presentation-asso/presentation-asso.vue";
 import Events from "@/sections/events/events.vue";
 import LastActu from "@/sections/last-actu/last-actu.vue";
 import Help from "@/sections/help/help.vue";
-
+import { mapGetters, mapActions } from "vuex";
 export default {
   components: {
     Cat,
@@ -18,6 +18,22 @@ export default {
     LastActu,
     Help,
     CatPaw,
+  },
+  computed: {
+    ...mapGetters("mainStore", {
+      getBodyClassPageHome: "getBodyClassPageHomeInStore",
+    }),
+  },
+  methods: {
+    ...mapActions("mainStore", {
+      setBodyClass: "setBodyClassInStore",
+    }),
+    setSiteContainerClass() {
+      this.setBodyClass(this.getBodyClassPageHome);
+    },
+  },
+  beforeMount() {
+    this.setSiteContainerClass();
   },
 };
 </script>
