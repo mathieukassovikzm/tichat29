@@ -18,6 +18,9 @@ export default {
     ...mapGetters("chatsStore", {
       getChat: "getChatInStore",
     }),
+    ...mapGetters("mainStore", {
+      getBodyClassPageNosChatsDetail: "getBodyClassPageNosChatsDetailInStore",
+    }),
     getMainPhoto() {
       return {
         ...this.chat.photos[0],
@@ -31,6 +34,12 @@ export default {
     ...mapActions("chatsStore", {
       fetchInfosChats: "fetchInfosChatsInStore",
     }),
+    ...mapActions("mainStore", {
+      setBodyClass: "setBodyClassInStore",
+    }),
+    setSiteContainerClass() {
+      this.setBodyClass(this.getBodyClassPageNosChatsDetail);
+    },
     fetchData() {
       this.error = this.chat = null;
       this.loading = true;
@@ -42,6 +51,7 @@ export default {
 
   beforeMount() {
     this.fetchData();
+    this.setSiteContainerClass();
   },
 };
 </script>

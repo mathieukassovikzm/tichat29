@@ -1,33 +1,21 @@
 .c-chat-detail {
   width: 100%;
-  height: $c-chat-detail-size;
   .chat-detail-name {
-    position: relative;
-    top: $c-chat-detail-name-pos-t;
-    left: $c-chat-detail-txt-pos-l;
-    transform: translateY(-100%);
-    h2 {
-      left: 0;
-    }
   }
   .chat-detail-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: $c-chat-detail-bottom-size;
+    position: relative;
     background-color: $c-chat-detail-bkg-color;
+    margin-top: $c-chat-detail-img-size/2;
+    padding-top: $c-chat-detail-img-size/2;
+
     .list-photos {
       width: 300px;
-      height: 200px;
-      background-color: black;
+      height: 300px;
     }
     .chat-detail-dsc {
       position: relative;
-      left: $c-chat-detail-txt-pos-l;
-      top: $c-chat-detail-dsc-pos-t;
-      transform: translateX(-50%);
-      width: $c-chat-detail-dsc-width;
+      margin: auto;
+      padding: $c-chat-detail-dsc-padding-tb $c-chat-detail-dsc-padding-lr;
       text-align: center;
       color: $c-chat-detail-dsc-color;
       font-size: $c-chat-detail-dsc-font-size;
@@ -35,17 +23,71 @@
   }
   .chat-detail-photo-container {
     position: absolute;
-    right: $c-chat-detail-img-pos-right;
-    top: $c-chat-detail-img-pos-top;
+    width: 100%;
+    top: 0;
     .chat-detail-photo {
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
       width: $c-chat-detail-img-size;
       height: $c-chat-detail-img-size;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
       object-fit: cover;
       border-radius: 50%;
       z-index: 1;
+    }
+  }
+}
+/*******************************
+ * Menu screen size
+ *******************************/
+@media only screen and (min-width: $min-width-m) {
+  .c-chat-detail {
+    width: 100%;
+    height: $c-chat-detail-size;
+    .chat-detail-name {
+      position: relative;
+      top: $c-chat-detail-name-pos-t;
+      left: $c-chat-detail-txt-pos-l;
+      transform: translateY(-100%);
+      h2 {
+        left: 0;
+      }
+    }
+    .chat-detail-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: $c-chat-detail-bottom-size;
+      background-color: $c-chat-detail-bkg-color;
+      .list-photos {
+        width: 300px;
+        height: 200px;
+        background-color: black;
+      }
+      .chat-detail-dsc {
+        position: relative;
+        left: $c-chat-detail-txt-pos-l;
+        top: $c-chat-detail-dsc-pos-t;
+        transform: translateX(-50%);
+        width: $c-chat-detail-dsc-width;
+        text-align: center;
+        color: $c-chat-detail-dsc-color;
+        font-size: $c-chat-detail-dsc-font-size;
+      }
+    }
+    .chat-detail-photo-container {
+      position: absolute;
+      right: $c-chat-detail-img-pos-right;
+      top: $c-chat-detail-img-pos-top;
+      .chat-detail-photo {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: $c-chat-detail-img-size;
+        height: $c-chat-detail-img-size;
+      }
     }
   }
 }

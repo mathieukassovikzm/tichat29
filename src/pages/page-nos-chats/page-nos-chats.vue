@@ -67,9 +67,6 @@ export default {
     padding: 0;
   }
   .voir-conditions {
-    position: absolute;
-    bottom: $p-chats-vc-position-b;
-    right: $p-chats-vc-position-r;
     .svg-cat-paw {
       position: relative;
       left: 50%;
@@ -93,6 +90,11 @@ export default {
     }
   }
 }
+.site-container.p-nos-chats.detail-chat {
+  .voir-conditions {
+    display: none;
+  }
+}
 /*******************************
  * Menu Responsive
  *******************************/
@@ -100,6 +102,11 @@ export default {
   .page-nos-chats {
     &.section .section-container {
       width: 100%;
+    }
+    .voir-conditions {
+      position: absolute;
+      bottom: $p-chats-vc-position-b;
+      right: $p-chats-vc-position-r;
     }
   }
 }

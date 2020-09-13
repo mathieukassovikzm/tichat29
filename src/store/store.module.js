@@ -3,6 +3,7 @@ const state = {
   BodyClass: '',
   BodyClassPageHome: 'p-home p-transparent-menu',
   BodyClassPageNosChats: 'p-nos-chats',
+  BodyClassPageNosChatsDetail: 'p-nos-chats detail-chat',
   BodyClassPageActu: 'p-actu',
   BodyClassPageFamAcc: 'p-fam-acc',
   BodyClassPageContact: 'p-contact',
@@ -12,6 +13,8 @@ const getters = {
   getBodyClassInStore: (state) => state.BodyClass,
   getBodyClassPageHomeInStore: (state) => state.BodyClassPageHome,
   getBodyClassPageNosChatsInStore: (state) => state.BodyClassPageNosChats,
+  getBodyClassPageNosChatsDetailInStore: (state) =>
+    state.BodyClassPageNosChatsDetail,
   getBodyClassPageActuInStore: (state) => state.BodyClassPageActu,
   getBodyClassPageFamAccInStore: (state) => state.BodyClassPageFamAcc,
   getBodyClassPageContactInStore: (state) => state.BodyClassPageContact,

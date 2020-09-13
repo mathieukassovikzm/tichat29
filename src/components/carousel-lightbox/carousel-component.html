@@ -1,9 +1,17 @@
 <div class="carousel__div carousel__lightbox">
   <SvgNext class="carousel__nav carousel__prev" @click.native="prev"></SvgNext>
   <Carousel ref="refCarousel">
-    <CarouselSlide v-for="n in slides" :index="n-1" v-bind:key="n">
-      <a :href="'https://picsum.photos/id/'+ (n) +'/800/600'" v-lightbox-simple="'first'" v-bind:key="n">
-        <img :src="'https://picsum.photos/id/'+ n +'/630/300'" width="100%" />
+    <CarouselSlide
+      v-for="objPhoto in listPhotosWithIndex"
+      :index="carouselIndex(objPhoto.index)"
+      v-bind:key="`slideKey-${objPhoto.index}`"
+    >
+      <a
+        :href="getPhoto(objPhoto.photo).img"
+        v-lightbox-simple="'first'"
+        v-bind:key="`slideKey-a-${objPhoto.index}`"
+      >
+        <img :src="getPhoto(objPhoto.photo).img" width="100%" />
       </a>
     </CarouselSlide>
   </Carousel>
