@@ -48,7 +48,7 @@ $menu-animation-duration: 0.3s !default;
 /*******************************
 ** Menu
 ********************************/
-.menu-item {
+.menu-item.menu-txt {
   text-transform: uppercase;
   .menu-item-link {
     position: relative;

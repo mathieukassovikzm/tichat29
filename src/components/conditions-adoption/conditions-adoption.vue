@@ -1,7 +1,7 @@
 <template >
   <div class="c-conditions section">
     <section class="section-container">
-      <PageTitle class="bkg-light">Conditions</PageTitle>
+      <PageTitle class="bkg-light">Conditions d'adoptions</PageTitle>
       <div class="conditions">
         <p>
           Dans un premier temps, la prise de contact se fait auprès d'un des
