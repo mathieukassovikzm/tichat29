@@ -40,6 +40,7 @@ export default {
         { name: "Devenir Famille d'acceuil", href: "PageFamilleDaccueil" },
         { name: "Contact", href: "PageContact" },
       ],
+      IdNavItemActif :""
     };
   },
   computed: {
@@ -62,6 +63,34 @@ export default {
     }),
 
     linkClicked(idLinkClicked) {
+      if(this.IdNavItemActif != ""){
+        var elementOld = document.getElementById(this.IdNavItemActif);
+        elementOld.classList.remove("link-active");
+      }
+      var eltId = "";
+      switch(idLinkClicked) {
+        case "PageHome":
+          eltId = "menu-item-link-home"
+          break;
+        case "NosChats":
+          eltId = "menu-item-link-nos-chats"
+          break;
+        case "PageHelp":
+          eltId = "menu-item-link-help"
+          break;
+        case "PageActualitees":
+          eltId = "menu-item-link-actualitees"
+          break;
+        case "PageContact":
+          eltId = "menu-item-link-contact"
+          break;
+        default:
+      }
+      if(eltId != ""){
+        var elementNew = document.getElementById(eltId);
+        elementNew.classList.add("link-active");
+        this.IdNavItemActif = eltId;
+      }
       if (
         this.$route.name !== idLinkClicked &&
         !(this.$route.name === "ListeChats" && idLinkClicked === "NosChats")

@@ -6,12 +6,12 @@
       padding-left: $form-section-padding-lr;
       padding-right: $form-section-padding-lr;
       &.section-form {
-        padding-top: $section-padding-tb;
-        padding-bottom: $section-padding-tb/2;
+        padding-top: $section-padding-b;
+        padding-bottom: $section-padding-b/2;
       }
       &.section-infos {
-        padding-top: $section-padding-tb/2;
-        padding-bottom: $section-padding-tb;
+        padding-top: $section-padding-b/2;
+        padding-bottom: $section-padding-b;
       }
     }
   }
@@ -97,8 +97,8 @@
         &.section-infos {
           padding-left: $form-section-fs-padding-lr;
           padding-right: $form-section-fs-padding-lr;
-          padding-top: $section-padding-tb;
-          padding-bottom: $section-padding-tb;
+          padding-top: $section-padding-b;
+          padding-bottom: $section-padding-b;
         }
         &.section-form {
           width: $form-section-form-width;

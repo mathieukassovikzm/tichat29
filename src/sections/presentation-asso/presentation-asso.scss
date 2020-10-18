@@ -1,0 +1,31 @@
+.section.s-presentation-asso {
+  color: red;
+  .section-container p {
+    text-align: center;
+  }
+  .img-obj-asso {
+    .section-container {
+      display: flex;
+      flex-wrap: wrap;
+      .title-h1 {
+        width: 100%;
+      }
+      p {
+        width: 100%;
+        color: $c-text-dark;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $min-width-m) {
+  .section.s-presentation-asso {
+    .img-obj-asso {
+      .section-container {
+        p {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

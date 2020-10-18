@@ -64,8 +64,8 @@ export default {
   .section-container {
     margin: 0;
     width: $section-resp-width;
-    padding-top: $section-padding-tb;
-    padding-bottom: $section-padding-tb;
+    padding-top: $section-padding-t;
+    padding-bottom: $section-padding-b;
     padding-left: $section-padding-lr;
     padding-right: $section-padding-lr;
   }

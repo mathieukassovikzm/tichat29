@@ -7,7 +7,7 @@ import ListChats from './components/chat-list/chat-list.vue';
 import DetailChat from './components/chat-detail/chat-detail.vue';
 import ConditionsAdoption from './components/conditions-adoption/conditions-adoption.vue';
 import PageActualitees from './pages/page-actualitees/page-actualitees.vue';
-import PageFamilleDaccueil from './pages/page-famille-accueil/page-famille-accueil.vue';
+import PageHelp from './pages/page-help/page-help.vue';
 import PageContact from './pages/page-contact/page-contact.vue';
 
 Vue.use(VueRouter);
@@ -47,9 +47,9 @@ const routes = [
     name: 'PageActualitees',
   },
   {
-    path: '/famille-accueil',
-    component: PageFamilleDaccueil,
-    name: 'PageFamilleDaccueil',
+    path: '/nous-aider',
+    component: PageHelp,
+    name: 'PageHelp',
   },
   {
     path: '/contact',

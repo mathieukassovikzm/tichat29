@@ -215,6 +215,7 @@ $menu-animation-duration: 0.3s !default;
             display: flex;
             flex-wrap: nowrap;
             align-items: center;
+            justify-content: center;
             top: 50%;
             transform: translateY(-50%);
             &::after {
@@ -228,22 +229,42 @@ $menu-animation-duration: 0.3s !default;
               }
               path,
               ellipse {
+                transition: all $animation-duration-short ease;
                 fill: $menu-item-link-svg-color;
               }
             }
             p {
+              position: relative;
+
+              transition: all $animation-duration-short ease;
               padding: $menu-item-link-txt-padding-tb
                 $menu-item-link-txt-padding-lr;
-              width: 100%;
               border-radius: $menu-item-link-txt-border-radius-s
                 $menu-item-link-txt-border-radius-b
                 $menu-item-link-txt-border-radius-b
                 $menu-item-link-txt-border-radius-s;
             }
-            // &.router-link-exact-active {
-            //   &::after {
-            //   }
-            // }
+            &.link-active {
+              .svg-menu {
+                path,
+                ellipse {
+                  fill: $menu-item-link-color-active;
+                }
+              }
+              p {
+                color: $menu-item-link-color-active;
+                &::after {
+                  content: '';
+                  position: absolute;
+                  top: 65%;
+                  height: 2px;
+                  width: 70%;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  background-color: $menu-item-link-color-active;
+                }
+              }
+            }
           }
 
           &.menu-logo {
@@ -251,20 +272,16 @@ $menu-animation-duration: 0.3s !default;
           }
           &:hover .menu-item-link {
             .svg-menu {
-              background-color: $menu-resp-item-hover-bkg-color;
-              border-radius: 50% 0 0 50%;
-
-              circle {
-                fill: $menu-resp-item-hover-bkg-color;
-              }
               path,
               ellipse {
                 fill: $menu-item-link-svg-color-hover;
               }
             }
             p {
-              color: $menu-resp-txt-color-hover;
-              background-color: $menu-resp-item-hover-bkg-color;
+              color: $menu-item-link-svg-color-hover;
+              &::after {
+                background-color: $menu-item-link-svg-color-hover;
+              }
             }
           }
         }

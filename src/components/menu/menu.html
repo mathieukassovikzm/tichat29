@@ -15,21 +15,15 @@
 
     <nav class="navigation push-left">
       <div class="menu-item menu-txt">
-        <div class="menu-item-link" @click="linkClicked('PageHome')">
+        <div id="menu-item-link-home" class="menu-item-link" @click="linkClicked('PageHome')">
           <SvgHome class="svg-menu" />
-          <p>Home</p>
+          <p>Accueil</p>
         </div>
       </div>
       <div class="menu-item menu-txt">
-        <div class="menu-item-link" @click="linkClicked('NosChats')">
+        <div id="menu-item-link-nos-chats" class="menu-item-link" @click="linkClicked('NosChats')">
           <SvgCatPaw class="svg-menu" />
-          <p>Nos chats</p>
-        </div>
-      </div>
-      <div class="menu-item menu-txt">
-        <div class="menu-item-link" @click="linkClicked('PageActualitees')">
-          <SvgScheduler class="svg-menu" />
-          <p>Actualitées</p>
+          <p>Nos protégés</p>
         </div>
       </div>
       <div class="menu-item menu-logo">
@@ -39,13 +33,19 @@
         </div>
       </div>
       <div class="menu-item menu-txt">
-        <div class="menu-item-link" @click="linkClicked('PageFamilleDaccueil')">
+        <div id="menu-item-link-help" class="menu-item-link" @click="linkClicked('PageHelp')">
           <SvgHeart class="svg-menu" />
-          <p>Devenir Famille d'acceuil</p>
+          <p>Nous aider</p>
         </div>
       </div>
       <div class="menu-item menu-txt">
-        <div class="menu-item-link" @click="linkClicked('PageContact')">
+        <div id="menu-item-link-actualitees" class="menu-item-link" @click="linkClicked('PageActualitees')">
+          <SvgScheduler class="svg-menu" />
+          <p>Actualitées</p>
+        </div>
+      </div>
+      <div class="menu-item menu-txt">
+        <div id="menu-item-link-contact" class="menu-item-link" @click="linkClicked('PageContact')">
           <SvgPhone class="svg-menu" />
           <p>Contact</p>
         </div>

@@ -1,4 +1,4 @@
-<template src="./page-famille-accueil.html"></template>
+<template src="./page-help.html"></template>
 
 <script>
 import PageTitle from "@/components/title/title.vue";
@@ -27,4 +27,4 @@ export default {
 };
 </script>
 
-<style lang="scss" src="./page-famille-accueil.scss"></style>
+<style lang="scss" src="./page-help.scss"></style>

@@ -1,11 +1,22 @@
 /*******************************
+** Media Query
+********************************/
+$min-width-s: 450px;
+$min-width-m: 650px;
+$min-width-l: 850px;
+
+/*******************************
 ** Globals
 ********************************/
+$animation-duration-short: 0.3s;
+$animation-duration: 0.5s;
+
 $size-under-menu: 90vh;
 $section-width: 70%;
 $section-resp-width: 100%;
 
-$section-padding-tb: 70px;
+$section-padding-t: 100px;
+$section-padding-b: 100px;
 $section-padding-lr: 10px;
 $section-container-padding-tb: 10px;
 $section-container-padding-lr: 10px;

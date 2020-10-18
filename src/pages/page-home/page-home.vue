@@ -9,6 +9,7 @@ import Events from "@/sections/events/events.vue";
 import LastActu from "@/sections/last-actu/last-actu.vue";
 import Help from "@/sections/help/help.vue";
 import { mapGetters, mapActions } from "vuex";
+import $ from "jquery";
 export default {
   components: {
     Cat,
@@ -30,6 +31,14 @@ export default {
     }),
     setSiteContainerClass() {
       this.setBodyClass(this.getBodyClassPageHome);
+    },
+    goToPresAsso() {
+      $("html,body").animate(
+        {
+          scrollTop: $("#s-pres-asso").offset().top 
+        },
+        "slow"
+      );
     },
   },
   beforeMount() {
