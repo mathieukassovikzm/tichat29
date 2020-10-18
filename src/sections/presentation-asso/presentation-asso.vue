@@ -59,4 +59,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scr="./presentation-asso.scss"></style>
+<style lang="scss" src="./presentation-asso.scss"></style>

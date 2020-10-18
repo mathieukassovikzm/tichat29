@@ -40,7 +40,7 @@ export default {
         { name: "Devenir Famille d'acceuil", href: "PageFamilleDaccueil" },
         { name: "Contact", href: "PageContact" },
       ],
-      IdNavItemActif :""
+      IdNavItemActif :"menu-item-link-home"
     };
   },
   computed: {

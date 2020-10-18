@@ -65,6 +65,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: $s-help-buttons-nb-margin-lr 0;
+
     .btn {
       margin: $s-help-button-nb-margin-tb 0;
     }
@@ -80,7 +82,7 @@
     }
     .buttons {
       .btn {
-        margin: $s-help-button-nb-margin-tb $s-help-buttons-nb-margin-lr;
+        margin: $s-help-button-nb-margin-tb $s-help-button-nb-margin-lr;
       }
     }
   }
