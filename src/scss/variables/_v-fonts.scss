@@ -19,13 +19,3 @@ $title-font-size-upper: 36px;
 $title-font-size-dec: 6px;
 $title-margin-bottom: 35px;
 $title-margin-bottom-dec: 5px;
-
-@each $heading in $headings {
-  #{$heading} {
-    font-size: $title-font-size-upper;
-    font-size: ($title-font-size-upper / $font-size-base) + em;
-    margin-bottom: $title-margin-bottom - $title-margin-bottom-dec;
-  }
-  $title-font-size-upper: $title-font-size-upper - $title-font-size-dec;
-  $title-margin-bottom: $title-margin-bottom - $title-margin-bottom-dec;
-}

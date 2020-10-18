@@ -2,11 +2,12 @@
 
 <script>
 import PageTitle from "@/components/title/title.vue";
+import SectionBkgImg from "@/components/section-bkg-img/section-bkg-img.vue";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
-    PageTitle,
+    PageTitle,SectionBkgImg
   },
   computed: {
     ...mapGetters("mainStore", {
