@@ -52,16 +52,6 @@ textarea {
   }
 }
 
-@each $heading in $headings {
-  #{$heading} {
-    font-size: $title-font-size-upper;
-    font-size: ($title-font-size-upper / $font-size-base) + em;
-    margin-bottom: $title-margin-bottom - $title-margin-bottom-dec;
-  }
-  $title-font-size-upper: $title-font-size-upper - $title-font-size-dec;
-  $title-margin-bottom: $title-margin-bottom - $title-margin-bottom-dec;
-}
-
 h1,
 h2,
 h3,

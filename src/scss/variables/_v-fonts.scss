@@ -1,0 +1,31 @@
+/*******************************
+** Fonts
+********************************/
+$font-title: 'futura';
+$font-txt: 'myriad';
+
+$base-size-font-txt-s: rem(16);
+$base-size-font-txt-m: rem(20);
+$base-size-font-txt-l: rem(24);
+
+$base-size-font-title-s: rem(16);
+$base-size-font-title-m: rem(22);
+$base-size-font-title-l: rem(32);
+
+$headings: h1 h2 h3 h4 h5 h6;
+$font-size-base: 16px;
+
+$title-font-size-upper: 36px;
+$title-font-size-dec: 6px;
+$title-margin-bottom: 35px;
+$title-margin-bottom-dec: 5px;
+
+@each $heading in $headings {
+  #{$heading} {
+    font-size: $title-font-size-upper;
+    font-size: ($title-font-size-upper / $font-size-base) + em;
+    margin-bottom: $title-margin-bottom - $title-margin-bottom-dec;
+  }
+  $title-font-size-upper: $title-font-size-upper - $title-font-size-dec;
+  $title-margin-bottom: $title-margin-bottom - $title-margin-bottom-dec;
+}

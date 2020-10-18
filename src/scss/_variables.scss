@@ -9,42 +9,10 @@ $min-width-m: 650px;
 $min-width-l: 850px;
 
 /*******************************
-** Colors
-********************************/
-$c-primary: #e2e0dd;
-$c-primary-light: #efedea;
-$c-primary-dark: #978f8f;
-
-$c-secundary: #575a5b;
-$c-secundary-light: #fafafa;
-$c-secundary-dark: #333;
-
-$c-third: #d5ac7f;
-
-$c-text-light: $c-primary;
-$c-text-dark: $c-secundary;
-
-$c-dark-background: $c-primary-light;
-
-$c-box-shadow: rgba(0, 0, 0, 0.9);
-
-/*******************************
-** Fonts
-********************************/
-$font-title: 'futura';
-$font-txt: 'myriad';
-
-$base-size-font-txt-s: rem(16);
-$base-size-font-txt-m: rem(20);
-$base-size-font-txt-l: rem(24);
-
-$base-size-font-title-s: rem(16);
-$base-size-font-title-m: rem(22);
-$base-size-font-title-l: rem(32);
-
-/*******************************
 ** Import
 ********************************/
+@import './variables/v-colors';
+@import './variables/v-fonts';
 @import './variables/v-globals';
 
 /* Components */
