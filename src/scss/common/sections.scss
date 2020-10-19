@@ -1,0 +1,61 @@
+section,
+.section {
+  position: relative;
+  background-image: url(./assets/img/backgroundTichat29.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &::before {
+    background-color: $c-dark-background;
+    display: block;
+    content: '';
+    position: absolute;
+    height: inherit;
+    width: inherit;
+  }
+  .section-container {
+    margin: 0;
+    width: $section-resp-width;
+    padding-top: $section-padding-t;
+    padding-bottom: $section-padding-b;
+    padding-left: $section-padding-lr;
+    padding-right: $section-padding-lr;
+  }
+}
+
+.section-title {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: $page-home-size;
+  .title-full {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media only screen and (min-width: $min-width-m) {
+  section,
+  .section {
+    .section-container {
+      margin: auto;
+      width: $section-width;
+    }
+  }
+  .section-title {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+
+    .title-full {
+      width: 50%;
+    }
+  }
+}

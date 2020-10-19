@@ -5,20 +5,8 @@ $page-home-title-txt-color: $c-secundary-light !default;
 $page-home-button-paw-size: 55px !default;
 /**------------------------------------------ Page Home -------------------------------------------------**/
 .section-home {
-  position: relative;
   background-image: url('./../../assets/img/pageHome/homePic.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: $page-home-size;
-  .home-title {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    top: 50%;
-    transform: translateY(-50%);
+  .title-full {
     h1 {
       width: 80%;
       color: $page-home-title-txt-color;
@@ -75,16 +63,5 @@ $page-home-button-paw-size: 55px !default;
     left: 50%;
     bottom: 10%;
     transform: translateX(-50%);
-  }
-}
-@media only screen and (min-width: $min-width-m) {
-  .section-home {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100vh;
-
-    .home-title {
-      width: 50%;
-    }
   }
 }

@@ -1,5 +1,16 @@
 .p-help {
+  .section-title {
+    background-image: url('./../../assets/img/titles/pageHelp.jpg');
+    h1 {
+      color: $s-help-svg-help-color;
+      &::after {
+        background-color: $s-help-svg-help-color;
+      }
+    }
+  }
   p {
     text-align: center;
+  }
+  .check {
   }
 }

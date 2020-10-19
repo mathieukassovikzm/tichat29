@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="section s-presentation-asso">
+    <section class="s-presentation-asso">
       <div class="section-container">
         <div class="title-h1">
           <TitleH1 class="bkg-light">TiChat29</TitleH1>
@@ -38,19 +38,17 @@
         <br />
       </div>
     </section>
-    <SectionBkgImg class="img-obj-asso bkg-light">
-      <div class="section-bkg-img img-obj-asso">
-        <div class="section-container">
-          <TitleH1>Objectifs de l'association</TitleH1>
-          <p>
-            Les chats sociables sont recueillis par notre association pour être
-            proposés à l’nos-chats (ils sont identifiés, vaccinés, stérilisés ou
-            castrés). Afin de remédier à la prolifération des chats errants qui
-            ne sont pas sociables, nous souhaitons les faire stériliser ou
-            castrer par un vétérinaire, puis les remettre sur site où ils sont
-            nourris et disposent d’un abri que nous confectionnons.
-          </p>
-        </div>
+    <SectionBkgImg class="section img-obj-asso bkg-light">
+      <div class="section-container">
+        <TitleH1>Objectifs de l'association</TitleH1>
+        <p>
+          Les chats sociables sont recueillis par notre association pour être
+          proposés à l’nos-chats (ils sont identifiés, vaccinés, stérilisés ou
+          castrés). Afin de remédier à la prolifération des chats errants qui
+          ne sont pas sociables, nous souhaitons les faire stériliser ou
+          castrer par un vétérinaire, puis les remettre sur site où ils sont
+          nourris et disposent d’un abri que nous confectionnons.
+        </p>
       </div>
     </SectionBkgImg>
   </div>

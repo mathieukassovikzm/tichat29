@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+h4 {
+  position: relative;
+  display: inline-block;
+  font-family: $font-title, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  font-weight: lighter;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    right: 1%;
+    height: 1px;
+    width: $titles-bar-width;
+    background-color: $titles-bkg-light-color;
+  }
+}
+
+h2 {
+  left: 50%;
+  transform: translateX(-50%);
+}
