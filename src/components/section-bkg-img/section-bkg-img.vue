@@ -18,12 +18,18 @@ export default {};
 </script>
 
 <style lang="scss">
+
 .section-bkg-img {
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  box-shadow: $sbkgimg-box-shadow;
+  &.bkg-dark{
+  box-shadow: $sbkgimg-box-shadow-dark;
+}
+&.bkg-light{
+  box-shadow: $sbkgimg-box-shadow-light;
+}
   .separation {
     position: absolute;
     left: 50%;
@@ -72,7 +78,10 @@ export default {};
     background-position: right 60% center;
   }
   &.img-fam-acc {
-    background-image: url("./../../assets/img/pageHome/img-fam-acc.jpg");
+    background-image: url("./../../assets/img/pageHelp/img-fam-acc.jpg");
+  }
+  &.img-lilo {
+    background-image: url("./../../assets/img/pageHelp/img-lilo.jpg");
   }
   &.bkg-dark {
     h1,

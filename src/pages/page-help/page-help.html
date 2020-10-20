@@ -1,9 +1,29 @@
 <div class="p-help">
-  <div class="section section-help section-title">
+  <div class="section-help section-title">
     <div class="title-full title-help">
       <h1>
         Nous aider
       </h1>
+      <div class="buttons">
+         <div
+           class="button-paw"
+         >
+           <SvgCatPaw />
+           <p>Faire<br/> un don</p>
+         </div>
+         <div
+           class="button-paw"
+         >
+           <SvgCatPaw />
+           <p>Famille<br/> d'accueil</p>
+         </div>
+         <div
+           class="button-paw"
+         >
+           <SvgCatPaw />
+           <p>Lilo</p>
+         </div>
+       </div>
     </div>
   </div>
   <section class="s-dons">
@@ -24,7 +44,7 @@
       </p>
       <img class="img-fisc" src="./../../assets/img/pageHelp/deduction_fiscale.jpg" alt="deduction_fiscale">
       <p>En cliquant sur le lien ci-dessous pour accéder au site Helloasso</p>
-      <button class="btn btn-v2 btn-don" @click="">Faire un don</button>
+      <a href="https://www.helloasso.com/associations/ti-chat-29" target="_blank"><button class="btn btn-v2 btn-don">Faire un don</button></a>
       <p>Par chèque à l'ordre de Ti Chat 29</p>
       <p class="check">
         Association Ti Chat 29<br />
@@ -76,23 +96,27 @@
         ?</p>
     </div>
   </section>
-  <section class="s-lilo">
+  <SectionBkgImg class="section s-lilo img-lilo bkg-light" >
     <div class="section-container">
       <PageTitle class="bkg-light">Lilo</PageTitle>
+   </div>
+  </SectionBkgImg>
+  <section>
+   <div class="section-container">
       <p>
-        Vous nous demandez souvent comment aider notre association
-      </p>
-      <p>Malheureusement vous n'avez pas toujours le temps ou pas toujours les moyens ?
-      </p>
-      <p>Nons avons la solution ;-)</p>
-      <p>
-        Il suffit d'utiliser Lilo comme moteur de recherche
-      </p>
-      <p>
-        C'est aussi efficace que Google et ça vous rapporte des gouttes que vous pouvez reverser à ti chat 29.
-      </p>
-      <p>Voici le lien, c'est facile , c'est gratuit et ça peut rapporter gros! <br />(pour nos ti chats)</p>
-      <button class="btn btn-v2 btn-lilo" @click="">Plus d'infos sur Lilo</button>
+         Vous nous demandez souvent comment aider notre association
+       </p>
+       <p>Malheureusement vous n'avez pas toujours le temps ou pas toujours les moyens ?
+       </p>
+       <p>Nons avons la solution ;-)</p>
+       <p>
+         Il suffit d'utiliser Lilo comme moteur de recherche
+       </p>
+       <p>
+         C'est aussi efficace que Google et ça vous rapporte des gouttes que vous pouvez reverser à ti chat 29.
+       </p>
+       <p>Voici le lien, c'est facile , c'est gratuit et ça peut rapporter gros! <br />(pour nos ti chats)</p>
+       <a href="https://search.lilo.org/" target="_blank"><button class="btn btn-v2 btn-lilo" >Plus d'infos sur Lilo</button></a>
     </div>
-  </section>
+</section>
 </div>

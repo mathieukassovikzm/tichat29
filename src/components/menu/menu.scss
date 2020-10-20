@@ -58,6 +58,9 @@ $menu-animation-duration: 0.3s !default;
     font-size: $menu-item-link-font-size;
     padding: 0 10px;
     cursor: pointer;
+    p {
+      margin: $menu-p-margin-tb 0;
+    }
     &::after {
       content: '';
       position: absolute;
