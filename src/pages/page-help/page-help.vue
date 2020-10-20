@@ -3,11 +3,12 @@
 <script>
 import PageTitle from "@/components/title/title.vue";
 import SectionBkgImg from "@/components/section-bkg-img/section-bkg-img.vue";
+import SvgCatPaw from "@/components/svg/svg-cat-paw";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
-    PageTitle,SectionBkgImg
+    PageTitle,SectionBkgImg,SvgCatPaw
   },
   computed: {
     ...mapGetters("mainStore", {

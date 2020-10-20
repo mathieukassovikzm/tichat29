@@ -10,32 +10,26 @@
           abandonnés. L'objectif étant de recueillir, identifier, stériliser et
           placer les chats abandonnés.
         </p>
-        <br />
         <p>Nous militons pour des adoptions responsables et engagées.</p>
-        <br />
         <p>
           Nos protégés, chats jeunes et moins jeunes, ont tous un point commun:
           avoir souffert de l'abandon, souvent de l'errance et de conditions de
           vie misérable dans la rue.
         </p>
-        <br />
         <p>
           Nous tenons à responsabiliser les adoptants potentiels sur le fait
           qu'adopter un animal est bien un engagement sur un certain nombre
           d'années : ce n'est ni une peluche, ni un jouet !
         </p>
-        <br />
         <p>
           De part leur histoire, certains de nos chats auront besoin de patience
           et de douceur pour reprendre confiance en l'humain, qui les a
           malmenés.
         </p>
-        <br />
         <p>
           En adoptant un de nos protégés, vous nous permettez de sauver une
           nouvelle vie!
         </p>
-        <br />
       </div>
     </section>
     <SectionBkgImg class="section img-obj-asso bkg-light">

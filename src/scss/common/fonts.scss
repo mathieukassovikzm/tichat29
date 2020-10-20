@@ -21,3 +21,7 @@
   $title-font-size-upper: $title-font-size-upper - $title-font-size-dec;
   $title-margin-bottom: $title-margin-bottom - $title-margin-bottom-dec;
 }
+
+p {
+  margin: $p-margin-tb 0;
+}

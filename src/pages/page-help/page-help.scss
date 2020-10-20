@@ -11,6 +11,43 @@
   p {
     text-align: center;
   }
-  .check {
+  .img-fisc,
+  .btn-don,
+  .check,
+  .btn-lilo {
+    margin: $p-margin-tb 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .s-dons {
+    .check {
+      border: 1px solid $p-help-c;
+      padding: $p-help-check-p;
+      width: $p-help-check-w;
+    }
+    .list-materiel {
+      li {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        p {
+          margin: $p-help-p-m-tb 0;
+        }
+        .svg-cat-paw {
+          width: $p-help-svg-size;
+          margin-right: $p-help-svg-m-r;
+          path,
+          ellipse {
+            fill: $p-help-c;
+          }
+        }
+      }
+    }
+    .remerciement {
+      margin-top: $p-help-remerciement-m-t;
+      font-size: $base-size-font-txt-l;
+      font-weight: bold;
+    }
   }
 }
