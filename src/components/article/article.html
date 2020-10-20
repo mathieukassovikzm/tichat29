@@ -1,0 +1,24 @@
+  <div class="c-article">
+      <div class="c-article-container">
+          <div class="avatar">
+            <SvgCatPaw v-if="noPhoto"></SvgCatPaw>
+            <img class="article-photo" :src="getPhoto.img" v-else />
+          </div>
+        <div class="article-desc">
+          <div class="article-desc-txt">
+            <p>{{article.titre}}</p>
+          </div>
+          <div class="article-desc-txt">
+            <p>{{article.lieu}}</p>
+          </div>
+            <div class="article-desc-txt">
+              <p>{{article.date}}</p>
+            </div>
+        </div>
+
+        <div class="article-infos-supp">
+          <h3>Description</h3>
+          <p>{{ article.description }}</p>
+        </div>
+      </div>
+  </div>

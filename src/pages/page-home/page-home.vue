@@ -5,7 +5,7 @@ import Cat from "@/components/svg/svg-cat.vue";
 import CatPaw from "@/components/svg/svg-cat-paw.vue";
 import TiChat from "@/components/svg/svg-tiChat29.vue";
 import PresAsso from "@/sections/presentation-asso/presentation-asso.vue";
-import Events from "@/sections/events/events.vue";
+import Articles from "@/sections/articles/articles.vue";
 import LastActu from "@/sections/last-actu/last-actu.vue";
 import Help from "@/sections/help/help.vue";
 import { mapGetters, mapActions } from "vuex";
@@ -15,7 +15,7 @@ export default {
     Cat,
     TiChat,
     PresAsso,
-    Events,
+    Articles,
     LastActu,
     Help,
     CatPaw,

@@ -30,30 +30,30 @@ $s-help-button-nb-margin-lr: 10px;
 $s-help-button-nb-margin-tb: 5px;
 
 /******************
-** Section Event
+** Section article
 *******************/
-$c-events-margin-tb: 20px;
-$c-event-max-width: 500px;
-$c-event-padding-tb: 10px;
-$c-event-expanded-padding-tb: 20px;
-$c-event-padding-lr: 20px;
-$c-event-bkg-color: $c-third;
-$c-event-border-radius: 60px;
-$c-event-box-shadow: 1px 1px 2px rgba($c-secundary-dark, 0.5);
-$c-event-box-svg-shadow: 2px 2px 2px rgba($c-secundary-dark, 0.5);
-$c-event-title-color: $c-secundary;
-$c-event-title-margin-t: 10px;
-$c-event-title-margin-b: 10px;
-$c-event-title-font-size: $base-size-font-title-m;
-$c-event-txt-color: $c-text-light;
-$c-event-txt-margin-tb: 10px;
-$c-event-img-size: 100px;
-$c-event-expanded-img-size: 150px;
-$c-event-paw-drop-size: 80%;
-$p-event-paw-drop-shadow: drop-shadow(2px 0px 0px rgba(0, 0, 0, 0.8));
-$c-event-desc-width: 70%;
-$c-event-desc-margin-l: 10px;
-$c-event-desc-padding: 15px;
-$c-event-desc-min-height: 100px;
-$c-event-desc-border-radius: 30px;
-$c-event-desc-margin-b: $c-event-expanded-padding-tb;
+$c-articles-margin-tb: 20px;
+$c-article-max-width: 500px;
+$c-article-padding-tb: 10px;
+$c-article-expanded-padding-tb: 20px;
+$c-article-padding-lr: 20px;
+$c-article-bkg-color: $c-third;
+$c-article-border-radius: 60px;
+$c-article-box-shadow: 1px 1px 2px rgba($c-secundary-dark, 0.5);
+$c-article-box-svg-shadow: 2px 2px 2px rgba($c-secundary-dark, 0.5);
+$c-article-title-color: $c-secundary;
+$c-article-title-margin-t: 10px;
+$c-article-title-margin-b: 10px;
+$c-article-title-font-size: $base-size-font-title-m;
+$c-article-txt-color: $c-text-light;
+$c-article-txt-margin-tb: 10px;
+$c-article-img-size: 100px;
+$c-article-expanded-img-size: 150px;
+$c-article-paw-drop-size: 80%;
+$p-article-paw-drop-shadow: drop-shadow(2px 0px 0px rgba(0, 0, 0, 0.8));
+$c-article-desc-width: 70%;
+$c-article-desc-margin-l: 10px;
+$c-article-desc-padding: 15px;
+$c-article-desc-min-height: 100px;
+$c-article-desc-border-radius: 30px;
+$c-article-desc-margin-b: $c-article-expanded-padding-tb;

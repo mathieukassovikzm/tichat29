@@ -1,11 +1,11 @@
-exports.getListEventsSortedChrono = (items) => {
+exports.getListArticlesSortedChrono = (items) => {
   items.sort((a, b) => {
     return new Date(a.date) - new Date(b.date);
   });
   return items;
 };
 
-exports.getListEventsSortedAntiChrono = (items) => {
+exports.getListArticlesSortedAntiChrono = (items) => {
   items.sort((a, b) => {
     return new Date(b.date) - new Date(a.date);
   });

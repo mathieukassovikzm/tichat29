@@ -33,9 +33,6 @@ export default {
     ...mapActions("articlesStore", {
       fetchInfosArticles: "fetchInfosArticlesInStore",
     }),
-    ...mapActions("eventsStore", {
-      fetchInfosEvents: "fetchInfosEventsInStore",
-    }),
     closeNav() {
       this.setToFalseNavOpen();
     },
@@ -43,7 +40,6 @@ export default {
   created() {
     this.fetchInfosChats();
     this.fetchInfosArticles();
-    this.fetchInfosEvents();
   },
 };
 </script>

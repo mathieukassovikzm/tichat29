@@ -29,7 +29,7 @@ export default {
       getListArticles: "getListArticlesInStore",
     }),
     listArticles() {
-      return DateHelper.getListEventsSortedAntiChrono(this.getListArticles);
+      return DateHelper.getListarticlesSortedAntiChrono(this.getListArticles);
     },
   },
 };
