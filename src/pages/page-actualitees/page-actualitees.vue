@@ -2,16 +2,26 @@
 
 <script>
 import PageTitle from "@/components/title/title.vue";
+import Article from "@/components/article/article.vue";
+import DateHelper from "@/dateHelper.js";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
     PageTitle,
+    Article,
   },
   computed: {
     ...mapGetters("mainStore", {
       getBodyClassPageActu: "getBodyClassPageActuInStore",
     }),
+    ...mapGetters("articlesStore", {
+      getListArticles: "getListArticlesInStore",
+      getListArticlesToCome: "getListArticlesToComeInStore",
+    }),
+    listArticles() {
+      return DateHelper.getListArticlesSortedAntiChrono(this.getListArticlesToCome);
+    },
   },
   methods: {
     ...mapActions("mainStore", {

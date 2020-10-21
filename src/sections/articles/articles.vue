@@ -1,5 +1,5 @@
 <template >
-  <section class="section">
+  <section>
     <div class="section-container">
       <TitleH1 class="bkg-light">Actualité</TitleH1>
         <ul>

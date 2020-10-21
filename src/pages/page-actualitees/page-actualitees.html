@@ -1,3 +1,18 @@
-<div>
-  <PageTitle pageName="pageActualitees" />
+<div class="p-articles">
+  <div class="section-articles section-title">
+    <div class="title-full title-articles">
+      <h1>
+        Actualité
+      </h1>
+    </div>
+  </div>
+  <section>
+    <div class="section-container">
+      <ul>
+        <li class="item-article" v-for="article in listArticles" v-bind:key="article.articleId">
+          <Article v-bind:article="article" />
+        </li>
+      </ul>
+    </div>
+  </section>
 </div>
