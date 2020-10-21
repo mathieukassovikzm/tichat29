@@ -2,21 +2,24 @@
 ** Section article
 *******************/
 $c-articles-margin-tb: 20px;
-$c-article-max-width: 500px;
-$c-article-expanded-padding-tb: 20px;
-$c-article-padding-lr: 20px;
+$c-articles-padding-tb: 25px;
+$c-articles-padding-lr: 10px;
+$c-article-max-width: 800px;
 $c-article-bkg-color: $c-third;
 $c-article-border-radius: 60px;
 $c-article-box-shadow: 1px 1px 2px rgba($c-secundary-dark, 0.5);
+$c-article-box-shadow-hover: 1px 1px 2px rgba($c-secundary-light, 0.5);
+$c-article-paw-color: $c-third;
+$c-article-paw-color-hover: $c-secundary-light;
 $c-article-box-svg-shadow: 2px 2px 2px rgba($c-secundary-dark, 0.5);
-$c-article-title-color: $c-secundary;
+$c-article-box-svg-shadow-hover: 2px 2px 2px rgba($c-secundary-light, 0.5);
 $c-article-title-margin-t: 10px;
 $c-article-title-margin-b: 10px;
-$c-article-title-font-size: $base-size-font-title-m;
-$c-article-txt-color: $c-text-dark;
 $c-article-txt-margin-tb: 10px;
 $c-article-img-size: 100px;
 $c-article-expanded-img-size: 150px;
-$c-article-paw-circle-size: 70%;
-$c-article-paw-drop-size: 70%;
-$p-article-paw-drop-shadow: drop-shadow(2px 0px 0px rgba(0, 0, 0, 0.8));
+$c-article-avatar-box-size: 70%;
+$c-article-avatar-paw-size: 70%;
+$p-article-avatar-paw-drop-shadow: drop-shadow(
+  2px 0px 0px rgba($c-primary-dark, 0.8)
+);

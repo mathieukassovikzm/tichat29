@@ -30,6 +30,9 @@ export default {
     setSiteContainerClass() {
       this.setBodyClass(this.getBodyClassPageActu);
     },
+    onClick(itemId) {
+      this.$router.push({ name: "DetailArticle", params: { itemId } });
+    },
   },
   beforeMount() {
     this.setSiteContainerClass();

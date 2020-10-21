@@ -83,6 +83,9 @@ export default {};
   &.img-lilo {
     background-image: url("./../../assets/img/pageHelp/img-lilo.jpg");
   }
+  &.img-actualitees {
+    background-image: url("./../../assets/img/pageHome/img-actualitees.jpg");
+  }
   &.bkg-dark {
     h1,
     p {

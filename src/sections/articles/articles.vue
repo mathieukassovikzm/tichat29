@@ -1,7 +1,12 @@
 <template >
-  <section>
+<div>
+  <SectionBkgImg class="section img-actualitees bkg-light">
     <div class="section-container">
       <TitleH1 class="bkg-light">Actualité</TitleH1>
+    </div>
+  </SectionBkgImg>
+  <section>
+    <div class="section-container">
         <ul>
           <li
             class="item-article"
@@ -13,17 +18,21 @@
         </ul>
     </div>
   </section>
+</div>
+
 </template>
 
 <script>
 import TitleH1 from "@/components/title/title.vue";
 import Article from "@/components/article/article.vue";
+import SectionBkgImg from '@/components/section-bkg-img/section-bkg-img.vue';
 import DateHelper from "../../dateHelper.js";
 import { mapGetters } from "vuex";
 
 export default {
   components: {
     TitleH1,
+    SectionBkgImg,
     Article,
   },
   data() {

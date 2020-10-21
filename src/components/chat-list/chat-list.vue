@@ -24,13 +24,7 @@ export default {
 
   data() {
     return {
-      active: 0,
-      staggerConfig: {
-        listEvents: {
-          speed: 0.5,
-          reverse: false,
-        },
-      },
+      
     };
   },
   computed: {
@@ -40,17 +34,9 @@ export default {
     listChats() {
       return this.getListChatsDispo;
     },
-    spring() {
-      return {
-        stiffness: 70,
-        damping: 15,
-      };
-    },
   },
   methods: {
     onClick(itemId) {
-      this.active = this.active === itemId ? 0 : itemId;
-      this.staggerConfig.listEvents.reverse = this.active !== 0;
       this.$router.push({ name: "DetailChat", params: { itemId } });
     },
   },

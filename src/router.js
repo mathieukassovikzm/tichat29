@@ -7,6 +7,7 @@ import ListChats from './components/chat-list/chat-list.vue';
 import DetailChat from './components/chat-detail/chat-detail.vue';
 import ConditionsAdoption from './components/conditions-adoption/conditions-adoption.vue';
 import PageActualitees from './pages/page-actualitees/page-actualitees.vue';
+import DetailArticle from './components/article/article.vue';
 import PageHelp from './pages/page-help/page-help.vue';
 import PageContact from './pages/page-contact/page-contact.vue';
 
@@ -45,6 +46,11 @@ const routes = [
     path: '/actualitees',
     component: PageActualitees,
     name: 'PageActualitees',
+  },
+  {
+    path: '/detail-article/:itemId',
+    component: DetailArticle,
+    name: 'DetailArticle',
   },
   {
     path: '/nous-aider',

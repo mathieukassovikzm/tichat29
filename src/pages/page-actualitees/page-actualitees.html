@@ -9,7 +9,10 @@
   <section>
     <div class="section-container">
       <ul>
-        <li class="item-article" v-for="article in listArticles" v-bind:key="article.articleId">
+        <li class="item-article" 
+            v-for="article in listArticles" 
+            v-bind:key="article.articleId"
+            @click="onClick(article.articleId)">
           <Article v-bind:article="article" />
         </li>
       </ul>

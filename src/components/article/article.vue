@@ -12,24 +12,6 @@ export default {
   },
   data() {
     return {
-      paragraphs: [
-        {
-          index: 1,
-          txt: `${this.article.titre}`,
-        },
-        {
-          index: 2,
-          txt: `Date: ${moment(this.article.date).format("DD/MM/YYYY")}`,
-        },
-        {
-          index: 3,
-          txt: `Heure: ${moment(this.article.date).format("H:mm")}`,
-        },
-        {
-          index: 4,
-          txt: `Lieu: ${this.article.lieu}`,
-        },
-      ],
     };
   },
   computed: {
@@ -44,6 +26,9 @@ export default {
           require(`@/assets/img/articles/${this.article.photo}`),
       };
     },
+    getDateFormated(){
+      return moment(this.article.date).locale('fr').format("DD MMMM YYYY");
+    }
   },
   methods: {
 
