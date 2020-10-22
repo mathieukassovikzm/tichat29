@@ -3,10 +3,9 @@
 <script>
 import CarouselComponent from "@/components/carousel-lightbox/carousel-component.vue";
 import { mapGetters, mapActions } from "vuex";
-import { Flipped } from "vue-flip-toolkit";
 export default {
   name: "component-chat-detail",
-  components: { Flipped, CarouselComponent },
+  components: { CarouselComponent },
   data() {
     return {
       loading: false,

@@ -1,15 +1,26 @@
-<template src="./page-actualitees.html"></template>
+<template>
+<div class="p-articles">
+  <div class="section-articles section-title">
+    <div class="title-full title-articles">
+      <h1>
+        Actualité
+      </h1>
+    </div>
+  </div>
+  <section>
+    <ListArticle/>
+  </section>
+</div>
+</template>
 
 <script>
-import PageTitle from "@/components/title/title.vue";
-import Article from "@/components/article/article.vue";
+import ListArticle from "@/components/article-list/article-list.vue";
 import DateHelper from "@/dateHelper.js";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
-    PageTitle,
-    Article,
+    ListArticle,
   },
   computed: {
     ...mapGetters("mainStore", {
@@ -29,10 +40,7 @@ export default {
     }),
     setSiteContainerClass() {
       this.setBodyClass(this.getBodyClassPageActu);
-    },
-    onClick(itemId) {
-      this.$router.push({ name: "DetailArticle", params: { itemId } });
-    },
+    }
   },
   beforeMount() {
     this.setSiteContainerClass();
@@ -40,4 +48,10 @@ export default {
 };
 </script>
 
-<style lang="scss" src="./page-actualitees.scss"></style>
+<style lang="scss">
+.p-articles {
+  .section-title {
+    background-image: url('./../../assets/img/titles/pageActualitees.jpg');
+  }
+}
+</style>

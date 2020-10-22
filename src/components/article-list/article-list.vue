@@ -1,10 +1,5 @@
 <template >
 <div>
-  <SectionBkgImg class="section img-actualitees bkg-light">
-    <div class="section-container">
-      <TitleH1 class="bkg-light">Actualité</TitleH1>
-    </div>
-  </SectionBkgImg>
   <section>
     <div class="section-container">
         <ul>
@@ -12,8 +7,9 @@
             class="item-article"
             v-for="article in listArticles"
             v-bind:key="article.articleId"
+            @click="onClick(article.articleId)"
           >
-            <Article v-bind:article="article" />
+            <Article class="not-expanded" v-bind:article="article" />
           </li>
         </ul>
     </div>
@@ -23,16 +19,12 @@
 </template>
 
 <script>
-import TitleH1 from "@/components/title/title.vue";
 import Article from "@/components/article/article.vue";
-import SectionBkgImg from '@/components/section-bkg-img/section-bkg-img.vue';
 import DateHelper from "../../dateHelper.js";
 import { mapGetters } from "vuex";
 
 export default {
   components: {
-    TitleH1,
-    SectionBkgImg,
     Article,
   },
   data() {
@@ -49,6 +41,9 @@ export default {
     },
   },
   methods: {
+    onClick(itemId) {
+      this.$router.push({ name: "DetailArticle", params: { itemId } });
+    }
   },
 };
 </script>

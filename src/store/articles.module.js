@@ -7,6 +7,9 @@ const getters = {
   getListArticlesInStore: (state) => {
     return state.listArticles;
   },
+  getArticleInStore: (state) => (id) => {
+    return state.listArticles.filter((article) => article.articleId == id);
+  },
   getListArticlesToComeInStore: (state) => {
     var listArticlesToCome = [];
     var currentDate = new Date();

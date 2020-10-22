@@ -3,35 +3,107 @@
   margin: auto;
   border: 2px solid $c-article-bkg-color;
   transition: all $animation-duration-short ease;
+
+  &.not-expanded {
+    .c-article-container {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      padding: $c-articles-padding-tb $c-articles-padding-lr;
+      .avatar {
+        position: relative;
+        width: 50%;
+        .avatar-box {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          border: 1px solid $c-primary-dark;
+          border-radius: 50%;
+          width: $c-article-avatar-box-size;
+          box-shadow: $c-article-box-svg-shadow;
+          &.avatar-photo {
+            overflow-x: hidden;
+          }
+          &:before {
+            content: '';
+            display: block;
+            padding-top: 100%; /* initial ratio of 1:1*/
+          }
+          .avatar-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            &.svg-cat-paw {
+              width: $c-article-avatar-paw-size;
+              filter: $p-article-avatar-paw-drop-shadow;
+              path,
+              ellipse {
+                fill: $c-article-paw-color;
+              }
+            }
+            &.article-photo {
+              object-fit: fill;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      .article-desc {
+        width: 50%;
+        p {
+          margin: 0;
+        }
+        .article-infos-supp {
+          display: none;
+        }
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: $c-article-bkg-color;
+      p {
+        color: $c-secundary-light;
+      }
+      .avatar {
+        .avatar-box {
+          border: 1px solid $c-secundary-light;
+          box-shadow: $c-article-box-svg-shadow-hover;
+          .avatar-content {
+            &.svg-cat-paw {
+              filter: $p-article-avatar-paw-drop-shadow;
+              path,
+              ellipse {
+                fill: $c-article-paw-color-hover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.expanded {
+    .c-article-container {
+      .avatar {
+        max-width: 100%;
+      }
+    }
+  }
+
   .c-article-container {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
     padding: $c-articles-padding-tb $c-articles-padding-lr;
     .avatar {
       position: relative;
-      width: 50%;
       .avatar-box {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        border: 1px solid $c-primary-dark;
-        border-radius: 50%;
-        width: $c-article-avatar-box-size;
-        box-shadow: $c-article-box-svg-shadow;
-        &.avatar-photo {
-          overflow-x: hidden;
-        }
-        &:before {
-          content: '';
-          display: block;
-          padding-top: 100%; /* initial ratio of 1:1*/
-        }
+
         .avatar-content {
-          position: absolute;
+          position: relative;
           left: 50%;
-          top: 50%;
-          transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%);
           &.svg-cat-paw {
             width: $c-article-avatar-paw-size;
             filter: $p-article-avatar-paw-drop-shadow;
@@ -49,41 +121,11 @@
     }
 
     .article-desc {
-      width: 50%;
       .desc-title {
         font-size: $base-size-font-title-m;
         font-weight: bold;
         margin-top: $c-article-title-margin-t;
         margin-bottom: $c-article-title-margin-b;
-      }
-      p {
-        margin: 0;
-      }
-      .article-infos-supp {
-        display: none;
-      }
-    }
-  }
-
-  &:hover {
-    cursor: pointer;
-    background-color: $c-article-bkg-color;
-    p {
-      color: $c-secundary-light;
-    }
-    .avatar {
-      .avatar-box {
-        border: 1px solid $c-secundary-light;
-        box-shadow: $c-article-box-svg-shadow-hover;
-        .avatar-content {
-          &.svg-cat-paw {
-            filter: $p-article-avatar-paw-drop-shadow;
-            path,
-            ellipse {
-              fill: $c-article-paw-color-hover;
-            }
-          }
-        }
       }
     }
   }
