@@ -1,23 +1,23 @@
 .c-chat-mini {
   .chat-mini-photo-container {
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: $c-chat-mini-img-size;
+    height: $c-chat-mini-img-size;
+    border-radius: 50%;
+    overflow: hidden;
     .chat-mini-photo {
       position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-      width: $c-chat-mini-img-size;
-      height: $c-chat-mini-img-size;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      border-radius: 50%;
       z-index: 1;
     }
     .cloak {
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: $c-chat-mini-img-size;
-      height: $c-chat-mini-img-size;
-      border-radius: 47%;
+      width: 100%;
+      height: 100%;
       background-color: $c-chat-mini-cloak-color;
       transition: opacity $c-chat-mini-hover-duration ease;
       opacity: 0;

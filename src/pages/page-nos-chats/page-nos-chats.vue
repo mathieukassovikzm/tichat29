@@ -1,5 +1,13 @@
 <template>
-  <section class="page-nos-chats section">
+<div class="page-nos-chats"> 
+  <div class="section-articles section-title">
+    <div class="title-full title-articles">
+      <h1>
+        Nos protégés
+      </h1>
+    </div>
+  </div>
+  <section>
     <div class="section-container">
       <router-view></router-view>
     </div>
@@ -9,6 +17,8 @@
       <h3 v-else>Retour</h3>
     </div>
   </section>
+</div>
+  
 </template>
 
 <script>
@@ -63,6 +73,9 @@ export default {
 
 <style lang="scss" >
 .page-nos-chats {
+  .section-title {
+    background-image: url('./../../assets/img/titles/pageNosChats.jpg');
+  }
   &.section .section-container {
     padding: 0;
   }

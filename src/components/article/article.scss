@@ -4,19 +4,53 @@
   border: 2px solid $c-article-bkg-color;
   transition: all $animation-duration-short ease;
 
-  &.not-expanded {
-    .c-article-container {
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: center;
-      padding: $c-articles-padding-tb $c-articles-padding-lr;
-      .avatar {
+  .c-article-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    .avatar {
+      position: relative;
+      .avatar-box {
         position: relative;
-        width: 50%;
-        .avatar-box {
+        left: 50%;
+        transform: translateX(-50%);
+
+        .avatar-content {
           position: relative;
           left: 50%;
           transform: translateX(-50%);
+          &.svg-cat-paw {
+            width: $c-article-avatar-paw-size;
+            filter: $p-article-avatar-paw-drop-shadow;
+            path,
+            ellipse {
+              fill: $c-article-paw-color;
+            }
+          }
+          &.article-photo {
+            object-fit: fill;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .article-desc {
+      .desc-title {
+        font-size: $base-size-font-title-m;
+        font-weight: bold;
+        margin-top: $c-article-title-margin-t;
+        margin-bottom: $c-article-title-margin-b;
+      }
+    }
+  }
+
+  &.not-expanded {
+    .c-article-container {
+      padding: $c-articles-padding-tb $c-articles-padding-lr;
+      .avatar {
+        width: 50%;
+        .avatar-box {
           border: 1px solid $c-primary-dark;
           border-radius: 50%;
           width: $c-article-avatar-box-size;
@@ -31,20 +65,10 @@
           }
           .avatar-content {
             position: absolute;
-            left: 50%;
             top: 50%;
             transform: translateX(-50%) translateY(-50%);
             &.svg-cat-paw {
               width: $c-article-avatar-paw-size;
-              filter: $p-article-avatar-paw-drop-shadow;
-              path,
-              ellipse {
-                fill: $c-article-paw-color;
-              }
-            }
-            &.article-photo {
-              object-fit: fill;
-              height: 100%;
             }
           }
         }
@@ -85,47 +109,19 @@
   }
   &.expanded {
     .c-article-container {
+      padding: $c-articles-exp-padding-tb $c-articles-exp-padding-lr;
+      flex-direction: column-reverse;
       .avatar {
         max-width: 100%;
       }
-    }
-  }
-
-  .c-article-container {
-    padding: $c-articles-padding-tb $c-articles-padding-lr;
-    .avatar {
-      position: relative;
-      .avatar-box {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-
-        .avatar-content {
-          position: relative;
-          left: 50%;
-          transform: translateX(-50%);
-          &.svg-cat-paw {
-            width: $c-article-avatar-paw-size;
-            filter: $p-article-avatar-paw-drop-shadow;
-            path,
-            ellipse {
-              fill: $c-article-paw-color;
-            }
-          }
-          &.article-photo {
-            object-fit: fill;
-            height: 100%;
-          }
+      .article-desc {
+        .desc-title {
+          text-align: center;
         }
-      }
-    }
-
-    .article-desc {
-      .desc-title {
-        font-size: $base-size-font-title-m;
-        font-weight: bold;
-        margin-top: $c-article-title-margin-t;
-        margin-bottom: $c-article-title-margin-b;
+        .date,
+        .place {
+          margin: 0;
+        }
       }
     }
   }
