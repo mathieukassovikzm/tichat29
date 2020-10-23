@@ -1,10 +1,11 @@
 /******************
 ** Section article
 *******************/
-$c-articles-margin-tb: 20px;
-$c-articles-padding-tb: 25px;
-$c-articles-padding-lr: 10px;
-$c-article-max-width: 800px;
+$c-article-width: 300px;
+$c-article-img-size: $c-article-width / 2;
+$c-article-padding-t: $c-article-img-size/2 + 20px;
+$c-article-padding-b: 25px;
+$c-article-padding-lr: 20px;
 $c-article-bkg-color: $c-third;
 $c-article-border-radius: 60px;
 $c-article-box-shadow: 1px 1px 2px rgba($c-secundary-dark, 0.5);
@@ -16,13 +17,12 @@ $c-article-box-svg-shadow-hover: 2px 2px 2px rgba($c-secundary-light, 0.5);
 $c-article-title-margin-t: 10px;
 $c-article-title-margin-b: 10px;
 $c-article-txt-margin-tb: 10px;
-$c-article-img-size: 100px;
 $c-article-expanded-img-size: 150px;
-$c-article-avatar-box-size: 70%;
 $c-article-avatar-paw-size: 70%;
-$p-article-avatar-paw-drop-shadow: drop-shadow(
-  2px 0px 0px rgba($c-primary-dark, 0.8)
-);
+$p-article-avatar-paw-drop-shadow: drop-shadow(2px 0px 0px rgba($c-primary-dark, 0.8));
+
+$c-articles-margin-tb: $c-article-padding-t/2;
+$c-articles-margin-lr: 20px;
 
 /**************
 ** Expanded
