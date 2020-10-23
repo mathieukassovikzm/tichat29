@@ -3,11 +3,11 @@ import VueRouter from 'vue-router';
 
 import Home from './pages/page-home/page-home.vue';
 import NosChats from './pages/page-nos-chats/page-nos-chats.vue';
-import ListChats from './components/chat-list/chat-list.vue';
-import DetailChat from './components/chat-detail/chat-detail.vue';
-import ConditionsAdoption from './components/conditions-adoption/conditions-adoption.vue';
+import ListChats from './pages/page-nos-chats/chat-list/chat-list.vue';
+import DetailChat from './pages/page-nos-chats/chat-detail/chat-detail.vue';
+import ConditionsAdoption from './pages/page-nos-chats/conditions-adoption/conditions-adoption.vue';
 import PageActualitees from './pages/page-actualitees/page-actualitees.vue';
-import DetailArticle from './components/article-detail/article-detail.vue';
+import DetailArticle from './pages/page-actualitees/article-detail/article-detail.vue';
 import PageHelp from './pages/page-help/page-help.vue';
 import PageContact from './pages/page-contact/page-contact.vue';
 

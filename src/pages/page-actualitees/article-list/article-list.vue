@@ -1,7 +1,7 @@
 <template >
-<div>
-  <section>
-    <div class="section-container">
+  <div>
+    <section>
+      <div class="section-container">
         <ul>
           <li
             class="item-article"
@@ -12,15 +12,14 @@
             <Article class="not-expanded" v-bind:article="article" />
           </li>
         </ul>
-    </div>
-  </section>
-</div>
-
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
-import Article from "@/components/article/article.vue";
-import DateHelper from "../../dateHelper.js";
+import Article from "./../article/article.vue";
+import DateHelper from "@/dateHelper.js";
 import { mapGetters } from "vuex";
 
 export default {
@@ -28,8 +27,7 @@ export default {
     Article,
   },
   data() {
-    return {
-    };
+    return {};
   },
   computed: {
     ...mapGetters("articlesStore", {
@@ -37,19 +35,21 @@ export default {
       getListArticlesToCome: "getListArticlesToComeInStore",
     }),
     listArticles() {
-      return DateHelper.getListArticlesSortedAntiChrono(this.getListArticlesToCome);
+      return DateHelper.getListArticlesSortedAntiChrono(
+        this.getListArticlesToCome
+      );
     },
   },
   methods: {
     onClick(itemId) {
       this.$router.push({ name: "DetailArticle", params: { itemId } });
-    }
+    },
   },
 };
 </script>
 
 <style lang="scss">
 .item-article {
- margin: $c-articles-margin-tb 0;
+  margin: $c-articles-margin-tb 0;
 }
 </style>

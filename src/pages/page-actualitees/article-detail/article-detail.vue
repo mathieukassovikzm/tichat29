@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Article from "@/components/article/article.vue";
+import Article from "@/pages/page-actualitees/article/article.vue";
 import { mapGetters, mapActions } from "vuex";
 
 export default {

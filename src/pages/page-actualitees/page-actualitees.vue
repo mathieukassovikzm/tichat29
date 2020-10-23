@@ -1,20 +1,18 @@
 <template>
-<div class="p-articles">
-  <div class="section-articles section-title">
-    <div class="title-full title-articles">
-      <h1>
-        Actualité
-      </h1>
+  <div class="p-articles">
+    <div class="section-articles section-title">
+      <div class="title-full title-articles">
+        <h1>Actualité</h1>
+      </div>
     </div>
+    <section>
+      <ListArticle />
+    </section>
   </div>
-  <section>
-    <ListArticle/>
-  </section>
-</div>
 </template>
 
 <script>
-import ListArticle from "@/components/article-list/article-list.vue";
+import ListArticle from "@/pages/page-actualitees/article-list/article-list.vue";
 import DateHelper from "@/dateHelper.js";
 import { mapGetters, mapActions } from "vuex";
 
@@ -31,7 +29,9 @@ export default {
       getListArticlesToCome: "getListArticlesToComeInStore",
     }),
     listArticles() {
-      return DateHelper.getListArticlesSortedAntiChrono(this.getListArticlesToCome);
+      return DateHelper.getListArticlesSortedAntiChrono(
+        this.getListArticlesToCome
+      );
     },
   },
   methods: {
@@ -40,7 +40,7 @@ export default {
     }),
     setSiteContainerClass() {
       this.setBodyClass(this.getBodyClassPageActu);
-    }
+    },
   },
   beforeMount() {
     this.setSiteContainerClass();
@@ -51,7 +51,7 @@ export default {
 <style lang="scss">
 .p-articles {
   .section-title {
-    background-image: url('./../../assets/img/titles/pageActualitees.jpg');
+    background-image: url("./../../assets/img/titles/pageActualitees.jpg");
   }
 }
 </style>

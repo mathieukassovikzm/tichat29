@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import ChatMini from "@/components/chat-mini/chat-mini.vue";
+import ChatMini from "@/pages/page-nos-chats/chat-mini/chat-mini.vue";
 import { mapGetters } from "vuex";
 export default {
   name: "component-list-chat",
