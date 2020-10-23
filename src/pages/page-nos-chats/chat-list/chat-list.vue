@@ -6,7 +6,7 @@
       v-bind:key="chat.chatId"
       @click="onClick(chat.chatId)"
     >
-      <ChatMini v-bind:chat="chat" v-bind:expanded="active === chat.chatId" />
+      <ChatMini v-bind:chat="chat" />
     </div>
   </div>
 </template>

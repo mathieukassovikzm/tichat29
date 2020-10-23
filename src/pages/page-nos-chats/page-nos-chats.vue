@@ -1,24 +1,22 @@
 <template>
-<div class="page-nos-chats"> 
-  <div class="section-articles section-title">
-    <div class="title-full title-articles">
-      <h1>
-        Nos protégés
-      </h1>
+  <div class="page-nos-chats">
+    <div class="section-articles section-title">
+      <div class="title-full title-articles">
+        <h1>Nos protégés</h1>
+      </div>
     </div>
-  </div>
-  <section>
-    <div class="section-container">
-      <router-view></router-view>
-    </div>
-    <div class="voir-conditions" @click="voirConditions">
+    <section>
+      <div class="section-container">
+        <router-view></router-view>
+      </div>
+    </section>
+
+    <div id="voir-conditions" class="voir-conditions" @click="voirConditions">
       <SvgCatPaw />
       <h3 v-if="voirConditionsTxt">Voir Conditions</h3>
       <h3 v-else>Retour</h3>
     </div>
-  </section>
-</div>
-  
+  </div>
 </template>
 
 <script>
@@ -54,7 +52,6 @@ export default {
       this.setBodyClass(this.getBodyClassPageNosChats);
     },
     voirConditions() {
-      console.log(this.$route);
       if (this.$route.name == "ConditionsAdoption") {
         this.$router.go(-1);
         this.voirCond = true;
@@ -67,60 +64,19 @@ export default {
   beforeMount() {
     this.fetchInfosChats();
     this.setSiteContainerClass();
+
+    var voirCond = document.getElementById("voir-conditions");
+    console.log("beforeMount");
+    console.log(voirCond);
+    voirCond.classList.toggle("visible");
+  },
+  beforeDestroy() {
+    var voirCond = document.getElementById("voir-conditions");
+    console.log("beforeDestroy");
+    console.log(voirCond);
+    voirCond.classList.toggle("visible");
   },
 };
 </script>
 
-<style lang="scss" >
-.page-nos-chats {
-  .section-title {
-    background-image: url('./../../assets/img/titles/pageNosChats.jpg');
-  }
-  &.section .section-container {
-    padding: 0;
-  }
-  .voir-conditions {
-    .svg-cat-paw {
-      position: relative;
-      left: 50%;
-      bottom: 30px;
-      width: $p-chats-paw-width;
-      filter: $p-chats-paw-drop-shadow;
-      transition: transform $p-chats-paw-scale-up-duration ease;
-      path,
-      ellipse {
-        fill: $p-chats-paw-color;
-      }
-    }
-    h3 {
-      margin-bottom: 0;
-    }
-    &:hover {
-      cursor: pointer;
-      .svg-cat-paw {
-        transform: scale($p-chats-paw-scale-up);
-      }
-    }
-  }
-}
-.site-container.p-nos-chats.detail-chat {
-  .voir-conditions {
-    display: none;
-  }
-}
-/*******************************
- * Menu Responsive
- *******************************/
-@media only screen and (min-width: $min-width-m) {
-  .page-nos-chats {
-    &.section .section-container {
-      width: 100%;
-    }
-    .voir-conditions {
-      position: absolute;
-      bottom: $p-chats-vc-position-b;
-      right: $p-chats-vc-position-r;
-    }
-  }
-}
-</style>
+<style lang="scss" src="./page-nos-chats.scss" ></style>
