@@ -31,6 +31,17 @@ export default {
   data() {
     return {
       limiteSize: 650,
+      limitSizeScroll: 50,
+      isTopMenu: true,
+      classMenuTop: "menu-top",
+      navItems: [
+        { name: "Home", href: "PageHome" },
+        { name: "Nos chats", href: "NosChats" },
+        { name: "Actualitées", href: "PageActualitees" },
+        { name: "Devenir Famille d'acceuil", href: "PageFamilleDaccueil" },
+        { name: "Contact", href: "PageContact" },
+      ],
+      IdNavItemActif: "menu-item-link-home",
     };
   },
   computed: {
