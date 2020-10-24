@@ -8,11 +8,13 @@ import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
-    PageTitle,SectionBkgImg,SvgCatPaw
+    PageTitle,
+    SectionBkgImg,
+    SvgCatPaw,
   },
   computed: {
     ...mapGetters("mainStore", {
-      getBodyClassPageFamAcc: "getBodyClassPageFamAccInStore",
+      getBodyClassPageHelp: "getBodyClassPageHelpInStore",
     }),
   },
   methods: {
@@ -20,7 +22,7 @@ export default {
       setBodyClass: "setBodyClassInStore",
     }),
     setSiteContainerClass() {
-      this.setBodyClass(this.getBodyClassPageFamAcc);
+      this.setBodyClass(this.getBodyClassPageHelp);
     },
   },
   beforeMount() {

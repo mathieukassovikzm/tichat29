@@ -4,7 +4,6 @@
       <Article class="expanded" v-bind:article="article" />
     </div>
   </section>
-
 </template>
 
 <script>
@@ -13,7 +12,7 @@ import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
-    Article
+    Article,
   },
   data() {
     return {
@@ -26,11 +25,20 @@ export default {
     ...mapGetters("articlesStore", {
       getArticle: "getArticleInStore",
     }),
+    ...mapGetters("mainStore", {
+      getBodyClassPageActuDetail: "getBodyClassPageActuDetailInStore",
+    }),
   },
   methods: {
     ...mapActions("articlesStore", {
       fetchInfosArticles: "fetchInfosArticlesInStore",
     }),
+    ...mapActions("mainStore", {
+      setBodyClass: "setBodyClassInStore",
+    }),
+    setSiteContainerClass() {
+      this.setBodyClass(this.getBodyClassPageActuDetail);
+    },
     fetchData() {
       this.error = this.article = null;
       this.loading = true;
@@ -41,6 +49,7 @@ export default {
   },
   beforeMount() {
     this.fetchData();
+    this.setSiteContainerClass();
   },
 };
 </script>
