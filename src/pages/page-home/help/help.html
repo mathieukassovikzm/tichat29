@@ -10,7 +10,9 @@
         <p>
           En adoptant un de nos protégés, vous nous permettez de sauver une nouvelle vie!
         </p>
-        <button class="btn btn-v1">Adopter</button>
+        <router-link :to="{ name: 'NosChats'}">
+          <button class="btn btn-v1">Adopter</button>
+        </router-link>
       </div>
       <div class="help offset-top help-adopter">
         <div class="logo-paw">
@@ -20,7 +22,9 @@
         <p>
           Il y a de nombreuses manières de nous aider. Découvrez les ici!
         </p>
-        <button class="btn btn-v1">Nous Aider</button>
+        <router-link :to="{ name: 'PageHelp'}">
+          <button class="btn btn-v1">Nous Aider</button>
+        </router-link>
       </div>
       <div class="help offset-bottom help-adopter">
         <div class="logo-paw">
@@ -38,9 +42,11 @@
           <SvgCatPaw />
         </div>
         <p>
-          Tous les dons comptent ! <br/>Merci pour votre soutien !
+          Tous les dons comptent ! <br />Merci pour votre soutien !
         </p>
-        <button class="btn btn-v1">Donnations</button>
+        <a href="https://www.helloasso.com/associations/ti-chat-29" target="_blank">
+          <button class="btn btn-v1">Donnations</button>
+        </a>
       </div>
     </div>
     <div class="buttons">

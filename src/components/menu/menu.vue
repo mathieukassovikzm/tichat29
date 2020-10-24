@@ -30,6 +30,7 @@ export default {
   },
   data() {
     return {
+      limiteSize: 650,
       limitSizeScroll: 50,
       isTopMenu: true,
       classMenuTop: "menu-top",
@@ -40,7 +41,7 @@ export default {
         { name: "Devenir Famille d'acceuil", href: "PageFamilleDaccueil" },
         { name: "Contact", href: "PageContact" },
       ],
-      IdNavItemActif :"menu-item-link-home"
+      IdNavItemActif: "menu-item-link-home",
     };
   },
   computed: {
@@ -48,9 +49,6 @@ export default {
       getNavOpenState: "getNavOpenStateInStore",
     }),
 
-    isOpen() {
-      return this.getNavOpenState === true ? "is-opened" : "is-closed";
-    },
     toggleMenuTop() {
       return this.isTopMenu === true ? this.classMenuTop : "";
     },
@@ -63,30 +61,30 @@ export default {
     }),
 
     linkClicked(idLinkClicked) {
-      if(this.IdNavItemActif != ""){
+      if (this.IdNavItemActif != "") {
         var elementOld = document.getElementById(this.IdNavItemActif);
         elementOld.classList.remove("link-active");
       }
       var eltId = "";
-      switch(idLinkClicked) {
+      switch (idLinkClicked) {
         case "PageHome":
-          eltId = "menu-item-link-home"
+          eltId = "menu-item-link-home";
           break;
         case "NosChats":
-          eltId = "menu-item-link-nos-chats"
+          eltId = "menu-item-link-nos-chats";
           break;
         case "PageHelp":
-          eltId = "menu-item-link-help"
+          eltId = "menu-item-link-help";
           break;
         case "PageActualitees":
-          eltId = "menu-item-link-actualitees"
+          eltId = "menu-item-link-actualitees";
           break;
         case "PageContact":
-          eltId = "menu-item-link-contact"
+          eltId = "menu-item-link-contact";
           break;
         default:
       }
-      if(eltId != ""){
+      if (eltId != "") {
         var elementNew = document.getElementById(eltId);
         elementNew.classList.add("link-active");
         this.IdNavItemActif = eltId;
@@ -97,13 +95,9 @@ export default {
       ) {
         router.push({ name: idLinkClicked });
       }
-
       this.setToFalseNavOpen();
     },
 
-    onNavBarItemClicked() {
-      this.openMenu();
-    },
     onScroll() {
       var y = window.scrollY;
       if (y > this.limitSizeScroll && this.isTopMenu) {

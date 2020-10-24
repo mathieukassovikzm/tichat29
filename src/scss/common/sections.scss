@@ -7,9 +7,9 @@ section,
   background-position: center center;
 
   &::before {
-    background-color: $c-dark-background;
+    background-color: $c-primary-light;
     display: block;
-    content: '';
+    content: "";
     position: absolute;
     height: inherit;
     width: inherit;

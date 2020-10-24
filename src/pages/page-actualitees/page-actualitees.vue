@@ -5,9 +5,7 @@
         <h1>Actualité</h1>
       </div>
     </div>
-    <section>
-      <ListArticle />
-    </section>
+    <ListArticle />
   </div>
 </template>
 

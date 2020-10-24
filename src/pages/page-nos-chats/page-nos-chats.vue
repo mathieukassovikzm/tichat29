@@ -1,5 +1,5 @@
 <template>
-  <div class="page-nos-chats">
+  <div class="p-nos-chats">
     <div class="section-articles section-title">
       <div class="title-full title-articles">
         <h1>Nos protégés</h1>
@@ -65,16 +65,16 @@ export default {
     this.fetchInfosChats();
     this.setSiteContainerClass();
 
-    var voirCond = document.getElementById("voir-conditions");
-    console.log("beforeMount");
-    console.log(voirCond);
-    voirCond.classList.toggle("visible");
+    // var voirCond = document.getElementById("voir-conditions");
+    // console.log("beforeMount");
+    // console.log(voirCond);
+    // voirCond.classList.toggle("visible");
   },
   beforeDestroy() {
-    var voirCond = document.getElementById("voir-conditions");
-    console.log("beforeDestroy");
-    console.log(voirCond);
-    voirCond.classList.toggle("visible");
+    // var voirCond = document.getElementById("voir-conditions");
+    // console.log("beforeDestroy");
+    // console.log(voirCond);
+    // voirCond.classList.toggle("visible");
   },
 };
 </script>

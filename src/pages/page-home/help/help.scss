@@ -63,8 +63,8 @@
   .buttons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: $s-help-buttons-nb-margin-lr 0;
+    justify-content: space-evenly;
+    margin: $s-help-buttons-nb-margin-t 0 $s-help-buttons-nb-margin-b 0;
 
     .btn {
       margin: $s-help-button-nb-margin-tb 0;

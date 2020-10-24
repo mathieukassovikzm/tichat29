@@ -20,14 +20,8 @@ $menu-animation-duration: 0.3s !default;
     padding-top: 0;
   }
   .menu.menu-top {
-    color: $menu-top-color;
     background-color: transparent;
     .menu-logo {
-      .svg {
-        path {
-          fill: $menu-top-color;
-        }
-      }
       .svg-cat {
         height: $menu-logo-cat-size;
       }
@@ -35,10 +29,41 @@ $menu-animation-duration: 0.3s !default;
         height: $menu-logo-tichat-size;
       }
     }
-    .menu-item {
-      .menu-item-link {
-        &::after {
-          background-color: $menu-top-color;
+  }
+  &.txt-light {
+    .menu.menu-top {
+      color: $menu-top-color-txt-light;
+      .menu-logo {
+        .svg {
+          path {
+            fill: $menu-top-color-txt-light;
+          }
+        }
+      }
+      .menu-item {
+        .menu-item-link {
+          &::after {
+            background-color: $menu-top-color-txt-light;
+          }
+        }
+      }
+    }
+  }
+  &.txt-dark {
+    .menu.menu-top {
+      color: $menu-top-color-txt-dark;
+      .menu-logo {
+        .svg {
+          path {
+            fill: $menu-top-color-txt-dark;
+          }
+        }
+      }
+      .menu-item {
+        .menu-item-link {
+          &::after {
+            background-color: $menu-top-color-txt-dark;
+          }
         }
       }
     }
@@ -62,7 +87,7 @@ $menu-animation-duration: 0.3s !default;
       margin: $menu-p-margin-tb 0;
     }
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0%;
       height: $menu-item-link-height !important;
@@ -164,7 +189,7 @@ $menu-animation-duration: 0.3s !default;
     overflow: hidden;
   }
   .site-pusher {
-    @include transition-duration(0.3s);
+    @include transition-duration($menu-animation-duration);
     @include transform(translateX(0px));
   }
   .site-content {
@@ -214,6 +239,8 @@ $menu-animation-duration: 0.3s !default;
 
         .menu-item {
           width: 100%;
+          opacity: 0;
+
           .menu-item-link {
             display: flex;
             flex-wrap: nowrap;
@@ -240,12 +267,9 @@ $menu-animation-duration: 0.3s !default;
               position: relative;
 
               transition: all $animation-duration-short ease;
-              padding: $menu-item-link-txt-padding-tb
-                $menu-item-link-txt-padding-lr;
-              border-radius: $menu-item-link-txt-border-radius-s
-                $menu-item-link-txt-border-radius-b
-                $menu-item-link-txt-border-radius-b
-                $menu-item-link-txt-border-radius-s;
+              padding: $menu-item-link-txt-padding-tb $menu-item-link-txt-padding-lr;
+              border-radius: $menu-item-link-txt-border-radius-s $menu-item-link-txt-border-radius-b
+                $menu-item-link-txt-border-radius-b $menu-item-link-txt-border-radius-s;
             }
             &.link-active {
               .svg-menu {
@@ -257,7 +281,7 @@ $menu-animation-duration: 0.3s !default;
               p {
                 color: $menu-item-link-color-active;
                 &::after {
-                  content: '';
+                  content: "";
                   position: absolute;
                   top: 65%;
                   height: 2px;
@@ -307,5 +331,35 @@ $menu-animation-duration: 0.3s !default;
       bottom: 0;
       background-color: $site-cache-color;
     }
+  }
+}
+
+//Animation of the responsive menu
+@keyframes navLinkFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX($menu-item-link-anim);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes navLinkFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX($menu-item-link-anim);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

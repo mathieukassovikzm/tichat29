@@ -1,12 +1,13 @@
 const state = {
   NavOpen: false,
   BodyClass: '',
-  BodyClassPageHome: 'p-home p-transparent-menu',
-  BodyClassPageNosChats: 'p-nos-chats',
-  BodyClassPageNosChatsDetail: 'p-nos-chats detail-chat',
-  BodyClassPageActu: 'p-actu',
-  BodyClassPageFamAcc: 'p-fam-acc',
-  BodyClassPageContact: 'p-contact',
+  BodyClassPageHome: 'p-transparent-menu txt-light',
+  BodyClassPageNosChats: 'p-transparent-menu txt-dark',
+  BodyClassPageNosChatsDetail: '',
+  BodyClassPageActu: 'p-transparent-menu txt-light',
+  BodyClassPageActuDetail: '',
+  BodyClassPageHelp: 'p-transparent-menu txt-light',
+  BodyClassPageContact: '',
 };
 const getters = {
   getNavOpenStateInStore: (state) => state.NavOpen,
@@ -16,7 +17,8 @@ const getters = {
   getBodyClassPageNosChatsDetailInStore: (state) =>
     state.BodyClassPageNosChatsDetail,
   getBodyClassPageActuInStore: (state) => state.BodyClassPageActu,
-  getBodyClassPageFamAccInStore: (state) => state.BodyClassPageFamAcc,
+  getBodyClassPageActuDetailInStore: (state) => state.BodyClassPageActuDetail,
+  getBodyClassPageHelpInStore: (state) => state.BodyClassPageHelp,
   getBodyClassPageContactInStore: (state) => state.BodyClassPageContact,
 };
 const mutations = {
