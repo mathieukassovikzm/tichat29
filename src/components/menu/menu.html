@@ -1,18 +1,17 @@
 <header class="menu" :class="toggleMenuTop">
   <div class="list-social-media">
-    <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
+    <div class="link" @click="goToFooter()">
       <SvgPhone />
-    </a>
+    </div>
     <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
       <SvgFacebook />
     </a>
-    <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
+    <!-- <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
       <SvgInstagram />
-    </a>
+    </a> -->
   </div>
   <div class="menu-container">
     <Burger />
-
     <nav class="navigation push-left">
       <div class="menu-item menu-txt">
         <div id="menu-item-link-home" class="menu-item-link link-active" @click="linkClicked('PageHome')">

@@ -10,12 +10,14 @@
     </div>
     <div class="article-desc">
       <p class="desc-title">{{article.titre}}</p>
-      <p class="date">{{getDateFormated}}</p>
-      <p class="place">{{article.lieu}}</p>
-      <div class="article-infos-supp">
-        <p>{{ article.description }}</p>
-      </div>
+      <p class="date">Date: {{getDateFormated}} <br />Heure: {{getHourFormated}}</p>
+      <p class="place">Lieu: {{article.lieu}}</p>
+      <p class="article-infos-supp">{{ article.description }}</p>
     </div>
-    <button></button>
   </div>
+  <button class="btn btn-v3 btn-fake">Savoir plus</button>
+
+  <button class="btn btn-v3 btn-savoir-plus" @click="goToDetailArticle()">Savoir plus</button>
+  <button class="btn btn-v1 btn-retour" @click="goToListArticles()">Retour</button>
+
 </div>

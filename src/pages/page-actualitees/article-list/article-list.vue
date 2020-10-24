@@ -6,7 +6,6 @@
           class="item-article"
           v-for="article in listArticles"
           v-bind:key="article.articleId"
-          @click="onClick(article.articleId)"
         >
           <Article class="not-expanded" v-bind:article="article" />
         </li>
@@ -38,11 +37,7 @@ export default {
       );
     },
   },
-  methods: {
-    onClick(itemId) {
-      this.$router.push({ name: "DetailArticle", params: { itemId } });
-    },
-  },
+  methods: {},
 };
 </script>
 

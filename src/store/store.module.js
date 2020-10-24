@@ -5,7 +5,7 @@ const state = {
   BodyClassPageNosChats: 'p-transparent-menu txt-dark',
   BodyClassPageNosChatsDetail: '',
   BodyClassPageActu: 'p-transparent-menu txt-light',
-  BodyClassPageActuDetail: '',
+  BodyClassPageActuDetail: 'p-color-secundary-menu txt-dark p-article-detail',
   BodyClassPageHelp: 'p-transparent-menu txt-light',
   BodyClassPageContact: '',
 };

@@ -1,19 +1,11 @@
 section,
 .section {
   position: relative;
-  background-image: url(./assets/img/backgroundTichat29.png);
+  background: url(./assets/img/backgroundTichat29.png), $site-bkg-color;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 
-  &::before {
-    background-color: $c-primary-light;
-    display: block;
-    content: "";
-    position: absolute;
-    height: inherit;
-    width: inherit;
-  }
   .section-container {
     margin: 0;
     width: $section-resp-width;

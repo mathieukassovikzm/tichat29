@@ -1,6 +1,6 @@
 <template >
   <section>
-    <div class="section-container">
+    <div class="section-container s-article-detail">
       <Article class="expanded" v-bind:article="article" />
     </div>
   </section>
@@ -54,4 +54,9 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.p-article-detail .site-pusher .site-content section {
+  background: url(./../../../assets/img/backgroundTichat29.png),
+    $site-bkg-color-secundary;
+}
+</style>
