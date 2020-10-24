@@ -9,8 +9,8 @@ import TiChat from "@/components/svg/svg-tiChat29.vue";
 import PresAsso from "./presentation-asso/presentation-asso.vue";
 import Help from "./help/help.vue";
 import Articles from "@/pages/page-actualitees/article-list/article-list.vue";
+import Functions from "@/functions.js";
 import { mapGetters, mapActions } from "vuex";
-import $ from "jquery";
 export default {
   components: {
     TitleH1,
@@ -35,12 +35,7 @@ export default {
       this.setBodyClass(this.getBodyClassPageHome);
     },
     goToPresAsso() {
-      $("html,body").animate(
-        {
-          scrollTop: $("#s-pres-asso").offset().top,
-        },
-        "slow"
-      );
+      Functions.moveSlowToId("#s-pres-asso");
     },
   },
   beforeMount() {
