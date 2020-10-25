@@ -74,4 +74,7 @@ export default {
     margin: $c-actualites-margin-tb $c-actualites-margin-lr;
   }
 }
+.p-home .section-actualites.section-title {
+  display: none;
+}
 </style>

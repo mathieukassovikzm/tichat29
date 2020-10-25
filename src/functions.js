@@ -8,7 +8,16 @@ function moveSlowToId(idItem) {
     "slow"
   );
 }
+function moveFastToId(idItem) {
+  $("html,body").animate(
+    {
+      scrollTop: $(idItem).offset().top,
+    },
+    "fast"
+  );
+}
 
 export default {
-  moveSlowToId
+  moveSlowToId,
+  moveFastToId
 }

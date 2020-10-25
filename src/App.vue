@@ -1,6 +1,7 @@
 <template src="./App.html"></template>
 
 <script>
+import Functions from "@/functions.js";
 import { mapGetters, mapActions } from "vuex";
 import MenuResp from "./components/menu/menu.vue";
 import FooterResp from "./components/footer/footer.vue";
@@ -67,12 +68,11 @@ export default {
     },
     enter(element) {
       const { height } = getComputedStyle(element);
-
       element.style.height = this.prevHeight;
-
       setTimeout(() => {
         element.style.height = height;
       });
+      Functions.moveFastToId("#app");
     },
     afterEnter(element) {
       element.style.height = "auto";

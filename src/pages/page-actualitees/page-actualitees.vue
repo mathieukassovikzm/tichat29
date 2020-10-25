@@ -1,7 +1,7 @@
 <template>
   <div class="p-actualites">
     <transition
-      name="zoom-height"
+      name="fade-slide-height"
       mode="out-in"
       @beforeLeave="beforeLeave"
       @enter="enter"
@@ -14,6 +14,7 @@
 
 <script>
 import DateHelper from "@/dateHelper.js";
+import Functions from "@/functions.js";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
@@ -57,6 +58,7 @@ export default {
       });
     },
     afterEnter(element) {
+      Functions.moveFastToId("#app");
       element.style.height = "auto";
     },
   },

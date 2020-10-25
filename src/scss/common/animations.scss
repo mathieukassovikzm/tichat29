@@ -17,29 +17,18 @@ $animation-duration: 0.3s !default;
 }
 
 /*****************************
-** Routeur Zoom
+** Routeur Slide Fade Height
 *****************************/
-.zoom-height-enter-active,
-.zoom-height-leave-active {
+.fade-slide-height-enter-active,
+.fade-slide-height-leave-active {
   transition-duration: $animation-duration;
-  transition-property: height, opacity;
+  transition-property: height, opacity, transform;
   transition-timing-function: ease;
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-  animation-name: zoom;
+  overflow: hidden;
 }
 
-.zoom-height-leave-active {
-  animation-direction: reverse;
-}
-
-@keyframes zoom {
-  from {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-
-  100% {
-    opacity: 1;
-  }
+.fade-slide-height-enter,
+.fade-slide-height-leave-active {
+  opacity: 0;
+  transform: translateX(-100px);
 }
