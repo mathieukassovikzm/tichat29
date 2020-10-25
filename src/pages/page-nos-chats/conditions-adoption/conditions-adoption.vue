@@ -59,7 +59,6 @@ export default {
 
 <style lang="scss">
 .c-conditions.section {
-  height: $c-chat-detail-size;
   background-color: $c-conditions-bkg-color;
   .section-container {
     margin: 0;

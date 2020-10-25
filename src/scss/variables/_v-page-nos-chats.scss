@@ -28,23 +28,24 @@ $c-chat-mini-hover-duration: 0.2s;
 /*******************************
 ** Variables Component chat-detail
 ********************************/
-$c-chat-detail-size: $size-under-menu;
-$c-chat-detail-bottom-size: $size-under-menu - 30vh;
-$c-chat-detail-name-pos-t: $size-under-menu - $c-chat-detail-bottom-size;
-$c-chat-detail-txt-pos-l: 30%;
-$c-chat-detail-dsc-width: 50%;
-$c-chat-detail-dsc-pos-t: 5vh;
+$c-chat-detail-bkg-color: $site-bkg-color-secundary;
+$c-chat-detail-txt-color: $c-text-dark;
+$c-chat-detail-img-size: 300px;
+$c-chat-detail-margin-t: $c-chat-detail-img-size * 3/4;
+$c-chat-detail-padding-t: $c-chat-detail-img-size * 3/4;
+$c-chat-detail-padding-b: 50px;
+$c-chat-detail-padding-lr: 50px;
 $c-chat-detail-dsc-padding-tb: 40px;
 $c-chat-detail-dsc-padding-lr: 10px;
-$c-chat-detail-dsc-color: $c-text-light;
 $c-chat-detail-dsc-font-size: $base-size-font-txt-m;
-$c-chat-detail-img-size: 300px;
-$c-chat-detail-img-pos-right: 50px;
-$c-chat-detail-img-pos-top: ($c-chat-detail-img-size / 2) * -1;
-$c-chat-detail-bkg-color: rgba($c-third, 0.7);
-$c-chat-detail-color: $c-text-dark;
+
+$c-chat-detail-scr-padding-t: $c-chat-detail-padding-b;
+$c-chat-detail-scr-avatar-container-size: 30%;
+$c-chat-detail-scr-chat-details-size: 100% - $c-chat-detail-scr-avatar-container-size;
+$c-chat-detail-scr-details-pos-t: $c-chat-detail-scr-padding-t + 50px;
+$c-chat-detail-scr-dsc-padding-lr: 30px;
 
 /*******************************
 ** Variables Component Conditions
 ********************************/
-$c-conditions-bkg-color: rgba($c-third, 0.2);
+$c-conditions-bkg-color: $site-bkg-color-secundary;
