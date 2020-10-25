@@ -8,7 +8,7 @@ import CatPaw from "@/components/svg/svg-cat-paw.vue";
 import TiChat from "@/components/svg/svg-tiChat29.vue";
 import PresAsso from "./presentation-asso/presentation-asso.vue";
 import Help from "./help/help.vue";
-import Articles from "@/pages/page-actualitees/article-list/article-list.vue";
+import actualites from "@/pages/page-actualitees/actualite-list/actualite-list.vue";
 import Functions from "@/functions.js";
 import { mapGetters, mapActions } from "vuex";
 export default {
@@ -18,7 +18,7 @@ export default {
     Cat,
     TiChat,
     PresAsso,
-    Articles,
+    actualites,
     Help,
     CatPaw,
   },

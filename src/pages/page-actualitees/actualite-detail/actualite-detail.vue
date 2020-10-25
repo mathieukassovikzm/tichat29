@@ -1,37 +1,37 @@
 <template >
-  <section>
-    <div class="section-container s-article-detail">
-      <Article class="expanded" v-bind:article="article" />
+  <section class="s-actualite-detail">
+    <div class="section-container">
+      <actualite class="expanded" v-bind:actualite="actualite" />
     </div>
   </section>
 </template>
 
 <script>
-import Article from "@/pages/page-actualitees/article/article.vue";
+import actualite from "@/pages/page-actualitees/actualite/actualite.vue";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
-    Article,
+    actualite,
   },
   data() {
     return {
       loading: false,
       error: null,
-      article: null,
+      actualite: null,
     };
   },
   computed: {
-    ...mapGetters("articlesStore", {
-      getArticle: "getArticleInStore",
+    ...mapGetters("actualitesStore", {
+      getactualite: "getactualiteInStore",
     }),
     ...mapGetters("mainStore", {
       getBodyClassPageActuDetail: "getBodyClassPageActuDetailInStore",
     }),
   },
   methods: {
-    ...mapActions("articlesStore", {
-      fetchInfosArticles: "fetchInfosArticlesInStore",
+    ...mapActions("actualitesStore", {
+      fetchInfosactualites: "fetchInfosactualitesInStore",
     }),
     ...mapActions("mainStore", {
       setBodyClass: "setBodyClassInStore",
@@ -40,11 +40,11 @@ export default {
       this.setBodyClass(this.getBodyClassPageActuDetail);
     },
     fetchData() {
-      this.error = this.article = null;
+      this.error = this.actualite = null;
       this.loading = true;
       const fetchedId = this.$route.params.itemId;
-      var resultArticle = this.getArticle(fetchedId);
-      this.article = resultArticle[0];
+      var resultactualite = this.getactualite(fetchedId);
+      this.actualite = resultactualite[0];
     },
   },
   beforeMount() {
@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style lang="scss">
-.p-article-detail .site-pusher .site-content section {
+.p-actualite-detail .site-pusher .site-content section {
   background: url(./../../../assets/img/backgroundTichat29.png),
     $site-bkg-color-secundary;
 }

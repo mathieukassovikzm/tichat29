@@ -1,7 +1,7 @@
 <template>
   <div class="p-nos-chats">
-    <div class="section-articles section-title">
-      <div class="title-full title-articles">
+    <div class="section-actualites section-title">
+      <div class="title-full title-actualites">
         <h1>Nos protégés</h1>
       </div>
     </div>

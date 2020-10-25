@@ -1,34 +1,39 @@
 <template>
-  <div class="p-articles">
-    <div class="section-articles section-title">
-      <div class="title-full title-articles">
-        <h1>Actualité</h1>
-      </div>
-    </div>
-    <ListArticle />
+  <div class="p-actualites">
+    <transition
+      name="zoom-height"
+      mode="out-in"
+      @beforeLeave="beforeLeave"
+      @enter="enter"
+      @afterEnter="afterEnter"
+    >
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
-import ListArticle from "@/pages/page-actualitees/article-list/article-list.vue";
 import DateHelper from "@/dateHelper.js";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
-  components: {
-    ListArticle,
+  components: {},
+  data() {
+    return {
+      prevHeight: 0,
+    };
   },
   computed: {
     ...mapGetters("mainStore", {
       getBodyClassPageActu: "getBodyClassPageActuInStore",
     }),
-    ...mapGetters("articlesStore", {
-      getListArticles: "getListArticlesInStore",
-      getListArticlesToCome: "getListArticlesToComeInStore",
+    ...mapGetters("actualitesStore", {
+      getlistActualites: "getlistActualitesInStore",
+      getlistActualitesToCome: "getlistActualitesToComeInStore",
     }),
-    listArticles() {
-      return DateHelper.getListArticlesSortedAntiChrono(
-        this.getListArticlesToCome
+    listActualites() {
+      return DateHelper.getlistActualitesSortedAntiChrono(
+        this.getlistActualitesToCome
       );
     },
   },
@@ -39,6 +44,21 @@ export default {
     setSiteContainerClass() {
       this.setBodyClass(this.getBodyClassPageActu);
     },
+    beforeLeave(element) {
+      this.prevHeight = getComputedStyle(element).height;
+    },
+    enter(element) {
+      const { height } = getComputedStyle(element);
+
+      element.style.height = this.prevHeight;
+
+      setTimeout(() => {
+        element.style.height = height;
+      });
+    },
+    afterEnter(element) {
+      element.style.height = "auto";
+    },
   },
   beforeMount() {
     this.setSiteContainerClass();
@@ -47,7 +67,7 @@ export default {
 </script>
 
 <style lang="scss">
-.p-articles {
+.p-actualites {
   .section-title {
     background-image: url("./../../assets/img/titles/pageActualitees.jpg");
   }

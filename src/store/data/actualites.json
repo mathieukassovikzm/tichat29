@@ -1,10 +1,10 @@
 {
-  "articles": [
+  "actualites": [
     {
       "titre": "Evénement à l'école Notre Dame des Victoires de Gouesnach",
       "date": "2020-11-24T20:00:00",
       "lieu": "Gouesnach",
-      "description": "Un grand merci à l'école notre dame des victoires de Gouesnach. Suite à l'article du journal Ouest France, ils ont organisées une collecte de croquettes et de litières. L'occasion pour nous de leur présenter l'association, et de les sensibiliser à l'indentification et la stérilisation des chats. Merci également pour leur écoute et leurs dessins.",
+      "description": "Un grand merci à l'école notre dame des victoires de Gouesnach. Suite à l'actualite du journal Ouest France, ils ont organisées une collecte de croquettes et de litières. L'occasion pour nous de leur présenter l'association, et de les sensibiliser à l'indentification et la stérilisation des chats. Merci également pour leur écoute et leurs dessins.",
       "photo": "20201124-ecole.jpg"
     },
     {
@@ -22,17 +22,17 @@
       "photo": "20201124-Collecte.jpg"
     },
     {
-      "titre": "Article1",
+      "titre": "actualite1",
       "date": "2020-10-10T11:00:00",
       "lieu": "Lennon",
-      "description": "Descriptif de l'article",
+      "description": "Descriptif de l'actualite",
       "photo": ""
     },
     {
-      "titre": "Article0",
+      "titre": "actualite0",
       "date": "2020-09-10T11:00:00",
       "lieu": "Pleyben",
-      "description": "Descriptif de l'article",
+      "description": "Descriptif de l'actualite",
       "photo": ""
     }
   ]

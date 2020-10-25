@@ -1,0 +1,23 @@
+<div class="c-actualite">
+  <div class="c-actualite-container">
+    <div class="avatar">
+      <div class="avatar-box avatar-paw" v-if="noPhoto">
+        <SvgCatPaw class="avatar-content"></SvgCatPaw>
+      </div>
+      <div class="avatar-box avatar-photo" v-else>
+        <img class="avatar-content actualite-photo" :src="getPhoto.img" />
+      </div>
+    </div>
+    <div class="actualite-desc">
+      <p class="desc-title">{{actualite.titre}}</p>
+      <p class="date">Date: {{getDateFormated}} <br />Heure: {{getHourFormated}}</p>
+      <p class="place">Lieu: {{actualite.lieu}}</p>
+      <p class="actualite-infos-supp">{{ actualite.description }}</p>
+    </div>
+  </div>
+  <button class="btn btn-v3 btn-fake">Savoir plus</button>
+
+  <button class="btn btn-v3 btn-savoir-plus" @click="goToDetailactualite()">Savoir plus</button>
+  <button class="btn btn-v1 btn-retour" @click="goTolistActualites()">Retour</button>
+
+</div>

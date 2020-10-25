@@ -1,0 +1,45 @@
+$animation-duration: 0.3s !default;
+
+/*****************************
+** Routeur Fade Height
+*****************************/
+.fade-height-enter-active,
+.fade-height-leave-active {
+  transition-duration: $animation-duration;
+  transition-property: height, opacity;
+  transition-timing-function: ease;
+  overflow: hidden;
+}
+
+.fade-height-enter,
+.fade-height-leave-active {
+  opacity: 0;
+}
+
+/*****************************
+** Routeur Zoom
+*****************************/
+.zoom-height-enter-active,
+.zoom-height-leave-active {
+  transition-duration: $animation-duration;
+  transition-property: height, opacity;
+  transition-timing-function: ease;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: zoom;
+}
+
+.zoom-height-leave-active {
+  animation-direction: reverse;
+}
+
+@keyframes zoom {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
