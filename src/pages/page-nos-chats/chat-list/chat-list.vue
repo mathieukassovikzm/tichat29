@@ -1,13 +1,24 @@
 <template >
-  <div class="list-chats">
-    <div
-      class="item-chat"
-      v-for="chat in listChats"
-      v-bind:key="chat.chatId"
-      @click="onClick(chat.chatId)"
-    >
-      <ChatMini v-bind:chat="chat" />
+  <div>
+    <div class="section-list-chats section-title">
+      <div class="title-full title-list-chats">
+        <h1>Nos protégés</h1>
+      </div>
     </div>
+    <section>
+      <div class="section-container">
+        <ul class="list-chats">
+          <li
+            class="item-chat"
+            v-for="chat in listChats"
+            v-bind:key="chat.chatId"
+            @click="onClick(chat.chatId)"
+          >
+            <ChatMini v-bind:chat="chat" />
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
 </template>
 
