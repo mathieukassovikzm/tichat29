@@ -39,7 +39,7 @@ const actions = {
       let data = dataChats;
       if (data) {
         let list = [];
-        var i = 1;
+        var i = 0;
         for (const [key, value] of Object.entries(data)) {
           if (key == 'nbChatsAdoptes') {
             store.commit('SETNBCHATSADOPTES', value);

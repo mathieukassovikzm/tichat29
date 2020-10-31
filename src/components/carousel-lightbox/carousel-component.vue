@@ -34,7 +34,7 @@ export default {
       this.$refs.refCarousel.prev();
     },
     carouselIndex(index) {
-      return index - 1;
+      return index;
     },
     getPhoto(i) {
       return {
@@ -49,6 +49,7 @@ export default {
           photo: this.listPhotos[i],
         });
       }
+      console.log(this.listPhotosWithIndex);
     },
   },
   beforeMount() {
