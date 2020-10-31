@@ -7,9 +7,7 @@ $carousel-pag-color: #333 !default;
 $carousel-pag-active-color: #efedea !default;
 
 .carousel__div.carousel__lightbox {
-  width: 60%;
   margin: auto;
-
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -23,8 +21,10 @@ $carousel-pag-active-color: #efedea !default;
     transition: all $carousel-anim-hover-duration ease;
 
     path {
+      transition: all $carousel-anim-hover-duration ease;
       fill: $carousel-nav-color;
     }
+
     &.carousel__prev {
       right: 5px;
       transform: translateY(-50%) rotate(180deg);
@@ -38,6 +38,10 @@ $carousel-pag-active-color: #efedea !default;
       &:hover {
         transform: scale(1.1) translateY(-50%);
       }
+    }
+
+    &:hover path {
+      fill: $carousel-pag-active-color;
     }
   }
 }

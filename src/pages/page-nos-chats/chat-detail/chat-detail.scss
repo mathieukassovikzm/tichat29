@@ -40,8 +40,7 @@
         font-size: $c-chat-detail-dsc-font-size;
       }
       .chat-list-photos {
-        width: 300px;
-        height: 300px;
+        padding: $c-chat-detail-dsc-padding-tb $c-chat-detail-dsc-padding-lr;
       }
     }
   }

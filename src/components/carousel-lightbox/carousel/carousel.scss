@@ -1,7 +1,9 @@
 /******* Control outside *******/
-.carousel.carousel__v2 {
+.carousel {
   position: relative;
   overflow: hidden;
+  width: $carousel-width;
+  max-width: $carousel-max-width;
 
   .carousel__div {
     display: flex;

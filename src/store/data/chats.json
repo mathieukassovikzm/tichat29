@@ -5,7 +5,11 @@
     {
       "nom": "Ron",
       "description": "Noisette , elle est très chouette Et sa bonne mine plutôt divine... Ti chat , y a le téléphon qui sonne  Et y aura pas personne ( ben non je serai là bien sûr) pour y répondre ! Bon je récapitule ... Noisette 8 mois hyper sociable a l’adoption sur pluguffan Appelez nous au 06 25 09 52 22",
-      "photos": ["Ron/Ron-1.jpg", "Ron/Ron-2.jpg", "Ron/Ron-3.jpg"],
+      "photos": [
+        "Ron/Ron-1.jpg",
+        "Ron/Ron-2.jpg",
+        "Ron/Ron-3.jpg"
+      ],
       "dispo": true
     },
     {
@@ -27,7 +31,7 @@
         "Hilda/Hilda-4.jpg",
         "Hilda/Hilda-2.jpg",
         "Hilda/Hilda-3.jpg",
-        "Hilda/Hilda-4.jpg",
+        "Hilda/Hilda-1.jpg",
         "Hilda/Hilda-5.jpg"
       ],
       "dispo": true
@@ -36,11 +40,11 @@
       "nom": "Jean",
       "description": "Juste le meilleur des chats, fait partie de la bande mafcuss",
       "photos": [
-        "Hilda/Hilda-3.jpg",
+        "Hilda/Hilda-5.jpg",
         "Hilda/Hilda-2.jpg",
-        "Hilda/Hilda-3.jpg",
+        "Hilda/Hilda-1.jpg",
         "Hilda/Hilda-4.jpg",
-        "Hilda/Hilda-5.jpg"
+        "Hilda/Hilda-3.jpg"
       ],
       "dispo": true
     },
