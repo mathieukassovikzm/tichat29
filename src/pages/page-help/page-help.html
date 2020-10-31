@@ -5,22 +5,22 @@
         Nous aider
       </h1>
       <div class="buttons">
-        <div class="button-paw">
+        <div class="button-paw" @click="goToDons">
           <SvgCatPaw />
           <p>Faire<br /> un don</p>
         </div>
-        <div class="button-paw">
+        <div class="button-paw" @click="goToFamAcc">
           <SvgCatPaw />
           <p>Famille<br /> d'accueil</p>
         </div>
-        <div class="button-paw">
+        <div class="button-paw" @click="goToLilo">
           <SvgCatPaw />
           <p>Lilo</p>
         </div>
       </div>
     </div>
   </div>
-  <section class="s-dons">
+  <section id="s-dons" class="s-dons">
     <div class="section-container">
       <PageTitle class="bkg-light">Faire un don</PageTitle>
       <p>
@@ -66,7 +66,7 @@
       </p>
     </div>
   </section>
-  <SectionBkgImg class="section s-fam-acc img-fam-acc bkg-light">
+  <SectionBkgImg id="s-fam-acc" class="section s-fam-acc img-fam-acc bkg-light">
     <div class="section-container">
       <PageTitle class="bkg-light">Familles d'accueil</PageTitle>
       <p>
@@ -91,7 +91,7 @@
         ?</p>
     </div>
   </section>
-  <SectionBkgImg class="section s-lilo img-lilo bkg-light">
+  <SectionBkgImg id="s-lilo" class="section s-lilo img-lilo bkg-light">
     <div class="section-container">
       <PageTitle class="bkg-light">Lilo</PageTitle>
     </div>

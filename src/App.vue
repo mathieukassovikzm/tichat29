@@ -1,6 +1,7 @@
 <template src="./App.html"></template>
 
 <script>
+import Functions from "@/functions.js";
 import { mapGetters, mapActions } from "vuex";
 import MenuResp from "./components/menu/menu.vue";
 import FooterResp from "./components/footer/footer.vue";
@@ -36,8 +37,8 @@ export default {
     ...mapActions("chatsStore", {
       fetchInfosChats: "fetchInfosChatsInStore",
     }),
-    ...mapActions("articlesStore", {
-      fetchInfosArticles: "fetchInfosArticlesInStore",
+    ...mapActions("actualitesStore", {
+      fetchInfosactualites: "fetchInfosactualitesInStore",
     }),
     closeNav() {
       this.setToFalseNavOpen();
@@ -61,10 +62,25 @@ export default {
         }
       }
     },
+
+    beforeLeave(element) {
+      this.prevHeight = getComputedStyle(element).height;
+    },
+    enter(element) {
+      const { height } = getComputedStyle(element);
+      element.style.height = this.prevHeight;
+      setTimeout(() => {
+        element.style.height = height;
+      });
+      Functions.moveFastToId("#app");
+    },
+    afterEnter(element) {
+      element.style.height = "auto";
+    },
   },
   created() {
     this.fetchInfosChats();
-    this.fetchInfosArticles();
+    this.fetchInfosactualites();
   },
 };
 </script>

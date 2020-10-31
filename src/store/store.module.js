@@ -2,10 +2,10 @@ const state = {
   NavOpen: false,
   BodyClass: '',
   BodyClassPageHome: 'p-transparent-menu txt-light',
-  BodyClassPageNosChats: 'p-transparent-menu txt-dark',
+  BodyClassPageNosChats: 'p-transparent-menu txt-light',
   BodyClassPageNosChatsDetail: '',
   BodyClassPageActu: 'p-transparent-menu txt-light',
-  BodyClassPageActuDetail: '',
+  BodyClassPageActuDetail: 'p-color-secundary-menu txt-dark p-actualite-detail',
   BodyClassPageHelp: 'p-transparent-menu txt-light',
   BodyClassPageContact: '',
 };

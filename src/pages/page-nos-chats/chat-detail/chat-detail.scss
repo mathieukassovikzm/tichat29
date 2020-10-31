@@ -1,92 +1,76 @@
 .c-chat-detail {
   width: 100%;
-  .chat-detail-name {
-  }
-  .chat-detail-bottom {
+  .chat-detail-container {
     position: relative;
     background-color: $c-chat-detail-bkg-color;
-    margin-top: $c-chat-detail-img-size/2;
-    padding-top: $c-chat-detail-img-size/2;
+    margin-top: $c-chat-detail-margin-t;
+    padding-top: $c-chat-detail-padding-t;
+    padding-bottom: $c-chat-detail-padding-b;
 
-    .list-photos {
-      width: 300px;
-      height: 300px;
-    }
-    .chat-detail-dsc {
-      position: relative;
-      margin: auto;
-      padding: $c-chat-detail-dsc-padding-tb $c-chat-detail-dsc-padding-lr;
-      text-align: center;
-      color: $c-chat-detail-dsc-color;
-      font-size: $c-chat-detail-dsc-font-size;
-    }
-  }
-  .chat-detail-photo-container {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    .chat-detail-photo {
-      width: $c-chat-detail-img-size;
-      height: $c-chat-detail-img-size;
-      position: relative;
+    .avatar-box {
+      position: absolute;
+      top: (-1) * $c-chat-detail-img-size/2;
       left: 50%;
-      top: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      object-fit: cover;
+      transform: translateX(-50%);
+      width: $c-chat-detail-img-size;
+      overflow: hidden;
       border-radius: 50%;
-      z-index: 1;
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 100%; /* initial ratio of 1:1*/
+      }
+      .avatar-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        object-fit: fill;
+        height: 100%;
+      }
+    }
+    .chat-details {
+      position: relative;
+      .chat-description {
+        position: relative;
+        margin: auto;
+        padding: $c-chat-detail-dsc-padding-tb $c-chat-detail-dsc-padding-lr;
+        text-align: center;
+        color: $c-chat-detail-txt-color;
+        font-size: $c-chat-detail-dsc-font-size;
+      }
+      .chat-list-photos {
+        width: 300px;
+        height: 300px;
+      }
     }
   }
 }
 /*******************************
  * Menu screen size
  *******************************/
-@media only screen and (min-width: $min-width-m) {
+@media only screen and (min-width: $min-width-l) {
   .c-chat-detail {
     width: 100%;
-    height: $c-chat-detail-size;
-    .chat-detail-name {
-      position: relative;
-      top: $c-chat-detail-name-pos-t;
-      left: $c-chat-detail-txt-pos-l;
-      transform: translateY(-100%);
-      h2 {
-        left: 0;
-      }
-    }
-    .chat-detail-bottom {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: $c-chat-detail-bottom-size;
-      background-color: $c-chat-detail-bkg-color;
-      .list-photos {
-        width: 300px;
-        height: 200px;
-        background-color: black;
-      }
-      .chat-detail-dsc {
+    .chat-detail-container {
+      padding-top: $c-chat-detail-scr-padding-t;
+      padding-bottom: 0;
+      display: flex;
+      flex-wrap: nowrap;
+      .avatar-container {
         position: relative;
-        left: $c-chat-detail-txt-pos-l;
-        top: $c-chat-detail-dsc-pos-t;
-        transform: translateX(-50%);
-        width: $c-chat-detail-dsc-width;
-        text-align: center;
-        color: $c-chat-detail-dsc-color;
-        font-size: $c-chat-detail-dsc-font-size;
+        min-width: $c-chat-detail-img-size;
+        width: $c-chat-detail-scr-avatar-container-size;
       }
-    }
-    .chat-detail-photo-container {
-      position: absolute;
-      right: $c-chat-detail-img-pos-right;
-      top: $c-chat-detail-img-pos-top;
-      .chat-detail-photo {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        width: $c-chat-detail-img-size;
-        height: $c-chat-detail-img-size;
+      .chat-details {
+        width: $c-chat-detail-scr-chat-details-size;
+        top: $c-chat-detail-scr-details-pos-t * -1;
+        .chat-name {
+          transform: translateX(-50%) translateY(-50%);
+        }
+        .chat-description {
+          padding: $c-chat-detail-dsc-padding-tb $c-chat-detail-scr-dsc-padding-lr;
+        }
       }
     }
   }

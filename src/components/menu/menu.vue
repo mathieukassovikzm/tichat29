@@ -12,6 +12,7 @@ import SvgCatPaw from "@/components/svg/svg-cat-paw-with-circle.vue";
 import SvgHeart from "@/components/svg/svg-heart.vue";
 import SvgScheduler from "@/components/svg/svg-scheduler.vue";
 import { mapGetters, mapActions } from "vuex";
+import Functions from "@/functions.js";
 import router from "./../../router";
 
 export default {
@@ -96,6 +97,10 @@ export default {
         router.push({ name: idLinkClicked });
       }
       this.setToFalseNavOpen();
+    },
+
+    goToFooter() {
+      Functions.moveSlowToId("#footer");
     },
 
     onScroll() {

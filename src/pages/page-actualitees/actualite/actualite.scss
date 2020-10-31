@@ -1,0 +1,191 @@
+.c-actualite {
+  position: relative;
+  margin: auto;
+  transition: all $animation-duration-short ease;
+
+  .c-actualite-container {
+    position: relative;
+    .avatar {
+      .avatar-box {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        &.avatar-paw {
+          background-color: $site-bkg-color;
+        }
+        .avatar-content {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          &.svg-cat-paw {
+            width: $c-actualite-avatar-paw-size;
+            filter: $p-actualite-avatar-paw-drop-shadow;
+            path,
+            ellipse {
+              fill: $c-actualite-paw-color;
+            }
+          }
+          &.actualite-photo {
+            object-fit: fill;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .actualite-desc {
+      text-align: center;
+      p {
+        &.desc-title {
+          font-size: $base-size-font-title-m;
+          font-weight: bold;
+          margin-top: $c-actualite-title-margin-t;
+          margin-bottom: $c-actualite-title-margin-b;
+        }
+      }
+    }
+  }
+  .btn {
+    position: absolute;
+    left: 50%;
+    bottom: $c-actualite-btn-bottom;
+    transform: translateX(-50%);
+    &.btn-fake {
+      position: relative;
+      opacity: 0;
+      margin-top: $c-actualite-btn-bottom;
+    }
+  }
+
+  &.not-expanded {
+    width: $c-actualite-width;
+    height: 100%;
+    border-radius: $c-actualite-border-radius;
+    background-color: $c-actualite-bkg-color;
+
+    .c-actualite-container {
+      padding: $c-actualite-padding-t $c-actualite-padding-lr $c-actualite-padding-b $c-actualite-padding-lr;
+      .avatar {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: $c-actualite-img-size;
+        .avatar-box {
+          border: 1px solid $c-actualite-bkg-color;
+          border-radius: 50%;
+          &.avatar-photo {
+            overflow-x: hidden;
+          }
+          &:before {
+            content: "";
+            display: block;
+            padding-top: 100%; /* initial ratio of 1:1*/
+          }
+          .avatar-content {
+            position: absolute;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            &.svg-cat-paw {
+              width: $c-actualite-avatar-paw-size;
+            }
+          }
+        }
+      }
+
+      .actualite-desc {
+        p {
+          margin: $c-actualite-txt-margin-tb 0;
+          transition: all $animation-duration-short ease;
+        }
+        .actualite-infos-supp {
+          display: none;
+        }
+        .date,
+        .place {
+          margin: 0;
+        }
+      }
+    }
+    .btn-savoir-plus {
+      display: block;
+    }
+    .btn-retour {
+      display: none;
+    }
+    &:hover {
+      p {
+        color: $c-secundary-light;
+      }
+    }
+  }
+  &.expanded {
+    .c-actualite-container {
+      .avatar {
+        margin: $c-actualite-exp-avatar-margin-tb auto;
+        .avatar-box {
+          &.avatar-paw {
+            border: 1px solid $c-actualite-bkg-color;
+            border-radius: 50%;
+            width: $c-actualite-exp-avatar-paw-size;
+            &:before {
+              content: "";
+              display: block;
+              padding-top: 100%; /* initial ratio of 1:1*/
+            }
+            .avatar-content {
+              position: absolute;
+              top: 50%;
+              transform: translateX(-50%) translateY(-50%);
+            }
+          }
+          &.avatar-photo .avatar-content {
+            width: 100%;
+          }
+        }
+      }
+      .actualite-desc {
+        .desc-title {
+          text-align: center;
+        }
+        p {
+          &.date {
+            margin: $c-actualite-exp-txt-margin-tb 0 0 0;
+          }
+          &.place {
+            margin: 0 0 $c-actualite-exp-txt-margin-tb 0;
+          }
+          &.actualite-infos-supp {
+            margin: $c-actualite-exp-txt-margin-tb 0;
+          }
+        }
+      }
+    }
+    .btn-savoir-plus {
+      display: none;
+    }
+    .btn.btn-fake {
+      position: absolute;
+    }
+    .btn-retour {
+      display: block;
+      bottom: $c-actualite-btn-bottom * (-1);
+      position: relative;
+    }
+  }
+}
+
+@media only screen and (min-width: $min-width-l) {
+  .c-actualite {
+    .c-actualite-container {
+      .avatar {
+        max-width: 80%;
+      }
+      .actualite-desc {
+        .desc-title {
+          // font-size: $base-size-font-title-l;
+        }
+      }
+    }
+  }
+}

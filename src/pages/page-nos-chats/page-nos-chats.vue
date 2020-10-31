@@ -1,15 +1,14 @@
 <template>
   <div class="p-nos-chats">
-    <div class="section-articles section-title">
-      <div class="title-full title-articles">
-        <h1>Nos protégés</h1>
-      </div>
-    </div>
-    <section>
-      <div class="section-container">
-        <router-view></router-view>
-      </div>
-    </section>
+    <transition
+      name="fade-slide-height"
+      mode="out-in"
+      @beforeLeave="beforeLeave"
+      @enter="enter"
+      @afterEnter="afterEnter"
+    >
+      <router-view></router-view>
+    </transition>
 
     <div id="voir-conditions" class="voir-conditions" @click="voirConditions">
       <SvgCatPaw />
@@ -21,6 +20,7 @@
 
 <script>
 import SvgCatPaw from "@/components/svg/svg-cat-paw.vue";
+import Functions from "@/functions.js";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
@@ -30,6 +30,7 @@ export default {
   },
   data() {
     return {
+      prevHeight: 0,
       voirCond: true,
     };
   },
@@ -59,6 +60,22 @@ export default {
         this.$router.push({ name: "ConditionsAdoption" });
         this.voirCond = false;
       }
+    },
+    beforeLeave(element) {
+      this.prevHeight = getComputedStyle(element).height;
+    },
+    enter(element) {
+      const { height } = getComputedStyle(element);
+
+      element.style.height = this.prevHeight;
+
+      setTimeout(() => {
+        element.style.height = height;
+      });
+    },
+    afterEnter(element) {
+      Functions.moveFastToId("#app");
+      element.style.height = "auto";
     },
   },
   beforeMount() {

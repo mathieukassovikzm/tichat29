@@ -70,6 +70,11 @@ $menu-animation-duration: 0.3s !default;
   }
 }
 
+.site-container.p-color-secundary-menu {
+  .menu.menu-top {
+    background: $site-bkg-color-secundary;
+  }
+}
 /*******************************
 ** Menu
 ********************************/
@@ -173,6 +178,9 @@ $menu-animation-duration: 0.3s !default;
         filter: $drop-shadow;
         @include svgHover($menu-social-bkg-color, $menu-social-color);
       }
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -181,6 +189,25 @@ $menu-animation-duration: 0.3s !default;
  * Menu Responsive
  *******************************/
 @media only screen and (max-width: $min-width-m) {
+  .site-container.p-color-secundary-menu .menu .menu-container .navigation {
+    background-color: $site-bkg-color-secundary;
+    .menu-item {
+      &:hover .menu-item-link {
+        .svg-menu {
+          path,
+          ellipse {
+            fill: $menu-resp-txt-color-hover;
+          }
+        }
+        p {
+          color: $menu-resp-txt-color-hover;
+          &::after {
+            background-color: $menu-resp-txt-color-hover;
+          }
+        }
+      }
+    }
+  }
   .site-pusher,
   .site-container {
     height: 100%;

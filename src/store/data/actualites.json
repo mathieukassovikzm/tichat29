@@ -1,0 +1,39 @@
+{
+  "actualites": [
+    {
+      "titre": "Evénement à l'école Notre Dame des Victoires de Gouesnach",
+      "date": "2020-11-24T20:00:00",
+      "lieu": "Gouesnach",
+      "description": "Un grand merci à l'école notre dame des victoires de Gouesnach. Suite à l'actualite du journal Ouest France, ils ont organisées une collecte de croquettes et de litières. L'occasion pour nous de leur présenter l'association, et de les sensibiliser à l'indentification et la stérilisation des chats. Merci également pour leur écoute et leurs dessins.",
+      "photo": "20201124-ecole.jpg"
+    },
+    {
+      "titre": "Collecte Ti Chat 29",
+      "date": "2020-12-24T20:00:00",
+      "lieu": "Leclerc Gourvily Quimper",
+      "description": "Après des mois de disettes où l’asso n’a pas pu faire de collecte (covid ), nous revoilà au Leclerc Quimper. Nos minous ont besoin de vous. N’hésitez pas à nous rendre visite ce samedi 26 septembre 2020",
+      "photo": ""
+    },
+    {
+      "titre": "Collecte Ti Chat 29 ",
+      "date": "2021-11-24T20:00:00",
+      "lieu": "Leclerc Gourvily Quimper",
+      "description": "Après des mois de disettes où l’asso n’a pas pu faire de collecte (covid ), nous revoilà au Leclerc Quimper. Nos minous ont besoin de vous. N’hésitez pas à nous rendre visite ce samedi 26 septembre 2020",
+      "photo": "20201124-Collecte.jpg"
+    },
+    {
+      "titre": "actualite1",
+      "date": "2020-10-10T11:00:00",
+      "lieu": "Lennon",
+      "description": "Descriptif de l'actualite",
+      "photo": ""
+    },
+    {
+      "titre": "actualite0",
+      "date": "2020-09-10T11:00:00",
+      "lieu": "Pleyben",
+      "description": "Descriptif de l'actualite",
+      "photo": ""
+    }
+  ]
+}

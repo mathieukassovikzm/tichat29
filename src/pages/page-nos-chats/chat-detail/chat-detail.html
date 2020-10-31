@@ -1,12 +1,16 @@
-<div class="c-chat-detail">
-  <div class="chat-detail-name">
-    <h2>{{ chat.nom }}</h2>
-  </div>
-  <div class="chat-detail-bottom">
-    <div class="chat-detail-photo-container">
-      <img class="chat-detail-photo" :src="getMainPhoto.img" />
+<section class="c-chat-detail">
+  <div class="chat-detail-container">
+    <div class="chat-details">
+      <h2 class="chat-name">{{ chat.nom }}</h2>
+      <p class="chat-description">{{ chat.description }}</p>
+      <CarouselComponent class="chat-list-photos" v-bind:listPhotos="chat.photos" />
     </div>
-    <p class="chat-detail-dsc">{{ chat.description }}</p>
-    <CarouselComponent class="list-photos" v-bind:listPhotos="chat.photos" />
+    <div class="avatar-container">
+      <div class="avatar-box">
+        <img class="avatar-content" :src="getMainPhoto.img" />
+      </div>
+    </div>
+
+
   </div>
-</div>
+</section>

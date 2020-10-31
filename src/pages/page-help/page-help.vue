@@ -4,6 +4,7 @@
 import PageTitle from "@/components/title/title.vue";
 import SectionBkgImg from "@/components/section-bkg-img/section-bkg-img.vue";
 import SvgCatPaw from "@/components/svg/svg-cat-paw";
+import Functions from "@/functions.js";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
@@ -23,6 +24,15 @@ export default {
     }),
     setSiteContainerClass() {
       this.setBodyClass(this.getBodyClassPageHelp);
+    },
+    goToDons() {
+      Functions.moveSlowToId("#s-dons");
+    },
+    goToFamAcc() {
+      Functions.moveSlowToId("#s-fam-acc");
+    },
+    goToLilo() {
+      Functions.moveSlowToId("#s-lilo");
     },
   },
   beforeMount() {
