@@ -69,9 +69,4 @@ export default {
 </script>
 
 <style lang="scss">
-.p-actualites {
-  .section-title {
-    background-image: url("./../../assets/img/titles/pageActualitees.jpg");
-  }
-}
 </style>

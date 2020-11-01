@@ -18,11 +18,20 @@ section,
 
 .section-title {
   position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
   height: $page-home-size;
-  .title-full {
+  &.section-home {
+    @include bkgGradient("./assets/img/titles/pageHome.jpg");
+  }
+  &.section-help {
+    @include bkgGradient($url: "./assets/img/titles/pageHelp.jpg", $color1Stop: 30%, $color2Stop: 50%);
+  }
+  &.section-list-chats {
+    @include bkgGradient("./assets/img/titles/pageNosChats.jpg");
+  }
+  &.section-actualites {
+    @include bkgGradient("./assets/img/titles/pageActualitees.jpg");
+  }
+  .title-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -30,6 +39,56 @@ section,
     justify-content: center;
     top: 50%;
     transform: translateY(-50%);
+    h1 {
+      width: 80%;
+      color: $page-home-title-txt-color;
+      font-size: $page-home-title-font-size;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: $page-home-title-margin-b;
+      .txt-italic {
+        font-style: italic;
+      }
+      &::after {
+        content: none;
+      }
+    }
+    p {
+      color: $page-home-title-txt-color;
+      text-align: center;
+      margin-bottom: $page-home-title-margin-b;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      cursor: pointer;
+      .button-paw {
+        position: relative;
+        margin: 0 10px;
+        .svg-cat-paw {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          width: $page-home-button-paw-size;
+          filter: $drop-shadow;
+
+          path,
+          ellipse {
+            fill: $page-home-title-txt-color;
+          }
+        }
+        p {
+          font-style: italic;
+          text-transform: uppercase;
+        }
+        transition: transform $page-home-button-paw-scale-up-duration ease;
+        &:hover {
+          transform: scale($page-home-button-paw-scale-up);
+        }
+      }
+    }
   }
 }
 
@@ -46,7 +105,7 @@ section,
     flex-wrap: wrap;
     height: 100vh;
 
-    .title-full {
+    .title-container {
       width: 50%;
     }
   }

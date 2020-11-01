@@ -1,7 +1,7 @@
 <template >
   <div>
     <div class="section-actualites section-title">
-      <div class="title-full title-actualites">
+      <div class="title-container title-actualites">
         <h1>Actualité</h1>
       </div>
     </div>

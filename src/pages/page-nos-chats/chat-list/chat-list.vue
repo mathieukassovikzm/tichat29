@@ -1,8 +1,22 @@
 <template >
   <div>
     <div class="section-list-chats section-title">
-      <div class="title-full title-list-chats">
+      <div class="title-container title-list-chats">
         <h1>Nos protégés</h1>
+        <div class="buttons">
+          <div class="button-paw" @click="goToDons">
+            <SvgCatPaw />
+            <p>Chats</p>
+          </div>
+          <div class="button-paw" @click="goToFamAcc">
+            <SvgCatPaw />
+            <p>Chattons</p>
+          </div>
+          <div class="button-paw" @click="goToLilo">
+            <SvgCatPaw />
+            <p>Sauvetages</p>
+          </div>
+        </div>
       </div>
     </div>
     <section>
@@ -24,10 +38,11 @@
 
 <script>
 import ChatMini from "@/pages/page-nos-chats/chat-mini/chat-mini.vue";
+import SvgCatPaw from "@/components/svg/svg-cat-paw";
 import { mapGetters } from "vuex";
 export default {
   name: "component-list-chat",
-  components: { ChatMini },
+  components: { ChatMini, SvgCatPaw },
 
   data() {
     return {};
