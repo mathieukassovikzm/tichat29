@@ -1,14 +1,16 @@
 <section class="c-chat-detail">
-  <div class="chat-detail-container">
-    <div class="chat-details">
-      <h2 class="chat-name">{{ chat.nom }}</h2>
-      <p class="chat-description">{{ chat.description }}</p>
-      <CarouselComponent class="chat-list-photos" v-bind:listPhotos="chat.photos" />
-    </div>
-    <div class="avatar-container">
-      <div class="avatar-box">
-        <img class="avatar-content" :src="getMainPhoto.img" />
+  <div id="chat-detail-circle" class="chat-detail-circle">
+    <div class="chat-detail-name-container">
+      <SvgTiChat />
+      <div>
+        <h2 class="chat-name">{{ chat.nom }}</h2>
       </div>
     </div>
+  </div>
+  <div id="chat-detail-circle-fake" class="chat-detail-circle-fake">
+  </div>
+  <div id="chat-detail-container" class="chat-detail-container">
+    <p class="chat-description">{{ chat.description }}</p>
+    <CarouselComponent class="chat-list-photos" v-bind:listPhotos="chat.photos" />
   </div>
 </section>

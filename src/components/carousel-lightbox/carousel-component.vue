@@ -49,7 +49,6 @@ export default {
           photo: this.listPhotos[i],
         });
       }
-      console.log(this.listPhotosWithIndex);
     },
   },
   beforeMount() {

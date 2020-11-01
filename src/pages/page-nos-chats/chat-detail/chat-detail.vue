@@ -2,10 +2,12 @@
 
 <script>
 import CarouselComponent from "@/components/carousel-lightbox/carousel-component.vue";
+import SvgTiChat from "@/components/svg/svg-tiChat29.vue";
 import { mapGetters, mapActions } from "vuex";
+import $ from "jquery";
 export default {
   name: "component-chat-detail",
-  components: { CarouselComponent },
+  components: { CarouselComponent, SvgTiChat },
   data() {
     return {
       loading: false,
@@ -46,11 +48,43 @@ export default {
       var resultChat = this.getChat(fetchedId);
       this.chat = resultChat[0];
     },
+    /* Recalcul des dimentions en fonction de la taille du cercle */
+    onResize() {
+      var circle = $("#chat-detail-circle");
+      var circleFake = $("#chat-detail-circle-fake");
+      circleFake.width(circle.width() * 0.4);
+
+      var detail = $("#chat-detail-container");
+      console.log(circle.height());
+      console.log(circle.offset().top);
+      console.log(circleFake.height());
+      console.log(circle.height() - circleFake.height());
+      detail.css(
+        "padding-top",
+        circle.height() + circle.offset().top - circleFake.height()
+      );
+    },
   },
 
   beforeMount() {
     this.fetchData();
     this.setSiteContainerClass();
+  },
+
+  mounted() {
+    this.onResize();
+
+    this.$nextTick(function () {
+      var resizeId;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeId);
+        resizeId = setTimeout(this.onResize(), 500);
+      });
+    });
+  },
+
+  destroy() {
+    window.removeEventListener("resize", () => {});
   },
 };
 </script>

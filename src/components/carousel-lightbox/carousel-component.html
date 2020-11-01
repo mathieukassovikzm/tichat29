@@ -1,17 +1,10 @@
 <div class="carousel__div carousel__lightbox">
   <SvgNext class="carousel__nav carousel__prev" @click.native="prev"></SvgNext>
   <Carousel ref="refCarousel">
-    <CarouselSlide
-      v-for="objPhoto in listPhotosWithIndex"
-      :index="carouselIndex(objPhoto.index)"
-      v-bind:key="`slideKey-${objPhoto.index}`"
-    >
-      <a
-        :href="getPhoto(objPhoto.photo).img"
-        v-lightbox-simple="'first'"
-        v-bind:key="`slideKey-a-${objPhoto.index}`"
-      >
-        <img :src="getPhoto(objPhoto.photo).img" width="100%" />
+    <CarouselSlide v-for="objPhoto in listPhotosWithIndex" :index="carouselIndex(objPhoto.index)"
+      v-bind:key="`slideKey-${objPhoto.index}`">
+      <a :href="getPhoto(objPhoto.photo).img" v-lightbox-simple="'first'" v-bind:key="`slideKey-a-${objPhoto.index}`">
+        <img :src="getPhoto(objPhoto.photo).img" />
       </a>
     </CarouselSlide>
   </Carousel>
