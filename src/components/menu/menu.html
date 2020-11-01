@@ -13,7 +13,7 @@
   <div class="menu-container">
     <Burger />
     <nav class="navigation push-left">
-      <div class="menu-item menu-txt">
+      <div class="menu-item menu-txt item-accueil">
         <div id="menu-item-link-home" class="menu-item-link link-active" @click="linkClicked('PageHome')">
           <SvgHome class="svg-menu" />
           <p>Accueil</p>
@@ -25,18 +25,20 @@
           <p>Nos protégés</p>
         </div>
       </div>
-      <div class="menu-item menu-logo">
-        <div class="menu-item-link" @click="linkClicked('PageHome')">
-          <SvgCat class="svg-cat" />
-          <SvgTiChat class="svg-tichat" />
-        </div>
-      </div>
       <div class="menu-item menu-txt">
         <div id="menu-item-link-help" class="menu-item-link" @click="linkClicked('PageHelp')">
           <SvgHeart class="svg-menu" />
           <p>Nous aider</p>
         </div>
       </div>
+      <div class="menu-item menu-logo">
+        <div class="menu-item-link" @click="linkClicked('PageHome')">
+          <SvgCat class="svg-cat" />
+          <!-- <SvgTiChat class="svg-tichat" /> -->
+          <p class="svg-tichat">Accueil</p>
+        </div>
+      </div>
+
       <div class="menu-item menu-txt">
         <div id="menu-item-link-actualitees" class="menu-item-link" @click="linkClicked('PageActualitees')">
           <SvgScheduler class="svg-menu" />

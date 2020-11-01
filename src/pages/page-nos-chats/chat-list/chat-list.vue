@@ -4,15 +4,15 @@
       <div class="title-container title-list-chats">
         <h1>Nos protégés</h1>
         <div class="buttons">
-          <div class="button-paw" @click="goToDons">
+          <div class="button-paw">
             <SvgCatPaw />
             <p>Chats</p>
           </div>
-          <div class="button-paw" @click="goToFamAcc">
+          <div class="button-paw">
             <SvgCatPaw />
             <p>Chattons</p>
           </div>
-          <div class="button-paw" @click="goToLilo">
+          <div class="button-paw">
             <SvgCatPaw />
             <p>Sauvetages</p>
           </div>
