@@ -1,58 +1,33 @@
 <template >
-  <div>
-    <div class="section-list-chats section-title">
-      <div class="title-container title-list-chats">
-        <h1>Nos protégés</h1>
-        <div class="buttons">
-          <div class="button-paw">
-            <SvgCatPaw />
-            <p>Chats</p>
-          </div>
-          <div class="button-paw">
-            <SvgCatPaw />
-            <p>Chattons</p>
-          </div>
-          <div class="button-paw">
-            <SvgCatPaw />
-            <p>Sauvetages</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section>
-      <div class="section-container">
-        <ul class="list-chats">
-          <li
-            class="item-chat"
-            v-for="chat in listChats"
-            v-bind:key="chat.chatId"
-            @click="onClick(chat.chatId)"
-          >
-            <ChatMini v-bind:chat="chat" />
-          </li>
-        </ul>
-      </div>
-    </section>
-  </div>
+  <ul class="list-chats">
+    <li
+      class="item-chat"
+      v-for="chat in listChats"
+      v-bind:key="chat.chatId"
+      @click="onClick(chat.chatId)"
+    >
+      <ChatMini v-bind:chat="chat" />
+    </li>
+  </ul>
 </template>
 
 <script>
 import ChatMini from "@/pages/page-nos-chats/chat-mini/chat-mini.vue";
-import SvgCatPaw from "@/components/svg/svg-cat-paw";
 import { mapGetters } from "vuex";
 export default {
   name: "component-list-chat",
-  components: { ChatMini, SvgCatPaw },
+  components: { ChatMini },
+  props: ["typeChat"],
 
   data() {
     return {};
   },
   computed: {
     ...mapGetters("chatsStore", {
-      getListChatsDispo: "getListChatsDispoInStore",
+      getListChatsType: "getListChatsTypeInStore",
     }),
     listChats() {
-      return this.getListChatsDispo;
+      return this.getListChatsType(this.typeChat);
     },
   },
   methods: {

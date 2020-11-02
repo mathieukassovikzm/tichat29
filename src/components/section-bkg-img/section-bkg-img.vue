@@ -18,18 +18,17 @@ export default {};
 </script>
 
 <style lang="scss">
-
 .section-bkg-img {
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  &.bkg-dark{
-  box-shadow: $sbkgimg-box-shadow-dark;
-}
-&.bkg-light{
-  box-shadow: $sbkgimg-box-shadow-light;
-}
+  &.bkg-dark {
+    box-shadow: $sbkgimg-box-shadow-dark;
+  }
+  &.bkg-light {
+    box-shadow: $sbkgimg-box-shadow-light;
+  }
   .separation {
     position: absolute;
     left: 50%;
@@ -85,6 +84,15 @@ export default {};
   }
   &.img-actualitees {
     background-image: url("./../../assets/img/pageHome/img-actualitees.jpg");
+  }
+  &.img-chats {
+    background-image: url("./../../assets/img/pageNosProteges/img-chats.jpg");
+  }
+  &.img-chattons {
+    background-image: url("./../../assets/img/pageNosProteges/img-chattons.jpg");
+  }
+  &.img-sauvetages {
+    background-image: url("./../../assets/img/pageNosProteges/img-sauvetages.jpg");
   }
   &.bkg-dark {
     h1,

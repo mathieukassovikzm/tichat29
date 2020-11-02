@@ -12,6 +12,9 @@ const getters = {
   getChatInStore: (state) => (id) => {
     return state.listChats.filter((chat) => chat.chatId == id);
   },
+  getListChatsTypeInStore: (state) => (typeChat) => {
+    return state.listChats.filter((chat) => (chat.type == typeChat) && (chat.dispo));
+  },
   getListChatsDispoInStore: (state) => {
     return state.listChats.filter((chat) => chat.dispo);
   },
@@ -51,6 +54,7 @@ const actions = {
             for (var objChat of value) {
               let chat = {
                 chatId: i,
+                type: objChat.type,
                 nom: objChat.nom,
                 description: objChat.description,
                 photos: objChat.photos,
