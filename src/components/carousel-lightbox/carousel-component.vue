@@ -4,7 +4,7 @@
 import Carousel from "./carousel/carousel.vue";
 import CarouselSlide from "./carousel/carousel-slide/carousel-slide.vue";
 import SvgNext from "@/components/svg/svg-next.vue";
-import Lightbox from "@/components/lightbox/lightbox-simple/lightbox.vue";
+import Lightbox from "@/components/lightbox/lightbox.vue";
 import { mapGetters } from "vuex";
 
 export default {
@@ -34,7 +34,7 @@ export default {
       this.$refs.refCarousel.prev();
     },
     carouselIndex(index) {
-      return index - 1;
+      return index;
     },
     getPhoto(i) {
       return {

@@ -12,6 +12,9 @@ const getters = {
   getChatInStore: (state) => (id) => {
     return state.listChats.filter((chat) => chat.chatId == id);
   },
+  getListChatsTypeInStore: (state) => (typeChat) => {
+    return state.listChats.filter((chat) => (chat.type == typeChat) && (chat.dispo));
+  },
   getListChatsDispoInStore: (state) => {
     return state.listChats.filter((chat) => chat.dispo);
   },
@@ -39,7 +42,7 @@ const actions = {
       let data = dataChats;
       if (data) {
         let list = [];
-        var i = 1;
+        var i = 0;
         for (const [key, value] of Object.entries(data)) {
           if (key == 'nbChatsAdoptes') {
             store.commit('SETNBCHATSADOPTES', value);
@@ -51,6 +54,7 @@ const actions = {
             for (var objChat of value) {
               let chat = {
                 chatId: i,
+                type: objChat.type,
                 nom: objChat.nom,
                 description: objChat.description,
                 photos: objChat.photos,

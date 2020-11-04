@@ -33,7 +33,7 @@ button,
     color: $buttons-v2-color;
     border: solid $buttons-border-width $buttons-v2-color;
     &:hover {
-      background-color: $buttons-v2-color;
+      background-color: transparent;
       color: $buttons-v2-color-hover;
       border: solid $buttons-border-width $buttons-v2-color-hover;
     }

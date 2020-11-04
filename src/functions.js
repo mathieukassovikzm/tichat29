@@ -3,7 +3,7 @@ import $ from "jquery";
 function moveSlowToId(idItem) {
   $("html,body").animate(
     {
-      scrollTop: $(idItem).offset().top,
+      scrollTop: $(idItem).offset().top - $("#menu-fixed").height(),
     },
     "slow"
   );
@@ -11,7 +11,7 @@ function moveSlowToId(idItem) {
 function moveFastToId(idItem) {
   $("html,body").animate(
     {
-      scrollTop: $(idItem).offset().top,
+      scrollTop: $(idItem).offset().top - $("#menu-fixed").height(),
     },
     "fast"
   );

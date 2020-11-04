@@ -26,7 +26,7 @@ $menu-animation-duration: 0.3s !default;
         height: $menu-logo-cat-size;
       }
       .svg-tichat {
-        height: $menu-logo-tichat-size;
+        font-size: $menu-item-link-font-size;
       }
     }
   }
@@ -78,16 +78,34 @@ $menu-animation-duration: 0.3s !default;
 /*******************************
 ** Menu
 ********************************/
-.menu-item.menu-txt {
+.menu-item {
   text-transform: uppercase;
+  &.item-accueil {
+    display: none;
+  }
+
   .menu-item-link {
     position: relative;
     display: inline-block;
     text-align: left;
     text-decoration: none;
     font-size: $menu-item-link-font-size;
-    padding: 0 10px;
+    padding: 0 $menu-item-link-txt-padding-lr;
     cursor: pointer;
+    &.router-link-exact-active {
+      &::after {
+        width: 70%;
+        transition: $animation-duration-short ease all;
+      }
+    }
+    .svg-menu {
+      display: none;
+    }
+  }
+}
+
+.menu-item.menu-txt {
+  .menu-item-link {
     p {
       margin: $menu-p-margin-tb 0;
     }
@@ -102,19 +120,9 @@ $menu-animation-duration: 0.3s !default;
       background-color: $menu-txt-color;
       transition: 0.4s ease-out all 0.1s;
     }
-    &.router-link-exact-active {
-      &::after {
-        width: 70%;
-        transition: $animation-duration-short ease all;
-      }
-    }
-    .svg-menu {
-      display: none;
-    }
   }
-
   &:hover .menu-item-link::after {
-    width: 80%;
+    width: 60%;
     transition: $animation-duration-short ease all;
   }
 }
@@ -151,7 +159,8 @@ $menu-animation-duration: 0.3s !default;
     }
     .svg-tichat {
       transition: $animation-duration-short ease-out all 0.1s;
-      height: 0;
+      font-size: 0;
+      margin: 0;
     }
   }
   .navigation {
@@ -265,6 +274,9 @@ $menu-animation-duration: 0.3s !default;
         }
 
         .menu-item {
+          &.item-accueil {
+            display: block;
+          }
           width: 100%;
           opacity: 0;
 

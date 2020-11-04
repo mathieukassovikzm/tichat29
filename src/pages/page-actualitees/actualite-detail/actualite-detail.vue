@@ -56,7 +56,6 @@ export default {
 
 <style lang="scss">
 .p-actualite-detail .site-pusher .site-content section {
-  background: url(./../../../assets/img/backgroundTichat29.png),
-    $site-bkg-color-secundary;
+  @include bkgImg($url: "./../../../assets/img/backgroundTichat29.png");
 }
 </style>

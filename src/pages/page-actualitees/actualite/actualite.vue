@@ -29,7 +29,7 @@ export default {
       return moment(this.actualite.date).locale("fr").format("DD MMMM YYYY");
     },
     getHourFormated() {
-      return moment(this.actualite.date).locale("fr").format("DD MMMM YYYY");
+      return moment(this.actualite.date).locale("fr").format("HH:mm");
     },
   },
   methods: {

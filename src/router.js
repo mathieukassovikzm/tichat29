@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 
 import Home from './pages/page-home/page-home.vue';
 import NosChats from './pages/page-nos-chats/page-nos-chats.vue';
-import ListChats from './pages/page-nos-chats/chat-list/chat-list.vue';
+import ChatAccueil from './pages/page-nos-chats/chat-accueil/chat-accueil.vue';
 import DetailChat from './pages/page-nos-chats/chat-detail/chat-detail.vue';
 import ConditionsAdoption from './pages/page-nos-chats/conditions-adoption/conditions-adoption.vue';
 import PageActualitees from './pages/page-actualitees/page-actualitees.vue';
@@ -22,14 +22,14 @@ const routes = [
   },
   {
     path: '/nos-chats',
-    redirect: { name: 'ListChats' },
+    redirect: { name: 'ChatAccueil' },
     component: NosChats,
     name: 'NosChats',
     children: [
       {
         path: '/nos-chats/liste-chats',
-        component: ListChats,
-        name: 'ListChats',
+        component: ChatAccueil,
+        name: 'ChatAccueil',
       },
       {
         path: '/nos-chats/detail-chat/:itemId',

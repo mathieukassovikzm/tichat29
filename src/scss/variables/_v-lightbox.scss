@@ -1,5 +1,5 @@
 /******* Variables Lightbox *******/
-$lightbox-color: $c-box-shadow;
+$lightbox-color: tint($c-third, 50%);
 $lightbox-icons-color: $c-primary;
 $lightbox-nav-size: 50px;
 $lightbox-duration-loading: $animation-duration;
