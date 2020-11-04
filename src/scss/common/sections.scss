@@ -58,36 +58,8 @@ section,
       text-align: center;
       margin-bottom: $page-home-title-margin-b;
     }
-
     .buttons {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: center;
-      cursor: pointer;
-      .button-paw {
-        position: relative;
-        margin: 0 10px;
-        .svg-cat-paw {
-          position: relative;
-          left: 50%;
-          transform: translateX(-50%);
-          width: $page-home-button-paw-size;
-          filter: $drop-shadow;
-
-          path,
-          ellipse {
-            fill: $page-home-title-txt-color;
-          }
-        }
-        p {
-          font-style: italic;
-          text-transform: uppercase;
-        }
-        transition: transform $page-home-button-paw-scale-up-duration ease;
-        &:hover {
-          transform: scale($page-home-button-paw-scale-up);
-        }
-      }
+      @include btnPaw($btn-color: $page-home-title-txt-color);
     }
   }
 }

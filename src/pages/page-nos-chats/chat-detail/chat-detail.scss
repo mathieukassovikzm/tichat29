@@ -20,13 +20,14 @@
     background-color: $c-chat-detail-bkg-color;
     padding: $c-chat-detail-dsc-padding-tb 0;
 
-    position: relative;
     .chat-description {
       position: relative;
       margin: auto;
-      text-align: center;
       color: $c-chat-detail-txt-color;
       font-size: $c-chat-detail-dsc-font-size;
+    }
+    .buttons {
+      @include btnPaw($btn-color: $c-chat-detail-txt-color);
     }
     .chat-description,
     .chat-list-photos {
@@ -78,12 +79,12 @@
     }
     .chat-detail-container {
       .chat-description {
-        width: $c-chat-detail-dsc-size;
+        margin-left: auto;
+        margin-right: 0;
         padding-right: $c-chat-detail-dsc-padding-lr * 2;
       }
       .chat-list-photos {
         position: absolute;
-        top: -80%;
         left: 0;
         width: 60%;
         padding: 0;

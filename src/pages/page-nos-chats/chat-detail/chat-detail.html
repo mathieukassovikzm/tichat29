@@ -10,7 +10,20 @@
   <div id="chat-detail-circle-fake" class="chat-detail-circle-fake">
   </div>
   <div id="chat-detail-container" class="chat-detail-container">
-    <p class="chat-description">{{ chat.description }}</p>
-    <CarouselComponent class="chat-list-photos" v-bind:listPhotos="chat.photos" />
+    <div id="chat-description" class="chat-description">
+      <p>{{ chat.description }}</p>
+      <div class="buttons">
+        <router-link :to="{ name: 'NosChats'}" class="button-paw">
+          <CatPaw />
+          <p>Conditions</p>
+        </router-link>
+        <router-link :to="{ name: 'NosChats'}" class="button-paw">
+          <CatPaw />
+          <p>Retour</p>
+        </router-link>
+      </div>
+    </div>
+
+    <CarouselComponent id="chat-list-photos" class="chat-list-photos" v-bind:listPhotos="chat.photos" />
   </div>
 </section>

@@ -2,15 +2,17 @@
 
 <script>
 import CarouselComponent from "@/components/carousel-lightbox/carousel-component.vue";
+import CatPaw from "@/components/svg/svg-cat-paw.vue";
 import SvgTiChat from "@/components/svg/svg-tiChat29.vue";
 import { mapGetters, mapActions } from "vuex";
-import $ from "jquery";
+// import $ from "jquery";
 export default {
   name: "component-chat-detail",
-  components: { CarouselComponent, SvgTiChat },
+  components: { CarouselComponent, SvgTiChat, CatPaw },
   data() {
     return {
       loading: false,
+      limiteSize: 850,
       error: null,
       chat: null,
     };
@@ -50,19 +52,22 @@ export default {
     },
     /* Recalcul des dimentions en fonction de la taille du cercle */
     onResize() {
-      var circle = $("#chat-detail-circle");
-      var circleFake = $("#chat-detail-circle-fake");
-      circleFake.width(circle.width() * 0.4);
-
-      var detail = $("#chat-detail-container");
-      console.log(circle.height());
-      console.log(circle.offset().top);
-      console.log(circleFake.height());
-      console.log(circle.height() - circleFake.height());
-      detail.css(
-        "padding-top",
-        circle.height() + circle.offset().top - circleFake.height()
-      );
+      // let windowWidth = document.documentElement.clientWidth;
+      // var circle = $("#chat-detail-circle");
+      // var circleFake = $("#chat-detail-circle-fake");
+      // var detailCtr = $("#chat-detail-container");
+      // var dsc = $("#chat-description");
+      // var listPhotos = $("#chat-list-photos");
+      // if (windowWidth > this.limiteSize) {
+      //   circleFake.width(circle.width() * 0.4);
+      //   var topPx = circle.height() + circle.offset().top - circleFake.height();
+      //   detailCtr.css("padding-top", topPx);
+      //   dsc.width(document.documentElement.clientWidth - listPhotos.width());
+      //   listPhotos.css("top", -topPx - 50);
+      // } else {
+      //   detailCtr.css("padding-top", "auto");
+      //   listPhotos.css("top", "auto");
+      // }
     },
   },
 
