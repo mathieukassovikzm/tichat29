@@ -1,0 +1,73 @@
+.page-chat-accueil {
+  .section-subtitle {
+    @include bkgImg(
+      $url: "./../../../assets/img/backgroundTichat29.png",
+      $color: $p-chat-accueil-title-bkg-color,
+      $opacity: 0.2
+    );
+
+    &.p-left {
+      .container-btn {
+        left: -1 * $p-chat-accueil-title-circle-width/2;
+        .button-paw {
+          left: 68%;
+        }
+      }
+    }
+    &.p-right {
+      .container-btn {
+        right: -1 * $p-chat-accueil-title-circle-width/2;
+        .button-paw {
+          left: 32%;
+        }
+      }
+    }
+
+    .container-btn {
+      background-color: $p-chat-accueil-title-bkg-color;
+
+      position: absolute;
+      display: block;
+      width: $p-chat-accueil-title-circle-width;
+      height: $p-chat-accueil-title-circle-width;
+      bottom: -1 * $p-chat-accueil-title-circle-width/2;
+      border-radius: 50%;
+      z-index: 1;
+      transition: transform $animation-duration-short ease;
+
+      .button-paw {
+        position: relative;
+        margin: 0;
+        max-width: $p-chat-accueil-paw-width;
+        max-height: $p-chat-accueil-paw-width;
+        top: 65%;
+        transform: translateX(-50%) translateY(-50%);
+        cursor: pointer;
+        .svg-cat-paw {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          width: $p-chat-accueil-paw-width;
+          filter: $drop-shadow;
+
+          path,
+          ellipse {
+            fill: $p-chat-accueil-paw-color;
+          }
+        }
+        p {
+          position: relative;
+          left: -12px;
+          margin: 0;
+          color: $p-chat-accueil-paw-color;
+          font-style: italic;
+          text-transform: uppercase;
+          text-shadow: $text-shadow;
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

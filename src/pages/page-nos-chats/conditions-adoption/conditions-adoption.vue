@@ -45,47 +45,49 @@
           la prolifération des futures petites misères de demain.
         </p>
       </div>
+      <div class="buttons">
+        <div class="button-paw" @click="goBack">
+          <SvgCatPaw />
+          <p>Retour</p>
+        </div>
+      </div>
     </section>
   </div>
 </template>
 
 <script>
 import PageTitle from "@/components/title/title.vue";
+import SvgCatPaw from "@/components/svg/svg-cat-paw";
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "component-conditions-adoption",
-  components: { PageTitle },
+  components: { PageTitle, SvgCatPaw },
+  computed: {
+    ...mapGetters("mainStore", {
+      getBodyClassPageCondition: "getBodyClassPageConditionInStore",
+    }),
+  },
+  methods: {
+    ...mapActions("mainStore", {
+      setBodyClass: "setBodyClassInStore",
+    }),
+    setSiteContainerClass() {
+      this.setBodyClass(this.getBodyClassPageCondition);
+    },
+    goBack() {
+      this.$router.go(-1);
+    },
+  },
+  beforeMount() {
+    this.setSiteContainerClass();
+  },
 };
 </script>
-
+  
 <style lang="scss">
-.c-conditions.section {
-  background-color: $c-conditions-bkg-color;
-  .section-container {
-    margin: 0;
-    width: $section-resp-width;
-    padding-top: $section-padding-t;
-    padding-bottom: $section-padding-b;
-    padding-left: $section-padding-lr;
-    padding-right: $section-padding-lr;
-  }
-  .conditions {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media only screen and (min-width: $min-width-m) {
-  .c-conditions.section {
-    .section-container {
-      margin: auto;
-      width: $section-width;
-      .conditions {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        p {
-          width: 50%;
-        }
-      }
-    }
+.c-conditions {
+  .buttons {
+    @include btnPaw($btn-color: $p-chat-accueil-title-bkg-color);
   }
 }
 </style>

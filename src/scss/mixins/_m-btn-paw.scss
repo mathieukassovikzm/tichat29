@@ -7,10 +7,11 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  cursor: pointer;
   .button-paw {
     position: relative;
     margin: 0 10px;
+    cursor: pointer;
+
     .svg-cat-paw {
       position: relative;
       left: 50%;
@@ -24,8 +25,10 @@
       }
     }
     p {
+      color: $btn-color;
       font-style: italic;
       text-transform: uppercase;
+      text-shadow: $text-shadow;
     }
     transition: transform $btn-scale-up-duration ease;
     &:hover {

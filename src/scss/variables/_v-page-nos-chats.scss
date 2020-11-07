@@ -6,13 +6,14 @@ $p-chats-vc-position-r: 30px;
 $p-chats-vc-h3-font-size: $base-size-font-title-s;
 $p-chats-paw-width: 90px;
 $p-chats-paw-color: $c-third;
-$p-chats-paw-drop-shadow: drop-shadow(2px 0px 0px rgba(0, 0, 0, 0.8));
-$p-chats-paw-scale-up: 1.1;
-$p-chats-paw-scale-up-duration: 0.2s;
 
 /*******************************
-** Variables Component list-chat
+** Variables page Chat accueil
 ********************************/
+$p-chat-accueil-title-bkg-color: $c-third;
+$p-chat-accueil-title-circle-width: 300px;
+$p-chat-accueil-paw-width: $p-chat-accueil-title-circle-width/4;
+$p-chat-accueil-paw-color: $c-secundary-light;
 
 /*******************************
 ** Variables Component Chat-mini

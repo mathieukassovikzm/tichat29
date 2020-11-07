@@ -85,15 +85,16 @@ export default {};
   &.img-actualitees {
     background-image: url("./../../assets/img/pageHome/img-actualitees.jpg");
   }
-  &.img-chats {
-    background-image: url("./../../assets/img/pageNosProteges/img-chats.jpg");
-  }
-  &.img-chattons {
-    background-image: url("./../../assets/img/pageNosProteges/img-chattons.jpg");
-  }
-  &.img-sauvetages {
-    background-image: url("./../../assets/img/pageNosProteges/img-sauvetages.jpg");
-  }
+  // TODO: Code mort
+  // &.img-chats {
+  //   background-image: url("./../../assets/img/pageNosProteges/img-chats.jpg");
+  // }
+  // &.img-chattons {
+  //   background-image: url("./../../assets/img/pageNosProteges/img-chattons.jpg");
+  // }
+  // &.img-sauvetages {
+  //   background-image: url("./../../assets/img/pageNosProteges/img-sauvetages.jpg");
+  // }
   &.bkg-dark {
     h1,
     p {
