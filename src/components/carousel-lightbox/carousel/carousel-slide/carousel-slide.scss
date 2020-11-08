@@ -1,9 +1,9 @@
 .slide-right-enter-active {
-  animation: slideRightIn $carousel-anim-duration;
+  animation: slideRightIn $carousel-anim-duration ease;
 }
 
 .slide-right-leave-active {
-  animation: slideRightOut $carousel-anim-duration;
+  animation: slideRightOut $carousel-anim-duration ease;
   position: absolute;
   top: 0;
   left: 0;
@@ -14,27 +14,31 @@
 @keyframes slideRightIn {
   from {
     transform: translateX(100%);
+    opacity: 0%;
   }
   to {
     transform: translateX(0);
+    opacity: 100%;
   }
 }
 
 @keyframes slideRightOut {
   from {
     transform: translateX(0);
+    opacity: 100%;
   }
   to {
     transform: translateX(-100%);
+    opacity: 0%;
   }
 }
 
 .slide-left-enter-active {
-  animation: slideleftIn $carousel-anim-duration;
+  animation: slideleftIn $carousel-anim-duration ease;
 }
 
 .slide-left-leave-active {
-  animation: slideleftOut $carousel-anim-duration;
+  animation: slideleftOut $carousel-anim-duration ease;
   position: absolute;
   top: 0;
   left: 0;
@@ -45,17 +49,21 @@
 @keyframes slideleftIn {
   from {
     transform: translateX(-100%);
+    opacity: 0%;
   }
   to {
     transform: translateX(0);
+    opacity: 100%;
   }
 }
 
 @keyframes slideleftOut {
   from {
     transform: translateX(0);
+    opacity: 100%;
   }
   to {
     transform: translateX(100%);
+    opacity: 0%;
   }
 }

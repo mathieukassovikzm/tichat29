@@ -1,5 +1,5 @@
 <template >
-  <div class="c-conditions section">
+  <section class="p-conditions">
     <section class="section-container">
       <PageTitle class="bkg-light">Conditions d'adoptions</PageTitle>
       <div class="conditions">
@@ -17,33 +17,52 @@
           l'association et à un engagement de stérilisation s'il s'agit d'un
           chaton.
         </p>
-        <p>Tarifs d'adoption</p>
-        <p>
-          Chats adultes : 120€ Comprenant la stérilisation/castration,
-          l'identification, la primo-vaccination (et rappel le cas échéant), et
-          le déparasitage interne/externe.
-        </p>
-        <p>
-          Chatons : 120€ Comprenant la stérilisation/castration,
-          l'identification, la primo-vaccination (et rappel le cas échéant), et
-          le déparasitage interne/externe. La stérilisation est obligatoire à
-          l'âge de 6 mois, les adoptants rempliront un engagement de
-          stérilisation lors de l'adoption et fourniront un chèque de caution de
-          120euros, qui sera détruit lors de la réception de l'attestation
-          vétérinaire.
-        </p>
-        <p>
-          Chats en "sauvetage" : chats et chatons, malades, âgés, handicapés...
-          : don libre (+ chèque de caution pour la stérilisation future s'il
-          s'agit d'un chaton)
-        </p>
-        <p>
-          Sachez que ces frais sont inférieurs à ceux que vous paierez en tant
-          que particulier chez un vétérinaire, et qu'ils vous donneront la
-          garantie d'un animal en règle (l'identification étant obligatoire en
-          France). De plus, la stérilisation est le seul moyen de lutter contre
-          la prolifération des futures petites misères de demain.
-        </p>
+        <div class="tarif-title">
+          <h3>Tarifs d'adoption</h3>
+        </div>
+        <div class="tarifs">
+          <div class="item-tarif tarifs-chats">
+            <div class="tarif-title">
+              <h4>Chats adultes</h4>
+            </div>
+            <p>
+              120€ Comprenant la stérilisation/castration, l'identification, la
+              primo-vaccination (et rappel le cas échéant), et le déparasitage
+              interne/externe.
+            </p>
+          </div>
+          <div class="item-tarif tarifs-chattons">
+            <div class="tarif-title">
+              <h4>Chatons</h4>
+            </div>
+            <p>
+              120€ Comprenant la stérilisation/castration, l'identification, la
+              primo-vaccination (et rappel le cas échéant), et le déparasitage
+              interne/externe. La stérilisation est obligatoire à l'âge de 6
+              mois, les adoptants rempliront un engagement de stérilisation lors
+              de l'adoption et fourniront un chèque de caution de 120euros, qui
+              sera détruit lors de la réception de l'attestation vétérinaire.
+            </p>
+          </div>
+          <div class="item-tarif tarifs-sauvetage">
+            <div class="tarif-title">
+              <h4>Chats en "sauvetage"</h4>
+            </div>
+            <p>
+              chats et chatons, malades, âgés, handicapés... : don libre (+
+              chèque de caution pour la stérilisation future s'il s'agit d'un
+              chaton)
+            </p>
+            <p>
+              Sachez que ces frais sont inférieurs à ceux que vous paierez en
+              tant que particulier chez un vétérinaire, et qu'ils vous donneront
+              la garantie d'un animal en règle (l'identification étant
+              obligatoire en France). De plus, la stérilisation est le seul
+              moyen de lutter contre la prolifération des futures petites
+              misères de demain.
+            </p>
+          </div>
+        </div>
       </div>
       <div class="buttons">
         <div class="button-paw" @click="goBack">
@@ -52,7 +71,7 @@
         </div>
       </div>
     </section>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -84,10 +103,5 @@ export default {
 };
 </script>
   
-<style lang="scss">
-.c-conditions {
-  .buttons {
-    @include btnPaw($btn-color: $p-chat-accueil-title-bkg-color);
-  }
-}
+<style lang="scss" src="./conditions-adoption.scss">
 </style>

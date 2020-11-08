@@ -3,7 +3,7 @@ const state = {
   BodyClass: '',
   BodyClassPageHome: 'p-transparent-menu txt-light',
   BodyClassPageNosChats: 'p-transparent-menu txt-light',
-  BodyClassPageNosChatsDetail: '',
+  BodyClassPageNosChatsDetail: 'p-chat-detail',
   BodyClassPageCondition: 'p-color-secundary-menu txt-dark',
   BodyClassPageActu: 'p-transparent-menu txt-light',
   BodyClassPageActuDetail: 'p-color-secundary-menu txt-dark p-actualite-detail',

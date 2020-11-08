@@ -1,29 +1,26 @@
 <section class="c-chat-detail">
-  <div id="chat-detail-circle" class="chat-detail-circle">
-    <div class="chat-detail-name-container">
-      <SvgTiChat />
-      <div>
-        <h2 class="chat-name">{{ chat.nom }}</h2>
-      </div>
+  <div class="top-dsc">
+    <SvgTiChat />
+    <div>
+      <h2 class="chat-name">{{ chat.nom }}</h2>
     </div>
   </div>
-  <div id="chat-detail-circle-fake" class="chat-detail-circle-fake">
-  </div>
-  <div id="chat-detail-container" class="chat-detail-container">
-    <div id="chat-description" class="chat-description">
-      <p>{{ chat.description }}</p>
-      <div class="buttons">
-        <router-link :to="{ name: 'NosChats'}" class="button-paw">
+  <div class="bottom-dsc">
+    <div id="ctn-carousel" class="dsc-item ctn-carousel">
+      <CarouselComponent id="chat-list-photos" class="chat-list-photos" v-bind:listPhotos="chat.photos" />
+    </div>
+    <div class="dsc-item ctn-dsc">
+      <p class="chat-description">{{ chat.description }}</p>
+      <div class="ctn-btns">
+        <router-link :to="{ name: 'ConditionsAdoption'}" class="button-paw">
           <CatPaw />
           <p>Conditions</p>
         </router-link>
-        <router-link :to="{ name: 'NosChats'}" class="button-paw">
+        <div class="button-paw" @click="goBack">
           <CatPaw />
           <p>Retour</p>
-        </router-link>
+        </div>
       </div>
     </div>
-
-    <CarouselComponent id="chat-list-photos" class="chat-list-photos" v-bind:listPhotos="chat.photos" />
   </div>
 </section>

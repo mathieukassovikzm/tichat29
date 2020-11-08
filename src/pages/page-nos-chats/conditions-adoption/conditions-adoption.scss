@@ -1,0 +1,40 @@
+.p-conditions {
+  @include bkgImg($url: "./../../../assets/img/backgroundTichat29.png");
+  .section-container {
+    background: none;
+    .conditions {
+      .tarif-title {
+        width: 100%;
+        h3,
+        h4 {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    .buttons {
+      margin-top: $p-conditions-btn-margin-tb;
+      @include btnPaw($btn-color: $p-conditions-paw-color);
+    }
+  }
+}
+@media only screen and (min-width: $min-width-l) {
+  .p-conditions {
+    .section-container {
+      .conditions {
+        .tarifs {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          .item-tarif {
+            width: 30%;
+          }
+        }
+      }
+      .buttons {
+      }
+    }
+  }
+}
