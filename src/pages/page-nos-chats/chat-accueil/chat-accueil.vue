@@ -1,5 +1,5 @@
 <template >
-  <div>
+  <div class="page-chat-accueil">
     <div class="section-list-chats section-title">
       <div class="title-container title-list-chats">
         <h1>Nos protégés</h1>
@@ -19,31 +19,50 @@
         </div>
       </div>
     </div>
-    <SectionBkgImg id="s-chats" class="section img-chats bkg-light">
+    <SectionConditions />
+    <section id="s-chats" class="section-subtitle p-left">
       <div class="section-container">
-        <TitleH1 class="bkg-light">Chats</TitleH1>
+        <TitleH1 class="bkg-dark">Chats</TitleH1>
+        <div class="container-btn">
+          <div class="button-paw" @click="goToConditions">
+            <SvgCatPaw />
+            <p>Conditions</p>
+          </div>
+        </div>
       </div>
-    </SectionBkgImg>
+    </section>
     <section>
       <div class="section-container s-chats">
         <ChatList typeChat="chat" />
       </div>
     </section>
-    <SectionBkgImg id="s-chatons" class="section img-chattons bkg-light">
+    <section id="s-chatons" class="section-subtitle p-right">
       <div class="section-container">
-        <TitleH1 class="bkg-light">Chattons</TitleH1>
+        <TitleH1 class="bkg-dark">Chattons</TitleH1>
+        <div class="container-btn">
+          <div class="button-paw" @click="goToConditions">
+            <SvgCatPaw />
+            <p>Conditions</p>
+          </div>
+        </div>
       </div>
-    </SectionBkgImg>
+    </section>
     <section>
       <div class="section-container s-chatons">
         <ChatList typeChat="chatton" />
       </div>
     </section>
-    <SectionBkgImg id="s-sauvetage" class="section img-sauvetages bkg-light">
+    <section id="s-sauvetage" class="section-subtitle p-left">
       <div class="section-container">
-        <TitleH1 class="bkg-light">Sauvetages</TitleH1>
+        <TitleH1 class="bkg-dark">Sauvetages</TitleH1>
+        <div class="container-btn">
+          <div class="button-paw" @click="goToConditions">
+            <SvgCatPaw />
+            <p>Conditions</p>
+          </div>
+        </div>
       </div>
-    </SectionBkgImg>
+    </section>
     <section>
       <div class="section-container s-sauvetage">
         <ChatList typeChat="sauvetage" />
@@ -54,34 +73,37 @@
 
 <script>
 import TitleH1 from "@/components/title/title.vue";
-import SectionBkgImg from "@/components/section-bkg-img/section-bkg-img.vue";
 import ChatList from "@/pages/page-nos-chats/chat-list/chat-list.vue";
+import SectionConditions from "./section-conditions/section-conditions.vue";
 import SvgCatPaw from "@/components/svg/svg-cat-paw";
 import Functions from "@/functions.js";
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "component-list-chat",
   components: {
     TitleH1,
-    SectionBkgImg,
     ChatList,
     SvgCatPaw,
+    SectionConditions,
   },
 
   data() {
     return {};
   },
   computed: {
-    ...mapGetters("chatsStore", {
-      getListChatsDispo: "getListChatsDispoInStore",
+    ...mapGetters("mainStore", {
+      getBodyClassPageNosChatsAccueil: "getBodyClassPageNosChatsAccueilInStore",
     }),
-    listChats() {
-      return this.getListChatsDispo;
-    },
   },
   methods: {
-    onClick(itemId) {
-      this.$router.push({ name: "DetailChat", params: { itemId } });
+    ...mapActions("mainStore", {
+      setBodyClass: "setBodyClassInStore",
+    }),
+    setSiteContainerClass() {
+      this.setBodyClass(this.getBodyClassPageNosChatsAccueil);
+    },
+    goToConditions() {
+      this.$router.push({ name: "ConditionsAdoption" });
     },
     goToChats() {
       Functions.moveSlowToId("#s-chats");
@@ -93,8 +115,10 @@ export default {
       Functions.moveSlowToId("#s-sauvetage");
     },
   },
+  beforeMount() {
+    this.setSiteContainerClass();
+  },
 };
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss" src="./chat-accueil.scss"></style>

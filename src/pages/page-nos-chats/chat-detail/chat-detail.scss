@@ -1,6 +1,11 @@
 .c-chat-detail {
-  width: 100%;
-  .chat-detail-circle {
+  .p-chat-detail .site-pusher .site-content section {
+    @include bkgImg($url: "./../../../assets/img/backgroundTichat29.png");
+  }
+
+  .top-dsc {
+    padding: $c-chat-detail-dsc-padding-tb $c-chat-detail-dsc-padding-lr;
+
     .chat-name {
       font-size: $c-chat-detail-name-font-size;
     }
@@ -14,79 +19,47 @@
       }
     }
   }
-
-  .chat-detail-container {
-    position: relative;
+  .bottom-dsc {
     background-color: $c-chat-detail-bkg-color;
-    padding: $c-chat-detail-dsc-padding-tb 0;
-
-    position: relative;
-    .chat-description {
+    .dsc-item {
       position: relative;
-      margin: auto;
-      text-align: center;
-      color: $c-chat-detail-txt-color;
-      font-size: $c-chat-detail-dsc-font-size;
-    }
-    .chat-description,
-    .chat-list-photos {
       padding: $c-chat-detail-dsc-padding-tb $c-chat-detail-dsc-padding-lr;
+      .chat-description {
+        margin: auto;
+        color: $c-chat-detail-txt-color;
+        font-size: $c-chat-detail-dsc-font-size;
+      }
+      .ctn-btns {
+        margin-top: $c-chat-detail-dsc-padding-tb;
+        @include btnPaw($btn-color: $page-home-title-txt-color);
+        align-items: center;
+      }
     }
   }
 }
 
-//
 /*******************************
  * Menu screen size
  *******************************/
 @media only screen and (min-width: $min-width-l) {
-  .c-chat-detail {
-    overflow-x: hidden;
-    .chat-detail-circle-fake,
-    .chat-detail-circle {
-      &:before {
-        content: "";
-        display: block;
-        padding-top: 100%; /* initial ratio of 1:1*/
+  .top-dsc {
+    width: 40%;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .bottom-dsc {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    .dsc-item {
+      &.ctn-dsc {
+        width: 40%;
       }
-    }
-    .chat-detail-circle {
-      position: absolute;
-      top: $c-chat-detail-name-circle-top;
-      right: $c-chat-detail-name-circle-right;
-      background-color: $c-chat-detail-name-bkg-color;
-      border-radius: 50%;
-      width: $c-chat-detail-name-circle-size;
-
-      &:before {
-        content: "";
-        display: block;
-        padding-top: 100%; /* initial ratio of 1:1*/
-      }
-      .chat-detail-name-container {
-        position: absolute;
-        top: 60%;
-        left: 8%;
-        svg {
-          position: relative;
-          top: 20px;
-          path {
-            fill: $c-chat-detail-txt-color;
-          }
+      &.ctn-carousel {
+        flex-grow: 1;
+        .chat-list-photos {
+          position: absolute;
         }
-      }
-    }
-    .chat-detail-container {
-      .chat-description {
-        width: $c-chat-detail-dsc-size;
-        padding-right: $c-chat-detail-dsc-padding-lr * 2;
-      }
-      .chat-list-photos {
-        position: absolute;
-        top: -80%;
-        left: 0;
-        width: 60%;
-        padding: 0;
       }
     }
   }

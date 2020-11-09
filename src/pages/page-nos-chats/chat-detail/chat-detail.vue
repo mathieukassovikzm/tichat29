@@ -2,15 +2,17 @@
 
 <script>
 import CarouselComponent from "@/components/carousel-lightbox/carousel-component.vue";
+import CatPaw from "@/components/svg/svg-cat-paw.vue";
 import SvgTiChat from "@/components/svg/svg-tiChat29.vue";
 import { mapGetters, mapActions } from "vuex";
 import $ from "jquery";
 export default {
   name: "component-chat-detail",
-  components: { CarouselComponent, SvgTiChat },
+  components: { CarouselComponent, SvgTiChat, CatPaw },
   data() {
     return {
       loading: false,
+      limiteSize: 850,
       error: null,
       chat: null,
     };
@@ -48,21 +50,26 @@ export default {
       var resultChat = this.getChat(fetchedId);
       this.chat = resultChat[0];
     },
+    goBack() {
+      this.$router.go(-1);
+    },
     /* Recalcul des dimentions en fonction de la taille du cercle */
     onResize() {
-      var circle = $("#chat-detail-circle");
-      var circleFake = $("#chat-detail-circle-fake");
-      circleFake.width(circle.width() * 0.4);
-
-      var detail = $("#chat-detail-container");
-      console.log(circle.height());
-      console.log(circle.offset().top);
-      console.log(circleFake.height());
-      console.log(circle.height() - circleFake.height());
-      detail.css(
-        "padding-top",
-        circle.height() + circle.offset().top - circleFake.height()
-      );
+      let windowWidth = document.documentElement.clientWidth;
+      var listPhotos = $("#chat-list-photos");
+      var ctnCarousel = $("#ctn-carousel");
+      var ctnDsc = $("#ctn-dsc");
+      if (windowWidth > this.limiteSize) {
+        listPhotos.width(document.documentElement.clientWidth - ctnDsc.width());
+        ctnCarousel.height(listPhotos.height() / 1.5);
+        listPhotos.css("top", -listPhotos.width() / 4);
+        listPhotos.css("left", -listPhotos.width() / 12);
+      } else {
+        listPhotos.width("auto");
+        ctnCarousel.height("auto");
+        listPhotos.css("top", "auto");
+        listPhotos.css("left", "auto");
+      }
     },
   },
 

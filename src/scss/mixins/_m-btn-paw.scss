@@ -1,0 +1,38 @@
+@mixin btnPaw(
+  $btn-color,
+  $btn-width: $button-paw-size,
+  $btn-scale-up: $button-paw-scale-up,
+  $btn-scale-up-duration: $button-paw-scale-up-duration
+) {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  .button-paw {
+    position: relative;
+    margin: 0 10px;
+    cursor: pointer;
+
+    .svg-cat-paw {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: $btn-width;
+      filter: $drop-shadow;
+
+      path,
+      ellipse {
+        fill: $btn-color;
+      }
+    }
+    p {
+      color: $btn-color;
+      font-style: italic;
+      text-transform: uppercase;
+      text-shadow: $text-shadow;
+    }
+    transition: transform $btn-scale-up-duration ease;
+    &:hover {
+      transform: scale($btn-scale-up);
+    }
+  }
+}

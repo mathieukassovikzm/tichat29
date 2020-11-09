@@ -58,4 +58,7 @@ export default {
 .p-actualite-detail .site-pusher .site-content section {
   @include bkgImg($url: "./../../../assets/img/backgroundTichat29.png");
 }
+.s-actualite-detail {
+  min-height: 100vh;
+}
 </style>
