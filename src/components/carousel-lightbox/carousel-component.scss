@@ -32,6 +32,7 @@ $carousel-pag-active-color: #efedea !default;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        border-radius: 50%;
       }
     }
   }
@@ -41,6 +42,7 @@ $carousel-pag-active-color: #efedea !default;
     height: $carousel-nav-size;
     cursor: pointer;
     transition: all $carousel-anim-hover-duration ease;
+    filter: $drop-shadow;
 
     path {
       transition: all $carousel-anim-hover-duration ease;

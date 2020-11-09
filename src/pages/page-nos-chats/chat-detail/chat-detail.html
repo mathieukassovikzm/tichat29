@@ -9,7 +9,7 @@
     <div id="ctn-carousel" class="dsc-item ctn-carousel">
       <CarouselComponent id="chat-list-photos" class="chat-list-photos" v-bind:listPhotos="chat.photos" />
     </div>
-    <div class="dsc-item ctn-dsc">
+    <div id="ctn-dsc" class="dsc-item ctn-dsc">
       <p class="chat-description">{{ chat.description }}</p>
       <div class="ctn-btns">
         <router-link :to="{ name: 'ConditionsAdoption'}" class="button-paw">

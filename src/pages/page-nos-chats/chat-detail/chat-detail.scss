@@ -30,6 +30,7 @@
         font-size: $c-chat-detail-dsc-font-size;
       }
       .ctn-btns {
+        margin-top: $c-chat-detail-dsc-padding-tb;
         @include btnPaw($btn-color: $page-home-title-txt-color);
         align-items: center;
       }
@@ -58,10 +59,6 @@
         flex-grow: 1;
         .chat-list-photos {
           position: absolute;
-          // top: -120px;
-          // left: -100px;
-          width: 140%;
-          // max-width: 800px;
         }
       }
     }
