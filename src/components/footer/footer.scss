@@ -2,7 +2,7 @@
   padding-left: 10px;
   padding-right: 10px;
   position: relative;
-  background-image: url('./../../assets/img/footer.jpg');
+  background-image: url("./../../assets/img/footer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right 10% center;
@@ -42,7 +42,24 @@
       .menu-item-link {
         font-size: $base-size-font-txt-s;
         &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          height: 2px;
+          width: 0%;
+          left: 50%;
+          transform: translateX(-50%);
           background-color: $footer-txt-color;
+          transition: $animation-duration-short ease all;
+        }
+      }
+      .menu-item {
+        &:hover {
+          .menu-item-link {
+            &::after {
+              width: 40%;
+            }
+          }
         }
       }
     }

@@ -92,7 +92,11 @@ export default {
       }
       if (
         this.$route.name !== idLinkClicked &&
-        !(this.$route.name === "ListeChats" && idLinkClicked === "NosChats")
+        !(this.$route.name === "ChatAccueil" && idLinkClicked === "NosChats") &&
+        !(
+          this.$route.name === "ListActualite" &&
+          idLinkClicked === "PageActualitees"
+        )
       ) {
         router.push({ name: idLinkClicked });
       }
