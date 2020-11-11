@@ -13,9 +13,11 @@
         <p>
           Dans un second temps, nous vous mettrons en contact avec la famille
           d'accueil de l'animal en question, afin de convenir d'un rendez-vous
-          pour le rencontrer. Toute adoption donne lieu à un contrat auprès de
-          l'association et à un engagement de stérilisation s'il s'agit d'un
-          chaton.
+          pour le rencontrer.
+        </p>
+        <p>
+          Toute adoption donne lieu à un contrat auprès de l'association et à un
+          engagement de stérilisation s'il s'agit d'un chaton.
         </p>
         <div class="tarif-title">
           <h3>Tarifs d'adoption</h3>
@@ -23,7 +25,7 @@
         <div class="tarifs">
           <div class="item-tarif tarifs-chats">
             <div class="tarif-title">
-              <h4>Chats adultes</h4>
+              <h4>Chats</h4>
             </div>
             <p>
               120€ Comprenant la stérilisation/castration, l'identification, la
@@ -46,23 +48,25 @@
           </div>
           <div class="item-tarif tarifs-sauvetage">
             <div class="tarif-title">
-              <h4>Chats en "sauvetage"</h4>
+              <h4>Sauvetage</h4>
             </div>
             <p>
               chats et chatons, malades, âgés, handicapés... : don libre (+
               chèque de caution pour la stérilisation future s'il s'agit d'un
               chaton)
             </p>
-            <p>
-              Sachez que ces frais sont inférieurs à ceux que vous paierez en
-              tant que particulier chez un vétérinaire, et qu'ils vous donneront
-              la garantie d'un animal en règle (l'identification étant
-              obligatoire en France). De plus, la stérilisation est le seul
-              moyen de lutter contre la prolifération des futures petites
-              misères de demain.
-            </p>
           </div>
         </div>
+        <p>
+          Sachez que ces frais sont inférieurs à ceux que vous paierez en tant
+          que particulier chez un vétérinaire, et qu'ils vous donneront la
+          garantie d'un animal en règle (l'identification étant obligatoire en
+          France).
+        </p>
+        <p>
+          De plus, la stérilisation est le seul moyen de lutter contre la
+          prolifération des futures petites misères de demain.
+        </p>
       </div>
       <div class="buttons">
         <div class="button-paw" @click="goBack">

@@ -12,9 +12,12 @@
           transform: translateX(-50%);
         }
       }
+      .tarifs {
+        margin: $p-conditions-items-margin-tb 0;
+      }
     }
     .buttons {
-      margin-top: $p-conditions-btn-margin-tb;
+      margin: $p-conditions-items-margin-tb 0;
       @include btnPaw($btn-color: $p-conditions-paw-color);
     }
   }
