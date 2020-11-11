@@ -23,11 +23,12 @@
     <section id="s-chats" class="section-subtitle p-left">
       <div class="section-container">
         <TitleH1 class="bkg-dark">Chats</TitleH1>
-        <div class="container-btn">
-          <div class="button-paw" @click="goToConditions">
-            <SvgCatPaw />
-            <p>Conditions</p>
-          </div>
+      </div>
+      <div class="container-btn">
+        <SvgFourthCircle class="svg-fourth-circle" />
+        <div class="button-paw" @click="goToConditions">
+          <SvgCatPaw />
+          <p>Conditions</p>
         </div>
       </div>
     </section>
@@ -39,11 +40,12 @@
     <section id="s-chatons" class="section-subtitle p-right">
       <div class="section-container">
         <TitleH1 class="bkg-dark">Chattons</TitleH1>
-        <div class="container-btn">
-          <div class="button-paw" @click="goToConditions">
-            <SvgCatPaw />
-            <p>Conditions</p>
-          </div>
+      </div>
+      <div class="container-btn">
+        <SvgFourthCircle class="svg-fourth-circle" />
+        <div class="button-paw" @click="goToConditions">
+          <SvgCatPaw />
+          <p>Conditions</p>
         </div>
       </div>
     </section>
@@ -55,11 +57,12 @@
     <section id="s-sauvetage" class="section-subtitle p-left">
       <div class="section-container">
         <TitleH1 class="bkg-dark">Sauvetages</TitleH1>
-        <div class="container-btn">
-          <div class="button-paw" @click="goToConditions">
-            <SvgCatPaw />
-            <p>Conditions</p>
-          </div>
+      </div>
+      <div class="container-btn">
+        <SvgFourthCircle class="svg-fourth-circle" />
+        <div class="button-paw" @click="goToConditions">
+          <SvgCatPaw />
+          <p>Conditions</p>
         </div>
       </div>
     </section>
@@ -76,6 +79,7 @@ import TitleH1 from "@/components/title/title.vue";
 import ChatList from "@/pages/page-nos-chats/chat-list/chat-list.vue";
 import SectionConditions from "./section-conditions/section-conditions.vue";
 import SvgCatPaw from "@/components/svg/svg-cat-paw";
+import SvgFourthCircle from "@/components/svg/svg-fourth-circle";
 import Functions from "@/functions.js";
 import { mapGetters, mapActions } from "vuex";
 export default {
@@ -85,6 +89,7 @@ export default {
     ChatList,
     SvgCatPaw,
     SectionConditions,
+    SvgFourthCircle,
   },
 
   data() {
