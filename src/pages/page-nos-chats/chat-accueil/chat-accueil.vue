@@ -2,6 +2,7 @@
   <div class="page-chat-accueil">
     <div class="section-list-chats section-title">
       <div class="title-container title-list-chats">
+        <TiChat class="svg-tichat29" />
         <h1>Nos protégés</h1>
         <div class="buttons">
           <div class="button-paw" @click="goToChats">
@@ -75,6 +76,7 @@
 </template>
 
 <script>
+import TiChat from "@/components/svg/svg-tiChat29.vue";
 import TitleH1 from "@/components/title/title.vue";
 import ChatList from "@/pages/page-nos-chats/chat-list/chat-list.vue";
 import SectionConditions from "./section-conditions/section-conditions.vue";
@@ -85,6 +87,7 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   name: "component-list-chat",
   components: {
+    TiChat,
     TitleH1,
     ChatList,
     SvgCatPaw,

@@ -2,6 +2,7 @@
   <div>
     <div class="section-actualites section-title">
       <div class="title-container title-actualites">
+        <TiChat class="svg-tichat29" />
         <h1>Actualité</h1>
       </div>
     </div>
@@ -24,11 +25,13 @@
 
 <script>
 import actualite from "./../actualite/actualite.vue";
+import TiChat from "@/components/svg/svg-tiChat29.vue";
 import DateHelper from "@/dateHelper.js";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
+    TiChat,
     actualite,
   },
   data() {
