@@ -10,8 +10,10 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "jquery": "^3.5.1",
-    "moment": "^2.26.0",
+    "moment": "^2.27.0",
     "vue": "^2.6.11",
+    "vue-flip-toolkit": "^1.6.0",
+    "vue-moment": "^4.1.0",
     "vue-router": "^3.3.2",
     "vuelidate": "^0.7.5",
     "vuex": "^3.4.0"
@@ -21,10 +23,12 @@
     "@vue/cli-plugin-eslint": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
     "babel-eslint": "^10.1.0",
+    "compass-mixins": "^0.12.10",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.14.1",
     "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

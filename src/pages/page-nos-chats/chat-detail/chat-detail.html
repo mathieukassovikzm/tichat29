@@ -1,0 +1,26 @@
+<section class="c-chat-detail">
+  <div class="top-dsc">
+    <SvgTiChat />
+    <div>
+      <h2 class="chat-name">{{ chat.nom }}</h2>
+    </div>
+  </div>
+  <div class="bottom-dsc">
+    <div id="ctn-carousel" class="dsc-item ctn-carousel">
+      <CarouselComponent id="chat-list-photos" class="chat-list-photos" v-bind:listPhotos="chat.photos" />
+    </div>
+    <div id="ctn-dsc" class="dsc-item ctn-dsc">
+      <p class="chat-description">{{ chat.description }}</p>
+      <div class="ctn-btns">
+        <router-link :to="{ name: 'ConditionsAdoption'}" class="button-paw">
+          <CatPaw />
+          <p>Conditions</p>
+        </router-link>
+        <div class="button-paw" @click="goBack">
+          <CatPaw />
+          <p>Retour</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

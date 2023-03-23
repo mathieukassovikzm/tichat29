@@ -1,2 +1,17 @@
+/*******************************
+ * Variables Page Home 
+ *******************************/
+$page-home-title-txt-color: $c-secundary-light !default;
+$page-home-button-paw-size: 55px !default;
+/**------------------------------------------ Page Home -------------------------------------------------**/
 
-/**------------------------------------------ header -------------------------------------------------**/
+.p-home {
+  .section-title {
+    .btn-savoir-plus {
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+      transform: translateX(-50%);
+    }
+  }
+}

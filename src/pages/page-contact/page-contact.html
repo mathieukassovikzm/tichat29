@@ -1,0 +1,68 @@
+<section class="p-contact section">
+  <div class="section-container">
+    <div class="p-contact-section section-form">
+      <TitleH1 class="bkg-light">Contactez-nous</TitleH1>
+      <form class="form" @submit.prevent="onSubmit()">
+        <div class="form-section">
+          <div class="form-elt">
+            <label for="lastname">Votre nom</label>
+            <input type="text" required id="lastname" name="lastname" />
+          </div>
+          <div class="form-elt">
+            <label for="firstname">Votre Prénom</label>
+            <input type="text" required id="firstname" name="firstname" />
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-elt">
+            <label for="phone">Votre téléphone</label>
+            <input type="tel" required id="phone" name="phone" placeholder="0629292929" />
+          </div>
+          <div class="form-elt">
+            <label for="email">Votre email</label>
+            <input type="email" required id="email" name="email" placeholder="votre@email.com" />
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-elt form-elt-message">
+            <label for="message">Votre message</label>
+            <textarea name="message" required></textarea>
+          </div>
+        </div>
+        <div class="form-section form-section-btn">
+          <button class="btn btn-v2" type="submit">Envoyer</button>
+        </div>
+      </form>
+    </div>
+    <div class="p-contact-section section-infos">
+      <TitleH1 class="bkg-light">Contact</TitleH1>
+      <div>
+        <p>Une question? N'hésites pas nous nous verrons un plaisir d'y répondre!</p>
+        <div class="contact-infos-item item-address">
+          <h3>Adresse</h3>
+          <p>Nigolou</p>
+          <p>29940 La Foret-Fouesnant</p>
+        </div>
+        <div class="contact-infos-item item-phone">
+          <h3>Téléphone</h3>
+          <p>06 25 09 52 22</p>
+        </div>
+        <div class="contact-infos-item item-social-icons">
+          <h3>Nos réseaux sociaux</h3>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
+                <SvgFacebook />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/go2sport29/" target="_blank">
+                <SvgInstagram />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

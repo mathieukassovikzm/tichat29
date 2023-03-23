@@ -1,0 +1,28 @@
+/*******************************
+** Media Query
+********************************/
+$min-width-s: 450px;
+$min-width-m: 650px;
+$min-width-l: 850px;
+
+/*******************************
+** Globals
+********************************/
+$animation-duration-short: 0.3s;
+$animation-duration: 0.5s;
+
+$size-under-menu: 90vh;
+$section-width: 70%;
+$section-resp-width: 100%;
+
+$section-padding-t: 100px;
+$section-padding-b: 100px;
+$section-padding-lr: 10px;
+$section-container-padding-tb: 10px;
+$section-container-padding-lr: 10px;
+
+$drop-shadow: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+$text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+
+$svg-media-size: 40px;
+$svg-color-anim-duration: $animation-duration-short;

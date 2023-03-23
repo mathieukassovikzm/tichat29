@@ -1,0 +1,66 @@
+.c-chat-detail {
+  .p-chat-detail .site-pusher .site-content section {
+    @include bkgImg($url: "./../../../assets/img/backgroundTichat29.png");
+  }
+
+  .top-dsc {
+    padding: $c-chat-detail-dsc-padding-tb $c-chat-detail-dsc-padding-lr;
+
+    .chat-name {
+      font-size: $c-chat-detail-name-font-size;
+    }
+    svg {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: $c-chat-detail-name-svg-size;
+      path {
+        fill: $c-chat-detail-name-bkg-color;
+      }
+    }
+  }
+  .bottom-dsc {
+    background-color: $c-chat-detail-bkg-color;
+    .dsc-item {
+      position: relative;
+      padding: $c-chat-detail-dsc-padding-tb $c-chat-detail-dsc-padding-lr;
+      .chat-description {
+        margin: auto;
+        color: $c-chat-detail-txt-color;
+        font-size: $c-chat-detail-dsc-font-size;
+      }
+      .ctn-btns {
+        margin-top: $c-chat-detail-dsc-padding-tb;
+        @include btnPaw($btn-color: $page-home-title-txt-color);
+        align-items: center;
+      }
+    }
+  }
+}
+
+/*******************************
+ * Menu screen size
+ *******************************/
+@media only screen and (min-width: $min-width-l) {
+  .top-dsc {
+    width: 40%;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .bottom-dsc {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    .dsc-item {
+      &.ctn-dsc {
+        width: 40%;
+      }
+      &.ctn-carousel {
+        flex-grow: 1;
+        .chat-list-photos {
+          position: absolute;
+        }
+      }
+    }
+  }
+}

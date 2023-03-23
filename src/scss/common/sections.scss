@@ -1,0 +1,90 @@
+section,
+.section {
+  position: relative;
+  background: url(./assets/img/backgroundTichat29.png), $site-bkg-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  .section-container {
+    margin: 0;
+    width: $section-resp-width;
+    padding-top: $section-padding-t;
+    padding-bottom: $section-padding-b;
+    padding-left: $section-padding-lr;
+    padding-right: $section-padding-lr;
+  }
+}
+
+.section-title {
+  position: relative;
+  height: $page-home-size;
+  &.section-home {
+    @include bkgGradient("./assets/img/titles/pageHome.jpg");
+  }
+  &.section-help {
+    @include bkgGradient($url: "./assets/img/titles/pageHelp.jpg", $color1Stop: 30%, $color2Stop: 50%);
+  }
+  &.section-list-chats {
+    @include bkgGradient("./assets/img/titles/pageNosChats.jpg");
+  }
+  &.section-actualites {
+    @include bkgGradient("./assets/img/titles/pageActualitees.jpg");
+  }
+  .title-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 67%;
+    transform: translateY(-50%);
+    .svg-tichat29 {
+      width: 60%;
+      path {
+        fill: $page-home-title-txt-color;
+      }
+    }
+    h1 {
+      width: 80%;
+      color: $page-home-title-txt-color;
+      font-size: $page-home-title-font-size;
+      text-transform: uppercase;
+      text-align: center;
+      margin: $page-home-title-margin-b 0;
+      .txt-italic {
+        font-style: italic;
+      }
+      &::after {
+        content: none;
+      }
+    }
+    p {
+      color: $page-home-title-txt-color;
+      text-align: center;
+      margin-bottom: $page-home-title-margin-b;
+    }
+    .buttons {
+      @include btnPaw($btn-color: $page-home-title-txt-color);
+    }
+  }
+}
+
+@media only screen and (min-width: $min-width-m) {
+  section,
+  .section {
+    .section-container {
+      margin: auto;
+      width: $section-width;
+    }
+  }
+  .section-title {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+
+    .title-container {
+      width: 50%;
+    }
+  }
+}

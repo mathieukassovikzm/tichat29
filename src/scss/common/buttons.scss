@@ -1,0 +1,54 @@
+button,
+.btn {
+  padding: 10px;
+
+  border-radius: $buttons-border-radius;
+
+  transition: color $buttons-anim-duration ease;
+  transition: background-color $buttons-anim-duration ease;
+
+  cursor: pointer;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font-txt, sans-serif;
+  font-size: $base-size-font-title-s;
+  font-style: italic;
+
+  @media only screen and (min-width: $min-width-s) {
+  }
+  @media only screen and (min-width: $min-width-m) {
+  }
+  &.btn-v1 {
+    background-color: transparent;
+    color: $buttons-v1-color;
+    border: solid $buttons-border-width $buttons-v1-color;
+    &:hover {
+      background-color: $buttons-v1-color;
+      color: $buttons-v1-color-hover;
+    }
+  }
+  &.btn-v2 {
+    background-color: $buttons-v2-color-hover;
+    color: $buttons-v2-color;
+    border: solid $buttons-border-width $buttons-v2-color;
+    &:hover {
+      background-color: transparent;
+      color: $buttons-v2-color-hover;
+      border: solid $buttons-border-width $buttons-v2-color-hover;
+    }
+  }
+  &.btn-v3 {
+    background-color: transparent;
+    color: $buttons-v3-color;
+    border: solid $buttons-border-width $buttons-v3-color;
+    &:hover {
+      background-color: $buttons-v3-color;
+      color: $buttons-v3-color-hover;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,51 @@
+/*******************************
+** Variables Page Nos Chats
+********************************/
+$p-chats-vc-position-b: 30px;
+$p-chats-vc-position-r: 30px;
+$p-chats-vc-h3-font-size: $base-size-font-title-s;
+$p-chats-paw-width: 90px;
+$p-chats-paw-color: $c-third;
+
+/*******************************
+** Variables page Chat accueil
+********************************/
+$p-chat-accueil-title-bkg-color: $c-third;
+$p-chat-accueil-title-circle-width: 150px;
+$p-chat-accueil-title-circle-width-big: 300px;
+$p-chat-accueil-paw-top: 40%;
+$p-chat-accueil-paw-lr: 40%;
+$p-chat-accueil-paw-width: $p-chat-accueil-title-circle-width/4;
+$p-chat-accueil-paw-width-big: $p-chat-accueil-title-circle-width-big/4;
+$p-chat-accueil-paw-color: $c-secundary-light;
+
+/*******************************
+** Variables Component Chat-mini
+********************************/
+$c-chat-mini-img-size: 200px;
+$c-chat-mini-svg-plus-width: 25px;
+$c-chat-mini-svg-plus-color: $c-third;
+$c-chat-mini-svg-plus-stroke-color: $c-primary-light;
+$c-chat-mini-svg-plus-stroke-width: 8px;
+$c-chat-mini-cloak-color: rgba($c-primary-light, 0.4);
+$c-chat-mini-hover-duration: 0.2s;
+
+/*******************************
+** Variables Component chat-detail
+********************************/
+$c-chat-detail-name-bkg-color: $c-third;
+$c-chat-detail-name-svg-size: 50%;
+$c-chat-detail-name-font-size: rem(70);
+$c-chat-detail-bkg-color: $site-bkg-color-secundary;
+$c-chat-detail-txt-color: $c-secundary-light;
+$c-chat-detail-dsc-padding-tb: 40px;
+$c-chat-detail-dsc-padding-lr: 40px;
+$c-chat-detail-dsc-font-size: $base-size-font-txt-m;
+
+/*******************************
+** Variables Component Conditions
+********************************/
+$p-conditions-bkg-color: $site-bkg-color-secundary;
+$p-conditions-paw-color: $c-secundary-light;
+$p-conditions-items-margin-tb: 50px;
+$p-conditions-item-tarif-margin-lr: 15px;

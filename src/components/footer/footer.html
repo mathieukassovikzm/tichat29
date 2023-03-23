@@ -1,4 +1,57 @@
-<footer>
-  <h1>Footer</h1>
-  <p>© 2020 Mathéo</p>
+<footer id="footer" class="footer">
+  <div class="section-container">
+    <div class="footer-item item-logo">
+      <Cat class="svg-cat" />
+      <TiChat class="svg-tichat" />
+    </div>
+
+    <nav class="footer-item item-navigation">
+      <div class="menu-item">
+        <router-link class="menu-item-link" :to="{ name: 'PageHome'}">Home</router-link>
+      </div>
+      <div class="menu-item">
+        <router-link class="menu-item-link" :to="{ name: 'PageContact'}">Contact</router-link>
+      </div>
+    </nav>
+
+    <ul class="footer-item item-social-icons">
+      <li>
+        <a href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
+          <SvgFacebook />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/go2sport29/" target="_blank">
+          <SvgInstagram />
+        </a>
+      </li>
+    </ul>
+
+    <div class="footer-item item-contact">
+      <ul class="contact-infos">
+        <li class="contact-info phone">
+          <SvgPhone />
+          <p>06 25 09 52 22</p>
+        </li>
+        <li class="contact-info email">
+          <SvgEmail />
+          <p>asso.tichat29@gmail.com</p>
+        </li>
+        <li class="contact-info address">
+          <SvgAddress />
+          <div class="text-address">
+            <p>Nigolou <br />29940 La Foret-Fouesnant</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-item item-copyright">
+      <span></span>
+      <p>Copyright © 2020 - Tichat29</p>
+      <p class="splitter">|</p>
+      <p>Design: Delgado Ericka</p>
+      <p class="splitter">|</p>
+      <p>Développement: Le Bellec Mathieu</p>
+    </div>
+  </div>
 </footer>

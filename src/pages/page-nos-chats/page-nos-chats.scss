@@ -1,0 +1,15 @@
+.p-nos-chats {
+  &.section .section-container {
+    padding: 0;
+  }
+}
+/*******************************
+ * Menu Responsive
+ *******************************/
+@media only screen and (min-width: $min-width-m) {
+  .p-nos-chats {
+    &.section .section-container {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.c-chat-mini {
+  .chat-mini-photo-container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: $c-chat-mini-img-size;
+    height: $c-chat-mini-img-size;
+    border-radius: 50%;
+    overflow: hidden;
+    .chat-mini-photo {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .cloak {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $c-chat-mini-cloak-color;
+      transition: opacity $c-chat-mini-hover-duration ease;
+      opacity: 0;
+      z-index: 2;
+    }
+    .svg-plus {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: transform $c-chat-mini-hover-duration ease;
+      transform: translateX(-50%) translateY(-50%) scale(0);
+      width: $c-chat-mini-svg-plus-width;
+      z-index: 3;
+      path {
+        fill: $c-chat-mini-svg-plus-color;
+        stroke: $c-chat-mini-svg-plus-stroke-color;
+        stroke-width: $c-chat-mini-svg-plus-stroke-width;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      .cloak {
+        opacity: 1;
+      }
+      .svg-plus {
+        transform: translateX(-50%) translateY(-50%) scale(1);
+      }
+    }
+  }
+  .chat-mini-name {
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+}

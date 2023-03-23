@@ -1,83 +1,23 @@
-$animation-duration-short: 0.2s;
-$animation-duration: 0.5s;
-
 /*******************************
- * Media Query
- *******************************/
-$min-width-s: 450px;
-$min-width-m: 650px;
-$min-width-l: 850px;
+** Import
+********************************/
+@import "./variables/v-colors";
+@import "./variables/v-fonts";
+@import "./variables/v-globals";
 
-/*******************************
- * Colors
- *******************************/
+/* Components */
+@import "./variables/v-actualite";
+@import "./variables/v-burger";
+@import "./variables/v-buttons";
+@import "./variables/v-carousel";
+@import "./variables/v-lightbox";
+@import "./variables/v-menu";
+@import "./variables/v-footer";
+@import "./variables/v-titles";
+@import "./variables/v-section-bkg-img";
 
-$c-primary: #f8bbd0;
-$c-primary-light: #ffedff;
-$c-primary-dark: #c38a9e;
-
-$c-secundary: #757575;
-$c-secundary-light: #fff;
-$c-secundary-dark: #616161;
-
-$c-text-light: $c-secundary-light;
-$c-text-dark: $c-secundary-dark;
-
-$c-dark-background: #e8eaf6;
-
-$c-box-shadow: rgba(0, 0, 0, 0.9);
-
-/*******************************
- * General
- *******************************/
-$font-title: 'parisienne';
-$font-txt: 'alegreya';
-
-$base-size-font-txt-xs: rem(18);
-$base-size-font-txt-s: rem(18);
-$base-size-font-txt-m: rem(20);
-$base-size-font-txt-l: rem(24);
-$base-size-font-txt-xl: rem(26);
-$base-size-font-txt-xxl: rem(30);
-
-$base-size-font-title-s: rem(16);
-$base-size-font-title-m: rem(22);
-$base-size-font-title-l: rem(28);
-$base-size-font-title-xl: rem(30);
-$base-size-font-title-xxl: rem(40);
-$base-size-font-title-xxxl: rem(55);
-
-$section-padding-tb: 50px;
-$section-padding-lr: 0px;
-$section-container-padding-tb: 10px;
-$section-container-padding-lr: 10px;
-
-$margin-bottom-h1: 20px;
-$margin-bottom-h2: 15px;
-$margin-bottom-h3: 10px;
-
-//$background-image: '../assets/img/Background.png';
-$background-color: $c-primary;
-
-$svg-media-size: 40px;
-
-/*******************************
- * Header
- *******************************/
-$header-bkg-color: $c-primary;
-$header-txt-color: $c-text-light;
-$header-txt-hover-color: $c-text-dark;
-$header-txt-size-m: $base-size-font-txt-m;
-$header-txt-size-l: $base-size-font-txt-xl;
-$header-txt-responsive-size: $base-size-font-title-m;
-$header-top-height: 80px;
-$header-responsive-nav-height: 93vh;
-
-/*******************************
- * Footer
- *******************************/
-// $footer-border-color: $c-primary;
-// $footer-title-color: $c-primary;
-// $footer-txt-color: $c-secundary-light;
-// $footer-padding-t: $section-padding-tb;
-// $footer-img-width: 250px;
+/* Pages */
+@import "./variables/v-page-help";
+@import "./variables/v-page-home";
+@import "./variables/v-page-nos-chats";
+@import "./variables/v-page-contact";

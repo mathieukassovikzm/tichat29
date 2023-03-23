@@ -1,0 +1,34 @@
+/******* Control outside *******/
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: $carousel-width;
+  max-width: $carousel-max-width;
+
+  .carousel__div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .carousel__pagination {
+    position: relative;
+    text-align: center;
+    button {
+      display: inline-block;
+      width: $carousel-pag-size;
+      height: $carousel-pag-size;
+      background-color: $carousel-pag-color;
+      opacity: 0.8;
+      border-radius: 50%;
+      margin: 0 4px;
+      cursor: pointer;
+      &.active {
+        background-color: $carousel-pag-active-color;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

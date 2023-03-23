@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "futura";
+  src: url("./assets/fonts/Futura_20Medium_20BT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "myriad";
+  src: url("./assets/fonts/MYRIADPRO-REGULAR.OTF") format("OpenType");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/************** Titles ***************/
+@each $heading in $headings {
+  #{$heading} {
+    font-size: $title-font-size-upper;
+    font-size: ($title-font-size-upper / $font-size-base) + em;
+    margin-bottom: $title-margin-bottom - $title-margin-bottom-dec;
+  }
+  $title-font-size-upper: $title-font-size-upper - $title-font-size-dec;
+  $title-margin-bottom: $title-margin-bottom - $title-margin-bottom-dec;
+}
+
+p {
+  margin: $p-margin-tb 0;
+}

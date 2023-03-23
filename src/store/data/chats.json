@@ -1,0 +1,115 @@
+{
+  "nbChatsAdoptes": 1000,
+  "nbChatsDisponibles": 5,
+  "chats": [
+    {
+      "type": "chat",
+      "nom": "Ron",
+      "description": "Noisette , elle est très chouette Et sa bonne mine plutôt divine... Ti chat , y a le téléphon qui sonne  Et y aura pas personne ( ben non je serai là bien sûr) pour y répondre ! Bon je récapitule ... Noisette 8 mois hyper sociable a l’adoption sur pluguffan Appelez nous au 06 25 09 52 22",
+      "photos": [
+        "Ron/Ron-1.jpg",
+        "Ron/Ron-2.jpg",
+        "Ron/Ron-3.jpg"
+      ],
+      "dispo": true
+    },
+    {
+      "type": "chat",
+      "nom": "Hila",
+      "description": "Hina déesse tahitienne ... Fille de la lune 🌔 et du soleil ☀️ Et oui, il lui fallait au moins un prénom pareil à cette jolie minette de deux ans. Un amour , sage propre câline et posée. Pour la rencontrer sur Pleuven merci de nous laisser un message sur Facebook ou nous contacter au 06 25 09 52 22",
+      "photos": [
+        "Hilda/Hilda-1.jpg",
+        "Hilda/Hilda-2.jpg",
+        "Hilda/Hilda-3.jpg",
+        "Hilda/Hilda-4.jpg",
+        "Hilda/Hilda-5.jpg"
+      ],
+      "dispo": true
+    },
+    {
+      "type": "chatton",
+      "nom": "René",
+      "description": "Muy sociable, le encanta ser el centro de atención. La familia no pudo hacerse cargo de ella y termino en la calle, donde no tenia posibilidad de sobrevivir. Desparasitado, perfil vírico negativo, esterilizado y con vacunas.",
+      "photos": [
+        "Hilda/Hilda-4.jpg",
+        "Hilda/Hilda-2.jpg",
+        "Hilda/Hilda-3.jpg",
+        "Hilda/Hilda-1.jpg",
+        "Hilda/Hilda-5.jpg"
+      ],
+      "dispo": true
+    },
+    {
+      "type": "sauvetage",
+      "nom": "Jean",
+      "description": "Juste le meilleur des chats, fait partie de la bande mafcuss",
+      "photos": [
+        "Hilda/Hilda-5.jpg",
+        "Hilda/Hilda-2.jpg",
+        "Hilda/Hilda-1.jpg",
+        "Hilda/Hilda-4.jpg",
+        "Hilda/Hilda-3.jpg"
+      ],
+      "dispo": true
+    },
+    {
+      "type": "chat",
+      "nom": "El padrino",
+      "description": "Muy sociable, le encanta ser el centro de atención. La familia no pudo hacerse cargo de ella y termino en la calle, donde no tenia posibilidad de sobrevivir. Desparasitado, perfil vírico negativo, esterilizado y con vacunas.",
+      "photos": [
+        "Hilda/Hilda-5.jpg",
+        "Hilda/Hilda-2.jpg",
+        "Hilda/Hilda-3.jpg",
+        "Hilda/Hilda-4.jpg",
+        "Hilda/Hilda-5.jpg"
+      ],
+      "dispo": true
+    },
+    {
+      "type": "chat",
+      "nom": "Zazu",
+      "description": "Chat plus dispo",
+      "photos": [],
+      "dispo": false
+    },
+    {
+      "type": "chatton",
+      "nom": "Hila",
+      "description": "Hina déesse tahitienne ... Fille de la lune 🌔 et du soleil ☀️ Et oui, il lui fallait au moins un prénom pareil à cette jolie minette de deux ans. Un amour , sage propre câline et posée. Pour la rencontrer sur Pleuven merci de nous laisser un message sur Facebook ou nous contacter au 06 25 09 52 22",
+      "photos": [
+        "Hilda/Hilda-1.jpg",
+        "Hilda/Hilda-2.jpg",
+        "Hilda/Hilda-3.jpg",
+        "Hilda/Hilda-4.jpg",
+        "Hilda/Hilda-5.jpg"
+      ],
+      "dispo": true
+    },
+    {
+      "type": "chat",
+      "nom": "René",
+      "description": "Muy sociable, le encanta ser el centro de atención. La familia no pudo hacerse cargo de ella y termino en la calle, donde no tenia posibilidad de sobrevivir. Desparasitado, perfil vírico negativo, esterilizado y con vacunas.",
+      "photos": [
+        "Hilda/Hilda-4.jpg",
+        "Hilda/Hilda-2.jpg",
+        "Hilda/Hilda-3.jpg",
+        "Hilda/Hilda-1.jpg",
+        "Hilda/Hilda-5.jpg"
+      ],
+      "dispo": true
+    },
+    {
+      "type": "chat",
+      "nom": "Jean",
+      "description": "Juste le meilleur des chats, fait partie de la bande mafcuss",
+      "photos": [
+        "Hilda/Hilda-5.jpg",
+        "Hilda/Hilda-2.jpg",
+        "Hilda/Hilda-1.jpg",
+        "Hilda/Hilda-4.jpg",
+        "Hilda/Hilda-3.jpg"
+      ],
+      "dispo": true
+    }
+  ]
+}

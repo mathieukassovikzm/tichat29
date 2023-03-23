@@ -1,0 +1,21 @@
+/*******************************
+** Colors
+********************************/
+$c-primary: #e2e0dd;
+$c-primary-light: #efedea;
+$c-primary-dark: #978f8f;
+
+$c-secundary: #575a5b;
+$c-secundary-light: #fafafa;
+$c-secundary-dark: #333;
+
+$c-third: #edc191;
+
+$c-text-light: $c-secundary-light;
+$c-text-dark: $c-secundary;
+
+$site-bkg-color: $c-secundary-light;
+$site-bkg-color-secundary: rgba($c-third, 0.6);
+$component-title-txt-color: $c-secundary-light;
+
+$c-box-shadow: rgba(0, 0, 0, 0.9);

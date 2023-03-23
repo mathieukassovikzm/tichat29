@@ -1,0 +1,56 @@
+<header id="menu-fixed" class="menu" :class="toggleMenuTop">
+  <div class="list-social-media">
+    <div class="link" @click="goToFooter()">
+      <SvgPhone />
+    </div>
+    <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
+      <SvgFacebook />
+    </a>
+    <!-- <a class="link" href="https://www.facebook.com/Ti-Chat-29-198937427142014/" target="_blank">
+      <SvgInstagram />
+    </a> -->
+  </div>
+  <div class="menu-container">
+    <Burger />
+    <nav class="navigation push-left">
+      <div class="menu-item menu-txt item-accueil">
+        <div id="menu-item-link-home" class="menu-item-link link-active" @click="linkClicked('PageHome')">
+          <SvgHome class="svg-menu" />
+          <p>Accueil</p>
+        </div>
+      </div>
+      <div class="menu-item menu-txt">
+        <div id="menu-item-link-nos-chats" class="menu-item-link" @click="linkClicked('NosChats')">
+          <SvgCatPaw class="svg-menu" />
+          <p>Nos protégés</p>
+        </div>
+      </div>
+      <div class="menu-item menu-txt">
+        <div id="menu-item-link-help" class="menu-item-link" @click="linkClicked('PageHelp')">
+          <SvgHeart class="svg-menu" />
+          <p>Nous aider</p>
+        </div>
+      </div>
+      <div class="menu-item menu-logo">
+        <div class="menu-item-link" @click="linkClicked('PageHome')">
+          <SvgCat class="svg-cat" />
+          <!-- <SvgTiChat class="svg-tichat" /> -->
+          <p class="svg-tichat">Accueil</p>
+        </div>
+      </div>
+
+      <div class="menu-item menu-txt">
+        <div id="menu-item-link-actualitees" class="menu-item-link" @click="linkClicked('PageActualitees')">
+          <SvgScheduler class="svg-menu" />
+          <p>Actualitées</p>
+        </div>
+      </div>
+      <div class="menu-item menu-txt">
+        <div id="menu-item-link-contact" class="menu-item-link" @click="linkClicked('PageContact')">
+          <SvgPhone class="svg-menu" />
+          <p>Contact</p>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

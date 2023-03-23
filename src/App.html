@@ -1,0 +1,14 @@
+<div id="app" class="app" :class="isOpen">
+  <div class="site-container" :class="getBodyClass">
+    <MenuResp />
+    <div class="site-pusher push-left">
+      <div class="site-content">
+        <transition name="fade-height" mode="out-in" @beforeLeave="beforeLeave" @enter="enter" @afterEnter="afterEnter">
+          <router-view></router-view>
+        </transition>
+        <FooterResp></FooterResp>
+      </div>
+      <div class="site-cache" @click="closeNav"></div>
+    </div>
+  </div>
+</div>

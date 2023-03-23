@@ -1,0 +1,69 @@
+.slide-right-enter-active {
+  animation: slideRightIn $carousel-anim-duration ease;
+}
+
+.slide-right-leave-active {
+  animation: slideRightOut $carousel-anim-duration ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+@keyframes slideRightIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0%;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes slideRightOut {
+  from {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0%;
+  }
+}
+
+.slide-left-enter-active {
+  animation: slideleftIn $carousel-anim-duration ease;
+}
+
+.slide-left-leave-active {
+  animation: slideleftOut $carousel-anim-duration ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+@keyframes slideleftIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0%;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes slideleftOut {
+  from {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0%;
+  }
+}

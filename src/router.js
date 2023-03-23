@@ -2,9 +2,15 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import Home from './pages/page-home/page-home.vue';
-import PageAdoptees from './pages/page-adoptees/page-adoptees.vue';
-import PageAdoption from './pages/page-adoption/page-adoption.vue';
-import PageEvents from './pages/page-events/page-events.vue';
+import NosChats from './pages/page-nos-chats/page-nos-chats.vue';
+import ChatAccueil from './pages/page-nos-chats/chat-accueil/chat-accueil.vue';
+import DetailChat from './pages/page-nos-chats/chat-detail/chat-detail.vue';
+import ConditionsAdoption from './pages/page-nos-chats/conditions-adoption/conditions-adoption.vue';
+import PageActualitees from './pages/page-actualitees/page-actualitees.vue';
+import ListActualite from "@/pages/page-actualitees/actualite-list/actualite-list.vue";
+import DetailActualite from './pages/page-actualitees/actualite-detail/actualite-detail.vue';
+import PageHelp from './pages/page-help/page-help.vue';
+import PageContact from './pages/page-contact/page-contact.vue';
 
 Vue.use(VueRouter);
 
@@ -15,19 +21,56 @@ const routes = [
     name: 'PageHome',
   },
   {
-    path: '/adoptees',
-    component: PageAdoptees,
-    name: 'PageAdoptees',
+    path: '/nos-chats',
+    redirect: { name: 'ChatAccueil' },
+    component: NosChats,
+    name: 'NosChats',
+    children: [
+      {
+        path: '/nos-chats/liste-chats',
+        component: ChatAccueil,
+        name: 'ChatAccueil',
+      },
+      {
+        path: '/nos-chats/detail-chat/:itemId',
+        component: DetailChat,
+        name: 'DetailChat',
+      },
+      {
+        path: '/nos-chats/conditions-adoption',
+        component: ConditionsAdoption,
+        name: 'ConditionsAdoption',
+      },
+    ],
   },
   {
-    path: '/adoption',
-    component: PageAdoption,
-    name: 'PageAdoption',
+    path: '/actualitees',
+    redirect: { name: 'ListActualite' },
+    component: PageActualitees,
+    name: 'PageActualitees',
+    children: [
+      {
+        path: '/actualitees/liste-actualites',
+        component: ListActualite,
+        name: 'ListActualite',
+      },
+      {
+        path: '/actualitees/detail-actualite/:itemId',
+        component: DetailActualite,
+        name: 'DetailActualite',
+      },
+    ],
+  },
+
+  {
+    path: '/nous-aider',
+    component: PageHelp,
+    name: 'PageHelp',
   },
   {
-    path: '/events',
-    component: PageEvents,
-    name: 'PageEvents',
+    path: '/contact',
+    component: PageContact,
+    name: 'PageContact',
   },
   { path: '*', redirect: '/' },
 ];

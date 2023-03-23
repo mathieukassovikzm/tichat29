@@ -1,0 +1,81 @@
+$svg-prev-next-width: 20px;
+$svg-prev-next-color: $c-primary;
+$svg-prev-next-color-hover: $c-primary-dark;
+$svg-prev-next-margin-lr: 5px;
+
+.mini-diapo {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  .photos {
+    position: relative;
+    width: 100%;
+    .main-photo-div {
+      position: relative;
+      width: 100%;
+      svg {
+        position: absolute;
+        width: $svg-prev-next-width;
+        &.icon-svg {
+          top: 50%;
+          &.icon-prev {
+            left: $svg-prev-next-margin-lr;
+            transform: translateY(-50%) rotate(180deg);
+          }
+          &.icon-next {
+            right: $svg-prev-next-margin-lr;
+            transform: translateY(-50%);
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          path {
+            fill: $svg-prev-next-color-hover;
+          }
+        }
+        path {
+          fill: $svg-prev-next-color;
+          transition: fill ease $animation-duration-short;
+        }
+      }
+      .main-photo {
+        width: 100%;
+        margin: auto;
+      }
+      .nb-photo {
+        color: $svg-prev-next-color;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+      }
+    }
+    .thumbnails {
+      position: relative;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      .thumbnail {
+        position: relative;
+        .shadow {
+          position: absolute;
+          box-shadow: inset 0 0 0 1000px rgba($c-secundary-dark, 0.4);
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+        }
+        &.thumbnail-active {
+          .shadow {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}

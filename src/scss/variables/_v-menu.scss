@@ -1,0 +1,54 @@
+$menu-color-1: $c-primary;
+$menu-color-2: $c-secundary;
+$menu-color-3: $c-primary-dark;
+$menu-color-4: $c-secundary-light;
+/*******************************
+** Menu
+********************************/
+$site-cache-color: rgba(0, 0, 0, 0.6);
+$site-content-bkg-color: $site-bkg-color;
+$menu-width: 100%;
+$menu-bkg-color: $site-bkg-color;
+$menu-txt-color: $menu-color-2;
+$menu-animation-duration: $animation-duration;
+$menu-social-size: 20px;
+$menu-social-bkg-color: $menu-color-1;
+$menu-social-color: $menu-color-2;
+$menu-p-margin-tb: 5px;
+
+/*******************************
+** Menu-top
+********************************/
+$menu-top-color-txt-light: $c-text-light;
+$menu-top-color-txt-dark: $c-secundary-dark;
+
+/*******************************
+** Menu Full Size
+********************************/
+$menu-height: 66px;
+$menu-logo-cat-size: 50px;
+$menu-logo-tichat-size: $menu-height - $menu-logo-cat-size;
+$menu-logo-color: $menu-color-2;
+$menu-logo-margin-lr: 5px;
+
+/*******************************
+** Menu Items
+********************************/
+$menu-item-link-anim: -150px;
+$menu-item-link-height: 2px;
+$menu-item-link-font-size: $base-size-font-txt-s;
+$menu-item-link-txt-padding-lr: 35px;
+$menu-item-link-txt-padding-tb: 25px;
+$menu-item-link-txt-border-radius-s: 10px;
+$menu-item-link-txt-border-radius-b: 60px;
+$menu-item-link-svg-size: 50px;
+$menu-item-link-svg-color: $menu-color-3;
+$menu-item-link-svg-color-hover: $c-third;
+$menu-item-link-color-active: $c-secundary-dark;
+
+/*******************************
+** Menu Responsive
+********************************/
+$menu-resp-txt-color: $menu-color-3;
+$menu-resp-txt-color-hover: $menu-color-4;
+$menu-resp-item-hover-bkg-color: $menu-color-3;

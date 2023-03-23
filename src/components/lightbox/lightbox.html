@@ -1,0 +1,14 @@
+<div class="lightbox" v-if="image" @click="close" @keyup.esc="close">
+  <transition :name="transition">
+    <LightboxImage :imageMounted="image" :key="image"></LightboxImage>
+  </transition>
+  <SvgClose class="lightbox__close" @click="close"></SvgClose>
+  <SvgNext
+    class="lightbox__btn lightbox__next"
+    @click.stop.native="next"
+  ></SvgNext>
+  <SvgNext
+    class="lightbox__btn lightbox__prev"
+    @click.stop.native="prev"
+  ></SvgNext>
+</div>

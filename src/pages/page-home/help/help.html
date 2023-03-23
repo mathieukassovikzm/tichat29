@@ -1,0 +1,57 @@
+<section class="section s-help">
+  <div class="section-container">
+    <TitleH1 class="bkg-light">Nous aider</TitleH1>
+    <div class="list-help">
+      <div class="help offset-bottom help-adopter">
+        <div class="logo-paw">
+          <SvgCatHelp />
+          <SvgCatPaw />
+        </div>
+        <p>
+          En adoptant un de nos protégés, vous nous permettez de sauver une nouvelle vie!
+        </p>
+        <router-link :to="{ name: 'NosChats'}">
+          <button class="btn btn-v1">Adopter</button>
+        </router-link>
+      </div>
+      <div class="help offset-top help-adopter">
+        <div class="logo-paw">
+          <SvgHands />
+          <SvgCatPaw />
+        </div>
+        <p>
+          Il y a de nombreuses manières de nous aider. Découvrez les ici!
+        </p>
+        <router-link :to="{ name: 'PageHelp'}">
+          <button class="btn btn-v1">Nous Aider</button>
+        </router-link>
+      </div>
+      <div class="help offset-bottom help-adopter">
+        <div class="logo-paw">
+          <SvgChild />
+          <SvgCatPaw />
+        </div>
+        <p>
+          Nous sommes perpétuellement à la recherche de nouveaux foyers prêts à se lancer dans l'aventure !
+        </p>
+        <button class="btn btn-v1">Devenir volontaire</button>
+      </div>
+      <div class="help offset-top help-adopter">
+        <div class="logo-paw">
+          <SvgDonate />
+          <SvgCatPaw />
+        </div>
+        <p>
+          Tous les dons comptent ! <br />Merci pour votre soutien !
+        </p>
+        <a href="https://www.helloasso.com/associations/ti-chat-29" target="_blank">
+          <button class="btn btn-v1">Donnations</button>
+        </a>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-v2">Nombre de chats sauvés <br />{{NbCatSaved}}</button>
+      <button class="btn btn-v2">Nombre de chats à l'adoption <br />{{NbCatAvailable}}</button>
+    </div>
+  </div>
+</section>

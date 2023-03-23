@@ -1,0 +1,22 @@
+$svg-color-anim-duration: 0.2s !default;
+
+@mixin svgHover($bkg-color, $color) {
+  &.svg {
+    circle {
+      fill: $bkg-color;
+      transition: fill $animation-duration-short ease;
+    }
+    path {
+      fill: $color;
+      transition: fill $animation-duration-short ease;
+    }
+    &:hover {
+      circle {
+        fill: $color;
+      }
+      path {
+        fill: $bkg-color;
+      }
+    }
+  }
+}

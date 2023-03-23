@@ -1,0 +1,106 @@
+.page-chat-accueil {
+  .section-subtitle {
+    @include bkgImg(
+      $url: "./../../../assets/img/backgroundTichat29.png",
+      $color: $p-chat-accueil-title-bkg-color,
+      $opacity: 0.2
+    );
+
+    &.p-left {
+      .container-btn {
+        transform-origin: top left;
+        left: 0;
+        .button-paw {
+          left: $p-chat-accueil-paw-lr;
+        }
+      }
+    }
+    &.p-right {
+      .container-btn {
+        transform-origin: top right;
+        right: 0;
+        .svg-fourth-circle path {
+          transform: scale(-1, 1) translateX(-100%);
+        }
+        .button-paw {
+          left: 100% - $p-chat-accueil-paw-lr;
+        }
+      }
+    }
+
+    .container-btn {
+      position: absolute;
+      display: block;
+      width: $p-chat-accueil-title-circle-width;
+      height: $p-chat-accueil-title-circle-width;
+      top: 0;
+      z-index: 1;
+      transition: transform $animation-duration-short ease;
+
+      .svg-fourth-circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter: $drop-shadow;
+        path {
+          fill: $p-chat-accueil-title-bkg-color;
+        }
+      }
+      .button-paw {
+        position: relative;
+        margin: 0;
+        max-width: $p-chat-accueil-paw-width;
+        max-height: $p-chat-accueil-paw-width;
+        top: $p-chat-accueil-paw-top;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        cursor: pointer;
+        .svg-cat-paw {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          width: $p-chat-accueil-paw-width;
+          filter: $drop-shadow;
+
+          path,
+          ellipse {
+            fill: $p-chat-accueil-paw-color;
+          }
+        }
+        p {
+          position: relative;
+          left: -30px;
+          margin: 0;
+          color: $p-chat-accueil-paw-color;
+          font-style: italic;
+          text-transform: uppercase;
+          text-shadow: $text-shadow;
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $min-width-l) {
+  .page-chat-accueil {
+    .section-subtitle {
+      .container-btn {
+        width: $p-chat-accueil-title-circle-width-big;
+        height: $p-chat-accueil-title-circle-width-big;
+        .button-paw {
+          max-width: $p-chat-accueil-paw-width-big;
+          max-height: $p-chat-accueil-paw-width-big;
+          .svg-cat-paw {
+            width: $p-chat-accueil-paw-width-big;
+          }
+          p {
+            left: -12px;
+          }
+        }
+      }
+    }
+  }
+}
